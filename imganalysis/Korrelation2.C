@@ -145,45 +145,45 @@ void Korrelation2(){
   x[1]=7;
   x[2]=14;
   x[3]=21;
-  Double_t y[4], yerr[4];
-  y[0]=wa(e1g0m,e1g0w,e1g0);
-  yerr[0]=waerr(e1g0m,e1g0w,e1g0);
-  y[1]=wa(e1g7m,e1g7w,e1g7);
-  yerr[1]=waerr(e1g7m,e1g7w,e1g7);
-  y[2]=wa(e1g14m,e1g14w,e1g14);
-  yerr[2]=waerr(e1g14m,e1g14w,e1g14);
-  y[3]=wa(e1g21m,e1g21w,e1g21);
-  yerr[3]=waerr(e1g21m,e1g21w,e1g21);
+  Double_t y_e1[4], yerr_e1[4], y_e10[4], yerr_e10[4], y_e20[4], yerr_e20[4];
+  y_e1[0]=wa(e1g0m,e1g0w,e1g0);
+  yerr_e1[0]=waerr(e1g0m,e1g0w,e1g0);
+  y_e1[1]=wa(e1g7m,e1g7w,e1g7);
+  yerr_e1[1]=waerr(e1g7m,e1g7w,e1g7);
+  y_e1[2]=wa(e1g14m,e1g14w,e1g14);
+  yerr_e1[2]=waerr(e1g14m,e1g14w,e1g14);
+  y_e1[3]=wa(e1g21m,e1g21w,e1g21);
+  yerr_e1[3]=waerr(e1g21m,e1g21w,e1g21);
   gStyle->SetOptFit(0001);
-  TGraphErrors* gre1=new TGraphErrors(4,x,y,0,yerr);
+  TGraphErrors* gre1=new TGraphErrors(4,x,y_e1,0,yerr_e1);
   //grg0->SetMarkerColor(3);
   //grg0->SetMarkerStyle(22);
   //grg0->Draw("ALP");
 
-  y[0]=wa(e10g0m,e10g0w,e10g0);
-  yerr[0]=waerr(e10g0m,e10g0w,e10g0);
-  y[1]=wa(e10g7m,e10g7w,e10g7);
-  yerr[1]=waerr(e10g7m,e10g7w,e10g7);
-  y[2]=wa(e10g14m,e10g14w,e10g14);
-  yerr[2]=waerr(e10g14m,e10g14w,e10g14);
-  y[3]=wa(e10g21m,e10g21w,e10g21);
-  yerr[3]=waerr(e10g21m,e10g21w,e10g21);
+  y_e10[0]=wa(e10g0m,e10g0w,e10g0);
+  yerr_e10[0]=waerr(e10g0m,e10g0w,e10g0);
+  y_e10[1]=wa(e10g7m,e10g7w,e10g7);
+  yerr_e10[1]=waerr(e10g7m,e10g7w,e10g7);
+  y_e10[2]=wa(e10g14m,e10g14w,e10g14);
+  yerr_e10[2]=waerr(e10g14m,e10g14w,e10g14);
+  y_e10[3]=wa(e10g21m,e10g21w,e10g21);
+  yerr_e10[3]=waerr(e10g21m,e10g21w,e10g21);
   gStyle->SetOptFit(0001);
-  TGraphErrors* gre10=new TGraphErrors(4,x,y,0,yerr);
+  TGraphErrors* gre10=new TGraphErrors(4,x,y_e10,0,yerr_e10);
   //grg0->SetMarkerColor(3);
   //grg0->SetMarkerStyle(22);
   //grg0->Draw("ALP")
 
-  y[0]=wa(e20g0m,e20g0w,e20g0);
-  yerr[0]=waerr(e20g0m,e20g0w,e20g0);
-  y[1]=wa(e20g7m,e20g7w,e20g7);
-  yerr[1]=waerr(e20g7m,e20g7w,e20g7);
-  y[2]=wa(e20g14m,e20g14w,e20g14);
-  yerr[2]=waerr(e20g14m,e20g14w,e20g14);
-  y[3]=wa(e20g21m,e20g21w,e20g21);
-  yerr[3]=waerr(e20g21m,e20g21w,e20g21);
+  y_e20[0]=wa(e20g0m,e20g0w,e20g0);
+  yerr_e20[0]=waerr(e20g0m,e20g0w,e20g0);
+  y_e20[1]=wa(e20g7m,e20g7w,e20g7);
+  yerr_e20[1]=waerr(e20g7m,e20g7w,e20g7);
+  y_e20[2]=wa(e20g14m,e20g14w,e20g14);
+  yerr_e20[2]=waerr(e20g14m,e20g14w,e20g14);
+  y_e20[3]=wa(e20g21m,e20g21w,e20g21);
+  yerr_e20[3]=waerr(e20g21m,e20g21w,e20g21);
   gStyle->SetOptFit(0001);
-  TGraphErrors* gre20=new TGraphErrors(4,x,y,0,yerr);
+  TGraphErrors* gre20=new TGraphErrors(4,x,y_e20,0,yerr_e20);
   //grg0->SetMarkerColor(3);
   //grg0->SetMarkerStyle(22);
   //grg0->Draw("ALP")
@@ -196,21 +196,22 @@ void Korrelation2(){
   mg->Draw("AL");
   gre1->SetLineColor(kBlue);
   gre1->SetMarkerSize(5);
-  //gre1->Fit("pol1");
+  gre1->Fit("pol1");
   gre10->SetLineColor(kGreen);
-  //gre10->Fit("pol1");
+  gre10->Fit("pol1");
   gre20->SetLineColor(kRed);
-  //gre20->Fit("pol1");
+  gre20->Fit("pol1");
   mg->SetTitle("gain v median;gain;median");
   TLegend *leg=new TLegend(0.1,0.7,0.48,0.9);
   leg->AddEntry("gre20", "exposure=20 (red)","LE");
   leg->AddEntry("gre10","exposure=10 (green)","LE");
   leg->AddEntry("gre1", "exposure=1 (blue)","LE");
   leg->Draw();
-  //std::cout<<wa(e1g0m,e1g0w,e1g0)<<std::endl;
-  //std::cout<<waerr(e1g0m,e1g0w,e1g0)<<std::endl;
-  //std::cout<<wa(e10g0m,e10g0w,e10g0)<<std::endl;
-  //std::cout<<waerr(e10g0m,e10g0w,e10g0)<<std::endl;
-  //std::cout<<wa(e20g0m,e20g0w,e20g0)<<std::endl;
-  //std::cout<<waerr(e20g0m,e20g0w,e20g0)<<std::endl;
+
+
+  std::cout<<"       |"<<"exposure=1| "<<"exposure=10|"<<"exposure=20"<<std::endl;
+  std::cout<<"-------|----------|------------|-----------"<<std::endl;
+  for (int i=0; i<4; i++){
+    std::cout<<"gain="<<x[i]<<" |  "<<y_e1[i]<<"  |  "<<y_e10[i]<<"  |  "<<y_e20[i]<<std::endl;
+  }
 }

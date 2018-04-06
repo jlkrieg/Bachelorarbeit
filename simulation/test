@@ -1,0 +1,25 @@
+void run281(){
+  TNtuple* nt = new TNtuple("nt","nt","u:azd:eld:az:el:flag:ps:x1:x2:x3");
+  //u: indicates whether the measurements were done with increasing elevation (u>0.5) or
+  //decreasing elevation (u<0.5) 
+  //azd: azimuth given to the drive system (in deg), select abs(az)<5deg
+  //eld: elevation given to the drive system (in deg), select azd > 35deg
+  //az: astrometric azimuth of the center of the SkyCCD field-of-view (in deg)
+  //el: astrometric elevation of the center of the SkyCCD field-of-view (in deg)
+  //flag: always 1, ignore
+  //ps: pixel scale (in arcsec), select abs(ps-11.03)<0.05 arcsec to reject badly reconstructed CCD images
+  //x1:x2:x3: ignore
+  
+  nt->Fill( 0.0000000000,40.0003640945,
+  	    15.2606553467,37.6257826487,1,11.02260 );
+  nt->Fill( 0.0000000000,50.0006805066,17.8671718231,47.2353685462,1,11.03820 );
+  nt->Fill( 0.0000000000,60.0008589809,22.2631715607,56.6539168638,1,11.02880 );
+  nt->Fill( 0.0000000000,70.0004796274,30.3403902210,65.6570840456,1,11.04460 );
+  nt->Fill( 0.0000000000,79.9998064621,47.3288648565,73.5438221183,1,11.029300 );
+  nt->Fill( 0.0000000000,50.0002371541,17.8957064447,47.2379946528,1,11.036207 );
+  nt->Fill( 0.0000000000,59.9993959884,22.3010361726,56.6560307101,1,11.027600 );
+  nt->Fill( 0.0000000000,69.9998016400,30.3631915386,65.6601005309,1,11.023507 );
+  nt->Fill( 0.0000000000,79.9997098825,47.3721000948,73.5543185191,1,11.037701 );
+  nt->Fill( 0.0000000000,85.0002047536,62.7455816308,76.4442133700,1,11.023008 );
+
+}

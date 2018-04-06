@@ -1,0 +1,90 @@
+#include <iostream>
+#include <TMath.h>
+#include <TRandom3.h>
+#include <TNtuple.h>
+#include <TFile.h>
+#include <TH1F.h>
+#include <TF1.h>
+#include <TGraph.h>
+#include <TCanvas.h>
+#include <TStyle.h>
+#include <TAxis.h>
+#include <cmath>
+
+void simulation(){
+
+  Double_t deg2rad = TMath::Pi()/180;//
+  const char*name="astro0";
+  TFile *file= TFile::Open("generatedData.root");
+  TNtuple *drive=(TNtuple*)file->Get("drive");
+  Int_t N=drive->GetEntries();
+  Double_t eld[N],azd[N];
+  const Float_t* a = drive->GetArgs();
+  for (int i=0; i<N; i++){
+    drive->GetEntry(i);
+    eld[i] = a[0];
+    azd[i] = a[1];
+  }
+  TNtuple *astro=(TNtuple*)file->Get(name);
+  //Int_t N_astro=astro->GetEntries();
+  Double_t ela[N],aza[N],alpha[N];
+    const Float_t* b = astro->GetArgs();
+  for (int i=0; i<N; i++){
+    astro->GetEntry(i);
+    ela[i] = b[0];
+    aza[i] = b[1];
+    alpha[i] = b[2];
+  }
+  Double_t ela_rad[N],eld_rad[N],aza_rad[N],azd_rad[N];
+  Double_t del[N],daz[N],y[N]; //radiant
+  for(int i=0; i<N; i++){
+  ela_rad[i] = ela[i]*deg2rad;
+  eld_rad[i] = eld[i]*deg2rad;
+  aza_rad[i] = aza[i]*deg2rad;
+  azd_rad[i] = azd[i]*deg2rad;
+  del[i]=eld_rad[i]-ela_rad[i];
+  daz[i]=azd_rad[i]-aza_rad[i];
+  y[i]=atan(sqrt((1-pow(1.009827572,2))/(pow(1.009827572,2)-pow(sin(ela[i]),2))))-azd_rad[i];
+  }
+
+
+  TCanvas *can= new TCanvas("c","c",1200,600);
+  gStyle->SetOptStat(1);
+  can->Divide(2,2);
+  can->cd(1);
+  TGraph* g_eld=new TGraph(N,eld_rad,del);
+  TF1 *f_eld =new TF1("f_eld","x-asin(sin(x)*[0])");
+  g_eld->Fit(f_eld);
+  g_eld->SetTitle("#Delta Elevation (drive)");
+  g_eld->GetXaxis()->SetTitle("elevation drive (rad)");
+  g_eld->GetYaxis()->SetTitle("#Delta el (rad)");
+  g_eld->Draw("A*");
+  can->cd(2);
+  can->Update();
+  TGraph* g_azd=new TGraph(N,eld_rad,daz);
+  TF1 *f_azd =new TF1("f_azd","-atan([0]/cos(x))");
+  g_azd->Fit(f_azd);
+  g_azd->SetTitle("#Delta Azemut (drive)");
+  g_azd->GetXaxis()->SetTitle("elevation drive (rad)");
+  g_azd->GetYaxis()->SetTitle("#Delta az (rad)");
+  g_azd->Draw("A*");
+  can->cd(3);
+  can->Update();
+  TGraph* g_ela=new TGraph(N,ela_rad,del);
+  TF1 *f_ela =new TF1("f_ela","asin(sin(x)*[0])-x");
+  g_ela->Fit(f_ela,"","",0,ela_rad[N-2] );
+  g_ela->SetTitle("#Delta Elevation (astro)");
+  g_ela->GetXaxis()->SetTitle("elevation astro (rad)");
+  g_ela->GetYaxis()->SetTitle("#Delta el (rad)");
+  g_ela->Draw("A*");
+  can->cd(4);
+  can->Update();
+  TGraph* g_aza=new TGraph(N,ela_rad,daz);
+  TF1 *f_aza =new TF1("f_aza","-atan(sqrt((1-pow([0],2))/(pow([1],2)-pow(sin(x),2))))+[2]");
+  g_aza->Fit(f_aza,"","",0,ela_rad[N-2]);
+  g_aza->SetTitle("#Delta Azemut (astro)");
+  g_aza->GetXaxis()->SetTitle("elevation astro (rad)");
+  g_aza->GetYaxis()->SetTitle("#Delta az (rad)");
+  g_aza->Draw("A*");
+
+}

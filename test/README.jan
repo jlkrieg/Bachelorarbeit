@@ -1,0 +1,55 @@
+
+Hallo Jan,
+
+Das tar-Archiv enthält den Code (pointing.C) und
+ein root-Datei (ntuple2nt_v11.root), mit deren Hilfe
+man Pointing-Modelle für zwei unterschiedliche Fälle
+berechnen kann. Die root-Datei enthält N-Tupel, wobei
+jede Zeile einer Kombination von elDrive, azDrive, elCenter
+und azCenter entspricht.
+
+Die zwei Fälle sind:
+
+1) Ein Pointing-Modell für den Fall, dass eine CCD-Kamera
+praktisch parallel zur Teleskoprichtung zeigt (run 103).
+Das Pointing-Modell heisst "TModel" (es gibt eine entsprechende
+Klasse in pointing.C) und Du kannst es fitten, indem Du
+in pointing.C "point = new TModel();" schreibst und dann
+
+root ntuple2nt_v11.root 'pointing.C+("run103_ccd4_tpoint_0_00_nt_ntuple",true)'
+
+in der Shell ausführst. Dieses Kommando startet root, lädt die
+Datei ntuple2nt_v11.root, kompiliert pointing.C und
+führt es mit gewissen Argumenten aus. (Beachte die feinen
+Unterschiede zwischen " und ') Das erste Argument ist der Name des N-Tupels. 
+(Ignoriere die vielen anderen N-Tupel in der root-Datei.)
+
+Du solltest dann die png-Dateien (ebenfalls im tar-Archiv) *TModel*png erhalten. 
+
+Bitte sieh Dir den Code und die Plots an und versuche zu
+verstehen, was der Code tut und wie die Plots erzeugt werden.
+Das TModel ist perfekt, es passt zu den Daten und hat
+ausreichend Parameter. Hier gibt es nichts mehr zu tun :-)
+
+2) Ein Pointing-Model für den Fall, dass eine CCD-Kamera unter
+einen Winkel zu der Teleskoprichtung zeigt (run168, unsere Baustelle).
+Ich habe bereits ein vorläufiges Model erzeugt, dass man auf
+Run 168 anwenden kann, indem man in pointing.C 
+"point = new UModel();" einkommentiert und dann in der Shell
+
+root ntuple2nt_v11.root 'pointing.C+("run168_73_tpoint_0_00_nt_ntuple",true)'
+
+ausführt. Die Plots (die mit *UModel*png) sehen wie Kraut und Rüben
+aus, weil das Modell noch nicht zu den Daten passt. Wir müssen
+versuchen, das Modell mit anderen Termen und Parametern zu
+verbesseren.
+
+Sorge Dich nicht, wenn das alles nicht funktioniert. Konzentriere
+Dich dann auf die ersten zwei Kapitel Deiner Bachelorarbeit mit
+der Analyse der Pedestal-Position und -Breite. Du kannst Dich an 
+Louise Oakes (im cc) wenden, wenn es Probleme gibt, die obigen 
+Kommandos auf einem unserer Rechner auszuführen.
+
+Gruss,
+
+Ulli

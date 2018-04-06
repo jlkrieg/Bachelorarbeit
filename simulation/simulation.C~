@@ -1,0 +1,60 @@
+#include <iostream>
+#include <TMath.h>
+#include <TRandom3.h>
+#include <TNtuple.h>
+#include <TFile.h>
+#include <TH1F.h>
+#include <TF1.h>
+#include <TGraph.h>
+#include <TCanvas.h>
+#include <TStyle.h>
+#include <TAxis.h>
+
+void simulation(){
+
+  Double_t deg2rad = TMath::Pi()/180;//
+  const char*name="drive";
+  TFile *file= TFile::Open("run281_simulation.root");
+  TNtuple *astro=(TNtuple*)file->Get("astro");
+  Int_t N=astro->GetEntries();
+  Double_t ela[N],aza[N];
+  const Float_t* a = astro->GetArgs();
+  for (int i=0; i<N; i++){
+    astro->GetEntry(i);
+    ela[i] = a[0];
+    aza[i] = a[1];
+  }
+  TNtuple *drive=(TNtuple*)file->Get(name);
+  Int_t N_drive=drive->GetEntries();
+  Double_t eld[N],azd[N],alpha[N];
+    const Float_t* b = drive->GetArgs();
+  for (int i=0; i<N; i++){
+    drive->GetEntry(i);
+    eld[i] = b[0];
+    azd[i] = b[1];
+    alpha[i] = b[2];
+  }
+  Double_t ela_rad[N],eld_rad[N],aza_rad[N],azd_rad[N];
+  for(int i=0; i<N; i++){
+  ela_rad[i] = ela[i]*deg2rad;
+  eld_rad[i] = eld[i]*deg2rad;
+  aza_rad[i] = aza[i]*deg2rad;
+  azd_rad[i] = azd[i]*deg2rad;
+  }
+  TCanvas *can= new TCanvas("c","c",1200,600);
+  gStyle->SetOptStat(1);
+  can->Divide(2,1);
+  can->cd(1);
+  TGraph* g_el=new TGraph(N,ela_rad,eld_rad);
+  TF1 *f_el =new TF1("f_el","asin([0]*sin(x))");
+  g_el->Fit(f_el);
+  g_el->SetTitle("Elevation");
+  g_el->Draw("A*");
+  can->cd(2);
+  can->Update();
+  TGraph* g_az=new TGraph(N,ela_rad,azd_rad);
+  TF1 *f_az =new TF1("f_az","atan([0]/cos(x))");
+  g_az->Fit(f_az);
+  g_az->SetTitle("Azemut");
+  g_az->Draw("A*");
+}

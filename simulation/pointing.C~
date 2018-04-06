@@ -1,0 +1,6 @@
+#include <iostream>
+
+int N=56;
+Double_t eld[N];
+for (int i=1;i<N;i++){eld[i]=34+1}
+std::cout<<eld<<std::endl;

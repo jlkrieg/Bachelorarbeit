@@ -1,0 +1,62 @@
+#include <iostream>
+#include <TFile.h>
+#include <TNtuple.h>
+
+void cut(){
+
+  TFile *file= TFile::Open("run281.root");
+  TNtuple *nt=(TNtuple*)file->Get("nt");
+  TNtuple *ntuple = new TNtuple("nt", "nt","u:azd:eld:az:el:flag:ps:x1:x2:x3",32000);
+  TNtuple *drive = new TNtuple("drive", "drive","eld:azd",32000);
+  TNtuple *astro = new TNtuple("astro", "astro","el:az",32000);
+  Int_t N=nt->GetEntries();
+  const Float_t* a = nt->GetArgs(); Double_t u[N],azd[N],eld[N],az[N],el[N],flag[N],ps[N],x1[N],x2[N],x3[N];
+  Int_t N_c=0;
+  for (int i=0; i<N; i++){
+    nt->GetEntry(i);
+    u[i]   = a[0];
+    azd[i] = a[1];
+    eld[i] = a[2];
+    az[i]  = a[3];
+    el[i]  = a[4];
+    flag[i]= a[5];
+    ps[i]  = a[6];
+    x1[i]  = a[7];
+    x2[i]  = a[8];
+    x3[i]  = a[9];
+    if (fabs(azd[i])<5 && fabs(eld[i])>35 && fabs(ps[i]-11.03)<0.05){
+      N_c++;
+      
+    }
+  }
+  Double_t u_c[N_c],azd_c[N_c],eld_c[N_c],az_c[N_c],el_c[N_c],flag_c[N_c],ps_c[N_c],x1_c[N_c],x2_c[N_c],x3_c[N_c];
+  Int_t i_c=1;
+  for (int i=0; i<N; i++){
+    if (fabs(azd[i])<5 && fabs(eld[i])>35 && fabs(ps[i]-11.03)<0.05){
+      u_c[i_c]   = u[i];
+      azd_c[i_c] = azd[i];
+      eld_c[i_c] = eld[i];
+      az_c[i_c]  = az[i];
+      el_c[i_c]  = el[i];
+      flag_c[i_c]= flag[i];
+      ps_c[i_c]  = ps[i];
+      x1_c[i_c]  = x1[i];
+      x2_c[i_c]  = x2[i];
+      x3_c[i_c]  = x3[i];
+      //std::cout<<azd[i]<<std::endl;
+      ntuple->TNtuple::Fill(u_c[i_c],azd_c[i_c],eld_c[i_c],az_c[i_c],el_c[i_c],flag_c[i_c],ps_c[i_c],x1_c[i_c],x2_c[i_c],x3_c[i_c]);
+      drive->TNtuple::Fill(eld[i_c],azd[i_c]);
+      astro->TNtuple::Fill(el[i_c],az[i_c]);
+      i_c++;
+    }
+  }
+  TFile f1("run281_cut.root","recreate");
+  ntuple->Write();
+  f1.Close();
+
+  TFile f2("run281_simulation.root","recreate");
+  drive->Write();
+  astro->Write();
+  f2.Close()
+    ;
+}

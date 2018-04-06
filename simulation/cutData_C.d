@@ -1,0 +1,52 @@
+
+# DO NOT DELETE
+
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TFile.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TDirectoryFile.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TDirectory.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TNamed.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TObject.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/Rtypes.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/RConfig.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/RVersion.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/DllImport.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/Rtypeinfo.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/snprintf.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/strlcpy.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TGenericClassInfo.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TSchemaHelper.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TStorage.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TVersionCheck.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/Riosfwd.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TBuffer.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TString.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TMathBase.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TList.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TSeqCollection.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TCollection.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TIterator.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TDatime.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TUUID.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TMap.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/THashTable.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TUrl.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TNtuple.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TTree.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TBranch.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TObjArray.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TAttFill.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TDataType.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TDictionary.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/Property.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TAttLine.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TAttMarker.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TArrayD.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TArray.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TArrayI.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TClass.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TObjString.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TVirtualTreePlayer.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TMath.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/TError.h
+./cutData_C.so: /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/cintdictversion.h /mnt/nfs64/root_v5.34.00__gcc-4.4.7/include/RVersion.h
+cutData_C__ROOTBUILDVERSION= 5.34/00

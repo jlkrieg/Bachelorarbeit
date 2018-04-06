@@ -1,0 +1,40 @@
+#include <iostream>
+#include <TMath.h>
+#include <TRandom3.h>
+#include <TNtuple.h>
+#include <TFile.h>
+
+void generateData(){
+  TNtuple *astro = new TNtuple("astro", "astro","el:az",32000);
+  TNtuple *drive0 = new TNtuple("drive0", "drive0","el0:az0",32000);
+  TNtuple *drive1 = new TNtuple("drive1", "drive1","el1:az1:alpha_rand1",32000);
+  TNtuple *drive2 = new TNtuple("drive2", "drive2","el2:az2:alpha_rand2",32000);
+  Double_t deg2rad = TMath::Pi()/180;
+  Double_t rad2deg = 180/TMath::Pi();
+  Double_t alpha = 8; //azimut offset, degree
+  TRandom3 alpha_rand = TRandom3();
+  int N=56;
+  Double_t el[N],az[N],alpha_rand1[N],alpha_rand2[N],az0[N],az1[N],az2[N],el0[N],el1[N],el2[N];
+  for (int i=1; i<=N;i++){
+    el[i]=i+34;
+    az[i]=0;
+    alpha_rand1[i]=(alpha_rand.Gaus(alpha,1));
+    alpha_rand2[i]=(alpha_rand.Gaus(alpha,2));
+    az0[i]=atan(tan(alpha*deg2rad)/cos(el[i]*deg2rad))*rad2deg;
+    az1[i]=atan(tan(alpha_rand1[i]*deg2rad)/cos(el[i]*deg2rad))*rad2deg;
+    az2[i]=atan(tan(alpha_rand2[i]*deg2rad)/cos(el[i]*deg2rad))*rad2deg;
+    el0[i]=asin(cos(alpha*deg2rad)*sin(el[i]*deg2rad))*rad2deg;
+    el1[i]=asin(cos(alpha_rand1[i]*deg2rad)*sin(el[i]*deg2rad))*rad2deg;
+    el2[i]=asin(cos(alpha_rand2[i]*deg2rad)*sin(el[i]*deg2rad))*rad2deg;
+    astro->TNtuple::Fill(el[i],az[i]);
+    drive0->TNtuple::Fill(el0[i],az0[i]);
+    drive1->TNtuple::Fill(el1[i],az1[i],alpha_rand1[i]);
+    drive2->TNtuple::Fill(el2[i],az2[i],alpha_rand2[i]);
+  }
+  TFile myfile("generatedData.root","recreate");
+  astro->Write();
+  drive0->Write();
+  drive1->Write();
+  drive2->Write();
+  myfile.Close();
+}
