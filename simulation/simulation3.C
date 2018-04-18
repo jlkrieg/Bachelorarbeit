@@ -68,7 +68,7 @@ void simulation3(){
     daz[i]=(azd[i]-aza[i])*deg2rad;
   }
 
-  Double_t alpha_del,alpha_daz,phi_del,phi_daz,alpha_err_del,alpha_err_daz,phi_err_del,phi_err_daz,chi_del,dof_del,chi_daz,dof_daz;
+  Double_t alpha_del,alpha_daz,phi_del,phi_daz,alpha_err_del,alpha_err_daz,phi_err_del,phi_err_daz;//,chi_del,dof_del,chi_daz,dof_daz;
   Double_t del_err[N],daz_err[N],del_fit[N],daz_fit[N];
 
   TCanvas *can= new TCanvas("c","c",1200,600);
@@ -77,7 +77,7 @@ void simulation3(){
   can->cd(1);
   can->Update();
   TGraph* g_del =new TGraph(N,el,del);
-  TF1 *f_del =new TF1("f_eld","asin(sqrt((1-cos(2*x))/(1+[0])))+[1]+x*[2]-x"); 
+  TF1 *f_del =new TF1("f_eld","asin(sqrt((1-cos(2*x))/(1+[0])))+[1]-x"); 
   f_del->SetParLimits(0,0.9,0.98);
   f_del->SetParLimits(1,0,0.1);
   g_del->Fit(f_del);
