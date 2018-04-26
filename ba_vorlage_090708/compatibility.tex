@@ -1,0 +1,30 @@
+\usepackage{ifpdf}
+
+\ifpdf
+%%das kann man benutzen, wenn man andere Formate benutzen will
+%\DeclareGraphicsExtensions{{.pdf}}   %Endung der Grafiken, wenn nicht pdf
+% die folgenden Angaben sind im PDF unter Datei | Dokumenteigenschaften 
+% in Acrobat / Acrobat Reader sichtbar
+% Aendern Sie bitte die Daten, wo noetig!
+\usepackage[%
+	pdftitle={\dctitle},
+	pdfauthor={\dcauthorsurname\ \dcauthorname},
+	pdfsubject={\dcpdfsubject}, % optional
+	pdfkeywords={\dckeydea, \dckeydeb, \dckeydec, \dckeyded},
+	pdfpagemode=UseOutlines,
+  colorlinks=true,					% bitte nicht ändern!
+	linkcolor=black,					% bitte nicht ändern!
+	filecolor=black,					% bitte nicht ändern!
+	urlcolor=black,						% bitte nicht ändern!
+	citecolor=black,					% bitte nicht ändern!
+	pdftex=true,              % bitte nicht ändern!
+	plainpages=false,         % bitte nicht ändern!
+	hypertexnames=false,      % bitte nicht ändern!
+	pdfpagelabels=true,       % bitte nicht ändern!
+	hyperindex=true]{hyperref}% bitte nicht ändern!
+\else
+  % hier kann mann eventuelle Befehle umdefinieren
+  % die nur für pdfLaTeX vorgesehen sind
+  % und das richtige Kompilieren durch den normalen LaTeX verhindern
+	\newcommand{\texorpdfstring}[1]{#1}
+\fi

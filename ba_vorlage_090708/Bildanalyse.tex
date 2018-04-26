@@ -1,0 +1,22 @@
+\chapter{Bildanalyse}
+Zu Beginn war der MST Protoyp in Adlershof noch nicht mit einem Cherenkovdetektor ausgestattet, sondern nur mit einfachen CCDs. Mit diesen wurde die Helligkeit des Nachthimmels beobachtet.
+
+\section{CCD Kameras}
+
+\section{Verwendete Kamera}
+Das MST ist mit verschiedenen Kameras ausgestattet, wobei nur Bilder der sogenannten Sky-CCD verwendet wurden. Die Sky-CCD ist eine ist eine Kamera des Typs Prosilica GC 1350 mit folgenden technischen Daten.
+
+Die Bilder wurden mit mit drei verschieden Belichtungszeiten (1s, 10s und 20s) und vier verschieden gain-Verstärkungsstufen (0dB, 7dB,14dB und 21dB) aufgenommen. Die Bilder wurden in Schwarz-Weiß mit einer Farbtiefe von 8Bit aufgenommen, das heißt jedem Pixel wird ein Wert von 0 bis 255 zugewiesen, wobei der Wert 255 der maximalen Helligkeit entspricht.
+
+\section{owas}
+Als Bilddaten wurde der Run 199 verwendete, in dem Bilder von bis aufgenommen wurden. Für jedes dieser Bilder wurde der gain und die Belichtungszeit gespeichert sowie ein Histogramm der Helligkeitsverteilung der einzelnen Bilder berechnet. Um ein Maß für die Helligkeit der Bilder zu bestimmen wurde der Median berechnet. Auf das arithmetische Mittel wurde verzichtet, da bei diesem der Einfluss heißer Pixel bei dunklen Bildern unverhältnismäßig groß werden kann. Zudem wurde noch die Breite des Helligkeitmaximums bestimmt in dem dieses als normalverteilt angenommen wurde und somit die Breite einer Standardabweichung berechnet wurde.
+
+\section{Korrelation der Werte}
+Im folgenden soll untersucht werden, wie sich Helligkeit und Breite in Abhängigkeit der Belichtungszeit und des gains verhalten.
+
+\subsection{Abhängigkeit von der Belichtungszeit}
+Eine längere Belichtungszeit bedeutet, dass die Blende der Kamera länger geöffnet bleibt. Daraus folgt die Erwartung, dass die Anzahl der detektierten Photonen proportional steigt und somit auch der Median der Helligkeitsverteilungen.
+
+\subsection{Abhängigkeit vom gain}
+
+\section{Fazit}

@@ -1,0 +1,18 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Erstes Kapitel}{2}{chapter.7}
+\contentsline {section}{\numberline {1.1}Erster Abschnitt Kapitel 1}{2}{section.8}
+\contentsline {subsection}{\numberline {1.1.1}Erster Unterabschnitt }{2}{subsection.9}
+\contentsline {chapter}{\numberline {2}gamma-Astronomie}{3}{chapter.10}
+\contentsline {chapter}{\numberline {3}Das Cherenkov Telescope Array}{4}{chapter.11}
+\contentsline {chapter}{\numberline {4}Pointing von Teleskopen}{5}{chapter.12}
+\contentsline {section}{\numberline {4.1}Koordinatensysteme in der Astronomie}{5}{section.13}
+\contentsline {section}{\numberline {4.2}\~A\IeC {\quotedblbase }quatoriales Koordinatensystem}{5}{section.14}
+\contentsline {section}{\numberline {4.3}irgendwas}{5}{section.15}
+\contentsline {chapter}{\numberline {5}Bildanalyse}{6}{chapter.16}
+\contentsline {section}{\numberline {5.1}CCD Kameras}{6}{section.17}
+\contentsline {section}{\numberline {5.2}Verwendete Kamera}{6}{section.18}
+\contentsline {section}{\numberline {5.3}owas}{6}{section.19}
+\contentsline {section}{\numberline {5.4}Korrelation der Werte}{6}{section.20}
+\contentsline {subsection}{\numberline {5.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{7}{subsection.21}
+\contentsline {subsection}{\numberline {5.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{7}{subsection.22}
+\contentsline {section}{\numberline {5.5}Fazit}{7}{section.23}

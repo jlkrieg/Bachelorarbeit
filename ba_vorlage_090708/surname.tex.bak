@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Dissertationen mit LaTeX auf dem edoc-Server
+%
+% Humboldt-Universitaet zu Berlin
+% Computer- und Medienservice		
+% Arbeitsgruppe Elektronisches Publizieren
+% Bezug der Vorlage und der Richtlinien:	
+%     http://edoc.hu-berlin.de/e_autoren/latex/	
+%						
+% Kontakt: 					
+%     E-Mail: 					
+%					edoc-latex@rz.hu-berlin.de
+%     Telefon: 				siehe 
+%     http://edoc.hu-berlin.de/e_autoren/latex/kontakt.php 	%
+%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	
+% Das folgende Template muss für die Publikation von digitalen        %
+% Dissertationen in LaTeX an der Humboldt-Universität benutzt werden. %
+%	
+% Aendern Sie den Name dieser Datei auf ihren_nachname.tex.           %
+%	
+% Die mit einem Stern (*) gekennzeichnete Teile sind optional;        %
+% falls Sie sie nicht verwenden möchten, sind entsprechende Zeile 		%
+% zu entfernen.
+%		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \listfiles    % Erstellt eine Liste von allen benutzten Dateien
+% zusammen mit ihrer Versionen 
+% und ggf. einer kurzen Beschreibung
+% Sie wird in die log-Datei geschrieben
+
+\documentclass[12pt,a4paper% die Verwendung von DIN-A4-Format ist pflicht!
+]{report}
+\usepackage[top=2cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+
+%notwendige Pakete
+\usepackage[ngerman, english]{babel}	% mehrsprachiger Textsatz
+% babel: letzte Sprache in Optionen zeigt die Sprache des Dokumentes
+% und kann durch den Befehl \selectlanguage{} geaendert werden
+% Passen Sie die Optionen des babel-Paketes nach Bedarf an!
+\usepackage[latin1]{inputenc}		% Eingabekodierung Parameter latin1 darf geändert werden
+\usepackage[T1]{fontenc}				% Schriftenkodierung
+\usepackage{graphicx}						% zum Einbinden von Grafiken
+\usepackage{lmodern}						% Ersatz fuer Computer Modern-Schriften
+																% zum besseren Aussehen am Bildschirm
+
+\include{metadata}							% Bitte ALLE Angaben erfüllen!
+\include{compatibility}
+
+%-Eigene Trennregeln*---------------------------------------------
+
+% \include{hyphenations}
+                          
+%-zusaetzliche Kommandos*-----------------------------------------
+
+%\include{command}
+
+%-Dokument--------------------------------------------------------
+
+\begin{document}
+
+% Es muss zitiert werden können! Im Vorspann roemisch, 
+% Im Hauptteil benutzt man arabische Nummerierung. 
+\pagenumbering{roman}
+
+%-Titelblatt------------------------------------------------------
+
+\include{titlepage}							% Bitte KEINE Änderungen vornehmen!
+\maketitle
+
+
+%-Zusammenfassung / Abstract*-------------------------------------
+
+%\include{abstract}
+%\selectlanguage{english}				% Bitte an die Sprache denken!!!
+%\setcounter{page}{4}  					%	Bitte an die Seitenzahl denken!!! 
+
+%-Widmung*--------------------------------------------------------
+
+\include{dedication}
+
+%-Inhaltsverzeichnis----------------------------------------------
+
+\tableofcontents
+\pagebreak
+
+\listoffigures
+\pagebreak
+
+\listoftables
+
+%-Hauptteil-------------------------------------------------------
+
+\pagenumbering{arabic}
+\pagestyle{myheadings}					% bzw. ist fancyhdr zu benutzten
+
+%-Kapitel---------------------------------------------------------
+
+% part ist optional, bitte ggf. löschen
+% \part{Teil1}			
+
+\include{chapter01}
+% \include{chapter02}
+% usw.
+
+%-Anhang----------------------------------------------------------
+
+\appendix
+
+%-Literaturverzeichnis--------------------------------------------
+
+%\nocite{*}
+%die Verwendung von bibtex ist Pflicht!!!
+\bibliography{bibliography}
+\bibliographystyle{plaindin}   		%bzw. unsrtdin, alphadin, abbrvdin
+
+%-Kapitel des Anhangs---------------------------------------------
+
+%\include{appendixA}
+%\include{appendixB}
+%usw.
+
+%-Abkuerzungen*---------------------------------------------------
+
+%\include{abbreviations}
+
+%-Danksagung*-----------------------------------------------------
+
+%\include{acknowledgement}
+
+%-Lebenslauf*-----------------------------------------------------
+
+%\include{cv}
+
+%-Selbstständigkeiterklärung--------------------------------------
+
+\include{declaration}
+
+%-----------------------------------------------------------------
+
+\end{document}

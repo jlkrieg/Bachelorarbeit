@@ -1,0 +1,4 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Erstes Kapitel}{2}
+\contentsline {section}{\numberline {1.1}Erster Abschnitt Kapitel 1}{2}
+\contentsline {subsection}{\numberline {1.1.1}Erster Unterabschnitt }{2}
