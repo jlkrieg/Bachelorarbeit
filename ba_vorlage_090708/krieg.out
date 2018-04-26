@@ -2,16 +2,19 @@
 \BOOKMARK [1][-]{section.8}{Erster Abschnitt Kapitel 1}{chapter.7}% 2
 \BOOKMARK [2][-]{subsection.9}{Erster Unterabschnitt }{section.8}% 3
 \BOOKMARK [0][-]{chapter.10}{gamma-Astronomie}{}% 4
-\BOOKMARK [0][-]{chapter.11}{Das Cherenkov Telescope Array}{}% 5
-\BOOKMARK [0][-]{chapter.12}{Pointing von Teleskopen}{}% 6
-\BOOKMARK [1][-]{section.13}{Koordinatensysteme in der Astronomie}{chapter.12}% 7
-\BOOKMARK [1][-]{section.14}{\303\214quatoriales Koordinatensystem}{chapter.12}% 8
-\BOOKMARK [1][-]{section.15}{irgendwas}{chapter.12}% 9
-\BOOKMARK [0][-]{chapter.16}{Bildanalyse}{}% 10
-\BOOKMARK [1][-]{section.17}{CCD Kameras}{chapter.16}% 11
-\BOOKMARK [1][-]{section.18}{Verwendete Kamera}{chapter.16}% 12
-\BOOKMARK [1][-]{section.19}{owas}{chapter.16}% 13
-\BOOKMARK [1][-]{section.20}{Korrelation der Werte}{chapter.16}% 14
-\BOOKMARK [2][-]{subsection.21}{Abh\303\244ngigkeit von der Belichtungszeit}{section.20}% 15
-\BOOKMARK [2][-]{subsection.22}{Abh\303\244ngigkeit vom gain}{section.20}% 16
-\BOOKMARK [1][-]{section.23}{Fazit}{chapter.16}% 17
+\BOOKMARK [1][-]{section.11}{bottom up}{chapter.10}% 5
+\BOOKMARK [1][-]{section.12}{top down}{chapter.10}% 6
+\BOOKMARK [1][-]{section.13}{Cherenkov Strahlung}{chapter.10}% 7
+\BOOKMARK [0][-]{chapter.14}{Das Cherenkov Telescope Array}{}% 8
+\BOOKMARK [0][-]{chapter.15}{Pointing von Teleskopen}{}% 9
+\BOOKMARK [1][-]{section.16}{Koordinatensysteme in der Astronomie}{chapter.15}% 10
+\BOOKMARK [1][-]{section.17}{\303\214quatoriales Koordinatensystem}{chapter.15}% 11
+\BOOKMARK [1][-]{section.18}{irgendwas}{chapter.15}% 12
+\BOOKMARK [0][-]{chapter.19}{Bildanalyse}{}% 13
+\BOOKMARK [1][-]{section.20}{CCD Kameras}{chapter.19}% 14
+\BOOKMARK [1][-]{section.21}{Verwendete Kamera}{chapter.19}% 15
+\BOOKMARK [1][-]{section.22}{owas}{chapter.19}% 16
+\BOOKMARK [1][-]{section.23}{Korrelation der Werte}{chapter.19}% 17
+\BOOKMARK [2][-]{subsection.24}{Abh\303\244ngigkeit von der Belichtungszeit}{section.23}% 18
+\BOOKMARK [2][-]{subsection.25}{Abh\303\244ngigkeit vom gain}{section.23}% 19
+\BOOKMARK [1][-]{section.26}{Fazit}{chapter.19}% 20
