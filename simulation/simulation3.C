@@ -101,7 +101,7 @@ void simulation3(){
   phi_del = calc_phi(f_del->GetParameter(1));
   phi_err_del = calc_phi(f_del->GetParError(1));
   std::cout<<"chisq/dof"<<f_del->GetChisquare()/f_del->GetNDF()<<std::endl;
-  std::cout<<"errorbars"<<del_err[1]<<std::endl;
+  std::cout<<"errorbars"<<del_err[1]*rad2deg<<std::endl;
   }
   can->cd(2);
   can->Update();
@@ -131,15 +131,18 @@ void simulation3(){
   phi_daz = calc_phi(f_daz->GetParameter(1));
   phi_err_daz = calc_phi_err(f_daz->GetParError(1));
   std::cout<<f_daz->GetChisquare()/f_daz->GetNDF()<<std::endl;
-  std::cout<<"errorbars"<<daz_err[1]<<std::endl;
+  std::cout<<"errorbars"<<daz_err[1]*rad2deg<<std::endl;
   }
-  //can->Print("simulation2.png");
+  can->Print("errorbars.png");
 
-  std::cout<<"----------------------"<<std::endl;
-  std::cout<<"alpha (el) = "<<alpha_del<<"+-"<<alpha_err_del<<std::endl;
-  std::cout<<"alpha (az) = "<<alpha_daz<<"+-"<<alpha_err_daz<<std::endl;
-  std::cout<<"----------------------"<<std::endl;
-  std::cout<<"phi (el)   = "<<phi_del<<"+-"<<phi_err_del<<std::endl;
-  std::cout<<"phi (az)   = "<<phi_daz<<"+-"<<phi_err_daz<<std::endl;
-  std::cout<<"----------------------"<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
+  std::cout<<"alpha (el)  = "<<alpha_del<<"+-"<<alpha_err_del<<std::endl;
+  std::cout<<"alpha (az)  = "<<alpha_daz<<"+-"<<alpha_err_daz<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
+  std::cout<<"phi (el)    = "<<phi_del<<"+-"<<phi_err_del<<std::endl;
+  std::cout<<"phi (az)    = "<<phi_daz<<"+-"<<phi_err_daz<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
+  std::cout<<"errbar (el) = "<<del_err[1]*rad2deg<<std::endl;
+  std::cout<<"errbar (az) = "<<daz_err[1]*rad2deg<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
 }
