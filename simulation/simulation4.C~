@@ -1,0 +1,148 @@
+#include <iostream>
+#include <TMath.h>
+#include <TRandom3.h>
+#include <TNtuple.h>
+#include <TFile.h>
+#include <TH1F.h>
+#include <TF1.h>
+#include <TGraph.h>
+#include <TCanvas.h>
+#include <TStyle.h>
+#include <TAxis.h>
+#include <TGraphErrors.h>
+
+Double_t deg2rad = TMath::Pi()/180;
+Double_t rad2deg = 180/TMath::Pi();
+
+Double_t pointing_del(Double_t x,Double_t par0, Double_t par1){
+  return asin(sqrt((1-cos(2*x))/(1+par0)))+par1-x;
+  //return asin(sqrt((1-cos(2*(x+par1)))/(1+par0)))-x;
+  //return 2*atan((par0-sqrt(pow(par0,2)+pow(par1,2)-pow(sin(x),2)))/(par1+sin(x)));
+  }
+
+Double_t pointing_daz(Double_t x,Double_t par0, Double_t par1){
+  return -atan(sqrt(2*(1-par0))/(sqrt((cos(2*x)+par0)*(1+cos(2*par1)))+sqrt((1-par0)*(1-cos(2*par1)))));
+  //return -atan(sqrt((1-par0)/(par0+cos(2*(x+par1)))));
+  }
+
+Double_t calc_err(Double_t N,Double_t *data,Double_t *fit,Double_t DoF){
+  Double_t err=0;
+  for (int i=0;i<N;i++){
+    err=err+pow((data[i]-fit[i]),2);
+  }
+  return sqrt(err/DoF);
+}
+
+Double_t calc_alpha(Double_t par){
+  return acos(par)/2*rad2deg;
+}
+
+Double_t calc_alpha_err(Double_t par, Double_t par_err){
+  return par_err/sqrt(1+pow(par,2))*rad2deg;
+}
+
+Double_t calc_phi(Double_t par){
+  return par*rad2deg;
+}
+
+Double_t calc_phi_err(Double_t par_err){
+  return par_err*rad2deg;
+}    
+
+void simulation3(){
+  TFile *file= TFile::Open("run281_cut.root");
+  TNtuple *nt=(TNtuple*)file->Get("nt");
+  Int_t N=nt->GetEntries();
+  Double_t eld[N],azd[N],ela[N],aza[N];
+  Double_t el[N],az[N],del[N],daz[N]; //radiant
+  const Float_t* a = nt->GetArgs();
+  for (int i=0; i<N; i++){
+    nt->GetEntry(i);
+    azd[i] = a[1];
+    eld[i] = a[2];
+    aza[i] = a[3];
+    ela[i] = a[4];
+    el[i] = ela[i]*deg2rad;
+    az[i] = aza[i]*deg2rad;
+    del[i]=(eld[i]-ela[i])*deg2rad;
+    daz[i]=(azd[i]-aza[i])*deg2rad;
+  }
+
+  Double_t alpha_del,alpha_daz,phi_del,phi_daz,alpha_err_del,alpha_err_daz,phi_err_del,phi_err_daz;//,chi_del,dof_del,chi_daz,dof_daz;
+  Double_t del_err[N],daz_err[N],del_fit[N],daz_fit[N];
+
+  TCanvas *can= new TCanvas("c","c",1200,600);
+  gStyle->SetOptStat(1);
+  can->Divide(2,1);
+  can->cd(1);
+  can->Update();
+  TGraph* g_del =new TGraph(N,el,del);
+  TF1 *f_del =new TF1("f_eld","asin(sqrt((1-cos(2*x))/(1+[0])))+[1]-x"); 
+  f_del->SetParLimits(0,0.9,0.98);
+  f_del->SetParLimits(1,0,0.1);
+  g_del->Fit(f_del);
+  for (int j=1;j<3;j++){
+  //Berechnung der Fitdatenpunkte
+  for (int i=0; i<N; i++){
+    del_fit[i]=pointing_del(el[i],f_del->GetParameter(0),f_del->GetParameter(1));
+  }
+  //Berechnung der Fehlerbalken
+  for (int i=0; i<N; i++){
+    del_err[i] = calc_err(N,del,del_fit,f_del->GetNDF());
+  }
+  TGraphErrors* gerr_del = new TGraphErrors(N,el,del,0,del_err);
+  gerr_del->Fit(f_del,"","",0,1.34);
+  gerr_del->SetTitle("#Delta Elevation");
+  gerr_del->GetXaxis()->SetTitle("elevation (rad)");
+  gerr_del->GetYaxis()->SetTitle("#Delta el (rad)");
+  gerr_del->Draw("AP");
+  alpha_del = calc_alpha(f_del->GetParameter(0));
+  alpha_err_del=calc_alpha_err(f_del->GetParameter(0),f_del->GetParError(0));
+  phi_del = calc_phi(f_del->GetParameter(1));
+  phi_err_del = calc_phi(f_del->GetParError(1));
+  std::cout<<"chisq/dof"<<f_del->GetChisquare()/f_del->GetNDF()<<std::endl;
+  std::cout<<"errorbars"<<del_err[1]*rad2deg<<std::endl;
+  }
+  can->cd(2);
+  can->Update();
+  TGraph* g_daz=new TGraph(N,el,daz);
+  TF1 *f_daz =new TF1("f_daz","-atan(sqrt(2*(1-[0]))/(sqrt((cos(2*x)+[0])*(1+cos(2*[1])))+sqrt((1-[0])*(1-cos(2*[1])))))");
+  f_daz->SetParLimits(0,0.9,1);
+  f_daz->SetParLimits(1,0,0.05);
+  g_daz->Fit(f_daz);
+  g_daz->Draw("A*");
+  for (int j=1;j<3;j++){
+  //Berechnung der Fitdatenpunkte
+  for (int i=0; i<N; i++){
+    daz_fit[i]=pointing_daz(el[i],f_daz->GetParameter(0),f_daz->GetParameter(1));
+  }
+  //Berechnung der Fehlerbalken
+  for (int i=0; i<N; i++){
+    daz_err[i] = calc_err(N,daz,daz_fit,f_daz->GetNDF());
+  }
+  TGraphErrors* gerr_daz = new TGraphErrors(N,el,daz,0,daz_err);
+  gerr_daz->Fit(f_daz);
+  gerr_daz->SetTitle("#Delta Azimut");
+  gerr_daz->GetXaxis()->SetTitle("elevation (rad)");
+  gerr_daz->GetYaxis()->SetTitle("#Delta az (rad)");
+  gerr_daz->Draw("AP");
+  alpha_daz = calc_alpha(f_daz->GetParameter(0));
+  alpha_err_daz=calc_alpha_err(f_daz->GetParameter(0),f_daz->GetParError(0));
+  phi_daz = calc_phi(f_daz->GetParameter(1));
+  phi_err_daz = calc_phi_err(f_daz->GetParError(1));
+  std::cout<<f_daz->GetChisquare()/f_daz->GetNDF()<<std::endl;
+  std::cout<<"errorbars"<<daz_err[1]*rad2deg<<std::endl;
+  }
+  can->Print("errorbars.png");
+
+  std::cout<<"------------------------"<<std::endl;
+  std::cout<<"alpha (el)  = "<<alpha_del<<"+-"<<alpha_err_del<<std::endl;
+  std::cout<<"alpha (az)  = "<<alpha_daz<<"+-"<<alpha_err_daz<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
+  std::cout<<"phi (el)    = "<<phi_del<<"+-"<<phi_err_del<<std::endl;
+  std::cout<<"phi (az)    = "<<phi_daz<<"+-"<<phi_err_daz<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
+  std::cout<<"errbar (el) = "<<del_err[1]*rad2deg<<std::endl;
+  std::cout<<"errbar (az) = "<<daz_err[1]*rad2deg<<std::endl;
+  std::cout<<"------------------------"<<std::endl;
+}
