@@ -32,14 +32,15 @@ double waerr(Double_t a[], Double_t b[],int c){
 void Korrelation2(){
   TFile *file= TFile::Open("imgdata.root");
   TTree *tree=(TTree*)file->Get("ntuple");
-  Long64_t entries =tree->GetEntries();
+  Int_t entries =tree->GetEntries();
   TLeaf*g =tree->GetLeaf("gain");
   TLeaf*e =tree->GetLeaf("exposure");
   TLeaf*m =tree->GetLeaf("median");
   TLeaf*w =tree->GetLeaf("width");
   double ve,vg;
   int e1g0=0,e1g7=0,e1g14=0,e1g21=0,e10g0=0,e10g7=0,e10g14=0,e10g21=0,e20g0=0,e20g7=0,e20g14=0,e20g21=0;
-  Double_t e1g0m[entries],e1g0w[entries],e1g7m[entries],e1g7w[entries],e1g14m[entries],e1g14w[entries],e1g21m[entries],e1g21w[entries],e10g0m[entries],e10g0w[entries],e10g7m[entries],e10g7w[entries],e10g14m[entries],e10g14w[entries],e10g21m[entries],e10g21w[entries],e20g0m[entries],e20g0w[entries],e20g7m[entries],e20g7w[entries],e20g14m[entries],e20g14w[entries],e20g21m[entries],e20g21w[entries];
+  Double_t e1g0m[entries];
+Double_t e1g0w[entries],e1g7m[entries],e1g7w[entries],e1g14m[entries],e1g14w[entries],e1g21m[entries],e1g21w[entries],e10g0m[entries],e10g0w[entries],e10g7m[entries],e10g7w[entries],e10g14m[entries],e10g14w[entries],e10g21m[entries],e10g21w[entries],e20g0m[entries],e20g0w[entries],e20g7m[entries],e20g7w[entries],e20g14m[entries],e20g14w[entries],e20g21m[entries],e20g21w[entries];
   for (int i=0; i<entries;i++){
     e->GetBranch()->GetEntry(i);
     ve=e->GetValue();
