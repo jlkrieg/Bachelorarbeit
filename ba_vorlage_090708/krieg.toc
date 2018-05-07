@@ -3,19 +3,31 @@
 \contentsline {section}{\numberline {1.1}Erster Abschnitt Kapitel 1}{2}{section.8}
 \contentsline {subsection}{\numberline {1.1.1}Erster Unterabschnitt }{2}{subsection.9}
 \contentsline {chapter}{\numberline {2}gamma-Astronomie}{3}{chapter.10}
-\contentsline {section}{\numberline {2.1}bottom up}{3}{section.11}
-\contentsline {section}{\numberline {2.2}top down}{3}{section.12}
-\contentsline {section}{\numberline {2.3}Cherenkov Strahlung}{3}{section.13}
-\contentsline {chapter}{\numberline {3}Das Cherenkov Telescope Array}{4}{chapter.14}
-\contentsline {chapter}{\numberline {4}Pointing von Teleskopen}{5}{chapter.15}
-\contentsline {section}{\numberline {4.1}Koordinatensysteme in der Astronomie}{5}{section.16}
-\contentsline {section}{\numberline {4.2}\~A\IeC {\quotedblbase }quatoriales Koordinatensystem}{5}{section.17}
-\contentsline {section}{\numberline {4.3}irgendwas}{5}{section.18}
-\contentsline {chapter}{\numberline {5}Bildanalyse}{6}{chapter.19}
-\contentsline {section}{\numberline {5.1}CCD Kameras}{6}{section.20}
-\contentsline {section}{\numberline {5.2}Verwendete Kamera}{6}{section.21}
-\contentsline {section}{\numberline {5.3}owas}{6}{section.22}
-\contentsline {section}{\numberline {5.4}Korrelation der Werte}{6}{section.23}
-\contentsline {subsection}{\numberline {5.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{7}{subsection.24}
-\contentsline {subsection}{\numberline {5.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{7}{subsection.25}
-\contentsline {section}{\numberline {5.5}Fazit}{7}{section.26}
+\contentsline {section}{\numberline {2.1}Quellen und Entstehung von hochenergetischer Strahlung}{3}{section.11}
+\contentsline {subsection}{\numberline {2.1.1}bottom up}{3}{subsection.12}
+\contentsline {subsection}{\numberline {2.1.2}top down}{3}{subsection.13}
+\contentsline {section}{\numberline {2.2}Detektion von Strahlung}{4}{section.14}
+\contentsline {subsection}{\numberline {2.2.1}Luftschauer}{4}{subsection.15}
+\contentsline {subsection}{\numberline {2.2.2}Cherenkov Strahlung}{4}{subsection.16}
+\contentsline {subsection}{\numberline {2.2.3}Detektion mit Teleskopen}{4}{subsection.17}
+\contentsline {chapter}{\numberline {3}Das Cherenkov Telescope Array}{5}{chapter.18}
+\contentsline {chapter}{\numberline {4}Pointing von Teleskopen}{6}{chapter.19}
+\contentsline {section}{\numberline {4.1}Koordinatensysteme in der Astronomie}{6}{section.20}
+\contentsline {section}{\numberline {4.2}\~A\IeC {\quotedblbase }quatoriales Koordinatensystem}{6}{section.21}
+\contentsline {section}{\numberline {4.3}irgendwas}{6}{section.22}
+\contentsline {chapter}{\numberline {6}Bildanalyse}{9}{chapter.31}
+\contentsline {section}{\numberline {6.1}CCD Kameras}{9}{section.32}
+\contentsline {section}{\numberline {6.2}Verwendete Kamera}{9}{section.33}
+\contentsline {section}{\numberline {6.3}owas}{9}{section.34}
+\contentsline {section}{\numberline {6.4}Korrelation der Werte}{9}{section.35}
+\contentsline {subsection}{\numberline {6.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{10}{subsection.36}
+\contentsline {subsection}{\numberline {6.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{10}{subsection.37}
+\contentsline {section}{\numberline {6.5}Fazit}{10}{section.38}
+\contentsline {chapter}{\numberline {6}Bildanalyse}{9}{chapter.31}
+\contentsline {section}{\numberline {6.1}CCD Kameras}{9}{section.32}
+\contentsline {section}{\numberline {6.2}Verwendete Kamera}{9}{section.33}
+\contentsline {section}{\numberline {6.3}owas}{9}{section.34}
+\contentsline {section}{\numberline {6.4}Korrelation der Werte}{9}{section.35}
+\contentsline {subsection}{\numberline {6.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{10}{subsection.36}
+\contentsline {subsection}{\numberline {6.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{10}{subsection.37}
+\contentsline {section}{\numberline {6.5}Fazit}{10}{section.38}

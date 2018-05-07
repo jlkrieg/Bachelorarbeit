@@ -2,19 +2,31 @@
 \BOOKMARK [1][-]{section.8}{Erster Abschnitt Kapitel 1}{chapter.7}% 2
 \BOOKMARK [2][-]{subsection.9}{Erster Unterabschnitt }{section.8}% 3
 \BOOKMARK [0][-]{chapter.10}{gamma-Astronomie}{}% 4
-\BOOKMARK [1][-]{section.11}{bottom up}{chapter.10}% 5
-\BOOKMARK [1][-]{section.12}{top down}{chapter.10}% 6
-\BOOKMARK [1][-]{section.13}{Cherenkov Strahlung}{chapter.10}% 7
-\BOOKMARK [0][-]{chapter.14}{Das Cherenkov Telescope Array}{}% 8
-\BOOKMARK [0][-]{chapter.15}{Pointing von Teleskopen}{}% 9
-\BOOKMARK [1][-]{section.16}{Koordinatensysteme in der Astronomie}{chapter.15}% 10
-\BOOKMARK [1][-]{section.17}{\303\214quatoriales Koordinatensystem}{chapter.15}% 11
-\BOOKMARK [1][-]{section.18}{irgendwas}{chapter.15}% 12
-\BOOKMARK [0][-]{chapter.19}{Bildanalyse}{}% 13
-\BOOKMARK [1][-]{section.20}{CCD Kameras}{chapter.19}% 14
-\BOOKMARK [1][-]{section.21}{Verwendete Kamera}{chapter.19}% 15
-\BOOKMARK [1][-]{section.22}{owas}{chapter.19}% 16
-\BOOKMARK [1][-]{section.23}{Korrelation der Werte}{chapter.19}% 17
-\BOOKMARK [2][-]{subsection.24}{Abh\303\244ngigkeit von der Belichtungszeit}{section.23}% 18
-\BOOKMARK [2][-]{subsection.25}{Abh\303\244ngigkeit vom gain}{section.23}% 19
-\BOOKMARK [1][-]{section.26}{Fazit}{chapter.19}% 20
+\BOOKMARK [1][-]{section.11}{Quellen und Entstehung von hochenergetischer Strahlung}{chapter.10}% 5
+\BOOKMARK [2][-]{subsection.12}{bottom up}{section.11}% 6
+\BOOKMARK [2][-]{subsection.13}{top down}{section.11}% 7
+\BOOKMARK [1][-]{section.14}{Detektion von Strahlung}{chapter.10}% 8
+\BOOKMARK [2][-]{subsection.15}{Luftschauer}{section.14}% 9
+\BOOKMARK [2][-]{subsection.16}{Cherenkov Strahlung}{section.14}% 10
+\BOOKMARK [2][-]{subsection.17}{Detektion mit Teleskopen}{section.14}% 11
+\BOOKMARK [0][-]{chapter.18}{Das Cherenkov Telescope Array}{}% 12
+\BOOKMARK [0][-]{chapter.19}{Pointing von Teleskopen}{}% 13
+\BOOKMARK [1][-]{section.20}{Koordinatensysteme in der Astronomie}{chapter.19}% 14
+\BOOKMARK [1][-]{section.21}{\303\214quatoriales Koordinatensystem}{chapter.19}% 15
+\BOOKMARK [1][-]{section.22}{irgendwas}{chapter.19}% 16
+\BOOKMARK [0][-]{chapter.23}{Bildanalyse}{}% 17
+\BOOKMARK [1][-]{section.24}{CCD Kameras}{chapter.23}% 18
+\BOOKMARK [1][-]{section.25}{Verwendete Kamera}{chapter.23}% 19
+\BOOKMARK [1][-]{section.26}{owas}{chapter.23}% 20
+\BOOKMARK [1][-]{section.27}{Korrelation der Werte}{chapter.23}% 21
+\BOOKMARK [2][-]{subsection.28}{Abh\303\244ngigkeit von der Belichtungszeit}{section.27}% 22
+\BOOKMARK [2][-]{subsection.29}{Abh\303\244ngigkeit vom gain}{section.27}% 23
+\BOOKMARK [1][-]{section.30}{Fazit}{chapter.23}% 24
+\BOOKMARK [0][-]{chapter.31}{Bildanalyse}{}% 25
+\BOOKMARK [1][-]{section.32}{CCD Kameras}{chapter.31}% 26
+\BOOKMARK [1][-]{section.33}{Verwendete Kamera}{chapter.31}% 27
+\BOOKMARK [1][-]{section.34}{owas}{chapter.31}% 28
+\BOOKMARK [1][-]{section.35}{Korrelation der Werte}{chapter.31}% 29
+\BOOKMARK [2][-]{subsection.36}{Abh\303\244ngigkeit von der Belichtungszeit}{section.35}% 30
+\BOOKMARK [2][-]{subsection.37}{Abh\303\244ngigkeit vom gain}{section.35}% 31
+\BOOKMARK [1][-]{section.38}{Fazit}{chapter.31}% 32
