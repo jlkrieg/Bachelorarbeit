@@ -33,7 +33,7 @@ Double_t daz(Double_t el,Double_t phi0,Double_t phi1){
   return atan2(-A,B)/f;
 }
 
-void run281f(float _AZ=90){
+void run281f3a(float _AZ=90){
   AZ = _AZ;
   TNtuple*nt = (TNtuple*)gDirectory->Get("nt");
   Int_t N = nt->GetEntries();
@@ -84,7 +84,7 @@ void run281f(float _AZ=90){
   can->Divide(2,2);
   can->cd(1);
   g1->Draw("AP");
-  TF1*f = new TF1("f",fitfunc,0,90,2);
+  TF1*f = new TF1("f",fitfunc,0,90);
   g1->Fit("f","","",20,90);
   double az0 = g1->GetFunction("f")->GetParameter(0);
   double el0 = g1->GetFunction("f")->GetParameter(1);
@@ -120,7 +120,7 @@ void run281f(float _AZ=90){
     el=el-del(eld,az0,el0);
     g3->SetPoint(kk++,eld,el);
     if( fabs(a[1]-AZ)<2 ){
-      az=az-daz(eld,phi0,phi1);
+      az=az-daz(eld,az0,el0);
       g4->SetPoint(k,eld,az);
       k++;
     }
