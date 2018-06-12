@@ -1,10 +1,30 @@
-\chapter{Pointing von Teleskopen}
+\chapter{Pointingmodell}
 Das Pointing von Teleskopen beschäftigt sich damit, dass das Teleskop so ausgerichtet wird, wie es erwünscht ist. Häufig ist das Problem, dass die eingestellte Position nicht exakt mit der gewünschten Position übereinstimmt. Gründe dafür können Fehler in der Präzision oder auch die Elastizität einzelner Bauteile sein. Da man die aufgenommen Daten mit den Bekannten Postionen am Himmel vergleichen kann, kann man versuchen ein Modell zu finden, welches die Fehler verkleinert oder im Idealfall sogar eliminiert.
 
-\section{Koordinatensysteme in der Astronomie}
+\section{Koordinatens des MST}
 Als geeignetes Koordinatensystem für den Betrieb eines Teleskops erweist sich ein mit zwei Winkeln zu beschreibendes System, das den Kugelkoordinaten ähnelt. Der Azemutwinkel behält seinen Namen und zeigt in der Regel bei $0^\circ$ in Richtung Norden. Der Polarwinkel behält ebenfalls seine Bedeutung und wird Elevation genannt.
 
-\section{Äquatoriales Koordinatensystem}
-Um die Position von Sternen eindeutig zu identifizieren benötigt man ein weiteres Koordinatensytem, das von der Position des Frühlingspunktes abhängig ist. Von diesem Punkt ausgehend kann jeder Punkt durch die beiden Winkel Rektaszension und Deklination beschrieben werden.
+\section{Kameras des MST}
+Der Prototyp des MST besitzt drei Kameras in der Mitte des Reflektors. Die Sky-CCD, für die im hier folgenden ein Pointingmodell entwickelt wird, ist schräg montiert, sodass sie am Detektorarm vorbei guckt um Bilder des Nachthimmels aufzunehmen. Aus diesen Bildern lassen sich mithilfe der Astrometry-Software die Koordinaten der Kamera bestimmen, die als die wahren Koordinaten angenommen werden.
 
-\section{irgendwas}
+\section{Entwicklung von Pointingmodellen}
+Da man aus den gewünschten Koordinaten der CCD die Koordinaten des Drives bestimmen lässt, drückt man sie als Funktion voneinander aus.
+\begin{align}
+az_D=f_{az}(az_C,el_C)
+el_D=f_{el}(az_C,el_C)
+\label{eq:pointingprinciple}
+\end{align}
+Diese Funktionen werden so optimiert, dass die Gleichung möglichst gut erfüllt wird.
+
+\section{Vereinfachtes Pointingmodell f\"ur feste Azimutwerte}
+Zunächst wurde ein Datensatz (run281), bei dem die vier feste Elevationswerte am Drive eingestellt wurden, verwendet. In diesem Modell wird die Position der Kamera durch zwei Drehungen beschrieben (eine um die x-Achse und eine um die z-Achse). Somit lässt sich die Position des Drives bzw der Kamera durch die Richtungsvektoren beschreiben.
+%Vektoren in Gleichung
+Da sich diese Vektoren durch Transformationen die unabhängig von el und az sind ineinander überführen lassen, kann das Modell auch entwickelt werden, indem die Drive und CCD Koordinaten in \ref{eq:pointingprinciple} untereinander tauscht. Das hat zum Vorteil, dass man die Funktionen nur für eine Variable fitten muss.\\
+Die Richtungsvektoren lassen sich durch zwei weitere Drehungen um den Elevationswinkel und den Azimutwinkel in Position bringen. Aus den resultierenden Vektoren lassen sich wiederum die wahren Azimut- und Elevationswerte bestimmen.
+\begin{align}
+az=\arctan\left(\frac{y}{x}\right)
+el=\arcsin(z)
+\end{align}
+wobei $x$,$y$ und $z$ den einzelnen Koordinaten der Vektoren entsprechen. Somit ergeben sich für dieses Modell folgende Funktionen.
+%Pointingfunktionen
+Hier müssen noch die beiden Winkel durch Fits am Datensatz bestimmt werden. Die Fits wurden jeweils für die vier Azimutwerte und die beiden Pointingfunktionen unabhängig durchgeführt, sodass sich für jeden Fit neue Parameter ergeben. Zusätzlich wurden konstante Fehlerbalken berechnet, die die Bedingung $\frac{\chi^2}{doF}$ erfüllen. Diese ergeben sich durch.
