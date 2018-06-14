@@ -1,33 +1,25 @@
 \BOOKMARK [0][-]{chapter.7}{gamma-Astronomie}{}% 1
 \BOOKMARK [1][-]{section.8}{Entstehung hochenergetischer Strahlung}{chapter.7}% 2
-\BOOKMARK [2][-]{subsection.9}{inverser Comptoneffekt}{section.8}% 3
-\BOOKMARK [2][-]{subsection.10}{Zerfall von schweren Teilchen}{section.8}% 4
-\BOOKMARK [2][-]{subsection.11}{Materie-Antimaterie-Annihilation}{section.8}% 5
-\BOOKMARK [2][-]{subsection.12}{Bremstrahlung}{section.8}% 6
-\BOOKMARK [2][-]{subsection.13}{unbekannte Effekte}{section.8}% 7
-\BOOKMARK [1][-]{section.14}{Quellen hochenergetischer Strahlung}{chapter.7}% 8
-\BOOKMARK [2][-]{subsection.15}{Supernova Ueberreste}{section.14}% 9
-\BOOKMARK [2][-]{subsection.16}{Pulsare}{section.14}% 10
-\BOOKMARK [2][-]{subsection.17}{Quasare}{section.14}% 11
-\BOOKMARK [2][-]{subsection.18}{Stelare}{section.14}% 12
-\BOOKMARK [2][-]{subsection.19}{Aktive Galaxien}{section.14}% 13
-\BOOKMARK [2][-]{subsection.20}{Binaere Systeme}{section.14}% 14
-\BOOKMARK [2][-]{subsection.21}{Gamma Ray Bursts}{section.14}% 15
-\BOOKMARK [1][-]{section.22}{Detektion von Strahlung}{chapter.7}% 16
-\BOOKMARK [2][-]{subsection.23}{Luftschauer}{section.22}% 17
-\BOOKMARK [2][-]{subsection.24}{Cherenkov Strahlung}{section.22}% 18
-\BOOKMARK [2][-]{subsection.25}{bodengestuezte Detektion mit Teleskopen}{section.22}% 19
-\BOOKMARK [0][-]{chapter.26}{Das Cherenkov Telescope Array}{}% 20
-\BOOKMARK [0][-]{chapter.27}{Bildanalyse}{}% 21
-\BOOKMARK [1][-]{section.28}{CCD Kameras}{chapter.27}% 22
-\BOOKMARK [1][-]{section.29}{Verwendete Kamera}{chapter.27}% 23
-\BOOKMARK [1][-]{section.30}{Helligkeit der Bilder}{chapter.27}% 24
-\BOOKMARK [1][-]{section.31}{Korrelation der Werte}{chapter.27}% 25
-\BOOKMARK [2][-]{subsection.32}{Abh\303\244ngigkeit von der Belichtungszeit}{section.31}% 26
-\BOOKMARK [2][-]{subsection.33}{Abh\303\244ngigkeit vom gain}{section.31}% 27
-\BOOKMARK [1][-]{section.34}{Fazit}{chapter.27}% 28
-\BOOKMARK [0][-]{chapter.35}{Pointingmodell}{}% 29
-\BOOKMARK [1][-]{section.36}{Koordinatens des MST}{chapter.35}% 30
-\BOOKMARK [1][-]{section.37}{Kameras des MST}{chapter.35}% 31
-\BOOKMARK [1][-]{section.38}{Entwicklung von Pointingmodellen}{chapter.35}% 32
-\BOOKMARK [1][-]{section.39}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.35}% 33
+\BOOKMARK [1][-]{section.9}{Quellen hochenergetischer Strahlung}{chapter.7}% 3
+\BOOKMARK [1][-]{section.10}{Detektion von Strahlung}{chapter.7}% 4
+\BOOKMARK [2][-]{subsection.11}{Luftschauer}{section.10}% 5
+\BOOKMARK [2][-]{subsection.12}{Cherenkov Strahlung}{section.10}% 6
+\BOOKMARK [2][-]{subsection.13}{Bodengest\303\274tzte Detektion der Cherenkovstrahlung}{section.10}% 7
+\BOOKMARK [0][-]{chapter.14}{Das Cherenkov Telescope Array}{}% 8
+\BOOKMARK [1][-]{section.15}{Design-Konzept}{chapter.14}% 9
+\BOOKMARK [1][-]{section.16}{Prototyp in Adlershof}{chapter.14}% 10
+\BOOKMARK [2][-]{subsection.17}{Kameras des MST}{section.16}% 11
+\BOOKMARK [2][-]{subsection.18}{Koordinatens des MST}{section.16}% 12
+\BOOKMARK [0][-]{chapter.19}{Bildanalyse}{}% 13
+\BOOKMARK [1][-]{section.20}{CCD Kameras}{chapter.19}% 14
+\BOOKMARK [1][-]{section.21}{Verwendete Kamera}{chapter.19}% 15
+\BOOKMARK [1][-]{section.22}{Helligkeit der Bilder}{chapter.19}% 16
+\BOOKMARK [1][-]{section.23}{Korrelation der Werte}{chapter.19}% 17
+\BOOKMARK [2][-]{subsection.24}{Abh\303\244ngigkeit von der Belichtungszeit}{section.23}% 18
+\BOOKMARK [2][-]{subsection.25}{Abh\303\244ngigkeit vom gain}{section.23}% 19
+\BOOKMARK [1][-]{section.26}{Fazit}{chapter.19}% 20
+\BOOKMARK [0][-]{chapter.27}{Pointingmodell}{}% 21
+\BOOKMARK [1][-]{section.28}{Koordinatens des MST}{chapter.27}% 22
+\BOOKMARK [1][-]{section.29}{Kameras des MST}{chapter.27}% 23
+\BOOKMARK [1][-]{section.30}{Entwicklung von Pointingmodellen}{chapter.27}% 24
+\BOOKMARK [1][-]{section.31}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.27}% 25

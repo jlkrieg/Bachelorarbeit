@@ -1,34 +1,26 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {}gamma-Astronomie}{2}{chapter.7}
-\contentsline {section}{\numberline {.1}Entstehung hochenergetischer Strahlung}{2}{section.8}
-\contentsline {subsection}{\numberline {.1.1}inverser Comptoneffekt}{2}{subsection.9}
-\contentsline {subsection}{\numberline {.1.2}Zerfall von schweren Teilchen}{2}{subsection.10}
-\contentsline {subsection}{\numberline {.1.3}Materie-Antimaterie-Annihilation}{2}{subsection.11}
-\contentsline {subsection}{\numberline {.1.4}Bremstrahlung}{3}{subsection.12}
-\contentsline {subsection}{\numberline {.1.5}unbekannte Effekte}{3}{subsection.13}
-\contentsline {section}{\numberline {.2}Quellen hochenergetischer Strahlung}{3}{section.14}
-\contentsline {subsection}{\numberline {.2.1}Supernova Ueberreste}{3}{subsection.15}
-\contentsline {subsection}{\numberline {.2.2}Pulsare}{3}{subsection.16}
-\contentsline {subsection}{\numberline {.2.3}Quasare}{3}{subsection.17}
-\contentsline {subsection}{\numberline {.2.4}Stelare}{3}{subsection.18}
-\contentsline {subsection}{\numberline {.2.5}Aktive Galaxien}{3}{subsection.19}
-\contentsline {subsection}{\numberline {.2.6}Binaere Systeme}{3}{subsection.20}
-\contentsline {subsection}{\numberline {.2.7}Gamma Ray Bursts}{3}{subsection.21}
-\contentsline {section}{\numberline {.3}Detektion von Strahlung}{3}{section.22}
-\contentsline {subsection}{\numberline {.3.1}Luftschauer}{3}{subsection.23}
-\contentsline {subsection}{\numberline {.3.2}Cherenkov Strahlung}{4}{subsection.24}
-\contentsline {subsection}{\numberline {.3.3}bodengestuezte Detektion mit Teleskopen}{4}{subsection.25}
-\contentsline {chapter}{\numberline {}Das Cherenkov Telescope Array}{5}{chapter.26}
-\contentsline {chapter}{\numberline {}Bildanalyse}{6}{chapter.27}
-\contentsline {section}{\numberline {.1}CCD Kameras}{6}{section.28}
-\contentsline {section}{\numberline {.2}Verwendete Kamera}{6}{section.29}
-\contentsline {section}{\numberline {.3}Helligkeit der Bilder}{6}{section.30}
-\contentsline {section}{\numberline {.4}Korrelation der Werte}{7}{section.31}
-\contentsline {subsection}{\numberline {.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{7}{subsection.32}
-\contentsline {subsection}{\numberline {.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{7}{subsection.33}
-\contentsline {section}{\numberline {.5}Fazit}{7}{section.34}
-\contentsline {chapter}{\numberline {}Pointingmodell}{8}{chapter.35}
-\contentsline {section}{\numberline {.1}Koordinatens des MST}{8}{section.36}
-\contentsline {section}{\numberline {.2}Kameras des MST}{8}{section.37}
-\contentsline {section}{\numberline {.3}Entwicklung von Pointingmodellen}{8}{section.38}
-\contentsline {section}{\numberline {.4}Vereinfachtes Pointingmodell f\"ur feste Azimutwerte}{8}{section.39}
+\contentsline {chapter}{\numberline {1}gamma-Astronomie}{2}{chapter.7}
+\contentsline {section}{\numberline {1.1}Entstehung hochenergetischer Strahlung}{2}{section.8}
+\contentsline {section}{\numberline {1.2}Quellen hochenergetischer Strahlung}{3}{section.9}
+\contentsline {section}{\numberline {1.3}Detektion von Strahlung}{3}{section.10}
+\contentsline {subsection}{\numberline {1.3.1}Luftschauer}{3}{subsection.11}
+\contentsline {subsection}{\numberline {1.3.2}Cherenkov Strahlung}{4}{subsection.12}
+\contentsline {subsection}{\numberline {1.3.3}Bodengest\~A\IeC {\textonequarter }tzte Detektion der Cherenkovstrahlung}{4}{subsection.13}
+\contentsline {chapter}{\numberline {2}Das Cherenkov Telescope Array}{5}{chapter.14}
+\contentsline {section}{\numberline {2.1}Design-Konzept}{5}{section.15}
+\contentsline {section}{\numberline {2.2}Prototyp in Adlershof}{5}{section.16}
+\contentsline {subsection}{\numberline {2.2.1}Kameras des MST}{5}{subsection.17}
+\contentsline {subsection}{\numberline {2.2.2}Koordinatens des MST}{6}{subsection.18}
+\contentsline {chapter}{\numberline {3}Bildanalyse}{7}{chapter.19}
+\contentsline {section}{\numberline {3.1}CCD Kameras}{7}{section.20}
+\contentsline {section}{\numberline {3.2}Verwendete Kamera}{7}{section.21}
+\contentsline {section}{\numberline {3.3}Helligkeit der Bilder}{7}{section.22}
+\contentsline {section}{\numberline {3.4}Korrelation der Werte}{8}{section.23}
+\contentsline {subsection}{\numberline {3.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{8}{subsection.24}
+\contentsline {subsection}{\numberline {3.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{8}{subsection.25}
+\contentsline {section}{\numberline {3.5}Fazit}{8}{section.26}
+\contentsline {chapter}{\numberline {4}Pointingmodell}{9}{chapter.27}
+\contentsline {section}{\numberline {4.1}Koordinatens des MST}{9}{section.28}
+\contentsline {section}{\numberline {4.2}Kameras des MST}{9}{section.29}
+\contentsline {section}{\numberline {4.3}Entwicklung von Pointingmodellen}{9}{section.30}
+\contentsline {section}{\numberline {4.4}Vereinfachtes Pointingmodell f\"ur feste Azimutwerte}{9}{section.31}
