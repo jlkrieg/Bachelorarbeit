@@ -1,29 +1,21 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}gamma-Astronomie}{2}{chapter.7}
+\contentsline {chapter}{\numberline {1}$\gamma $-Astronomie}{2}{chapter.7}
 \contentsline {section}{\numberline {1.1}Entstehung hochenergetischer Strahlung}{2}{section.8}
-\contentsline {section}{\numberline {1.2}Quellen hochenergetischer Strahlung}{3}{section.9}
+\contentsline {section}{\numberline {1.2}Quellen hochenergetischer Strahlung}{2}{section.9}
 \contentsline {section}{\numberline {1.3}Detektion von Strahlung}{3}{section.10}
 \contentsline {subsection}{\numberline {1.3.1}Luftschauer}{3}{subsection.11}
-\contentsline {subsection}{\numberline {1.3.2}Cherenkov Strahlung}{4}{subsection.12}
-\contentsline {subsection}{\numberline {1.3.3}Bodengest\~A\IeC {\textonequarter }tzte Detektion der Cherenkovstrahlung}{4}{subsection.14}
-\contentsline {chapter}{\numberline {2}Das Cherenkov Telescope Array}{5}{chapter.15}
-\contentsline {section}{\numberline {2.1}Design-Konzept}{5}{section.16}
-\contentsline {subsection}{\numberline {2.1.1}Teleskoptypen}{5}{subsection.17}
-\contentsline {subsection}{\numberline {2.1.2}Arrays}{6}{subsection.19}
-\contentsline {section}{\numberline {2.2}Prototyp in Adlershof}{7}{section.21}
-\contentsline {subsection}{\numberline {2.2.1}Kameras des MST}{7}{subsection.22}
-\contentsline {subsection}{\numberline {2.2.2}Koordinatens des MST}{7}{subsection.23}
-\contentsline {subsection}{\numberline {2.2.3}Bestimmung der Bildkoordinaten durch astronometry.net}{7}{subsection.24}
-\contentsline {chapter}{\numberline {3}Bildanalyse}{8}{chapter.25}
-\contentsline {section}{\numberline {3.1}CCD Kameras}{8}{section.26}
-\contentsline {section}{\numberline {3.2}Verwendete Kamera}{8}{section.27}
-\contentsline {section}{\numberline {3.3}Helligkeit der Bilder}{8}{section.28}
-\contentsline {section}{\numberline {3.4}Korrelation der Werte}{9}{section.29}
-\contentsline {subsection}{\numberline {3.4.1}Abh\~A\IeC {\textcurrency }ngigkeit von der Belichtungszeit}{9}{subsection.30}
-\contentsline {subsection}{\numberline {3.4.2}Abh\~A\IeC {\textcurrency }ngigkeit vom gain}{9}{subsection.31}
-\contentsline {section}{\numberline {3.5}Fazit}{9}{section.32}
-\contentsline {chapter}{\numberline {4}Pointingmodell}{10}{chapter.33}
-\contentsline {section}{\numberline {4.1}Koordinatens des MST}{10}{section.34}
-\contentsline {section}{\numberline {4.2}Kameras des MST}{10}{section.35}
-\contentsline {section}{\numberline {4.3}Entwicklung von Pointingmodellen}{10}{section.36}
-\contentsline {section}{\numberline {4.4}Vereinfachtes Pointingmodell f\"ur feste Azimutwerte}{10}{section.37}
+\contentsline {subsection}{\numberline {1.3.2}Cherenkov Strahlung}{3}{subsection.12}
+\contentsline {subsection}{\numberline {1.3.3}Bodengest\IeC {\"u}tzte Detektion der Cherenkovstrahlung}{4}{subsection.15}
+\contentsline {chapter}{\numberline {2}Das Cherenkov Telescope Array}{6}{chapter.17}
+\contentsline {section}{\numberline {2.1}Design-Konzept}{6}{section.18}
+\contentsline {subsection}{\numberline {2.1.1}Teleskoptypen}{6}{subsection.19}
+\contentsline {subsection}{\numberline {2.1.2}Arrays}{7}{subsection.21}
+\contentsline {section}{\numberline {2.2}Prototyp in Adlershof}{7}{section.23}
+\contentsline {subsection}{\numberline {2.2.1}Kameras des MST}{7}{subsection.24}
+\contentsline {subsection}{\numberline {2.2.2}Koordinatens des MST}{8}{subsection.25}
+\contentsline {subsection}{\numberline {2.2.3}Bestimmung der Bildkoordinaten durch astronometry.net}{8}{subsection.26}
+\contentsline {chapter}{\numberline {3}Pointingmodell}{9}{chapter.27}
+\contentsline {section}{\numberline {3.1}Koordinatens des MST}{9}{section.28}
+\contentsline {section}{\numberline {3.2}Kameras des MST}{9}{section.29}
+\contentsline {section}{\numberline {3.3}Entwicklung von Pointingmodellen}{9}{section.30}
+\contentsline {section}{\numberline {3.4}Vereinfachtes Pointingmodell f\"ur feste Azimutwerte}{9}{section.32}

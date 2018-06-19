@@ -32,8 +32,9 @@
 % und ggf. einer kurzen Beschreibung
 % Sie wird in die log-Datei geschrieben
 
-\documentclass[12pt,a4paper% die Verwendung von DIN-A4-Format ist pflicht!
-]{report}
+%\documentclass[12pt,a4paper% die Verwendung von DIN-A4-Format ist pflicht!
+%]{report} %eig report
+\documentclass[pdftex,a4paper]{scrreprt}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 %notwendige Pakete
@@ -41,7 +42,7 @@
 % babel: letzte Sprache in Optionen zeigt die Sprache des Dokumentes
 % und kann durch den Befehl \selectlanguage{} geaendert werden
 % Passen Sie die Optionen des babel-Paketes nach Bedarf an!
-\usepackage[ansinew]{inputenc}       % Eingabekodierung Parameter latin1 darf ge�ndert werden
+\usepackage[utf8]{inputenc}       % Eingabekodierung Parameter latin1 darf ge�ndert werden
 \usepackage[T1]{fontenc}                % Schriftenkodierung
 \usepackage{graphicx}                       % zum Einbinden von Grafiken
 \usepackage{lmodern}                        % Ersatz fuer Computer Modern-Schriften
@@ -55,7 +56,7 @@
 % \include{hyphenations}
 
 %-zusaetzliche Kommandos*-----------------------------------------
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 %\renewcommand{\chaptername}{}
 
 %\renewcommand{\thechapter}{}
@@ -109,7 +110,7 @@
 % \include{chapter02}
 \include{gamma-Astronomie}
 \include{CTA}
-\include{Bildanalyse}
+%\include{Bildanalyse}
 \include{Pointing}
 
 % usw.

@@ -1,4 +1,4 @@
-\chapter{gamma-Astronomie}
+\chapter{$\gamma$-Astronomie} 
 Die Astronomie ist die Wissenschaft des Universums und beschreibt die Bewegung und Eigenschaften von Himmelskörpern wie Planeten oder Galaxien, interstellarer Materie und Strahlung. Betrachtete man frueher nur Licht im optisch sichtbaren Bereich, so sind im 20. Jahrhundert einige zusatliche Quellen dazugekommmen. Dazu zaehlen die von Viktor HESS durch Ballonversuche entdeckte kosmische Strahlung, die Roentgen-/bzw die Gammastrahlung sowie die Neutrinoastronomie. Die Gammaastronomie beschaftigt sich mit Photonen im Bereich von bis . Photonen haben den Vorteil, dass sie nicht wie geladene Teilchen durch elektromagnetische Felder abgelenkt werden und somit ihre Quelle leichter detektiert werden kann. Zudem sind sie auch noch deutlich leichter zu detektieren sind als Neutrinos. Da die Energie dieser Photonen so hoch ist, koennen sie nicht thermischen Ursprungs sein sondern kommen aus anderen Quellen, deren Untersuchung das Ziel der Hochenergie-Gamma-Astronomie ist.
 
 %cite Design concept
@@ -44,17 +44,24 @@ Neben elektromagnetischen Schauern existieren noch hadronische und myonische Sch
 
 \subsection{Cherenkov Strahlung}
 Cherenkov Strahlung tritt auf, wenn geladene sich Teilchen in Materie schneller als Photonen bewegen und lässt sich analog zum Überschallknall erklären. Das geladene Teilchen polarisiert auf seiner Trajektorie die einzelnen Atome, die somit Licht sphaerisch abstrahlen. Da sich das Teilchen allerdings schneller als das Licht bewegt, entsteht ein Kegel konstruktiver Interferenz. Somit entsteht ein Lichtblitz, der sich kegelfoermig mit dem Oeffnungswinkel %bild zur interferenz
-\begin{align}
-\theta = \arccos\left(\frac{1}{\beta n}\right)
-\end{align}
+\begin{equation}
+\theta = \arccos\left(\frac{1}{\beta n}\right) \label{eq:cherenkow}
+\end{equation}\\
 ausbreitet. Fuer Luft (in Bodennaehe) ergibt sich somit ein maximaler Oeffnungswinkel von
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.5\textwidth]{Images/cherenkow.png}
-\caption{Der Cherenkoweffekt}
+\includegraphics[width=0.7\textwidth]{Images/cherenkow.png}
+\caption{Der Cherenkoweffekt: Ein geladenes Teilchen durchfliegt ein dielektrisches Medium und erzeugt Wellenfronten.}
 \label{img:cherenkow}
 \end{figure}
 
 \subsection{Bodengestützte Detektion der Cherenkovstrahlung}
 Da aufgrund der Atmosphaere weder das primaere Photon noch die Teilchen des Luftschauers detektiert werden koennen, versucht man die Cherenkovstrahlung, die durch den Luftschauer entsteht zu detektieren. Dazu muss eine grosse Flaeche abgedeckt werden, da selbst bei vertikaler Einstrahlung der Schauer einen Durchmesser von ca 250m haben kann %design concept 
 Somit ergeben sich Flachen der Grossenordnung von $10^4-10^5 m^2$. Um diese Flaechen abdecken zu koennen, verwendet man Teleskope mit effektiven Flaechen von ungefaehr $100 m^2$ (VERITAS). Haufig bestehen die Reflektoren aus vielen einzelnen Spiegeln um die Kosten zu druecken. Im Brennpunkt der Spiegel befindet sich der Cherenkovdetektor der in der Regel aus vielen Photomultipliern (PMTs) besteht. Somit erhaelt man effektiv eine Kamera mit einer typischen Aufloesung von ca 2000 Pixeln. Die Aufloesung ist im Vergleich zu CCD Kameras einerseits eher gering, da die Cherenkov Kamera in der Lage sein muss einzelne Photonen zu detekieren und andererseites dauern Cherenkovschauer nur wenige Nanosekunden, die wiederum zeitlich aufgeloest werden muessen. Zusaetlich muessen die Teleskope elektromagenetische Schauer von hadronisches Schauern unterscheiden und duerfen nicht durch Hintergrundeffekte wie zum Beispiel Sternenlicht gestoert werden.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Images/detection.png}
+\caption{Detektion hochenergetischer Strahlung}
+\label{img:detection}
+\end{figure}
