@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.10.11)  19 JUN 2018 16:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.10.11)  19 JUN 2018 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,6 +282,51 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 ))
+! Undefined control sequence.
+l.58 \titleformat
+                 {\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{...
+
+? 
+! Argument of \@xdblarg has an extra }.
+<inserted text> 
+                \par 
+l.58 \titleformat{\chapter}
+                           [hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{...
+
+? 
+Runaway argument?
+! Paragraph ended before \@xdblarg was complete.
+<to be read again> 
+                   \par 
+l.58 \titleformat{\chapter}
+                           [hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{...
+
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \titleformat{\chapter}[
+                            hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{...
+
+? 
+! Undefined control sequence.
+l.58 ...ter}[hang]{\Huge\bfseries}{\thechapter\hsp
+                                                  \textcolor{gray75}{|}\hsp}...
+
+? 
+! Undefined control sequence.
+l.58 ...{\Huge\bfseries}{\thechapter\hsp\textcolor
+                                                  {gray75}{|}\hsp}{0pt}{\Hug...
+
+? 
+! Undefined control sequence.
+l.58 ...}{\thechapter\hsp\textcolor{gray75}{|}\hsp
+                                                  }{0pt}{\Huge\bfseries}
+? 
 (./krieg.aux (./titlepage.aux) (./dedication.aux) (./gamma-Astronomie.aux)
 (./CTA.aux) (./Bildanalyse.aux) (./Pointing.aux) (./declaration.aux))
 \openout1 = `krieg.aux'.
@@ -395,10 +440,18 @@ LaTeX Info: Redefining \nameref on input line 66.
 \@outlinefile=\write3
 \openout3 = `krieg.out'.
 
+ [1
+
+
+
+
+
+
+{/mnt/nfs64/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \openout2 = `titlepage.aux'.
 
  (./titlepage.tex)
-<husiegel.pdf, id=116, 131.49126pt x 132.495pt>
+<husiegel.pdf, id=123, 131.49126pt x 132.495pt>
 File: husiegel.pdf Graphic file (type pdf)
  <use husiegel.pdf>
 Package pdftex.def Info: husiegel.pdf used on input line 76.
@@ -434,17 +487,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 
-
-
-
-
-
-{/mnt/nfs64/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./husie
-gel.pdf>]
+ <./husiegel.pdf>]
 \openout2 = `dedication.aux'.
 
-
-(./dedication.tex) [1
+ (./dedication.tex) [1
 
 
 ] (./krieg.toc
@@ -462,7 +508,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 ...von der Belichtungszeit}{9}{subsection.29}
+l.22 ...von der Belichtungszeit}{9}{subsection.30}
                                                   
 ? 
 
@@ -472,7 +518,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 ...ency }ngigkeit vom gain}{9}{subsection.30}
+l.23 ...ency }ngigkeit vom gain}{9}{subsection.31}
                                                   
 ? 
 )
@@ -541,7 +587,6 @@ Type  H <return>  for immediate help.
 l.29 \item[Binäre Systeme]
                            \hfill \\
 ? 
-[3]
 
 ! LaTeX Error: Command \textcurrency unavailable in encoding T1.
 
@@ -596,7 +641,13 @@ l.47 \end{align}
 l.47 \end{align}
                 
 ? 
-) [4]
+<Images/cherenkow.png, id=203, 1280.785pt x 886.31125pt>
+File: Images/cherenkow.png Graphic file (type png)
+
+<use Images/cherenkow.png>
+Package pdftex.def Info: Images/cherenkow.png used on input line 51.
+(pdftex.def)             Requested size: 241.84843pt x 167.35953pt.
+ [3]) [4 <./Images/cherenkow.png>]
 \openout2 = `CTA.aux'.
 
  (./CTA.tex
@@ -617,14 +668,14 @@ nd hat einen Durchmesser
 
 
 
-] <Images/TelescopeTypes.jpg, id=213, 3854.4pt x 2168.1pt>
+] <Images/TelescopeTypes.jpg, id=221, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
 Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 28.
 (pdftex.def)             Requested size: 483.69687pt x 272.07048pt.
 
-<Images/ArrayLayout.png, id=215, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=223, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
@@ -1036,35 +1087,37 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
 Package rerunfilecheck Info: File `krieg.out' has not changed.
-(rerunfilecheck)             Checksum: 6416C47100673EB461ABC3D6C71D2C5E;1949.
+(rerunfilecheck)             Checksum: F7EA60C4A0D0345330B2677EA451F7A4;1949.
  ) 
 Here is how much of TeX's memory you used:
- 6317 strings out of 493629
- 92628 string characters out of 3143343
- 184956 words of memory out of 3000000
- 9415 multiletter control sequences out of 15000+200000
- 60868 words of font info for 46 fonts, out of 3000000 for 9000
+ 6329 strings out of 493629
+ 92820 string characters out of 3143343
+ 185026 words of memory out of 3000000
+ 9422 multiletter control sequences out of 15000+200000
+ 62414 words of font info for 48 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 33i,6n,30p,1098b,386s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 33i,7n,30p,1098b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/mnt/nfs64/texlive/2011/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/mnt/nfs64/
 texlive/2011/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/mnt/nfs64/texlive/20
 11/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/mnt/nfs64/texlive/2011/texmf-d
 ist/fonts/enc/dvips/lm/lm-mathex.enc}{/mnt/nfs64/texlive/2011/texmf-dist/fonts/
-enc/dvips/lm/lm-ec.enc}</mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/l
-m/lmbx12.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmex10.p
-fb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></mnt/n
-fs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></mnt/nfs64/texliv
-e/2011/texmf-dist/fonts/type1/public/lm/lmr10.pfb></mnt/nfs64/texlive/2011/texm
-f-dist/fonts/type1/public/lm/lmr12.pfb></mnt/nfs64/texlive/2011/texmf-dist/font
-s/type1/public/lm/lmr17.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/pub
-lic/lm/lmr6.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmr8.
-pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmri12.pfb></mnt/
-nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></mnt/nfs64/texl
-ive/2011/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on krieg.pdf (16 pages, 5774535 bytes).
+enc/dvips/lm/lm-ec.enc}{/mnt/nfs64/texlive/2011/texmf-dist/fonts/enc/dvips/cm-s
+uper/cm-super-t1.enc}</mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/
+lmbx12.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmex10.pfb
+></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></mnt/nfs
+64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></mnt/nfs64/texlive/
+2011/texmf-dist/fonts/type1/public/lm/lmr10.pfb></mnt/nfs64/texlive/2011/texmf-
+dist/fonts/type1/public/lm/lmr12.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/
+type1/public/lm/lmr17.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/publi
+c/lm/lmr6.pfb></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmr8.pf
+b></mnt/nfs64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmri12.pfb></mnt/nf
+s64/texlive/2011/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></mnt/nfs64/texliv
+e/2011/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></mnt/nfs64/texlive/2011/texm
+f-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on krieg.pdf (17 pages, 5809940 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 322 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

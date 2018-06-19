@@ -4,25 +4,25 @@
 \BOOKMARK [1][-]{section.10}{Detektion von Strahlung}{chapter.7}% 4
 \BOOKMARK [2][-]{subsection.11}{Luftschauer}{section.10}% 5
 \BOOKMARK [2][-]{subsection.12}{Cherenkov Strahlung}{section.10}% 6
-\BOOKMARK [2][-]{subsection.13}{Bodengest\303\274tzte Detektion der Cherenkovstrahlung}{section.10}% 7
-\BOOKMARK [0][-]{chapter.14}{Das Cherenkov Telescope Array}{}% 8
-\BOOKMARK [1][-]{section.15}{Design-Konzept}{chapter.14}% 9
-\BOOKMARK [2][-]{subsection.16}{Teleskoptypen}{section.15}% 10
-\BOOKMARK [2][-]{subsection.18}{Arrays}{section.15}% 11
-\BOOKMARK [1][-]{section.20}{Prototyp in Adlershof}{chapter.14}% 12
-\BOOKMARK [2][-]{subsection.21}{Kameras des MST}{section.20}% 13
-\BOOKMARK [2][-]{subsection.22}{Koordinatens des MST}{section.20}% 14
-\BOOKMARK [2][-]{subsection.23}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.20}% 15
-\BOOKMARK [0][-]{chapter.24}{Bildanalyse}{}% 16
-\BOOKMARK [1][-]{section.25}{CCD Kameras}{chapter.24}% 17
-\BOOKMARK [1][-]{section.26}{Verwendete Kamera}{chapter.24}% 18
-\BOOKMARK [1][-]{section.27}{Helligkeit der Bilder}{chapter.24}% 19
-\BOOKMARK [1][-]{section.28}{Korrelation der Werte}{chapter.24}% 20
-\BOOKMARK [2][-]{subsection.29}{Abh\303\244ngigkeit von der Belichtungszeit}{section.28}% 21
-\BOOKMARK [2][-]{subsection.30}{Abh\303\244ngigkeit vom gain}{section.28}% 22
-\BOOKMARK [1][-]{section.31}{Fazit}{chapter.24}% 23
-\BOOKMARK [0][-]{chapter.32}{Pointingmodell}{}% 24
-\BOOKMARK [1][-]{section.33}{Koordinatens des MST}{chapter.32}% 25
-\BOOKMARK [1][-]{section.34}{Kameras des MST}{chapter.32}% 26
-\BOOKMARK [1][-]{section.35}{Entwicklung von Pointingmodellen}{chapter.32}% 27
-\BOOKMARK [1][-]{section.36}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.32}% 28
+\BOOKMARK [2][-]{subsection.14}{Bodengest\303\274tzte Detektion der Cherenkovstrahlung}{section.10}% 7
+\BOOKMARK [0][-]{chapter.15}{Das Cherenkov Telescope Array}{}% 8
+\BOOKMARK [1][-]{section.16}{Design-Konzept}{chapter.15}% 9
+\BOOKMARK [2][-]{subsection.17}{Teleskoptypen}{section.16}% 10
+\BOOKMARK [2][-]{subsection.19}{Arrays}{section.16}% 11
+\BOOKMARK [1][-]{section.21}{Prototyp in Adlershof}{chapter.15}% 12
+\BOOKMARK [2][-]{subsection.22}{Kameras des MST}{section.21}% 13
+\BOOKMARK [2][-]{subsection.23}{Koordinatens des MST}{section.21}% 14
+\BOOKMARK [2][-]{subsection.24}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.21}% 15
+\BOOKMARK [0][-]{chapter.25}{Bildanalyse}{}% 16
+\BOOKMARK [1][-]{section.26}{CCD Kameras}{chapter.25}% 17
+\BOOKMARK [1][-]{section.27}{Verwendete Kamera}{chapter.25}% 18
+\BOOKMARK [1][-]{section.28}{Helligkeit der Bilder}{chapter.25}% 19
+\BOOKMARK [1][-]{section.29}{Korrelation der Werte}{chapter.25}% 20
+\BOOKMARK [2][-]{subsection.30}{Abh\303\244ngigkeit von der Belichtungszeit}{section.29}% 21
+\BOOKMARK [2][-]{subsection.31}{Abh\303\244ngigkeit vom gain}{section.29}% 22
+\BOOKMARK [1][-]{section.32}{Fazit}{chapter.25}% 23
+\BOOKMARK [0][-]{chapter.33}{Pointingmodell}{}% 24
+\BOOKMARK [1][-]{section.34}{Koordinatens des MST}{chapter.33}% 25
+\BOOKMARK [1][-]{section.35}{Kameras des MST}{chapter.33}% 26
+\BOOKMARK [1][-]{section.36}{Entwicklung von Pointingmodellen}{chapter.33}% 27
+\BOOKMARK [1][-]{section.37}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.33}% 28
