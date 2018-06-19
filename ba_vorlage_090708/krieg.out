@@ -7,19 +7,22 @@
 \BOOKMARK [2][-]{subsection.13}{Bodengest\303\274tzte Detektion der Cherenkovstrahlung}{section.10}% 7
 \BOOKMARK [0][-]{chapter.14}{Das Cherenkov Telescope Array}{}% 8
 \BOOKMARK [1][-]{section.15}{Design-Konzept}{chapter.14}% 9
-\BOOKMARK [1][-]{section.16}{Prototyp in Adlershof}{chapter.14}% 10
-\BOOKMARK [2][-]{subsection.17}{Kameras des MST}{section.16}% 11
-\BOOKMARK [2][-]{subsection.18}{Koordinatens des MST}{section.16}% 12
-\BOOKMARK [0][-]{chapter.19}{Bildanalyse}{}% 13
-\BOOKMARK [1][-]{section.20}{CCD Kameras}{chapter.19}% 14
-\BOOKMARK [1][-]{section.21}{Verwendete Kamera}{chapter.19}% 15
-\BOOKMARK [1][-]{section.22}{Helligkeit der Bilder}{chapter.19}% 16
-\BOOKMARK [1][-]{section.23}{Korrelation der Werte}{chapter.19}% 17
-\BOOKMARK [2][-]{subsection.24}{Abh\303\244ngigkeit von der Belichtungszeit}{section.23}% 18
-\BOOKMARK [2][-]{subsection.25}{Abh\303\244ngigkeit vom gain}{section.23}% 19
-\BOOKMARK [1][-]{section.26}{Fazit}{chapter.19}% 20
-\BOOKMARK [0][-]{chapter.27}{Pointingmodell}{}% 21
-\BOOKMARK [1][-]{section.28}{Koordinatens des MST}{chapter.27}% 22
-\BOOKMARK [1][-]{section.29}{Kameras des MST}{chapter.27}% 23
-\BOOKMARK [1][-]{section.30}{Entwicklung von Pointingmodellen}{chapter.27}% 24
-\BOOKMARK [1][-]{section.31}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.27}% 25
+\BOOKMARK [2][-]{subsection.16}{Teleskoptypen}{section.15}% 10
+\BOOKMARK [2][-]{subsection.18}{Arrays}{section.15}% 11
+\BOOKMARK [1][-]{section.20}{Prototyp in Adlershof}{chapter.14}% 12
+\BOOKMARK [2][-]{subsection.21}{Kameras des MST}{section.20}% 13
+\BOOKMARK [2][-]{subsection.22}{Koordinatens des MST}{section.20}% 14
+\BOOKMARK [2][-]{subsection.23}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.20}% 15
+\BOOKMARK [0][-]{chapter.24}{Bildanalyse}{}% 16
+\BOOKMARK [1][-]{section.25}{CCD Kameras}{chapter.24}% 17
+\BOOKMARK [1][-]{section.26}{Verwendete Kamera}{chapter.24}% 18
+\BOOKMARK [1][-]{section.27}{Helligkeit der Bilder}{chapter.24}% 19
+\BOOKMARK [1][-]{section.28}{Korrelation der Werte}{chapter.24}% 20
+\BOOKMARK [2][-]{subsection.29}{Abh\303\244ngigkeit von der Belichtungszeit}{section.28}% 21
+\BOOKMARK [2][-]{subsection.30}{Abh\303\244ngigkeit vom gain}{section.28}% 22
+\BOOKMARK [1][-]{section.31}{Fazit}{chapter.24}% 23
+\BOOKMARK [0][-]{chapter.32}{Pointingmodell}{}% 24
+\BOOKMARK [1][-]{section.33}{Koordinatens des MST}{chapter.32}% 25
+\BOOKMARK [1][-]{section.34}{Kameras des MST}{chapter.32}% 26
+\BOOKMARK [1][-]{section.35}{Entwicklung von Pointingmodellen}{chapter.32}% 27
+\BOOKMARK [1][-]{section.36}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.32}% 28

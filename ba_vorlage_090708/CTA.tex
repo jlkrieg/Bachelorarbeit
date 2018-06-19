@@ -13,7 +13,38 @@ Mit dem Bau des Cherenkov Telescope Arrays (CTA) werden verschiedene Ziele verfo
 
 \section{Design-Konzept}
 Um sowohl die suedliche als auch die noerdliche Hemnisphaere abzudecken, wird das CTA in der Atacamawueste in Chile und auf der zu Spanien gehoerenden Insel La Palma errichtet.
+\subsection{Teleskoptypen}
+Fuer das CTA werden drei Teleskope unterschiedlicher Groesse entwickelt
+\begin{description}
+\item[Small Sized Telescope (SMT)]\hfill \\
+Das kleinste Teleskop ist sensitiv im Bereich von 1TeV bis 300TeV und wird eingesetzt um Schauer grosser Energie zu detektieren. Momentan werden drei verschiedene Varianten entwickelt, die zu einem harmonisiert werden sollen. Das SST 1M ist eine kleinere Variante des MST und SST-2M  ASTRI und das SST-2M GCT basieren auf dem Prinzip eines Schwarzschild-Couder Designs. Das SST soll einen Reflektordurchmesser von ca. 4m haben.
+\item[Medium Sized Telescope (MST)]\hfill \\ 
+Das MST basiert auf einem modifiziertem Davies-Cotton-Design und hat einen Durchmesser von 12m. Mit einem Sensitivitaetsbereich von 150GeV bis 5TeV deckt es den Kernbereich des CTAs ab.
+\item[Large Sized Telescope (LST)]\hfill \\
+Die groessten Teleskope des CTA werden einen Reflektordurchmesser von 23m um auch Strahlung niedriger Energie zu detektieren. Da aufgrund der Groesse eine Bauweise aus Stahl zu schwer waere, werden diese Teleskope aus kohlefaserverstaerktem Kunststoff gebaut. Das hat zum Vorteil, dass die Teleskope zwar leichter werden, aber es hat auch den Nachteil, dass die Bauteile durch Bewegung des Teleskops staerker verbiegen, was das Pointing erschwert. Aufgrund der Groesse dieser Teleskope reicht es nicht mehr die Reflektoren dieser Teleskope sphaerisch zu bauen, sondern parabolisch. Hierbei steigt der Aufwand, da jeder einzelne Spiegel eine individuelle Brennweite hat.
+\end{description}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Images/TelescopeTypes.jpg}
+\caption{Die drei verschieden grossen Teleskope des CTA: links die drei Varianten des SMT, in der Mitte das MST und rechts das LST}
+\label{img:TelescopeTypes}
+\end{figure}
 
+\subsection{Arrays}
+Um den gesamten Himmel abdecken zu koennen wird jeweils eine Anlage auf der Nordhalbkugel un der Suedhalbkugel errichtet.
+\begin{description}
+\item[suedliche Hemnisphaere]\hfill \\
+Die groessere der beiden Anlagen wird in der Atacamawueste in Chile errichtet und besteht aus allen drei Teleskoptypen, die auf einer Flaeche von $4km^2$ verteilt sind \ref{img:ArrayLayout}, um so den gesamten Energiebereich des CTAs abzudecken
+\item[noerdliche Hemnisphaere]\hfill \\ 
+Auf der spanischen Insel La Palma wird die noerdliche Anlage errichtet. Hier steht eine kleinere Flaeche zur Verfuegung und es wird auf die kleinen Teleskope verzichtet, wodurch der Energiebereich auf 20GeV bis 20TeV begrenzt ist.
+\end{description}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{Images/ArrayLayout.png}
+\caption{Der geplante Aufbau der Arrays auf La Palma und in der Atacamawueste: Auf La Palma werden zunaechst nur die beiden groesseren Teleskoptypen am Krater des Vulkans errichtet. In der Atacamawueste werden alle drei Teleskoptypten verwendet. Aufgrund der grossen freien Flaeche kann hier auch ein grosser Bereich symmetrisch abgedeckt werden.}
+\label{img:ArrayLayout}
+\end{figure}
 
 \section{Prototyp in Adlershof}
 In Adlershof wurde 2012 vom DESY ein Prototyp des MSTs errichtet um den mechanischen Aufbau zu testen, Pointingmodelle zu entwickeln und um die einzelnen Spiegel zu testen und auszurichten.
@@ -23,3 +54,11 @@ Der Prototyp des MST besitzt drei Kameras in der Mitte des Reflektors. Die Sky-C
 
 \subsection{Koordinatens des MST}
 Als geeignetes Koordinatensystem für den Betrieb eines Teleskops erweist sich ein mit zwei Winkeln zu beschreibendes System, das den Kugelkoordinaten ähnelt. Der Azemutwinkel behält seinen Namen und zeigt in der Regel bei $0^\circ$ in Richtung Norden. Der Polarwinkel behält ebenfalls seine Bedeutung und wird Elevation genannt.
+
+\subsection{Bestimmung der Bildkoordinaten durch astronometry.net}
+Aus den mit der Kamera aufgenommen Bildern lassen sich mithilfe der astronometry.net Software die einzelnen Koordinaten der Bilder und die Groesse des Bildausschnitts bestimmen. Auf den einzelnen Bildern werden Sterne erkannt, die jeweils zu Tripplets zusammengeschlossen werden. Diese Tripletts werden mit zwei Sternenkatalogen 
+\begin{itemize}
+\item USNO-B: Ein Katalog mit ungefaehr einer Milliarde OBjekten (Sterne und Galaxien)
+\item TYYCHO-2 Ein Katalog mit den 2.5 Millionen hellsten Sternen
+\end{itemize}
+Die Software kommt auch mit Fehlern wie fehlenden und zu vielen Objekten klar.
