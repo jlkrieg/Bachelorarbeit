@@ -1,13 +1,13 @@
 \chapter{Das Cherenkov Telescope Array}
-Mit dem Bau des Cherenkov Telescope Arrays (CTA) werden verschiedene Ziele verfolgt:
+Mit dem Bau des Cherenkov Telescope Arrays (CTA) werden verschiedene Ziele verfolgt \cite{NextGen}:
 \begin{itemize}
 
-\item Verbesserung des Senstitiviteatslevels um eine Grossenordnung auf 1TeV
-\item Erhoehung der Detektionsflaeche/Photonenrate->Zugang zu kurzeitigen Ereignissen
-\item Erhoehung der Winkelaufloesung/des Sichtfeldes
-\item Energieabdeckung von 20GeV bis 300TeV
-\item Verbesserung des Vermessungsfaehigkeit, Ueberwachungsfaehigkeit und Flexibilitaet->gleichzeitige Beobachtung von Objekten in verschiedenen Feldern
-\item Datenproduktion und Tools auf fuer nicht Experten
+\item Abdeckung des Energiebereichs von 30GeV bis 100TeV
+\item Verbesserung der Sensitivitaet um eine Groessenordnung im Vergleich zur aktuellen Generation (H.E.S.S., VERITAS und MAGIC)
+\item Verbesserung der Winkelaufloesung auf $0,1^{\circ}$ bei 0,1TeV und $0,05^{\circ}$ bei 1TeV
+\item Verbesserung der Energieaufloesung auf 25\% bei 50GeV und 10\% bei 1TeV
+\item Entdeckung einer grossen Anzahl von Quellen bekannter Klassen
+\item Entdeckung neuer Quellen (zum Beispiel Quellen GRBs)
 \item Abdeckung des gesamten Himmels (nord+sued)
 \end{itemize}
 
@@ -53,7 +53,7 @@ In Adlershof wurde 2012 vom DESY ein Prototyp des MSTs errichtet um den mechanis
 Der Prototyp des MST besitzt drei Kameras in der Mitte des Reflektors. Die Sky-CCD, für die im hier folgenden ein Pointingmodell entwickelt wird, ist schräg montiert, sodass sie am Detektorarm vorbei guckt um Bilder des Nachthimmels aufzunehmen. Aus diesen Bildern lassen sich mithilfe der Astrometry-Software die Koordinaten der Kamera bestimmen, die als die wahren Koordinaten angenommen werden.
 
 \subsection{Koordinatens des MST}
-Als geeignetes Koordinatensystem für den Betrieb eines Teleskops erweist sich ein mit zwei Winkeln zu beschreibendes System, das den Kugelkoordinaten ähnelt. Der Azemutwinkel behält seinen Namen und zeigt in der Regel bei $0^\circ$ in Richtung Norden. Der Polarwinkel behält ebenfalls seine Bedeutung und wird Elevation genannt.
+Das MST benutzt ein Koordinatensystem aus zwei Winkeln und aehnelt den Kugelkoordinaten. Der Azimutwinkel ($az$) beschreibt die Auslenkung in der Ebenenen und lauft von $-180^{\circ}$ bis $180^{\circ}$, wobei es fuer $az=0^{\circ}$ in Richtung Norden ausgerichtet ist. Der Elevationswinkel $el$ lauft von $0^{\circ}$ bis $90^{\circ}$ wobei $el=90^{\circ}$ dem Zenit entspricht. Da es bei der Entwicklung von Pointingmodellen von Vorteil sein kann, wenn man in kartesischen Koordinaten rechnet, wurde hier die Konvention verwendet, dass Nordrichtung der x-Richtung, die Westrichtung der y-Richtung und die Zenitrichtung der z-Richtung entspricht.
 
 \subsection{Bestimmung der Bildkoordinaten durch astronometry.net}
 Aus den mit der Kamera aufgenommen Bildern lassen sich mithilfe der astronometry.net Software die einzelnen Koordinaten der Bilder und die Groesse des Bildausschnitts bestimmen. Auf den einzelnen Bildern werden Sterne erkannt, die jeweils zu Tripplets zusammengeschlossen werden. Diese Tripletts werden mit zwei Sternenkatalogen 
