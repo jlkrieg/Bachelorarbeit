@@ -12,7 +12,16 @@
 \BOOKMARK [1][-]{section.23}{Prototyp in Adlershof}{chapter.17}% 12
 \BOOKMARK [2][-]{subsection.24}{Kameras des MST}{section.23}% 13
 \BOOKMARK [2][-]{subsection.25}{Koordinatens des MST}{section.23}% 14
+<<<<<<< HEAD
 \BOOKMARK [2][-]{subsection.26}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.23}% 15
 \BOOKMARK [0][-]{chapter.27}{Pointingmodell}{}% 16
 \BOOKMARK [1][-]{section.28}{Entwicklung von Pointingmodellen}{chapter.27}% 17
 \BOOKMARK [1][-]{section.30}{Vereinfachtes Pointingmodell mit zwei Parametern}{chapter.27}% 18
+=======
+\BOOKMARK [2][-]{subsection.27}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.23}% 15
+\BOOKMARK [0][-]{chapter.28}{Pointingmodell}{}% 16
+\BOOKMARK [1][-]{section.29}{Koordinatens des MST}{chapter.28}% 17
+\BOOKMARK [1][-]{section.30}{Kameras des MST}{chapter.28}% 18
+\BOOKMARK [1][-]{section.31}{Entwicklung von Pointingmodellen}{chapter.28}% 19
+\BOOKMARK [1][-]{section.33}{Vereinfachtes Pointingmodell f\374r feste Azimutwerte}{chapter.28}% 20
+>>>>>>> 9541613fb8deb314988bbee932ed66745bb868cf
