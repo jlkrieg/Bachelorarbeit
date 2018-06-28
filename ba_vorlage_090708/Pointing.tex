@@ -2,21 +2,30 @@
 Das Pointing von Teleskopen beschäftigt sich damit, dass das Teleskop so ausgerichtet wird, wie es erwünscht ist. Häufig ist das Problem, dass die eingestellte Position nicht exakt mit der gewünschten Position übereinstimmt. Gründe dafür können Fehler in der Präzision oder auch die Elastizität einzelner Bauteile sein. Da man die aufgenommen Daten mit den Bekannten Postionen am Himmel vergleichen kann, kann man versuchen ein Modell zu finden, welches die Fehler verkleinert oder im Idealfall sogar eliminiert.
 
 \section{Entwicklung von Pointingmodellen}
-Da man aus den gewünschten Koordinaten der CCD die Koordinaten des Drives bestimmen lässt, drückt man sie als Funktion voneinander aus.
+Da man das Teleskop so ausrichten will, das die man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. 
 \begin{equation}
 az_D=f_{az}(az_C,el_C)\\
 el_D=f_{el}(az_C,el_C)
 \label{eq:pointingprinciple}
 \end{equation}\\
-Diese Funktionen werden so optimiert, dass die Gleichung möglichst gut erfüllt wird.
+az_D=f_{az}(az_C,el_C)\\
+el_D=f_{el}(az_C,el_C)
+\label{eq:pointingprinciple}
+\end{equation}\\
+Ziel ist es, die Funktionen so zu optimieren, dass die Differenzen zu den gewünschten Koordinaten verschwinden.
+\begin{equation}
+\Delta{_az}=f_{az}(az_C,el_C)=0\\
+\Delta_{el}=f_{el}(az_C,el_C)=0
+\label{eq:pointingZero}
+\end{equation}\\
 
 \section{Vereinfachtes Pointingmodell mit zwei Parametern}
-Die Position des Drives und die der CCD werden durch zwei Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Die Startposition des Drives wird in Richtung Norden definiert
+Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem die Kamera in der Parkposition ($el_C=0,az_C=0$) in eine andere Richtung zeigt als das Drivesystem ($el_D=el_0,az_D=az_0$). Die beiden Positionen lassen sich auch durch zwei karthesische Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Somit lässt sich die CCD durch einen Vektor in Richtung Norden
 \begin{equation}
-\vec{r}_D^0=\left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right)
-\label{eq:startDrive}
+\vec{r}_C^0=\left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right)
+\label{eq:startCCD}
 \end{equation}
-und kann durch eine Transformation $T$, die aus einer Drehung um die y-Achse $R_y$ und folgender Drehung um die z-Achse in Position besteht, gebracht werden
+beschreiben. Durch eine Drehung um die y-Achse mit dem Winkel $el$ und anschließender Drehung die z-Achse um den Winkel $az$ lässt sich jeder Punkt auf der Einheitskugel erreichen. Die beiden Drehungen lassen sich zu einer Transformation $T(az,el)$ zusammenfassen:
 \begin{equation}
 \nonumber
 T(az,el)=R_z(el)R_y(az)=
@@ -26,38 +35,46 @@ T(az,el)=R_z(el)R_y(az)=
 T(az,el)=\left(\begin{array}{ccc} \cos(az)\cos(el) & \sin(az) &-\cos(az)\sin(el) \\-\cos(el)\sin(az) & \cos(az) & \sin(az)\sin(el)\\ \sin(el) & 0 & \cos(el) \end{array} \right)
 \label{eq:TransformMat}
 \end{equation}\\
-Da durch diese Transformation der Vektor $\vec{r}_D^0$ in jede Richtung gedreht werden kann laesst sich die Startposition durch den Vektor
+Mit dieser Transformtion lässt sich auch die Startposition des Drives bestimmen:
 \begin{equation}
 \vec{r}_C^0=T(az_0,el_0)\vec{r}_D^0=\left(\begin{array}{c} \cos(az_0)\cos(el_0) \\ -\cos(el_0)\sin(az_0) \\ \sin(el_0) \end{array}\right)
-\label{eq:startCCD}
+\label{eq:startDrive}
 \end{equation}
-beschreiben. Faehrt man nun das Drivesystem in Position, also wendet die Transformation $T$ auf beide Vektoren an, so erhaelt man folgende Richtungen
+Wendet man nun die Gleiche Transformation $T(az,el)$ auf beide Startvektoren an, so erhält man für jedes Koordinatenpaar der CCD die zugehörigen Koordinaten des Drives in Abhängigkeit der Koordinaten der CCD. Für die Richtung der CCD ergibt sich
 \begin{equation}
-\vec{r}_D=T(az,el)\vec{r}_D^0=\left(\begin{array}{c} \cos(az)\cos(el) \\ -\cos(el)\sin(az) \\ \sin(el) \end{array}\right)
-\label{eq:finDrive}
-\end{equation}
-und
-\begin{equation}
-\vec{r}_C=T(az,el)\vec{r}_C^0=\left(\begin{array}{c} \cos(az)\left(\cos(az_0)\cos(el)\cos(el_0)-\sin(el)\sin(el_0)\right)-\cos(el_0)\sin(az)\sin(az_0) \\
-\sin(az)\left(\sin(el)\sin(el_0)-\cos(az_0)\cos(el)\cos(el_0)\right)-\cos(az)\cos(el_0)\sin(az_0) \\
-\cos(az_0)\cos(el_0)\sin(el)+\cos(el)\sin(el_0) \end{array}\right)
+\vec{r}_C=T(az,el)\vec{r}_D^0=\left(\begin{array}{c} \cos(az)\cos(el) \\ -\cos(el)\sin(az) \\ \sin(el) \end{array}\right)
 \label{eq:finCCD}
 \end{equation}
-Aus dem Vektor $\vec{r}_D$ lassen sich die Rechenvorschriften fuer die Ruecktransformation ins Koordinatensystem $(el,az)$ ablesen:
+und für die Richtung des Drives
+\begin{equation}
+\vec{r}_D=T(az,el)\vec{r}_C^0=\left(\begin{array}{c} \cos(az)\left(\cos(az_0)\cos(el)\cos(el_0)-\sin(el)\sin(el_0)\right)-\cos(el_0)\sin(az)\sin(az_0) \\
+\sin(az)\left(\sin(el)\sin(el_0)-\cos(az_0)\cos(el)\cos(el_0)\right)-\cos(az)\cos(el_0)\sin(az_0) \\
+\cos(az_0)\cos(el_0)\sin(el)+\cos(el)\sin(el_0) \end{array}\right)
+\label{eq:finDrive}
+\end{equation}
+Aus diesen Richtungsvektoren müssen wieder die ursprünglichen Koordinaten $az$ und $el$ rekonstruiert werden. Die Elevation lässt sich aus der z-Komponente (Höhe) berechnen
 \begin{equation}
 el=\arcsin(r_z)
 \label{eq:backtrafoEl}
 \end{equation}
-dsf
+und der Azimutwinkel aus dem Verhältnis von y- zu x-Komponente. Allerdings muss man hierbei beachten, in welchem der 4 Quadranten man sich befindet
 \begin{equation}
 az=\arctan(r_y,r_x)=\left\{\begin{array}{lr}
 \arctan\left(\frac{{r_y}}{{r_x}}\right) & r_x \textgreater 0  \\
 \arctan\left(\frac{{r_y}}{{r_x}}\right)+\pi &  r_x \textless 0,r_y \textgreater 0 \\
-\pm \pi \text{fuer }  &  r_x \textless 0,r_y = 0 \\
+\pm \pi   &  r_x \textless 0,r_y = 0 \\
 \arctan\left(\frac{{r_y}}{{r_x}}\right)-\pi &  x \textless 0,r_y \textless 0 \\
 +\frac{\pi}{2} &  x = 0,r_y \textgreater 0 \\
 -\frac{\pi}{2} & x = 0,r_y \textless 0 \\
 \end{array}
 \label{eq:backtrafoAz}
 \end{equation}
-Als Koordinaten des Drives in Abhaenigkeit der Koordinaten der CCD erhaelt man somit
+Die Position der CCD ist so konstruiert, dass ihre Koordinaten mit denen in der Transformationsmatrix übereinstimmen
+\begin{equation}
+az_C=az\\
+el_C=el
+\end{equation}
+und für die Koordinaten des Drives erhält man
+\begin{equation}
+az
+\end{equation}
