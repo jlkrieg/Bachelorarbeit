@@ -25,13 +25,13 @@ Ziel VHE-Astronomie ist es die Quellen hochenergetischer Gammastrahlung zu erfor
 \item[Schwarze Loecher]\hfill \\
 Schwarze Loecher sind Ueberreste von Supernovae massiver Sterne -> aktive Kerne
 \item[Supernova Uebereste]\hfill \\
-Supernovae
+Hat ein Stern mit ausreichender Masse seinen Wasserstoff- und Heliumvorat verbrannt und somit sein Lebensende erreicht, kollabiert dieser und es entsteht ein kompaktes Objekt, wie zum Beispiel ein Neutronenstern
 \item[Pulsare]\hfill \\
 Kollabieren die Überreste einer Supernova von einem Durchmesser von ca $10^6km$ auf ca $20km$ ensteht ein Neutronenstern, der sich aufgrund der Drehimpulserhaltung sehr schnell dreht. Solche Konstrukte nennt man Pulsare. Durch die schnelle Rotation entstehen starke elektromagnetische Felder, die geladene Partikel beschleunigen können. Pulsare strahlen ungefähr $10^42eV/s$ ab.
 \item[Binäre Systeme]\hfill \\ 
 Befindet sich ein Neutronenstern oder Pulsar in einem System mit einem normalen Stern, entsteht durch absaugen von Materie eine Akkretitionsscheibe um den Neutronenstern beziehungsweise um den Pulsar. Da die Materie in diesem System durch Gravitation beschleunigt wird, werden Energien der Größenordnung $10^19 eV$ erzeugt. 
 \item[Dunkle Materie]\hfill \\
-Hochenergetische Photonen koennen auch nach Prinzipien erzeugt werden, die man heute noch nicht versteht. So koennte es moeglich sein, dass hochenergetische Photonen durch den Zerfall von Partikeln der dunklen Materie stammen. Die Supersymmetrie sagt zum Beispiel den Zerfall von schweren WIMPS in Photonen vorraus. Durch Detektion solcher Ereignisse liesse sich auf neue Physik schliessen.
+Hochenergetische Photonen koennen auch nach Prinzipien erzeugt werden, die man heute noch nicht versteht. So koennte es moeglich sein, dass hochenergetische Photonen durch den Zerfall von Partikeln der dunklen Materie stammen. %Die Supersymmetrie sagt zum Beispiel den Zerfall von schweren WIMPS in Photonen vorraus. Durch Detektion solcher Ereignisse liesse sich auf neue Physik schliessen.
 \end{description}
 
 
@@ -39,7 +39,10 @@ Hochenergetische Photonen koennen auch nach Prinzipien erzeugt werden, die man h
 Prinzipiell laesst sich zwischen bodengestuetzter und satellitengestuetzter Gammaastronomie unterscheiden. Durch den Einsatz von Satelliten vermeidet man den stoerenden Einfluss der Erdatmosphaere, muss dafuer Abstriche in der Groesse der Detektoren machen und mit hohen Kosten kalkulieren. Hier soll sich nur mit der bodengestuetzten Variante beschaeftigt werden.
 
 \subsection{Luftschauer}
-Treten hochenergetische Photonen in die Materie ein, so wechselwirken sie mit dieser ueber Paarbildung. Das entstehende Elektron bzw Positron verliert daraufhin Energie durch Bremstrahlung, worauf die entstehenden Photonen wieder durch Paarbildung wechselwirken koennen. Somit steigt die Anzahl der Teilchen exponentiell an und die durchschnittliche Energie nimmt exponentiell ab, bis die Teilchen ioniserend sind und der Schauer verschwindet. Die entstehenden Teilchen lassen sich nicht direkt nachweisen, da der Schauer bereits in einer Hoehe von ca 10km verschwindet. %bild zur veranschaulichung
+Treten hochenergetische Photonen in die Materie ein, so wechselwirken sie mit dieser ueber Paarbildung. Das entstehende Elektron bzw Positron verliert daraufhin Energie durch Bremstrahlung, worauf die entstehenden Photonen wieder durch Paarbildung wechselwirken koennen. Somit steigt die Anzahl der Teilchen exponentiell an und die durchschnittliche Energie nimmt exponentiell ab, bis die Teilchen ioniserend sind und der Schauer verschwindet. Die entstehenden Teilchen lassen sich nicht direkt nachweisen, da der Schauer bereits in einer Hoehe von ca 10km verschwindet. Die charakteristische Groesse fuer den Teilchenverlust in einem Medium ist die Strahlungslaenge, die fuer Luft pdg betraegt und nach der, sich die Anzahl der Teilchen verdoppelt. Somit
+\begin{equation}
+E_n=\frac{E_0}{2^n}
+\end{equation}\\
 Neben elektromagnetischen Schauern existieren noch hadronische und myonische Schauer. Hadronische Schauer entstehen wenn hochenergetische Hadronen in die Atmosphaere eindringen. Durch die Wechselwirkung von Hadronen entstehen haufig Pionen, die wiederum in Photonen zerfallen, wodurch wiederum ein elekromagnetischer Schauer entsteht, der allderdings einen anderen Ursprung hat. Entstehen Myonen in einem Schauer, so besteht das Problem, dass diese kaum Energie abgeben und bei hoher Geschwindigkeit den Erdboden erreichen. Somit gibt nur ein Teil des Schauers die Energie ab und die Messung weicht von der Realitaet ab.
 
 \subsection{Cherenkov Strahlung}
@@ -51,17 +54,22 @@ ausbreitet. Fuer Luft (in Bodennaehe) ergibt sich somit ein maximaler Oeffnungsw
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{Images/cherenkow.png}
-\caption{Der Cherenkoweffekt: Ein geladenes Teilchen durchfliegt ein dielektrisches Medium und erzeugt Wellenfronten.}
+\caption{Der Cherenkoweffekt: Ein geladenes Teilchen durchfliegt ein dielektrisches Medium mit einer Geschwindigkeit ueber der der Lichtgeschwindigkeit im Medium und erzeugt Wellenfronten.}
 \label{img:cherenkow}
 \end{figure}
+Mit einem Brechungsindex von $n=1$ fuer Luft in Bodennaehe ergibt sich ein Offnungswinkel von $\theta=1.3^{\circ}$. Da der Schauer allerdings deutlich ueber dem Boden endet, beobachtet man einen Winkel von ungefaehr $\theta=1^{\circ}$ \cite{Grupen}.
+
+
 
 \subsection{Bodengestützte Detektion der Cherenkovstrahlung}
-Da aufgrund der Atmosphaere weder das primaere Photon noch die Teilchen des Luftschauers detektiert werden koennen, versucht man die Cherenkovstrahlung, die durch den Luftschauer entsteht zu detektieren. Dazu muss eine grosse Flaeche abgedeckt werden, da selbst bei vertikaler Einstrahlung der Schauer einen Durchmesser von ca 250m haben kann %design concept 
-Somit ergeben sich Flachen der Grossenordnung von $10^4-10^5 m^2$. Um diese Flaechen abdecken zu koennen, verwendet man Teleskope mit effektiven Flaechen von ungefaehr $100 m^2$ (VERITAS). Haufig bestehen die Reflektoren aus vielen einzelnen Spiegeln um die Kosten zu druecken. Im Brennpunkt der Spiegel befindet sich der Cherenkovdetektor der in der Regel aus vielen Photomultipliern (PMTs) besteht. Somit erhaelt man effektiv eine Kamera mit einer typischen Aufloesung von ca 2000 Pixeln. Die Aufloesung ist im Vergleich zu CCD Kameras einerseits eher gering, da die Cherenkov Kamera in der Lage sein muss einzelne Photonen zu detekieren und andererseites dauern Cherenkovschauer nur wenige Nanosekunden, die wiederum zeitlich aufgeloest werden muessen. Zusaetlich muessen die Teleskope elektromagenetische Schauer von hadronisches Schauern unterscheiden und duerfen nicht durch Hintergrundeffekte wie zum Beispiel Sternenlicht gestoert werden.
+Da aufgrund der Atmosphaere weder das primaere Photon noch die Teilchen des Luftschauers detektiert werden koennen, versucht man die Cherenkovstrahlung, die durch den Luftschauer entsteht zu detektieren. Bei einem Oeffnungswinkel von $\theta_c=1^{\circ}$%cite grupen
+in einer Hohe von $10km$ ergibt sich ein Lichtpool mit einem Durchmesser von 250m (effektive Flaechen von $10^4-10^5 m^2$). Werden im Maximum $10^8-10^9$ Photonen so ergibt sich eine Dichte von ca $10^3$ Photonen pro Quadratmeter, die inerhalb von wenigen Nanosekunden detektiert werden muessen.
+Dazu verwendet man Abbildende Cherenkovteleskope (IACTS - Imaging Atmosphaeric Cherenkov Telescops), die aus einem parabolischem Spiegel, bei kleineren Teleskopen mit deutlich groesserer Brennweite als Durchmesser werden haufig auch sphaerische Spiegel verwendet, die das Licht in der Brennebene buendeln. Um kosten zu sparen, bestehen die Reflektoren in der Regel aus vielen einzelnen Spiegeln. In der Brennebene befindet sich als Detektor eine Cherenkovkamera, die eine typische Aufloesung von 2000 Pixeln hat. Die im Vergleich zu CCD Kameras eher geringe Aufloesung ergibt sich aus der Problematik, dass man wenige Photonen sehr schnell detektieren muss. Dazu werden Photomultiplier (PMTs) verwendet.
+Aus den aufgenommenen Daten laesst sich mit Hilfe von Monte-Carlo-Simulationen die Richtung und die Energie des detektierten Photons rekonstruieren. 
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{Images/detection.png}
-\caption{Detektion hochenergetischer Strahlung}
+\caption{Detektion hochenergetischer Strahlung: Das in die Atmosphaere eintretende Photon erzeugt einen elektromagnetischen Luftschauer (oben rechts) der widerum Cherenkovlicht erzeugt, welches am Boden mit IACTs detektiert werden kann. Ein Detektionsbild ist unten links zu sehen.}
 \label{img:detection}
 \end{figure}
