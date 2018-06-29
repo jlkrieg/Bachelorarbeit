@@ -1,0 +1,19 @@
+#include "Math/Functor.h"
+#include "Math/BrentMinimizer1D.h"
+ 
+double myfunc(double x ) { 
+   return 1 + -4*x + 1*x*x; 
+}
+ 
+int NumericalMinimization(){
+   ROOT::Math::Functor1D func(&myfunc);
+ 
+   ROOT::Math::BrentMinimizer1D bm;
+   bm.SetFunction(func, -10,10);
+   bm.Minimize(10,0,0);
+ 
+   cout << "f(" << bm.XMinimum() << ") = " <<bm.FValMinimum() << endl;
+ 
+   return 0;
+}
+
