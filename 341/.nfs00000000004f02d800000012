@@ -1,64 +1,54 @@
 //global constants
 const Float_t f = TMath::Pi()/180.0;
 Double_t AZ =0;
-Double_t U =0;
 Double_t DAZ =2;
-Double_t cutEl=35;
+Double_t cutEl=90;
 
 //functions for el and az
 Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0){
   double Z = sin(el*f)*cos(az0*f)*cos(el0*f)+cos(el*f)*sin(el0*f);
   return asin(Z)/f;
-  // az=az*f;
-  // el=el*f;
-  // az0=az0*f;
-  // el0=el0*f;
-  // Double_t r = pow(cos(az0)*cos(el0),2) + pow(cos(el0)*sin(az0),2) + pow(cos(az0)*sin(el0),2) + pow(sin(az0)*sin(el0),2);
-  // Double_t z = cos(az0)*cos(el0)*sin(el)-cos(az0)*cos(el)*sin(el0);
-  // return asin(z/r)/f;
 }
 
 Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0){
   double X = +cos(az*f)*(cos(el*f)*cos(az0*f)*cos(el0*f)-sin(el*f)*sin(el0*f))-sin(az*f)*sin(az0*f)*cos(el0*f);
   double Y = -sin(az*f)*(cos(el*f)*cos(az0*f)*cos(el0*f)-sin(el*f)*sin(el0*f))-cos(az*f)*sin(az0*f)*cos(el0*f);
   return atan2(-Y,X)/f;
-  // az=az*f;
-  // el=el*f;
-  // az0=az0*f;
-  // el0=el0*f;
-  // Double_t x=cos(az)*cos(az0)*cos(el)*cos(el0)+cos(az)*cos(az0)*sin(el)*sin(el0)+sin(az)*(pow(cos(el0),2)*sin(az0)+sin(az0)*pow(sin(el0),2));
-  // Double_t y=cos(az0)*cos(el)*cos(el0)*sin(az)+cos(az0)*sin(az)*sin(el)*sin(el0)+cos(az)*(pow(cos(el0),2)*sin(az0)+sin(az0)*pow(sin(el0),2));
-  // return atan2(-y,x)/f;
 }
 
 //funtion to minimize (chisq)
 Double_t chi(Double_t az0, Double_t el0){
   Double_t result=0;
-  TNtuple*nt = (TNtuple*)gDirectory->Get("nt");
+  TFile *file= TFile::Open("ntuple2nt_v12.root");
+  TNtuple*nt = (TNtuple*)file->Get("run341_ccd3_tpoint_0_00_nt_ntuple");
   Int_t N = nt->GetEntries();
   Float_t* a = nt->GetArgs();
   for(int i=0;i<N;i++){
     nt->GetEntry(i);
-    Double_t u = a[0];
-    Double_t ps = a[6];
+    Double_t ps = a[5];
     if( fabs(ps-11.03) > 0.05 ) continue; 
-    Double_t azd = a[1];
+    Double_t azd = a[0];
     //if (azd == AZ){
-      Double_t eld = a[2];
-      Double_t az = a[3];
-      Double_t el = a[4];
-      if( eld > cutEl ){
+      Double_t eld = a[1];
+      Double_t az = a[2];
+      Double_t el = a[3];
+      if( eld < cutEl ){
 	Double_t del = funcEl(el,az,az0,el0)-eld;
 	if (del < -180){
 	  del+=360;
 	}
-	Double_t daz = funcAz(el,az,az0,el0)-eld;
+	if (del > 180){
+	  del-=360;
+	}
+	Double_t daz = funcAz(el,az,az0,el0)-azd;
 	if (daz < -180){
 	  daz+=360;
 	}
-	result+=pow((del-eld),2);//+pow((daz-azd),2);
-	//result+=pow((el-funcEl(eld,azd,az0,el0)),2)+pow((az-funcAz(eld,azd,az0,el0)),2); //eld abh
-      }
+	if (daz > 180){
+	  daz-=360;
+	}
+	result+=pow(del,2)+pow(daz,2);
+	}
       // }
   }
   return result;
@@ -69,20 +59,20 @@ void minuitFunction(int& nDim, double* gout, double& result, double par[], int f
   result = chi(par[0], par[1]);
 }
 
-void fit281(){
-
-  TNtuple*nt = (TNtuple*)gDirectory->Get("nt");
+void fitC2D(){
+  TFile *file= TFile::Open("ntuple2nt_v12.root");
+  TNtuple*nt = (TNtuple*)file->Get("run341_ccd3_tpoint_0_00_nt_ntuple");
   Int_t N = nt->GetEntries();
   Float_t* a = nt->GetArgs();
   int k = 0;
   for(int i=0;i<N;i++){
     nt->GetEntry(i);
-    Double_t ps = a[6];
+    Double_t ps = a[5];
     if( fabs(ps-11.03) > 0.05 ) continue;  
-    Double_t azd = a[1];
+    Double_t azd = a[0];
     //if ( azd == AZ ){
-      Double_t eld = a[2];
-      if( eld > cutEl ){
+      Double_t eld = a[1];
+      if( eld < cutEl ){
 	k++;
       }
       //}
@@ -94,19 +84,17 @@ void fit281(){
   k=0;
   for(int i=0;i<N;i++){
     nt->GetEntry(i);
-    Double_t u = a[0];
-    Double_t ps = a[6];
+    Double_t ps = a[5];
     if( fabs(ps-11.03) > 0.05 ) continue;
-    Double_t azd = a[1];
+    Double_t azd = a[0];
     //if ( azd == AZ ){
-      Double_t eld = a[2];
-      if( eld > cutEl ){
-	Double_t az = a[3];
+      Double_t eld = a[1];
+      if( eld < cutEl ){
+	Double_t az = a[2];
 	if (az < -180){
 	  az+=360;
 	}
-	Double_t el = a[4];
-	Float_t flag = a[5];
+	Double_t el = a[3];
 	azd_vec[k]=azd;
 	eld_vec[k]=eld;
 	az_vec[k]=az;
@@ -138,34 +126,38 @@ void fit281(){
   // fit.
   minimizer->ExecuteCommand("MIGRAD",0,0);
   // Get the best fit values
-  double bestX = minimizer->GetParameter(0);
-  double bestY = minimizer->GetParameter(1);
+  double el0 = minimizer->GetParameter(0);
+  double az0 = minimizer->GetParameter(1);
   // Get the function value at the best fit.
-  double minimum = chi(bestX, bestY);
-  std::cout<<"az0 = "<<bestX<<std::endl;
-  std::cout<<"el0 = "<<bestY<<std::endl;
+  double minimum = chi(el0, az0);
+  std::cout<<"az0 = "<<el0<<std::endl;
+  std::cout<<"el0 = "<<az0<<std::endl;
   std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
 
   //testparams
   // for drive dependency az0 = 12.1029 el0 = -1.23133
-  //bestX=12.1029;
-  //bestY=-1.23133;
+  // bestX=-12.048;
+  // bestY=1.18437;
 
   //calculate differences
   for(int i=0; i<kk; i++){
-    //del_vec[i] = funcEl(el_vec[i],az_vec[i],bestX,bestY)-eld_vec[i];
-    //del_vec[i] = funcEl(eld_vec[i],azd_vec[i],bestX,bestY)-el_vec[i]; //eld abh
-    del_vec[i] = el_vec[i]-eld_vec[i];
+    del_vec[i] = funcEl(el_vec[i],az_vec[i],el0,az0)-eld_vec[i];
+    //del_vec[i] = eld_vec[i];
     if (del_vec[i] < -180){
       del_vec[i]+=360;
     }
+    if (del_vec[i] > 180){
+      del_vec[i]-=360;
+    }
   }				
   for(int i=0; i<kk; i++){
-    //daz_vec[i] = funcAz(el_vec[i],az_vec[i],bestX,bestY)-azd_vec[i];
-    //daz_vec[i] = funcAz(eld_vec[i],azd_vec[i],bestX,bestY)-az_vec[i]; //eld abh
-    daz_vec[i] = az_vec[i]-azd_vec[i];
+    daz_vec[i] = funcAz(el_vec[i],az_vec[i],el0,az0)-azd_vec[i];
+    //daz_vec[i] = azd_vec[i];
     if (daz_vec[i] < -180){
       daz_vec[i]+=360;
+    }
+    if (daz_vec[i] > 180){
+      daz_vec[i]-=360;
     }
   }
 
@@ -178,30 +170,46 @@ void fit281(){
 
   //plot
   TCanvas* can = new TCanvas("plots","Plots",0,0,800,600);
-  TString nam("run281_az");
-  nam += Int_t(AZ);
-  nam += ".png";
   can->Divide(2,2);
+  TString nam("run341C2D.png");
+  TString tit1("fit CCD to drive");
+  TString tit2("el0 = ");
+  //tit2 += Int_t(AZ);
+  tit2 += el0;
+  tit2 += ", az0 = ";
+  tit2 += az0;
   TGraph* g_delel=new TGraph(kk,el_vec,del_vec);
   can->cd(1);
   g_delel->SetMarkerStyle(20);
   g_delel->SetMarkerSize(0.80);
+  g_delel->GetXaxis()->SetTitle("elevation drive (deg)");
+  g_delel->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
+  g_delel->SetTitle(tit1);
   g_delel->Draw("AP");
   TGraph* g_delaz=new TGraph(kk,az_vec,del_vec);
   can->cd(2);
   g_delaz->SetMarkerStyle(20);
   g_delaz->SetMarkerSize(0.80);
+  g_delaz->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g_delaz->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
+  g_delaz->SetTitle(tit2);
   g_delaz->Draw("AP");
   TGraph* g_dazel=new TGraph(kk,el_vec,daz_vec);
   can->cd(3);
   g_dazel->SetMarkerStyle(20);
   g_dazel->SetMarkerSize(0.80);
+  g_dazel->GetXaxis()->SetTitle("elevation drive (deg)");
+  g_dazel->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
   g_dazel->Draw("AP");
   TGraph* g_dazaz=new TGraph(kk,az_vec,daz_vec);
   can->cd(4);
   g_dazaz->SetMarkerStyle(20);
   g_dazaz->SetMarkerSize(0.80);
+  g_dazaz->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g_dazaz->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
   g_dazaz->Draw("AP");
+  can->SaveAs(nam);
+  file->Close();
   }
 
 
