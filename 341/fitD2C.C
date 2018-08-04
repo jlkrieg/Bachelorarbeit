@@ -5,19 +5,29 @@ Double_t DAZ =2;
 Double_t cutEl=35;
 
 //functions for el and az
-Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0, Double_t el1){
-  double Z = sin(el*f)*cos(az0*f)*cos(el0*f)+cos(el*f)*sin(el0*f);
-  return asin(Z)/f+el1;
+Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0, Double_t phi, Double_t psi){
+  az = az*f;
+  el = el*f;
+  az0 = az0*f;
+  el0 = el0*f;
+  phi = phi*f;
+  psi = psi*f;
+  //el=+el1;
+  double Z = sin(el)*cos(az0)*cos(el0)+cos(el)*sin(el0);
+  //double Z = -cos[el0]*sin[az0]*(cos[phi]*sin[az]*sin[psi]+cos[az]*sin[phi]*sin[psi])+cos[az0]*cos[el0]*(cos[psi]*sin[el]+cos[az]*cos[el]*cos[phi]*sin[psi]-cos[el]*sin[az]*sin[phi]*sin[psi])+sin[el0]*(cos[el]*cos[psi]-cos[az]*cos[phi]*sin[el]*sin[psi]+sin[az]*sin[el]*sin[phi]*sin[psi]);
+  return asin(Z)/f+phi*sin(az+psi);
 }
 
-Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0, Double_t az1){
+Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0){//, Double_t el1,Double_t az1){
+  //az+=az1;
+  //el+=el1;
   double X = +cos(az*f)*(cos(el*f)*cos(az0*f)*cos(el0*f)-sin(el*f)*sin(el0*f))-sin(az*f)*sin(az0*f)*cos(el0*f);
   double Y = -sin(az*f)*(cos(el*f)*cos(az0*f)*cos(el0*f)-sin(el*f)*sin(el0*f))-cos(az*f)*sin(az0*f)*cos(el0*f);
-  return atan2(-Y,X)/f+az1;
+  return atan2(-Y,X)/f;
 }
 
 //funtion to minimize (chisq)
-Double_t chi(Double_t az0, Double_t el0, Double_t az1, Double_t el1){
+Double_t chi(Double_t az0, Double_t el0, Double_t phi, Double_t psi){
   Double_t result=0;
   TFile *file= TFile::Open("ntuple2nt_v12.root");
   TNtuple*nt = (TNtuple*)file->Get("run341_ccd3_tpoint_0_00_nt_ntuple");
@@ -31,14 +41,14 @@ Double_t chi(Double_t az0, Double_t el0, Double_t az1, Double_t el1){
     Double_t eld = a[1];
     Double_t az = a[2];
     Double_t el = a[3];
-    Double_t del = funcEl(eld,azd,az0,el0,el1)-el;
+    Double_t del = funcEl(eld,azd,az0,el0,phi,psi)-el;
     if (del < -180){
       del+=360;
     }
     if (del > 180){
       del-=360;
     }
-    Double_t daz = funcAz(eld,azd,az0,el0,az1)-az;
+    Double_t daz = funcAz(eld,azd,az0,el0)-az;
     if (daz < -180){
       daz+=360;
     }
@@ -106,8 +116,8 @@ void fitD2C(){
   //   arg5, arg6 – ignore for now
   minimizer->SetParameter(0,"az0",0,10,0,0);
   minimizer->SetParameter(1,"el0",0,5,0,0);
-  minimizer->SetParameter(2,"az1",0,1,0,0);
-  minimizer->SetParameter(3,"el1",0,1,0,0);
+  minimizer->SetParameter(2,"phi",0,1,0,0);
+  minimizer->SetParameter(3,"psi",0,1,0,0);
   // Run the simplex minimizer to get close to the minimum
   minimizer->ExecuteCommand("SIMPLEX",0,0);
   // Run the migrad minimizer (an extended Powell's method) to improve the
@@ -116,19 +126,19 @@ void fitD2C(){
   // Get the best fit values
   double az0 = minimizer->GetParameter(0);
   double el0 = minimizer->GetParameter(1);
-  double az1 = minimizer->GetParameter(2);
-  double el1 = minimizer->GetParameter(3);
+  double phi = minimizer->GetParameter(2);
+  double psi = minimizer->GetParameter(3);
   // Get the function value at the best fit.
-  double minimum = chi(az0,el0,az1,el1);
+  double minimum = chi(az0,el0,phi,psi);
   std::cout<<"az0 = "<<az0<<std::endl;
   std::cout<<"el0 = "<<el0<<std::endl;
-  std::cout<<"az1 = "<<az1<<std::endl;
-  std::cout<<"el1 = "<<el1<<std::endl;
+  std::cout<<"phi = "<<phi<<std::endl;
+  std::cout<<"psi = "<<psi<<std::endl;
   std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
 
   //calculate differences
   for(int i=0; i<kk; i++){
-    del_vec[i] = funcEl(eld_vec[i],azd_vec[i],az0,el0,el1)-el_vec[i];
+    del_vec[i] = funcEl(eld_vec[i],azd_vec[i],az0,el0,phi,psi)-el_vec[i];
     if (del_vec[i] < -180){
       del_vec[i]+=360;
     }
@@ -138,7 +148,7 @@ void fitD2C(){
   }
 				
   for(int i=0; i<kk; i++){
-    daz_vec[i] = funcAz(eld_vec[i],azd_vec[i],az0,el0,az1)-az_vec[i];
+    daz_vec[i] = funcAz(eld_vec[i],azd_vec[i],az0,el0)-az_vec[i];
     if (daz_vec[i] < -180){
       daz_vec[i]+=360;
     }

@@ -6,8 +6,15 @@ Double_t cutEl=90;
 
 //functions for el and az
 Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0){
-  double Z = sin(el*f)*cos(az0*f)*cos(el0*f)+cos(el*f)*sin(el0*f);
-  return asin(Z)/f;
+  //double temp1 = el;
+  //double temp2 = az;
+  //el = el0;
+  //az = az0;
+  //el0 = temp1;
+  //az0 = temp2;
+  //double Z = sin(el*f)*cos(az0*f)*cos(el0*f)+cos(el*f)*sin(el0*f);
+  double Z = sin(el*f)*az0+cos(el*f)*el0;  
+return asin(Z)/f;
 }
 
 Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0){
@@ -47,7 +54,7 @@ Double_t chi(Double_t az0, Double_t el0){
 	if (daz > 180){
 	  daz-=360;
 	}
-	result+=pow(del,2)+pow(daz,2);
+	result+=pow(del,2);//+pow(daz,2);
 	}
       // }
   }
@@ -106,42 +113,44 @@ void fitC2D(){
 
   //minimize
   //function to minimize chi(el_vec,az_vec,eld_vec,azd_vec,kk,n,par)
-  TFitter* minimizer = new TFitter(2);
-  { 
-    double p1 = -1;
-    minimizer->ExecuteCommand("SET PRINTOUT",&p1,1);
-  }
-  minimizer->SetFCN(minuitFunction);
+  //TFitter* minimizer = new TFitter(2);
+  //{ 
+  //  double p1 = -1;
+  //  minimizer->ExecuteCommand("SET PRINTOUT",&p1,1);
+  //}
+  //minimizer->SetFCN(minuitFunction);
   // Define the parameters
-         //   arg1 – parameter number
+  //   arg1 – parameter number
   //   arg2 – parameter name
   //   arg3 – first guess at parameter value
   //   arg4 – estimated distance to minimum
   //   arg5, arg6 – ignore for now
-  minimizer->SetParameter(0,"az0",0,10,0,0);
-  minimizer->SetParameter(1,"el0",0,5,0,0);
+  //minimizer->SetParameter(0,"az0",1,0.1,0,0);//0,10
+  //minimizer->SetParameter(1,"el0",0,0.1,0,0);//0,5
   // Run the simplex minimizer to get close to the minimum
-  minimizer->ExecuteCommand("SIMPLEX",0,0);
-  // Run the migrad minimizer (an extended Powell's method) to improve the
-  // fit.
-  minimizer->ExecuteCommand("MIGRAD",0,0);
+  //minimizer->ExecuteCommand("SIMPLEX",0,0);
+  // Run the migrad minimizer (an extended Powell's method) to improve the fit.
+  //minimizer->ExecuteCommand("MIGRAD",0,0);
   // Get the best fit values
-  double el0 = minimizer->GetParameter(0);
-  double az0 = minimizer->GetParameter(1);
+  //double el0 = minimizer->GetParameter(0);
+  //double az0 = minimizer->GetParameter(1);
   // Get the function value at the best fit.
-  double minimum = chi(el0, az0);
-  std::cout<<"az0 = "<<el0<<std::endl;
-  std::cout<<"el0 = "<<az0<<std::endl;
-  std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
+  //double minimum = chi(el0, az0);
+  //std::cout<<"az0 = "<<el0<<std::endl;
+  //std::cout<<"el0 = "<<az0<<std::endl;
+  //std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
 
   //testparams
   // for drive dependency az0 = 12.1029 el0 = -1.23133
-  // bestX=-12.048;
-  // bestY=1.18437;
+  double bestX=1.0198;//1.02 1.02252 ;
+  double bestY=0.0225;//0.023 0.0206697;
+  double az0 = 6.6;
+  double el0 = -10.48;
 
   //calculate differences
   for(int i=0; i<kk; i++){
-    del_vec[i] = funcEl(el_vec[i],az_vec[i],el0,az0)-eld_vec[i];
+    del_vec[i] = eld_vec[i]-funcEl(el_vec[i],az_vec[i],bestX,bestY);
+    //del_vec[i] = eld_vec[i]-el_vec[i];
     //del_vec[i] = eld_vec[i];
     if (del_vec[i] < -180){
       del_vec[i]+=360;
@@ -152,7 +161,7 @@ void fitC2D(){
   }				
   for(int i=0; i<kk; i++){
     daz_vec[i] = funcAz(el_vec[i],az_vec[i],el0,az0)-azd_vec[i];
-    //daz_vec[i] = azd_vec[i];
+    //daz_vec[i] = azd_vec[i]-az_vec[i];
     if (daz_vec[i] < -180){
       daz_vec[i]+=360;
     }
@@ -160,7 +169,7 @@ void fitC2D(){
       daz_vec[i]-=360;
     }
   }
-
+  std::cout<<"test"<<funcEl(65,0,1,0)<<std::endl;
   //chitest
   Double_t chisq=0;
   for(int i=0; i<kk; i++){
