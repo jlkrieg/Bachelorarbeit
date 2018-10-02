@@ -143,6 +143,29 @@ void fitC2D4(){
   std::cout<<"el1 = "<<el1<<std::endl;
   std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
 
+
+  const int npar = 4;
+  double matrix[npar][npar];
+  gMinuit->mnemat(&matrix[0][0],npar);
+  TMatrixD* fCovar = new TMatrixD(npar,npar,&matrix[0][0]);
+  std::cout << "Error matrix" << std::endl;
+  fCovar->Print();
+  double sigma[npar];
+  for(int i=0;i<npar;i++){
+    sigma[i]=sqrt((*fCovar)[i][i]);
+  }
+  for(int i=0;i<npar;i++){
+    for(int k=0;k<npar;k++){
+      double s = sigma[i]*sigma[k];
+      (*fCovar)[i][k] = (*fCovar)[i][k]/s;
+    }
+  }
+  std::cout << "Correlation matrix" << std::endl;
+  fCovar->Print();
+
+
+
+
   //calculate differences
   for(int i=0; i<kk; i++){
     del_vec[i] = eld_vec[i]-funcEl(el_vec[i],az_vec[i],az0,el0,az1,el1);
