@@ -1,4 +1,4 @@
-\select@language {english}
+\babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}$\gamma $-Astronomie}{2}{chapter.7}
 \contentsline {section}{\numberline {1.1}Entstehung hochenergetischer Strahlung}{2}{section.8}
 \contentsline {section}{\numberline {1.2}Quellen hochenergetischer Strahlung}{2}{section.9}

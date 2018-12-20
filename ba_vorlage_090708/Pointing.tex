@@ -2,7 +2,7 @@
 Das Pointing von Teleskopen beschäftigt sich damit, dass das Teleskop so ausgerichtet wird, wie es erwünscht ist. Häufig ist das Problem, dass die eingestellte Position nicht exakt mit der gewünschten Position übereinstimmt. Gründe dafür können Fehler in der Präzision oder auch die Elastizität einzelner Bauteile sein. Da man die aufgenommen Daten mit den Bekannten Postionen am Himmel vergleichen kann, kann man versuchen ein Modell zu finden, welches die Fehler verkleinert oder im Idealfall sogar eliminiert.
 
 \section{Koordinaten}
-Das MST benutzt ein Koordinatensystem aus zwei Winkeln, welches den Kugelkoordinaten ähnelt. Der Azimutwinkel ($az$) beschreibt die Auslenkung in der Ebenenen und läuft von $-180^{\circ}$ bis $180^{\circ}$, wobei es für $az=0^{\circ}$ in Richtung Norden ausgerichtet ist. Der Elevationswinkel $el$ lauft von $0^{\circ}$ bis $90^{\circ}$ wobei $el=90^{\circ}$ dem Zenit entspricht. Da es bei der Entwicklung von Pointingmodellen von Vorteil sein kann, in kartesischen Koordinaten zu rechnen, wird hier die Konvention verwendet, dass Nordrichtung der x-Richtung, die Westrichtung der y-Richtung und die Zenitrichtung der z-Richtung entspricht.
+Das MST benutzt ein Koordinatensystem aus zwei Winkeln, welches den Kugelkoordinaten ähnelt. Der Azimutwinkel ($az$) beschreibt die Auslenkung in der Ebenen und läuft von $-180^{\circ}$ bis $180^{\circ}$, wobei es für $az=0^{\circ}$ in Richtung Norden ausgerichtet ist. Der Elevationswinkel $el$ läuft von $0^{\circ}$ bis $90^{\circ}$ wobei $el=90^{\circ}$ dem Zenit entspricht. Da es bei der Entwicklung von Pointingmodellen von Vorteil sein kann, in kartesischen Koordinaten zu rechnen, wird hier die Konvention verwendet, dass Nordrichtung der x-Richtung, die Westrichtung der y-Richtung und die Zenitrichtung der z-Richtung entspricht.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{Images/coordinates.png}
@@ -13,24 +13,23 @@ Das MST benutzt ein Koordinatensystem aus zwei Winkeln, welches den Kugelkoordin
 \section{Entwicklung von Pointingmodellen}
 Da man das Teleskop so ausrichten will, das die man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. 
 \begin{equation}
-az_D=f_{az}(az_C,el_C)\\
+\nonumber
+az_D=f_{az}(az_C,el_C)
+\end{equation}
+\begin{equation}
 el_D=f_{el}(az_C,el_C)
 \label{eq:pointingprinciple}
-\end{equation}\\
-az_D=f_{az}(az_C,el_C)\\
-el_D=f_{el}(az_C,el_C)
-\label{eq:pointingprinciple}
-\end{equation}\\
+\end{equation}
 Ziel ist es, die Funktionen so zu optimieren, dass die Differenzen zu den gewünschten Koordinaten verschwinden.
 \begin{equation}
 \Delta{_az}=f_{az}(az_C,el_C)=0\\
 \Delta_{el}=f_{el}(az_C,el_C)=0
 \label{eq:pointingZero}
-\end{equation}\\
+\end{equation}
 
 \section{Pointingmodell mit zwei Parametern}
 \subsection{Vorhersage der CCD-Koordinaten in Abhaengigkeit der Drive-Koordinaten}
-Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem das Drivesystem in der Parkposition ($el_D=0,az_D=0$) in eine andere Richtung zeigt als die CCD-Kamera ($el_C=el_0,az_C=az_0$). Die beiden Positionen lassen sich auch durch zwei karthesische Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Ausgehend von dieser Startposition wird das Teleskop beziehungsweise die Vektoren $\vec{r_D}$ und $\vec{r_C}$ durch orthogonale Transformationen in die gewünschte Position gebracht wird. Als Parkpostion für das Drive-System erhaelt man mit den oben genannten Bedingung folgenden karthesischen Vektor:
+Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem das Drivesystem in der Parkposition ($el_D=0,az_D=0$) in eine andere Richtung zeigt als die CCD-Kamera ($el_C=el_0,az_C=az_0$). Die beiden Positionen lassen sich auch durch zwei karthesische Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Ausgehend von dieser Startposition wird das Teleskop beziehungsweise die Vektoren $\vec{r_D}$ und $\vec{r_C}$ durch orthogonale Transformationen in die gewünschte Position gebracht wird. Als Parkpostion für das Drive-System erhält man mit den oben genannten Bedingung folgenden karthesischen Vektor:
 \begin{equation}
 \vec{r}_D^0=\left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right)
 \label{eq:startDrive}
@@ -109,7 +108,7 @@ az_D=(
 wobei hier noch $el_D$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.
 
 \section{Erweiterung des Modells auf vier Parameter}
-Unter der Annahme, dass die Skalen des Drivesystems einen Offset haben, also das der Wertebereich von $el_D$ beispielshalbe von $1^{\circ}$ bis $91^{\circ}$ laeuft kann das Modell mit zwei additiven Konstanten $el_1$ und $az_1$ erweitert werden. Das bedeutet, das bei der Vorhersage der CCD-Koordinaten \ref{eq:elD2C} und \ref{eq:azD2C} ein konstanter Offset zu den Argumenten hinzugefuegt wird:
+Unter der Annahme, dass die Skalen des Drivesystems einen Offset haben, also das der Wertebereich von $el_D$ beispielshalber von $1^{\circ}$ bis $91^{\circ}$ läuft kann das Modell mit zwei additiven Konstanten $el_1$ und $az_1$ erweitert werden. Das bedeutet, das bei der Vorhersage der CCD-Koordinaten \ref{eq:elD2C} und \ref{eq:azD2C} ein konstanter Offset zu den Argumenten hinzugefügt wird:
 \begin{equation}
 el_C^{4par}=el_C(el_D+el_1,az_D+az_1)
 \label{eq:elD2C4}
