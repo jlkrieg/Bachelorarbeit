@@ -10,30 +10,6 @@ Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0){
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
-  //el0 = 0; //1 par
-
-  //Variante 1 (5.16306)
-  //double Z = sin(el)/cos(az0);
-  //return (asin(Z)+el0)/f;
-
-  //Variante 2 (15.1388)
-  //double Z = sin(el)*cos(el0)/cos(az0)-cos(el)*sin(el0);
-  //return asin(Z)/f;
-  
-  //Variante 3 (17.7755)
-  //double Z = sin(el)/(cos(az0)*cos(el0))-cos(el)*sin(el0)/cos(az0);
-  //return asin(Z)/f;
-
-  //Variante 4 (5.19538)
-  //double Z = sin(el+el0)/(cos(az0)*cos(el0))-cos(el)*sin(el0)/cos(az0);
-  //return (asin(Z)-el0)/f;
-  
-  //Variante 5 (5.16289)
-  //double shift = atan(sin(el0)*cos(az0)-tan(el0));
-  //double Z = sin(el+el0+shift)/(cos(az0)*cos(el0))-cos(el+shift)*sin(el0)/cos(az0);
-  //return (asin(Z)-el0)/f;
-
-  //Variante 6
   double temp1 = cos(az0)*cos(el0)-sqrt(pow(cos(az0)*cos(el0),2)+pow(sin(el0),2)-pow(sin(el),2));
   double temp2 = sin(el0)+sin(el);
   return 2*atan(temp1/temp2)/f;
@@ -44,42 +20,12 @@ Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0){
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
-  //el0 = 0; //1 par
-
-  //Variante 1 (5.16306)
-  //double Z = sin(el)/cos(az0);
-  //el = asin(Z);
-  //double X = cos(el)*cos(az0)*cos(az)+sin(az)*sin(az0);
-  //double Y = sin(az)*cos(el)*cos(az0)-sin(az0)*cos(az);
-  //return atan2(Y,X)/f;
-
-  //Variante 2 (15.1388)
-  //double Z = sin(el)*cos(el0)/cos(az0)-cos(el)*sin(el0);
-  //el=asin(Z);
-
-  //Variante 3 (17.7755)
-  //double Z =  sin(el)/(cos(az0)*cos(el0))-cos(el)*sin(el0)/cos(az0);
-  //el=asin(Z);
-
-  //Variante 4 (5.19538)
-  //double Z = sin(el+el0)/(cos(az0)*cos(el0))-cos(el)*sin(el0)/cos(az0);
-  //el = (asin(Z)-el0);
-
-  //Variante 5 (5.16289)
-  //double shift = atan(sin(el0)*cos(az0)-tan(el0));
-  //double Z = sin(el+el0+shift)/(cos(az0)*cos(el0))-cos(el+shift)*sin(el0)/cos(az0);
-  //el = asin(Z)-el0;
-
-  //double X = cos(el)*cos(az0)*cos(az)+sin(az)*sin(az0);
-  //double Y = sin(az)*cos(el)*cos(az0)-sin(az0)*cos(az);
-  
-  //Variante 6
   double temp1 = cos(az0)*cos(el0)-sqrt(pow(cos(az0)*cos(el0),2)+pow(sin(el0),2)-pow(sin(el),2));
   double temp2 = sin(el0)+sin(el);
   el = 2*atan(temp1/temp2);
   double X = cos(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+sin(az)*sin(az0)*cos(el0);
-  double Y = sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))-cos(az)*sin(az0)*cos(el0);
-  return atan2(Y,X)/f;
+  double Y = -sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+cos(az)*sin(az0)*cos(el0);
+  return atan2(-Y,X)/f;
 }
 
 //funtion to minimize (chisq)
@@ -141,7 +87,7 @@ void fitC2D(){
     }
   }
   const int kk=k;
-  Double_t az_vec[kk],el_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk],azerr[kk],elerr[kk];
+  Double_t  az_vec[kk], el_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk],azerr[kk],elerr[kk];
   
   //Einlesen der Daten
   k=0;
@@ -164,6 +110,8 @@ void fitC2D(){
       k++;
     }
   }
+  //test
+  std::cout<<sizeof(eld_vec)/sizeof(eld_vec[0])<<"vs"<<kk<<std::endl;
 
   //minimize
   TFitter* minimizer = new TFitter(2);
@@ -173,17 +121,36 @@ void fitC2D(){
   }
   minimizer->SetFCN(minuitFunction);
   minimizer->SetParameter(0,"az0",12,1,0,0);//0,10
-  minimizer->SetParameter(1,"el0",-1,1,0,0);//0,5
+  minimizer->SetParameter(1,"el0",0,1,0,0);//0,5
   minimizer->ExecuteCommand("SIMPLEX",0,0);
   minimizer->ExecuteCommand("MIGRAD",0,0);
   double az0 = minimizer->GetParameter(0);
   double el0 = minimizer->GetParameter(1);
-  double az0 = 12.048;
-  double el0 = -1.18437;
   double minimum = chi(az0,el0);
   std::cout<<"az0 = "<<az0<<std::endl;
   std::cout<<"el0 = "<<el0<<std::endl;
   std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
+
+  //Matrizen berechnen
+  const int npar = 2;
+  double matrix[npar][npar];
+  gMinuit->mnemat(&matrix[0][0],npar);
+  TMatrixD* fCovar = new TMatrixD(npar,npar,&matrix[0][0]);
+  std::cout << "Error matrix" << std::endl;
+  fCovar->Print();
+  double sigma[npar];
+  for(int i=0;i<npar;i++){
+    sigma[i]=sqrt((*fCovar)[i][i]);
+  }
+  for(int i=0;i<npar;i++){
+    for(int k=0;k<npar;k++){
+      double s = sigma[i]*sigma[k];
+      (*fCovar)[i][k] = (*fCovar)[i][k]/s;
+    }
+  }
+  std::cout << "Correlation matrix" << std::endl;
+  fCovar->Print();
+
   //calculate differences
   for(int i=0; i<kk; i++){
     del_vec[i] = eld_vec[i]-funcEl(el_vec[i],az_vec[i],az0,el0);

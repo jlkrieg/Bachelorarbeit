@@ -12,10 +12,9 @@ Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0,Double_t az1, 
   el0 = el0*f;
   az1 = az1*f;
   el1 = el1*f;
-
   double temp1 = cos(az0)*cos(el0)-sqrt(pow(cos(az0)*cos(el0),2)+pow(sin(el0),2)-pow(sin(el),2));
   double temp2 = sin(el0)+sin(el);
-  return 2*atan(temp1/temp2)/f+el1;
+  return 2*atan(temp1/temp2)/f-el1;
 }
 
 Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0,Double_t az1, Double_t el1){
@@ -23,15 +22,12 @@ Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0,Double_t az1, 
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
-  //el0 = 0; //1 par
-  az1 = az1*f;
-  el1 = el1*f;
   double temp1 = cos(az0)*cos(el0)-sqrt(pow(cos(az0)*cos(el0),2)+pow(sin(el0),2)-pow(sin(el),2));
   double temp2 = sin(el0)+sin(el);
   el = 2*atan(temp1/temp2)+el1;
   double X = cos(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+sin(az)*sin(az0)*cos(el0);
-  double Y = sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))-cos(az)*sin(az0)*cos(el0);
-  return atan2(Y,X)/f+az1;
+  double Y = -sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+cos(az)*sin(az0)*cos(el0);
+  return atan2(-Y,X)/f-az1;
 }
 
 //funtion to minimize (chisq)
@@ -116,6 +112,7 @@ void fitC2D4(){
       k++;
     }
   }
+  file->Close();
 
   //minimize
   TFitter* minimizer = new TFitter(2);
@@ -240,6 +237,5 @@ void fitC2D4(){
   g_dazaz->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
   g_dazaz->Draw("AP");
   can->SaveAs(nam);
-  file->Close();
   }
 

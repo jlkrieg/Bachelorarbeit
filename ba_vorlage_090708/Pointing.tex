@@ -28,13 +28,14 @@ Ziel ist es, die Funktionen so zu optimieren, dass die Differenzen zu den gewün
 \label{eq:pointingZero}
 \end{equation}\\
 
-\section{Vereinfachtes Pointingmodell mit zwei Parametern}
-Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem die Kamera in der Parkposition ($el_C=0,az_C=0$) in eine andere Richtung zeigt als das Drivesystem ($el_D=el_0,az_D=az_0$). Die beiden Positionen lassen sich auch durch zwei karthesische Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Zunächst wird davon ausgegangen, dass das Teleskop sich in einer Parkposition befindet und anschließend in die gewünschte Position gebracht wird. Als Parkpostion für das Drive-System werden die Koordinaten $el=0$ und $az=0$ gewählt. In karthesischen Koordinaten lässt sich die Richtung durch
+\section{Pointingmodell mit zwei Parametern}
+\subsection{Vorhersage der CCD-Koordinaten in Abhaengigkeit der Drive-Koordinaten}
+Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem das Drivesystem in der Parkposition ($el_D=0,az_D=0$) in eine andere Richtung zeigt als die CCD-Kamera ($el_C=el_0,az_C=az_0$). Die beiden Positionen lassen sich auch durch zwei karthesische Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Ausgehend von dieser Startposition wird das Teleskop beziehungsweise die Vektoren $\vec{r_D}$ und $\vec{r_C}$ durch orthogonale Transformationen in die gewünschte Position gebracht wird. Als Parkpostion für das Drive-System erhaelt man mit den oben genannten Bedingung folgenden karthesischen Vektor:
 \begin{equation}
 \vec{r}_D^0=\left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right)
 \label{eq:startDrive}
 \end{equation}
-beschreiben. Durch eine Drehung um die y-Achse mit dem Winkel $el$ und anschließender Drehung die z-Achse um den Winkel $az$ lässt sich aus dieser Startposition jeder Punkt auf der Einheitskugel erreichen. Die beiden Drehungen lassen sich zu einer Transformation $T(az,el)$ zusammenfassen:
+Durch eine Drehung um die y-Achse mit dem Winkel $el$ und anschließender Drehung die z-Achse um den Winkel $az$ lässt sich aus dieser Startposition jeder Punkt auf der Einheitskugel erreichen. Die beiden Drehungen lassen sich zu einer Transformation $T(az,el)$ zusammenfassen:
 \begin{equation}
 \nonumber
 T(az,el)=R_z(el)R_y(az)=
@@ -44,7 +45,7 @@ T(az,el)=R_z(el)R_y(az)=
 T(az,el)=\left(\begin{array}{ccc} \cos(az)\cos(el) & \sin(az) &-\cos(az)\sin(el) \\-\cos(el)\sin(az) & \cos(az) & \sin(az)\sin(el)\\ \sin(el) & 0 & \cos(el) \end{array} \right)
 \label{eq:TransformMat}
 \end{equation}\\
-Unter der Annahme, dass die Kamera von vornherein in eine andere Richtung als das Drive-System zeigt, lässt sich mit dieser Transformtion $T(az0,el0)$ auch die Startposition der Kamera bestimmen:
+Unter der Annahme, dass die Kamera von vornherein in eine andere Richtung als das Drive-System zeigt, lässt sich mit dieser Transformtion $T(az0,el0)$ aus der Startpostion des Drives die Startposition der Kamera bestimmen:
 \begin{equation}
 \vec{r}_C^0=T(az_0,el_0)\vec{r}_D^0=\left(\begin{array}{c} \cos(az_0)\cos(el_0) \\ -\cos(el_0)\sin(az_0) \\ \sin(el_0) \end{array}\right)
 \label{eq:startCCD}
@@ -66,9 +67,9 @@ Aus diesen Richtungsvektoren müssen wieder die ursprünglichen Koordinaten $az$
 el=\arcsin(r_z)
 \label{eq:backtrafoEl}
 \end{equation}
-und der Azimutwinkel aus dem Verhältnis von y- zu x-Komponente. Allerdings muss man hierbei beachten, in welchem der 4 Quadranten man sich befindet
+und der Azimutwinkel aus dem Verhältnis von y- zu x-Komponente. Da der Tangens dieses Verhaeltnis dem Azimuthwinkel mit einem Wertebereich von $-180^{\circ}$ bis $180^\circ$ entspricht muss man als Umkehrfunktion den erweiterten $\arctan$ vervewenden:
 \begin{equation}
-az=\arctan(r_y,r_x)=\left\{\begin{array}{lr}
+az=\arctan 2(r_y,r_x)=\left\{\begin{array}{lr}
 \arctan\left(\frac{{r_y}}{{r_x}}\right) & r_x \textgreater 0  \\
 \arctan\left(\frac{{r_y}}{{r_x}}\right)+\pi &  r_x \textless 0,r_y \textgreater 0 \\
 \pm \pi   &  r_x \textless 0,r_y = 0 \\
@@ -85,20 +86,44 @@ el_C=\arcsin\left(\cos(az_0)\cos(el_0)\sin(el_D)+\sin(el_0)\cos(el_D)\right)
 \label{eq:elD2C}
 \end{equation}
 \begin{equation}
-az_C=\arctan2(x)
-\label{eq:azC2D}
+az_C=\arctan2(
+\sin(az_D)(\cos(el_D)\cos(az_0)\cos(el0)-\sin(el_D)\sin(el_0))-\cos(az_D)\sin(az_0)\cos(el0),
+\cos(az_D)(\cos(el_D)\cos(az_0)\cos(el0)-\sin(el_D)\sin(el_0))+\sin(az_D)\sin(az_0)\cos(el0))
+\label{eq:azD2C}
 \end{equation}
+
+\subsection{Vorhersage der Drive-Koordinaten in Abhaengigkeit der CCD-Koordinaten}
 Um die Abhängigkeiten der Drive-Koordinaten von den CCD-Koordinaten zu erhalten, muss das Gleichungssystem \ref{eq:elD2C} \ref{eq:azC2D} nach $el_D$ und $az_D$ aufgelöst werden. Da die Formel \ref{eq:elD2C} nur von $el_D$ und $el_C$ abhängt, kann diese unabhängig von \ref{eq:azC2D} umgestellt werden:
+
 \begin{equation}
-el_D=2\arctan\left(\frac{\cos(el_0)\cos(az_0)-\sqrt{\cos^2(el_0)\cos^2(az_0)-\sin^2(el_0)+\sin^2(el_C)}}{\sin(el_C)+\sin(el_0)}
+el_D=2\arctan\left(\frac{\cos(el_0)\cos(az_0)-\sqrt{\cos^2(el_0)\cos^2(az_0)-\sin^2(el_0)+\sin^2(el_C)}}{\sin(el_C)+\sin(el_0)}\right)
 \label{eq:elC2D}
 \end{equation}
 Stellt man Gleichung \ref{eq:azC2D} nach $az_D$ um, so erhält man
 \begin{equation}
-az_D=\arctan2\left( x \right)
+az_D=(
+\sin(az_C)(\cos(el_C)\cos(az_0)\cos(el0)-\sin(el_C)\sin(el_0))-\cos(az_C)\sin(az_0)\cos(el0),
+\cos(az_C)(\cos(el_C)\cos(az_0)\cos(el0)-\sin(el_C)\sin(el_0))+\sin(az_C)\sin(az_0)\cos(el0))
 \label{eq:azC2D}
 \end{equation}
 wobei hier noch $el_D$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.
 
 \section{Erweiterung des Modells auf vier Parameter}
-Einführung additiver Konstanten
+Unter der Annahme, dass die Skalen des Drivesystems einen Offset haben, also das der Wertebereich von $el_D$ beispielshalbe von $1^{\circ}$ bis $91^{\circ}$ laeuft kann das Modell mit zwei additiven Konstanten $el_1$ und $az_1$ erweitert werden. Das bedeutet, das bei der Vorhersage der CCD-Koordinaten \ref{eq:elD2C} und \ref{eq:azD2C} ein konstanter Offset zu den Argumenten hinzugefuegt wird:
+\begin{equation}
+el_C^{4par}=el_C(el_D+el_1,az_D+az_1)
+\label{eq:elD2C4}
+\end{equation}
+\begin{equation}
+az_C^{4par}=az_C(el_D+el_1,az_D+az_1)
+\label{eq:azD2C4}
+\end{equation}
+wohingegen bei der Vorhersage der Drive-Koordinaten nur ein konstanter Offset zu den Funktionen \ref{eq:elC2D} und \ref{eq:azC2D} addiert wird.
+\begin{equation}
+el_D^{4par}=el_D(el_C,az_C)+el_1
+\label{eq:elD2C4}
+\end{equation}
+\begin{equation}
+az_D^{4par}=az_D(el_C+,az_C)+az_1
+\label{eq:azD2C4}
+\end{equation}

@@ -12,8 +12,14 @@
 \contentsline {subsection}{\numberline {2.1.2}Arrays}{7}{subsection.22}
 \contentsline {section}{\numberline {2.2}Prototyp in Adlershof}{7}{section.24}
 \contentsline {subsection}{\numberline {2.2.1}Kameras des MST}{7}{subsection.25}
-\contentsline {subsection}{\numberline {2.2.2}Koordinatens des MST}{8}{subsection.26}
-\contentsline {subsection}{\numberline {2.2.3}Bestimmung der Bildkoordinaten durch astronometry.net}{9}{subsection.28}
-\contentsline {chapter}{\numberline {3}Pointingmodell}{10}{chapter.29}
-\contentsline {section}{\numberline {3.1}Entwicklung von Pointingmodellen}{10}{section.30}
-\contentsline {section}{\numberline {3.2}Vereinfachtes Pointingmodell mit zwei Parametern}{10}{section.33}
+\contentsline {subsection}{\numberline {2.2.2}Bestimmung der Bildkoordinaten durch astronometry.net}{8}{subsection.26}
+\contentsline {chapter}{\numberline {3}Pointingmodell}{9}{chapter.27}
+\contentsline {section}{\numberline {3.1}Koordinaten}{9}{section.28}
+\contentsline {section}{\numberline {3.2}Entwicklung von Pointingmodellen}{9}{section.30}
+\contentsline {section}{\numberline {3.3}Pointingmodell mit zwei Parametern}{10}{section.33}
+\contentsline {subsection}{\numberline {3.3.1}Vorhersage der CCD-Koordinaten in Abhaengigkeit der Drive-Koordinaten}{10}{subsection.34}
+\contentsline {subsection}{\numberline {3.3.2}Vorhersage der Drive-Koordinaten in Abhaengigkeit der CCD-Koordinaten}{11}{subsection.44}
+\contentsline {section}{\numberline {3.4}Erweiterung des Modells auf vier Parameter}{11}{section.47}
+\contentsline {chapter}{\numberline {4}Auswertung}{12}{chapter.52}
+\contentsline {section}{\numberline {4.1}Datensatz}{12}{section.53}
+\contentsline {section}{\numberline {4.2}Programm}{12}{section.54}

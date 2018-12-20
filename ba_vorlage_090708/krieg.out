@@ -11,8 +11,14 @@
 \BOOKMARK [2][-]{subsection.22}{Arrays}{section.19}% 11
 \BOOKMARK [1][-]{section.24}{Prototyp in Adlershof}{chapter.18}% 12
 \BOOKMARK [2][-]{subsection.25}{Kameras des MST}{section.24}% 13
-\BOOKMARK [2][-]{subsection.26}{Koordinatens des MST}{section.24}% 14
-\BOOKMARK [2][-]{subsection.28}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.24}% 15
-\BOOKMARK [0][-]{chapter.29}{Pointingmodell}{}% 16
-\BOOKMARK [1][-]{section.30}{Entwicklung von Pointingmodellen}{chapter.29}% 17
-\BOOKMARK [1][-]{section.33}{Vereinfachtes Pointingmodell mit zwei Parametern}{chapter.29}% 18
+\BOOKMARK [2][-]{subsection.26}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.24}% 14
+\BOOKMARK [0][-]{chapter.27}{Pointingmodell}{}% 15
+\BOOKMARK [1][-]{section.28}{Koordinaten}{chapter.27}% 16
+\BOOKMARK [1][-]{section.30}{Entwicklung von Pointingmodellen}{chapter.27}% 17
+\BOOKMARK [1][-]{section.33}{Pointingmodell mit zwei Parametern}{chapter.27}% 18
+\BOOKMARK [2][-]{subsection.34}{Vorhersage der CCD-Koordinaten in Abhaengigkeit der Drive-Koordinaten}{section.33}% 19
+\BOOKMARK [2][-]{subsection.44}{Vorhersage der Drive-Koordinaten in Abhaengigkeit der CCD-Koordinaten}{section.33}% 20
+\BOOKMARK [1][-]{section.47}{Erweiterung des Modells auf vier Parameter}{chapter.27}% 21
+\BOOKMARK [0][-]{chapter.52}{Auswertung}{}% 22
+\BOOKMARK [1][-]{section.53}{Datensatz}{chapter.52}% 23
+\BOOKMARK [1][-]{section.54}{Programm}{chapter.52}% 24

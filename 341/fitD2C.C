@@ -10,7 +10,6 @@ Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0){
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
-  //el0 = 0; //1 par
   double Z = sin(el)*cos(az0)*cos(el0)+cos(el)*sin(el0);
   return asin(Z)/f;
 }
@@ -20,10 +19,18 @@ Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0){
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
-  //el0 = 0; //1 par
-  double X = cos(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+sin(az)*sin(az0)*cos(el0);
-  double Y = sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))-cos(az)*sin(az0)*cos(el0);
-  return atan2(Y,X)/f;
+  double X = cos(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))-sin(az)*sin(az0)*cos(el0);
+  double Y = -sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))-cos(az)*sin(az0)*cos(el0);
+  return atan2(-Y,X)/f;
+}
+
+Double_t funcElT(Double_t el,Double_t az,Double_t az0,Double_t el0){
+  az = az*f;
+  el = el*f;
+  az0 = az0*f;
+  el0 = el0*f;
+  double Z = el-0.5*(tan(el)*pow(az0,2)+tan(el)/cos(el)*az0*el0);
+  return Z/f;
 }
 
 //funtion to minimize (chisq)
@@ -108,8 +115,8 @@ void fitD2C(){
     minimizer->ExecuteCommand("SET PRINTOUT",&p1,1);
   }
   minimizer->SetFCN(minuitFunction);
-  minimizer->SetParameter(0,"az0",0,10,0,0);
-  minimizer->SetParameter(1,"el0",0,5,0,0);
+  minimizer->SetParameter(0,"az0",0,12,0,0);
+  minimizer->SetParameter(1,"el0",0,1,0,0);
   minimizer->ExecuteCommand("SIMPLEX",0,0);
   minimizer->ExecuteCommand("MIGRAD",0,0);
   double az0 = minimizer->GetParameter(0);
@@ -118,6 +125,26 @@ void fitD2C(){
   std::cout<<"az0 = "<<az0<<std::endl;
   std::cout<<"el0 = "<<el0<<std::endl;
   std::cout<<"Minimum chi^2 = "<<minimum<<std::endl;
+
+  //Matrizen berechnen
+  const int npar = 2;
+  double matrix[npar][npar];
+  gMinuit->mnemat(&matrix[0][0],npar);
+  TMatrixD* fCovar = new TMatrixD(npar,npar,&matrix[0][0]);
+  std::cout << "Error matrix" << std::endl;
+  fCovar->Print();
+  double sigma[npar];
+  for(int i=0;i<npar;i++){
+    sigma[i]=sqrt((*fCovar)[i][i]);
+  }
+  for(int i=0;i<npar;i++){
+    for(int k=0;k<npar;k++){
+      double s = sigma[i]*sigma[k];
+      (*fCovar)[i][k] = (*fCovar)[i][k]/s;
+    }
+  }
+  std::cout << "Correlation matrix" << std::endl;
+  fCovar->Print();
 
   //calculate differences
   for(int i=0; i<kk; i++){
@@ -188,6 +215,33 @@ void fitD2C(){
   g_dazaz->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
   g_dazaz->Draw("AP");
   can->SaveAs(nam);
+
+  Double_t elT_vec1[kk],elT_vec2[kk],elT_vec3[kk];
+  for(int i=0; i<kk; i++){
+    elT_vec1[i] = funcElT(eld_vec[i],azd_vec[i],az0,el0);
+    elT_vec2[i] = funcEl(eld_vec[i],azd_vec[i],az0,el0);
+    elT_vec3[i] = elT_vec1[i] - elT_vec2[i];
+  }
+  TCanvas* can2 = new TCanvas("TAylor","Taylor",0,0,1200,600);
+  can2->Divide(3,1);
+  TString nam2("Taylor.png");
+  can2->cd(1);
+  TGraph* g_t1=new TGraph(kk,eld_vec,elT_vec1);
+  g_t1->SetMarkerStyle(20);
+  g_t1->SetMarkerSize(0.80);
+  g_t1->Draw("AP");
+  can2->cd(2);
+  TGraph* g_t2=new TGraph(kk,eld_vec,elT_vec2);
+  g_t2->SetMarkerStyle(20);
+  g_t2->SetMarkerSize(0.80);
+  g_t2->Draw("AP");
+  can2->cd(3);
+  TGraph* g_t3=new TGraph(kk,eld_vec,elT_vec3);
+  g_t3->SetMarkerStyle(20);
+  g_t3->SetMarkerSize(0.80);
+  g_t3->Draw("AP");
+
+
   file->Close();
   }
 
