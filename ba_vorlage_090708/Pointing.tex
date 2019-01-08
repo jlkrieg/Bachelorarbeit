@@ -11,9 +11,8 @@ Das MST benutzt ein Koordinatensystem aus zwei Winkeln, welches den Kugelkoordin
 \end{figure}
 
 \section{Entwicklung von Pointingmodellen}
-Da man das Teleskop so ausrichten will, das die man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. 
+Da man das Teleskop so ausrichten will, das die man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. \\
 \begin{equation}
-\nonumber
 az_D=f_{az}(az_C,el_C)
 \end{equation}
 \begin{equation}
@@ -22,13 +21,15 @@ el_D=f_{el}(az_C,el_C)
 \end{equation}
 Ziel ist es, die Funktionen so zu optimieren, dass die Differenzen zu den gewünschten Koordinaten verschwinden.
 \begin{equation}
-\Delta{_az}=f_{az}(az_C,el_C)=0\\
+\Delta_{az}=f_{az}(az_C,el_C)=0
+\end{equation}
+\begin{equation}
 \Delta_{el}=f_{el}(az_C,el_C)=0
 \label{eq:pointingZero}
 \end{equation}
 
 \section{Pointingmodell mit zwei Parametern}
-\subsection{Vorhersage der CCD-Koordinaten in Abhaengigkeit der Drive-Koordinaten}
+\subsection{Vorhersage der CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten}
 Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem das Drivesystem in der Parkposition ($el_D=0,az_D=0$) in eine andere Richtung zeigt als die CCD-Kamera ($el_C=el_0,az_C=az_0$). Die beiden Positionen lassen sich auch durch zwei karthesische Richtungsvektoren $\vec{r_D}$ und $\vec{r_C}$ beschrieben. Ausgehend von dieser Startposition wird das Teleskop beziehungsweise die Vektoren $\vec{r_D}$ und $\vec{r_C}$ durch orthogonale Transformationen in die gewünschte Position gebracht wird. Als Parkpostion für das Drive-System erhält man mit den oben genannten Bedingung folgenden karthesischen Vektor:
 \begin{equation}
 \vec{r}_D^0=\left(\begin{array}{c} 1 \\ 0 \\ 0 \end{array}\right)
@@ -36,11 +37,11 @@ Zunächst soll ein Pointingmodell mit zwei Parametern entwickelt werden, bei dem
 \end{equation}
 Durch eine Drehung um die y-Achse mit dem Winkel $el$ und anschließender Drehung die z-Achse um den Winkel $az$ lässt sich aus dieser Startposition jeder Punkt auf der Einheitskugel erreichen. Die beiden Drehungen lassen sich zu einer Transformation $T(az,el)$ zusammenfassen:
 \begin{equation}
-\nonumber
 T(az,el)=R_z(el)R_y(az)=
 \left(\begin{array}{ccc} \cos(az) & \sin(el) & 0 \\ -\sin(el) & \cos(el) & 0 \\ 0 & 0 & 1\end{array}\right)
 \left(\begin{array}{ccc} \cos(el) & 0 &-\sin(el) \\0 & 1 & 0\\ \sin(el) & 0 & \cos(el) \end{array} \right)
 \end{equation}\\
+\begin{equation}
 T(az,el)=\left(\begin{array}{ccc} \cos(az)\cos(el) & \sin(az) &-\cos(az)\sin(el) \\-\cos(el)\sin(az) & \cos(az) & \sin(az)\sin(el)\\ \sin(el) & 0 & \cos(el) \end{array} \right)
 \label{eq:TransformMat}
 \end{equation}\\
@@ -91,7 +92,7 @@ az_C=\arctan2(
 \label{eq:azD2C}
 \end{equation}
 
-\subsection{Vorhersage der Drive-Koordinaten in Abhaengigkeit der CCD-Koordinaten}
+\subsection{Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
 Um die Abhängigkeiten der Drive-Koordinaten von den CCD-Koordinaten zu erhalten, muss das Gleichungssystem \ref{eq:elD2C} \ref{eq:azC2D} nach $el_D$ und $az_D$ aufgelöst werden. Da die Formel \ref{eq:elD2C} nur von $el_D$ und $el_C$ abhängt, kann diese unabhängig von \ref{eq:azC2D} umgestellt werden:
 
 \begin{equation}
