@@ -19,3 +19,8 @@
 \BOOKMARK [2][-]{subsection.35}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.34}% 19
 \BOOKMARK [2][-]{subsection.46}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.34}% 20
 \BOOKMARK [1][-]{section.49}{Erweiterung des Modells auf vier Parameter}{chapter.26}% 21
+\BOOKMARK [0][-]{chapter.54}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 22
+\BOOKMARK [1][-]{section.55}{Datensatz}{chapter.54}% 23
+\BOOKMARK [1][-]{section.56}{Programm}{chapter.54}% 24
+\BOOKMARK [1][-]{section.60}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.54}% 25
+\BOOKMARK [1][-]{section.61}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.54}% 26

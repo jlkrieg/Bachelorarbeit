@@ -20,3 +20,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten}{10}{subsection.35}
 \contentsline {subsection}{\numberline {3.3.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{11}{subsection.46}
 \contentsline {section}{\numberline {3.4}Erweiterung des Modells auf vier Parameter}{11}{section.49}
+\contentsline {chapter}{\numberline {4}Anwendung des Pointingmodells auf Daten des Teleskops}{12}{chapter.54}
+\contentsline {section}{\numberline {4.1}Datensatz}{12}{section.55}
+\contentsline {section}{\numberline {4.2}Programm}{12}{section.56}
+\contentsline {section}{\numberline {4.3}Anwendung auf das Pointingmodell mit 2 Parametern}{13}{section.60}
+\contentsline {section}{\numberline {4.4}Anwendung auf das Pointingmodell mit 4 Parametern}{13}{section.61}
