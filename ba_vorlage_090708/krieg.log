@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  18 JAN 2019 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  22 JAN 2019 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,15 +675,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \openout2 = `amsmath.aux'.
 
 No file amsmath.tex.
-(./krieg.aux (./titlepage.aux) (./dedication.aux) (./gamma-Astronomie.aux)
-(./CTA.aux) (./Pointing.aux
-
-LaTeX Warning: Label `eq:elD2C4' multiply defined.
-
-
-LaTeX Warning: Label `eq:azD2C4' multiply defined.
-
-) (./Auswertung.aux) (./declaration.aux))
+(./krieg.aux (./titlepage.aux) (./gamma-Astronomie.aux) (./CTA.aux)
+(./Pointing.aux) (./Auswertung.aux) (./declaration.aux))
 \openout1 = `krieg.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -802,7 +795,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 77.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<husiegel.pdf, id=100, 131.49126pt x 132.495pt>
+<husiegel.pdf, id=16, 131.49126pt x 132.495pt>
 File: husiegel.pdf Graphic file (type pdf)
  <use husiegel.pdf>
 Package pdftex.def Info: husiegel.pdf used on input line 77.
@@ -865,6 +858,34 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              by `\normalfont \itshape ' on input line 77.
 
 
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 77.
+
+
+Class scrreprt Warning: Usage of deprecated font command `\it'!
+(scrreprt)              You should note, that in 1994 font command `\it' has
+(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
+(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrreprt)              shouldn't use such commands any longer and within
+(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
+(scrreprt)              See `fntguide.pdf' for more information about
+(scrreprt)              recommended font commands.
+(scrreprt)              Note also, that KOMA-Script will remove the definition
+(scrreprt)              of `\it' anytime until release of about version 3.20.
+(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
+(scrreprt)              by `\normalfont \itshape ' on input line 77.
+
+
 ! Package inputenc Error: Unicode char �rz (U+F0)
 (inputenc)                not set up for use with LaTeX.
 
@@ -891,13 +912,7 @@ or  <return>  to continue without it.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./husiegel.pdf>]
-\openout2 = `dedication.aux'.
-
-
-(./dedication.tex) [2
-
-
-] (./krieg.toc
+(./krieg.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -908,20 +923,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `krieg.toc'.
 
- [3
+ [2
 
-
-] (./krieg.lof
-Overfull \hbox (10.08723pt too wide) in paragraph at lines 4--4
- \T1/lmr/m/n/10.95 erzeugt einen elek-tro-mag-netis-chen Luftschauer (oben rech
-ts) der wiederum Cherenkovlicht 
- []
-
-)
+] (./krieg.lof)
 \tf@lof=\write5
 \openout5 = `krieg.lof'.
 
- [4
+ [3
 
 ] (./krieg.lot)
 \tf@lot=\write6
@@ -951,20 +959,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 1.
 
-LaTeX Warning: Citation `DesignConcept' on page 2 undefined on input line 2.
+LaTeX Warning: Citation `PDG' on page 2 undefined on input line 15.
 
 
-LaTeX Warning: Citation `PDG' on page 2 undefined on input line 12.
-
-
-LaTeX Warning: Citation `PDG' on page 2 undefined on input line 12.
+LaTeX Warning: Citation `PDG' on page 2 undefined on input line 15.
 
 [2
 
 
 ]
 ! Undefined control sequence.
-l.28 ...roße Magnetfelder ($\mathcal{O}(10^8\unit
+l.31 ...roße Magnetfelder ($\mathcal{O}(10^8\unit
                                                   {T})$\cite{Grupen}. In die...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -973,48 +978,32 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `Grupen' on page 3 undefined on input line 28.
-
-! Undefined control sequence.
-l.30 ...gien in der Größenordnung $10^{19} \unit
-                                                  {eV}$\cite{Grupen} erhalten.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Warning: Citation `Grupen' on page 3 undefined on input line 31.
 
 
-LaTeX Warning: Citation `Grupen' on page 3 undefined on input line 30.
+LaTeX Warning: Citation `Crab1' on page 3 undefined on input line 48.
 
 
-Overfull \hbox (21.79837pt too wide) in paragraph at lines 29--31
-\T1/lmr/m/n/10.95 entsteht durch Ab-saugen von Ma-terie eine Akkre-tion-ss-chei
-be um den Neu-tro-nen-stern beziehungsweise
- []
+LaTeX Warning: Citation `iwas' on page 3 undefined on input line 55.
 
-
-LaTeX Warning: Citation `iwas' on page 3 undefined on input line 41.
-
-
-Overfull \hbox (19.27286pt too wide) in paragraph at lines 48--49
+[3]
+Overfull \hbox (19.27286pt too wide) in paragraph at lines 62--63
 \T1/lmr/m/n/10.95 Cherenkov Strahlung tritt auf, wenn geladene sich Teilchen in
  Ma-terie schneller als die Licht-geschwindigkeit
  []
 
-[3]
 
-LaTeX Warning: Citation `Grupen' on page 4 undefined on input line 52.
+LaTeX Warning: Citation `Grupen' on page 4 undefined on input line 66.
 
-<Images/cherenkow.png, id=195, 387.3672pt x 204.5241pt>
+<Images/cherenkow.png, id=68, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
-Package pdftex.def Info: Images/cherenkow.png used on input line 55.
+Package pdftex.def Info: Images/cherenkow.png used on input line 69.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
 
 ! Extra }, or forgotten $.
-l.62 ...inem Cherenkovwinkel von $\theta=1^\{circ}
+l.76 ...inem Cherenkovwinkel von $\theta=1^\{circ}
                                                   $ in 10km Höhe und senkre...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1023,18 +1012,19 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-LaTeX Warning: Citation `DesignConcept' on page 4 undefined on input line 62.
+LaTeX Warning: Citation `DesignConcept' on page 4 undefined on input line 76.
 
 
-LaTeX Warning: Citation `CherenkovCam' on page 4 undefined on input line 64.
+LaTeX Warning: Citation `CherenkovCam' on page 4 undefined on input line 78.
 
-<Images/detection.png, id=197, 895.84688pt x 648.17157pt>
+[4 <./Images/cherenkow.png>]
+<Images/detection.png, id=83, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
-Package pdftex.def Info: Images/detection.png used on input line 69.
+Package pdftex.def Info: Images/detection.png used on input line 83.
 (pdftex.def)             Requested size: 483.69687pt x 349.96786pt.
- [4 <./Images/cherenkow.png>]) [5 <./Images/detection.png>]
+) [5 <./Images/detection.png>]
 \openout2 = `CTA.aux'.
 
  (./CTA.tex
@@ -1049,18 +1039,22 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 5.
 
-<Images/TelescopeTypes.jpg, id=212, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=90, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
 Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 29.
 (pdftex.def)             Requested size: 483.69687pt x 272.07048pt.
- [6
+
+
+LaTeX Warning: Reference `img:ArrayLayout' on page 6 undefined on input line 38
+.
+
+[6
 
 
 
-]
-<Images/ArrayLayout.png, id=218, 963.6pt x 395.076pt>
+] <Images/ArrayLayout.png, id=98, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
@@ -1071,7 +1065,7 @@ Package pdftex.def Info: Images/ArrayLayout.png used on input line 45.
 
  (./Pointing.tex
 chapter 3.
-<Images/coordinates.png, id=227, 505.89pt x 337.26pt>
+<Images/coordinates.png, id=113, 505.89pt x 337.26pt>
 File: Images/coordinates.png Graphic file (type png)
 
 <use Images/coordinates.png>
@@ -1138,6 +1132,17 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
+LaTeX Warning: Reference `eq:backtrafoEl' on page 11 undefined on input line 83
+.
+
+
+LaTeX Warning: Reference `eq:backtrafoAz' on page 11 undefined on input line 83
+.
+
+
+LaTeX Warning: Reference `eq:finCCD' on page 11 undefined on input line 83.
+
+
 Overfull \hbox (361.2057pt too wide) detected at line 93
 []\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = [] 2([](\OML/lmm/m/it/10.95 az[
 ]\OT1/lmr/m/n/10.95 )([](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 ) [](\OML/l
@@ -1156,6 +1161,21 @@ m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10.95 0))[][]
  []
 
 
+LaTeX Warning: Reference `eq:elD2C' on page 11 undefined on input line 96.
+
+
+LaTeX Warning: Reference `eq:azC2D' on page 11 undefined on input line 96.
+
+
+LaTeX Warning: Reference `eq:elD2C' on page 11 undefined on input line 96.
+
+
+LaTeX Warning: Reference `eq:azC2D' on page 11 undefined on input line 96.
+
+
+LaTeX Warning: Reference `eq:azC2D' on page 11 undefined on input line 102.
+
+
 Overfull \hbox (319.27667pt too wide) detected at line 108
 []\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = ([](\OML/lmm/m/it/10.95 az[]\OT
 1/lmr/m/n/10.95 )([](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m
@@ -1172,6 +1192,21 @@ T1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 )) + [](\OML/l
 mm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/
 10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10.95 0))[][]
  []
+
+
+LaTeX Warning: Reference `eq:elC2D' on page 11 undefined on input line 109.
+
+
+LaTeX Warning: Reference `eq:elD2C' on page 11 undefined on input line 112.
+
+
+LaTeX Warning: Reference `eq:azD2C' on page 11 undefined on input line 112.
+
+
+LaTeX Warning: Reference `eq:elC2D' on page 11 undefined on input line 121.
+
+
+LaTeX Warning: Reference `eq:azC2D' on page 11 undefined on input line 121.
 
 ) [11]
 \openout2 = `Auswertung.aux'.
@@ -1192,9 +1227,9 @@ chapter 4.
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 154.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 154.
- (./krieg.aux (./titlepage.aux) (./dedication.aux) (./gamma-Astronomie.aux) (./
-CTA.aux) (./Pointing.aux)
-(./Auswertung.aux) (./declaration.aux))
+ (./krieg.aux (./titlepage.aux) (./gamma-Astronomie.aux) (./CTA.aux) (./Pointin
+g.aux) (./Auswertung.aux)
+(./declaration.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 154.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 154.
 
@@ -1204,24 +1239,24 @@ Package rerunfilecheck Warning: File `krieg.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `krieg.out':
-(rerunfilecheck)             Before: EC7634E87C7F458B14B93F1C411BC6B2;1779
-(rerunfilecheck)             After:  02EF43AB73928BB6B7A3E1DD389B3C26;1971.
+(rerunfilecheck)             Before: E334C2919DB973F5D5087830A096E3BC;207
+(rerunfilecheck)             After:  E92695F5470398A423DE8B682131E2D4;1975.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 154.
  ) 
 Here is how much of TeX's memory you used:
- 8652 strings out of 494910
- 131550 string characters out of 6179836
- 295904 words of memory out of 5000000
- 11674 multiletter control sequences out of 15000+600000
+ 8622 strings out of 494910
+ 131108 string characters out of 6179836
+ 292100 words of memory out of 5000000
+ 11650 multiletter control sequences out of 15000+600000
  63890 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,9n,66p,1461b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,9n,66p,1461b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1235,10 +1270,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy8.pfb>
-Output written on krieg.pdf (18 pages, 7284358 bytes).
+Output written on krieg.pdf (17 pages, 7282026 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
+ 251 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
  81 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 55 words of extra memory for PDF output out of 10000 (max. 10000000)
 

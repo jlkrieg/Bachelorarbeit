@@ -1,27 +1,27 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}$\gamma $-Astronomie}{2}{chapter.6}
-\contentsline {section}{\numberline {1.1}Entstehung hochenergetischer Strahlung}{2}{section.7}
-\contentsline {section}{\numberline {1.2}Quellen hochenergetischer Strahlung}{2}{section.8}
-\contentsline {section}{\numberline {1.3}Detektion von Strahlung}{3}{section.9}
-\contentsline {subsection}{\numberline {1.3.1}Luftschauer}{3}{subsection.10}
-\contentsline {subsection}{\numberline {1.3.2}Cherenkov Strahlung}{4}{subsection.12}
-\contentsline {subsection}{\numberline {1.3.3}Bodengest\IeC {\"u}tzte Detektion der Cherenkovstrahlung}{4}{subsection.15}
-\contentsline {chapter}{\numberline {2}Das Cherenkov Telescope Array}{6}{chapter.17}
-\contentsline {section}{\numberline {2.1}Design-Konzept}{6}{section.18}
-\contentsline {subsection}{\numberline {2.1.1}Teleskoptypen}{6}{subsection.19}
-\contentsline {subsection}{\numberline {2.1.2}Arrays}{7}{subsection.21}
-\contentsline {section}{\numberline {2.2}Prototyp in Adlershof}{7}{section.23}
-\contentsline {subsection}{\numberline {2.2.1}Kameras des MST}{7}{subsection.24}
-\contentsline {subsection}{\numberline {2.2.2}Bestimmung der Bildkoordinaten durch astronometry.net}{8}{subsection.25}
-\contentsline {chapter}{\numberline {3}Pointingmodell}{9}{chapter.26}
-\contentsline {section}{\numberline {3.1}Koordinaten}{9}{section.27}
-\contentsline {section}{\numberline {3.2}Entwicklung von Pointingmodellen}{9}{section.29}
-\contentsline {section}{\numberline {3.3}Pointingmodell mit zwei Parametern}{10}{section.34}
-\contentsline {subsection}{\numberline {3.3.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten}{10}{subsection.35}
-\contentsline {subsection}{\numberline {3.3.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{11}{subsection.46}
-\contentsline {section}{\numberline {3.4}Erweiterung des Modells auf vier Parameter}{11}{section.49}
-\contentsline {chapter}{\numberline {4}Anwendung des Pointingmodells auf Daten des Teleskops}{12}{chapter.54}
-\contentsline {section}{\numberline {4.1}Datensatz}{12}{section.55}
-\contentsline {section}{\numberline {4.2}Programm}{12}{section.56}
-\contentsline {section}{\numberline {4.3}Anwendung auf das Pointingmodell mit 2 Parametern}{13}{section.60}
-\contentsline {section}{\numberline {4.4}Anwendung auf das Pointingmodell mit 4 Parametern}{13}{section.61}
+\contentsline {chapter}{\numberline {1}$\gamma $-Astronomie}{2}{chapter.7}
+\contentsline {section}{\numberline {1.1}Entstehung hochenergetischer Strahlung}{2}{section.8}
+\contentsline {section}{\numberline {1.2}Quellen hochenergetischer Strahlung}{2}{section.9}
+\contentsline {section}{\numberline {1.3}Detektion von Strahlung}{3}{section.10}
+\contentsline {subsection}{\numberline {1.3.1}Luftschauer}{3}{subsection.11}
+\contentsline {subsection}{\numberline {1.3.2}Cherenkov Strahlung}{4}{subsection.13}
+\contentsline {subsection}{\numberline {1.3.3}Bodengest\IeC {\"u}tzte Detektion der Cherenkovstrahlung}{4}{subsection.16}
+\contentsline {chapter}{\numberline {2}Das Cherenkov Telescope Array}{6}{chapter.18}
+\contentsline {section}{\numberline {2.1}Design-Konzept}{6}{section.19}
+\contentsline {subsection}{\numberline {2.1.1}Teleskoptypen}{6}{subsection.20}
+\contentsline {subsection}{\numberline {2.1.2}Arrays}{7}{subsection.22}
+\contentsline {section}{\numberline {2.2}Prototyp in Adlershof}{7}{section.24}
+\contentsline {subsection}{\numberline {2.2.1}Kameras des MST}{7}{subsection.25}
+\contentsline {subsection}{\numberline {2.2.2}Bestimmung der Bildkoordinaten durch astronometry.net}{8}{subsection.26}
+\contentsline {chapter}{\numberline {3}Pointingmodell}{9}{chapter.27}
+\contentsline {section}{\numberline {3.1}Koordinaten}{9}{section.28}
+\contentsline {section}{\numberline {3.2}Entwicklung von Pointingmodellen}{9}{section.30}
+\contentsline {section}{\numberline {3.3}Pointingmodell mit zwei Parametern}{10}{section.35}
+\contentsline {subsection}{\numberline {3.3.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten}{10}{subsection.36}
+\contentsline {subsection}{\numberline {3.3.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{11}{subsection.47}
+\contentsline {section}{\numberline {3.4}Erweiterung des Modells auf vier Parameter}{11}{section.50}
+\contentsline {chapter}{\numberline {4}Anwendung des Pointingmodells auf Daten des Teleskops}{12}{chapter.55}
+\contentsline {section}{\numberline {4.1}Datensatz}{12}{section.56}
+\contentsline {section}{\numberline {4.2}Programm}{12}{section.57}
+\contentsline {section}{\numberline {4.3}Anwendung auf das Pointingmodell mit 2 Parametern}{13}{section.61}
+\contentsline {section}{\numberline {4.4}Anwendung auf das Pointingmodell mit 4 Parametern}{13}{section.62}

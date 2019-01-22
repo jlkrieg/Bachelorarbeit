@@ -1,13 +1,16 @@
 \chapter{$\gamma$-Astronomie} 
-Die Astronomie ist die Wissenschaft des Universums und beschreibt die Bewegung und Eigenschaften von Himmelskörpern wie Planeten oder Galaxien, interstellarer Materie und Strahlung. Betrachtete man früher nur Licht im optisch sichtbaren Bereich, so sind im 20. Jahrhundert einige zusätzliche Quellen dazugekommmen. Dazu zählen die von Viktor Hess durch Ballonversuche entdeckte kosmische Strahlung, die Röntgen-/bzw die Gammastrahlung sowie die Neutrinoastronomie. Die $\gamma$-Astronomie beschäftigt sich mit Photonen im Bereich ab einer Energie von 100 GeV \cite{DesignConcept}. Photonen haben den Vorteil, dass sie nicht wie geladene Teilchen durch elektromagnetische Felder abgelenkt werden und somit ihre Quelle leichter detektiert werden kann. Zudem sind sie auch noch deutlich leichter zu detektieren sind als Neutrinos. Da die Energie dieser Gammastrahlung so hoch ist, können sie nicht thermischen Ursprungs sein sondern kommen aus anderen Quellen, deren Untersuchung das Ziel der Hochenergie-Gamma-Astronomie (VHE - Very High Energy) ist.
+Die Astronomie ist die Wissenschaft des Universums und beschreibt die Bewegung und Eigenschaften von Himmelskörpern wie Planeten oder Galaxien, interstellarer Materie und Strahlung. Betrachtete man früher nur Licht im optisch sichtbaren Bereich, so sind im 20. Jahrhundert einige zusätzliche Quellen dazugekommmen. Dazu zählen die von Viktor Hess durch Ballonversuche entdeckte kosmische Strahlung, die Röntgen-/bzw die Gammastrahlung sowie die Neutrinoastronomie.
+Diese haben den Vorteil, dass sie anders als geladene Teilchen nicht durch elektromagnetische Felder abgelenkt werden können und somit die Quellen der Strahlung leichter bestimmt werden können. Da Neutrinos nur schwach mit Materie wechselwirkenist es im Vergleich zu Photonen deutlich aufwändiger diese zu detektieren.
+% Die $\gamma$-Astronomie beschäftigt sich mit Photonen im Bereich ab einer Energie von 100 GeV \cite{DesignConcept}. Photonen haben den Vorteil, dass sie nicht wie geladene Teilchen durch elektromagnetische Felder abgelenkt werden und somit ihre Quelle leichter detektiert werden kann. Zudem sind sie auch noch deutlich leichter zu detektieren sind als Neutrinos. 
+Da die Energie dieser Gammastrahlung so hoch ist, können sie nicht thermischen Ursprungs sein sondern kommen aus anderen Quellen, deren Untersuchung das Ziel der Hochenergie-Gamma-Astronomie (VHE - Very High Energy) ist.
 
 \section{Entstehung hochenergetischer Strahlung}
 
 \begin{description}
 \item[inverser Comptoneffekt]\hfill \\
 Durch den Comptoneffekt können hochenergetische Photonen einen Teil ihres Impulses und Energie an ein freies Elektron übergeben. Dieser Prozess kann auch invers ablaufen und somit kann ein niederenergetisches Photon, zum Beispiel aus dem kosmischen Mikrowellenhintergrund (E=66meV), durch einen Stoß mit einem Elektron eine hohe Energie bekommen.
-\item[Bremstrahlung]\hfill \\
-Durchfliegen hochenergetische Teilchen Materie, so kann es vorkommen, dass diese eng an den Atomen vorbeifliegen und abgelenkt werden. Durch diese Ablenkung werden Photonen abgestrahlt.
+\item[Brems- und Synchrotonstrahlung]\hfill \\
+Durchfliegen Elektronen ein starkes Magnetfeld, wie es sie beispielsweise an Neutronensternen gibt, oder starke elektrische Felder in der Nähe von Atomkernen, so erfahren sie eine Beschleunigung. Durch diese Beschleunigung werden Photonen abgesstrahlt, deren Energie mit der Energie des Elektrons zunimmt.
 \item[Zerfälle und Annihilation]\hfill \\ 
 Hochenergetische Photonen können auch durch Zerfälle massiver Teilchen entstehen, wobei die Ruhemasse des Teilchen in kinetischer Energie der Photonen umgewandelt wird. So zerfällt das neutrale Pion zum Beispiel zu 98,8\% \cite{PDG} in zwei Photonen und setzt dabei eine Ruhemasse von $E_0=135MeV$ \cite{PDG} um. Eine weitere Möglichkeit ist die Annihilation von Materie und Antimaterie. Auch hier wird die Ruheenergie der Teilchen in kinetische Energie umgewandelt. So entstehen bei der Elektron-Positron-Annihilation zwei Photonen mit der Energie $E=511keV$.
 Diese Energien liegen allerdings noch weit unter der Grenze der VHE.
@@ -19,19 +22,30 @@ Ziel VHE-Astronomie ist es die Quellen hochenergetischer Gammastrahlung zu erfor
 
 \begin{description}
 \item[Supernova Überreste]\hfill \\
-Hat ein Stern mit ausreichender Masse seinen Wasserstoff- und Heliumvorrat verbrannt und somit sein Lebensende erreicht, kollabiert dieser und es entsteht ein kompaktes Objekt, wie zum Beispiel ein Neutronenstern, der mit der ihn umgebenden Materie interagieren kann.
-\item[Schwarze Löcher]\hfill \\
-Schwarze Löcher sind Objekte mit einer Gravitationskraft, die so stark ist, dass auch Photonen, die sich hinter dem Ereignishorizont befinden nicht entkommen können. Durch die starke Anziehung entsteht eine Akkretionsscheibe in der große elektromagnetische Felder herrschen, durch die wiederum hochenergetische Photonen entstehen können.
-\item[Aktive Galaxien und aktive galaktische Kerne]\hfill \\
-Da schwarze Löcher zu den hellsten Gammaquellen gehören und sich in der Regel im Zentrum einer Galaxie befinden, können diese überstrahlen. Häufig werden diese als stellare Objekte wargenommen. AGNs haben eine Masse von rund 100 Millionen Sonnenmassen. Zu den AGNs gehören auch Blazare und Quasare.
+Supernovae sind Explosionen von Sternen die auf zwei Arten stattfinden können:
+Supernovae vom Typ Ia finden in Systemen von weißen Zwergen mit Sternen statt. Ein weißer Zwerg ist ein ausgebrannter Stern, der größtenteils aus Sauer- und Kohlenstoff besteht. Saugt dieser weiße Zwerg Materie von einem anderen Stern ab, nimmt die Masse zu bis sie die Chandrasekhar-Grenze überschreitet und durch den gestiegenen Gravitationsdruck die Kernfusion wieder startet.
+Kernkollaps-Supernovae entstehen aus Sternen. Nachdem diese ihren Wasserstoff- und Heliumvorrat verbrannt haben, folgt eine Gravitationskontraktion, die zu einer schnelle Abfolge von Kernfusionen schwererer Elemente führt. Nach dem Erreichen des stabilsten Elements (56-Eisen) kollabiert der Stern.
+Durch eine Supernova entsteht ein massives Objekt, das mit der durch die Explosion verteilten Materie interagieren kann.
+
 \item[Pulsare]\hfill \\
 Kollabieren die Überreste einer Supernova von einem Durchmesser von ca $10^6km$ auf ca $20km$ ensteht ein Neutronenstern, der sich aufgrund der Drehimpulserhaltung sehr schnell dreht. Solche Konstrukte nennt man Pulsare. Bleibt der magnetische Fluss durch die Oberfläche erhalten, entstehen große Magnetfelder ($\mathcal{O}(10^8\unit{T})$\cite{Grupen}. In diesem rotierenden Magnetfeld können geladene Teilchen durch die Lorentzkraft auf hohe Geschwindigkeiten beschleunigt werden, die ihre Energie wiederum an Photonen abgeben können.
-\item[Binäre Systeme]\hfill \\ 
-Befindet sich ein Neutronenstern oder Pulsar in einem System mit einem normalen Stern, entsteht durch Absaugen von Materie eine Akkretionsscheibe um den Neutronenstern beziehungsweise um den Pulsar. Durch diese Plasmabewegungen entstehen elektromagnetische Felder, in denen Teilchen Energien in der Größenordnung $10^{19} \unit{eV}$\cite{Grupen} erhalten.
+
+\item[Schwarze Löcher]\hfill \\
+Schwarze Löcher sind Objekte mit einer Gravitationskraft, die so stark ist, dass auch Photonen, die sich hinter dem Ereignishorizont befinden nicht entkommen können. Durch die starke Anziehung entsteht eine Akkretionsscheibe in der große elektromagnetische Felder herrschen, durch die wiederum hochenergetische Photonen entstehen können.
+Gerade in Zentren von Galaxien herscht eine hohe Sterndichte, die dazu führt, dass sich hier supermassenreiche schwarze Löcher entstehen können. Diese können mit den großen Mengen an Plasma interagieren und strahlen häufig so hell, dass das Zentrum oder sogar den Rest der Galaxie überstrahlen können. Solche Quellen nennt man aktive galaktische Kerne (AGNs).
+
+%\item[Binäre Systeme]\hfill \\ 
+%Befindet sich ein Neutronenstern oder Pulsar in einem System mit einem normalen Stern, entsteht durch Absaugen von Materie eine Akkretionsscheibe um den Neutronenstern beziehungsweise um den Pulsar. Durch diese Plasmabewegungen entstehen elektromagnetische Felder, in denen Teilchen Energien in der Größenordnung $10^{19} \unit{eV}$\cite{Grupen} erhalten.
 \item[Dunkle Materie]\hfill \\
-Da die VHE-Astronomie sich mit Energien beschäftigt, die in keinem Experiment auf der Erde realisiert werden können, erhofft man sich auch Erkenntnisse zu ungeklärten Fragen der Physik, wie zum Beispiel zur dunklen Materie.
+Betrachtet man die Rotation von Galaxien, so stellt man fest, dass sich diese nicht durch die sichtbare Materie erklärbar sind. Um dieses Problem zu lösen, postuliert man die Existenz einer uns nicht bekannten Materieform, der dunklen Materie. Durch die VHE-Astronomie versucht man Erkenntnisse über diese zu gewinnen. Man sucht beispielsweise nach monoenergetischen Energielinien, die durch Selbstanihilation von dunkler Materie entstehen könnten.
 \end{description}
 
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\textwidth]{Images/CrabNebula.png}
+%\caption{Der Cherenkoweffekt: Ein geladenes Teilchen durchfliegt ein dielektrisches Medium mit einer Geschwindigkeit über der der Lichtgeschwindigkeit im Medium und erzeugt Wellenfronten.}
+%\label{img:cherenkow}
+Die erste Entdeckte Gammaquelle liegt im Krebsnebel und wurde  1989 vom amerikanischem Whipple Observatorium entdeckt\cite{Crab1}. Der Krebsnebel ist ein Pulsarwindnebel, der aus der Supernova 1054 hervorgegangen ist. Inzwischen hat man Strahlung von bis zu 20TeV von dort aus registriert.
 
 \section{Detektion von Strahlung}
 Prinzipiell lässt sich zwischen bodengestützter und satellitengestützter $\gamma$-Astronomie unterscheiden. Durch den Einsatz von Satelliten vermeidet man den störenden Einfluss der Erdatmosphäre, muss dafür allerdings Abstriche in der Größe der Detektoren machen und mit hohen Kosten kalkulieren. Hier soll sich nur mit der bodengestützten Variante beschäftigt werden, die günstiger ist und nicht in der Größe beschränkt ist. Dazu verwendet man sogenannte IACTS (Imaging Atmosphaeric Cherenkov Telescopes), die die Strahlung nur indirekt detektieren.
