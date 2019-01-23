@@ -2,20 +2,20 @@ This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: krieg.aux
 A level-1 auxiliary file: titlepage.aux
-A level-1 auxiliary file: dedication.aux
 A level-1 auxiliary file: gamma-Astronomie.aux
 A level-1 auxiliary file: CTA.aux
 A level-1 auxiliary file: Pointing.aux
+A level-1 auxiliary file: Auswertung.aux
 I couldn't open style file plaindin.bst
----line 33 of file krieg.aux
+---line 29 of file krieg.aux
  : \bibstyle{plaindin
  :                   }
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: declaration.aux
 I found no style file---while reading file krieg.aux
-You've used 6 entries,
+You've used 7 entries,
             0 wiz_defined-function locations,
-            102 strings with 671 characters,
+            104 strings with 681 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
