@@ -1,61 +1,47 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  23 JAN 2019 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.23)  30 JAN 2019 12:41
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**krieg.tex
-(./krieg.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrreprt.cls
-Document Class: scrreprt 2015/10/03 v3.19a KOMA-Script document class (report)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-dependent 
+**./krieg.tex
+(krieg.tex
+LaTeX2e <2016/03/31> patch level 1
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrreprt.cls"
+Document Class: scrreprt 2018/03/30 v3.25 KOMA-Script document class (report)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
+Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
+Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-independent
- basics and keyval usage)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2015/10/03 v3.19a KOMA-Script package (loading files)
-
-Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
-                  Copyright (C) Markus Kohm
-
-))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2015/10/03 v3.19a KOMA-Script package (handling toc-files)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
+Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
+Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box26
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 125.
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 126.
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 127.
-Package tocbasic Info: defining new hook before heading of `' on input line 158
-8.
+(tocbasic)             for `toc' on input line 136.
+Package tocbasic Info: defining new hook before heading of `' on input line 166
+7.
 Class scrreprt Info: File `scrsize11pt.clo' used instead of
-(scrreprt)           file `scrsize11.clo' to setup font sizes on input line 224
+(scrreprt)           file `scrsize11.clo' to setup font sizes on input line 232
 8.
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2015/10/03 v3.19a KOMA-Script font size class option (11p
-t)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\scrsize11pt.clo"
+File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt
 )
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2015/10/03 v3.19a KOMA-Script package (type area)
-
-Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
-                  Copyright (C) Frank Neukam, 1992-1994
-                  Copyright (C) Markus Kohm, 1994-
-
-\ta@bcor=\skip41
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
+Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
+\ta@bcor=\skip42
 \ta@div=\count79
 Package typearea Info: You've used standard option `pdftex'.
 (typearea)             This is correct!
@@ -69,10 +55,10 @@ Package typearea Info: You've used standard option `a4paper'.
 (typearea)             If you'd like to set the option with \KOMAoptions,
 (typearea)             you'd have to use `paper=a4' there
 (typearea)             instead of `a4paper', too.
-\ta@hblk=\skip42
-\ta@vblk=\skip43
-\ta@temp=\skip44
-\footheight=\skip45
+\ta@hblk=\skip43
+\ta@vblk=\skip44
+\ta@temp=\skip45
+\footheight=\skip46
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 10
 (typearea)             BCOR = 0.0pt
@@ -89,7 +75,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1509.
+(typearea)              on input line 1706.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -98,25 +84,40 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
-LaTeX Info: Redefining \textsubscript on input line 4652.
-\abovecaptionskip=\skip46
-\belowcaptionskip=\skip47
-\c@pti@nb@sid@b@x=\box26
+\scr@dte@part@maxnumwidth=\skip47
+\scr@dte@chapter@maxnumwidth=\skip48
+\scr@dte@section@maxnumwidth=\skip49
+\scr@dte@subsection@maxnumwidth=\skip50
+\scr@dte@subsubsection@maxnumwidth=\skip51
+\scr@dte@paragraph@maxnumwidth=\skip52
+\scr@dte@subparagraph@maxnumwidth=\skip53
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\c@pti@nb@sid@b@x=\box27
+\scr@dte@figure@maxnumwidth=\skip56
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6247.
 \c@figure=\count87
+\scr@dte@table@maxnumwidth=\skip57
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6264.
 \c@table=\count88
+Class scrreprt Info: Redefining `\numberline' on input line 6433.
 \bibindent=\dimen102
-) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count89
@@ -131,51 +132,53 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/04/23 3.9r The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/02/24 3.9q The Babel package
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
 
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
 
-! Package babel Error: Unknown option `ngerman'. Either you misspelled it
-(babel)                or the language definition file ngerman.ldf was not foun
-d.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 \ProcessOptions*
-                      
-Valid options are: shorthands=, KeepShorthandsActive,
-activeacute, activegrave, noconfigs, safe=, main=, math=
-headfoot=, strings=, config=, hyphenmap=, or a language name.
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/02/24 3.9q Babel common definitions
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count92
 \U@D=\dimen111
 )
+\l@naustrian = a dialect from \language\l@ngerman 
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -387,11 +390,15 @@ File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
    defining Unicode char U+0219 (decimal 537)
    defining Unicode char U+021A (decimal 538)
    defining Unicode char U+021B (decimal 539)
-   defining Unicode char U+01E02 (decimal 7682)
-   defining Unicode char U+01E03 (decimal 7683)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
    defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
    defining Unicode char U+2018 (decimal 8216)
    defining Unicode char U+2019 (decimal 8217)
    defining Unicode char U+201A (decimal 8218)
@@ -407,8 +414,8 @@ File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -448,8 +455,8 @@ File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -472,42 +479,42 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2016/06/17 v0.06h Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count93
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(/usr/share/texmf/tex/latex/lm/lmodern.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -545,113 +552,113 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 \@input{metadata.aux}
 \openout2 = `metadata.aux'.
 
-(./metadata.tex)
+(metadata.tex)
 \@input{compatibility.aux}
 \openout2 = `compatibility.aux'.
 
-(./compatibility.tex
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(compatibility.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2016/05/21 v6.83p Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen114
 \Hy@linkcounter=\count94
 \Hy@pagecounter=\count95
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2016/05/21 v6.83p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count96
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4362.
 
 
 Package hyperref Warning: Unexpected value for option `pdftex'
-(hyperref)                is ignored on input line 4319.
+(hyperref)                is ignored on input line 4362.
 
-Package hyperref Info: Option `plainpages' set `false' on input line 4319.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 4319.
-Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4319.
-Package hyperref Info: Option `hyperindex' set `true' on input line 4319.
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Option `plainpages' set `false' on input line 4362.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 4362.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4362.
+Package hyperref Info: Option `hyperindex' set `true' on input line 4362.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Bookmarks ON on input line 4735.
 \c@Hy@tempcnt=\count97
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
+LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen115
 \Fld@menulength=\count98
 \Field@Width=\dimen116
 \Fld@charsize=\dimen117
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring ON on input line 6360.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
 \Hy@abspage=\count99
 \c@Item=\count100
 \c@Hfootnote=\count101
@@ -659,616 +666,55 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver: hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2016/05/21 v6.83p Hyperref driver for pdfTeX
 \Fld@listcount=\count102
 \c@bookmark@seq@number=\count103
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip48
+\Hy@SectionHShift=\skip58
 ))
 \@input{amsmath.aux}
 \openout2 = `amsmath.aux'.
 
 No file amsmath.tex.
-(/usr/share/texlive/texmf-dist/tex/latex/units/units.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\units\units.sty"
 Package: units 1998/08/04 v0.9b Typesetting units
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\units\nicefrac.sty"
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip49
-\L@UnitsRaiseTextstyle=\skip50
-\L@UnitsRaiseScriptstyle=\skip51
+\L@UnitsRaiseDisplaystyle=\skip59
+\L@UnitsRaiseTextstyle=\skip60
+\L@UnitsRaiseScriptstyle=\skip61
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/isotope/isotope.sty
-Package: isotope 2011/08/26 v0.3 for typesetting isotopes
-) (./krieg.aux
-(./titlepage.aux) (./gamma-Astronomie.aux) (./CTA.aux) (./Pointing.aux
 
-LaTeX Warning: Label `eq:elD2C4' multiply defined.
+! LaTeX Error: File `isotope.sty' not found.
 
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-LaTeX Warning: Label `eq:azD2C4' multiply defined.
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.68 
+      
+*** (cannot \read from terminal in nonstop modes)
 
-) (./Auswertung.aux) (./declaration.aux))
-\openout1 = `krieg.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 71.
-
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=731.23584pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-52.7645pt
-* \headheight=17.0pt
-* \headsep=20.40001pt
-* \topskip=11.0pt
-* \footskip=47.6pt
-* \marginparwidth=59.7508pt
-* \marginparsep=12.8401pt
-* \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen118
-\scratchbox=\box27
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen119
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
-\everyMPtoPDFconversion=\toks19
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\AtBeginShipoutBox=\box28
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 143.
-)
-Package hyperref Info: Link coloring ON on input line 71.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count110
-)
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
-
-(./krieg.out) (./krieg.out)
-\@outlinefile=\write3
-\openout3 = `krieg.out'.
-
-\openout2 = `titlepage.aux'.
-
- (./titlepage.tex)
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 81.
-
-(/usr/share/texmf/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-<husiegel.pdf, id=108, 131.49126pt x 132.495pt>
-File: husiegel.pdf Graphic file (type pdf)
- <use husiegel.pdf>
-Package pdftex.def Info: husiegel.pdf used on input line 81.
-(pdftex.def)             Requested size: 170.71652pt x 172.02713pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 81.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 81.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 81.
-
-
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 81.
-
-
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 81.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 81.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 81.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 81.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 81.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 81.
-
-
-Class scrreprt Warning: Usage of deprecated font command `\it'!
-(scrreprt)              You should note, that in 1994 font command `\it' has
-(scrreprt)              been defined for compatiblitiy to Script 2.0 only.
-(scrreprt)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrreprt)              shouldn't use such commands any longer and within
-(scrreprt)              KOMA-Script usage of `\it' is definitely deprecated.
-(scrreprt)              See `fntguide.pdf' for more information about
-(scrreprt)              recommended font commands.
-(scrreprt)              Note also, that KOMA-Script will remove the definition
-(scrreprt)              of `\it' anytime until release of about version 3.20.
-(scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 81.
-
-
-! Package inputenc Error: Unicode char ärz (U+F0)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.81 
-     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1
-
-
-
-
-
-
-
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./husiegel.pdf>]
-(./krieg.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 2.
-)
-\tf@toc=\write4
-\openout4 = `krieg.toc'.
-
- [2
-
-] (./krieg.lof
-
-LaTeX Warning: Citation `FermiLAT' on page iii undefined on input line 3.
-
-
-Overfull \hbox (10.08723pt too wide) in paragraph at lines 5--5
- \T1/lmr/m/n/10.95 erzeugt einen elek-tro-mag-netis-chen Luftschauer (oben rech
-ts) der wiederum Cherenkovlicht 
- []
-
-)
-\tf@lof=\write5
-\openout5 = `krieg.lof'.
-
- [3
-
-] (./krieg.lot)
-\tf@lot=\write6
-\openout6 = `krieg.lot'.
-
- [1
-
-]
-\openout2 = `gamma-Astronomie.aux'.
-
- (./gamma-Astronomie.tex
-chapter 1.
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 1.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 1.
-
-LaTeX Warning: Citation `DesignConcept' on page 2 undefined on input line 2.
-
-
-LaTeX Warning: Citation `PDG' on page 2 undefined on input line 11.
-
-! Undefined control sequence.
-l.11 ... zwei Photonen mit der Energie $E=511\unti
-                                                  {keV}$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Grupen' on page 2 undefined on input line 19.
-
-[2
-
-
-]
-
-LaTeX Warning: Citation `Grupen' on page 3 undefined on input line 21.
-
-
-Overfull \hbox (0.22214pt too wide) in paragraph at lines 20--22
-\T1/lmr/m/n/10.95 strukt Pul-sar. In seinem rotieren-den Mag-net-feld kön-nen g
-eladene Teilchen durch die Lorentzkraft
- []
-
-
-Overfull \hbox (3.53036pt too wide) in paragraph at lines 20--22
-\T1/lmr/m/n/10.95 auf hohe Geschwindigkeiten beschle-u-nigt wer-den, die ihre E
-n-ergie wiederum an Pho-to-nen abgeben
- []
-
-<Images/lat.png, id=200, 800.9925pt x 450.0012pt>
-File: Images/lat.png Graphic file (type png)
- <use Images/lat.png>
-Package pdftex.def Info: Images/lat.png used on input line 31.
-(pdftex.def)             Requested size: 483.69687pt x 271.74687pt.
-
-
-LaTeX Warning: Citation `FermiLAT' on page 3 undefined on input line 32.
-
-
-LaTeX Warning: Citation `FermiLAT' on page 3 undefined on input line 32.
-
-
-LaTeX Warning: Citation `iwas' on page 3 undefined on input line 42.
-
-[3]
-Overfull \hbox (19.27286pt too wide) in paragraph at lines 49--50
-\T1/lmr/m/n/10.95 Cherenkov Strahlung tritt auf, wenn geladene sich Teilchen in
- Ma-terie schneller als die Licht-geschwindigkeit
- []
-
-
-LaTeX Warning: Citation `Grupen' on page 4 undefined on input line 53.
-
-<Images/cherenkow.png, id=206, 387.3672pt x 204.5241pt>
-File: Images/cherenkow.png Graphic file (type png)
-
-<use Images/cherenkow.png>
-Package pdftex.def Info: Images/cherenkow.png used on input line 56.
-(pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
-
-
-LaTeX Warning: Citation `DesignConcept' on page 4 undefined on input line 63.
-
-
-LaTeX Warning: Citation `CherenkovCam' on page 4 undefined on input line 65.
-
-[4 <./Images/lat.png (PNG copy)>]
-<Images/detection.png, id=218, 895.84688pt x 648.17157pt>
-File: Images/detection.png Graphic file (type png)
-
-<use Images/detection.png>
-Package pdftex.def Info: Images/detection.png used on input line 70.
-(pdftex.def)             Requested size: 483.69687pt x 349.96786pt.
-) [5 <./Images/cherenkow.png>] [6 <./Images/detection.png>]
-\openout2 = `CTA.aux'.
-
- (./CTA.tex
-chapter 2.
-
-LaTeX Warning: Citation `NextGen' on page 7 undefined on input line 2.
-
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 5.
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 5.
-
-<Images/TelescopeTypes.jpg, id=230, 3854.4pt x 2168.1pt>
-File: Images/TelescopeTypes.jpg Graphic file (type jpg)
-
-<use Images/TelescopeTypes.jpg>
-Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 29.
-(pdftex.def)             Requested size: 483.69687pt x 272.07048pt.
- [7
-
-
-
-]
-<Images/ArrayLayout.png, id=236, 963.6pt x 395.076pt>
-File: Images/ArrayLayout.png Graphic file (type png)
-
-<use Images/ArrayLayout.png>
-Package pdftex.def Info: Images/ArrayLayout.png used on input line 45.
-(pdftex.def)             Requested size: 483.69687pt x 198.31517pt.
- [8 <./Images/TelescopeTypes.jpg>]) [9 <./Images/ArrayLayout.png>]
-\openout2 = `Pointing.aux'.
-
- (./Pointing.tex
-chapter 3.
-<Images/coordinates.png, id=245, 505.89pt x 337.26pt>
-File: Images/coordinates.png Graphic file (type png)
-
-<use Images/coordinates.png>
-Package pdftex.def Info: Images/coordinates.png used on input line 8.
-(pdftex.def)             Requested size: 338.58632pt x 225.72629pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-[10
-
-
-
- <./Images/coordinates.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-[11]
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 73.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 74.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 74.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 75.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 76.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 76.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 77.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 78.
-
-! You can't use `\eqno' in math mode.
-\H@endequation ->\eqno 
-                       \hbox {\@eqnnum }$$\@ignoretrue 
-l.81 \end{equation}
-                   
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.81 \end{equation}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (361.2057pt too wide) detected at line 93
-[]\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = [] 2([](\OML/lmm/m/it/10.95 az[
-]\OT1/lmr/m/n/10.95 )([](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 ) [](\OML/l
-mm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10
-.95 0) \OMS/lmsy/m/n/10.95 ^^@ []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 el[]\O
-T1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 )) \OMS/lmsy/m
-/n/10.95 ^^@ []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 )
- [](\OML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/
-lmr/m/n/10.95 0)\OML/lmm/m/it/10.95 ; []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95
- az[]\OT1/lmr/m/n/10.95 )([](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 ) [](\O
-ML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/
-n/10.95 0) \OMS/lmsy/m/n/10.95 ^^@ []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 el
-[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 )) + [](\O
-ML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 az[]\OT1/lmr/
-m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10.95 0))[][]
- []
-
-
-Overfull \hbox (319.27667pt too wide) detected at line 108
-[]\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = ([](\OML/lmm/m/it/10.95 az[]\OT
-1/lmr/m/n/10.95 )([](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m
-/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10.95 
-0) \OMS/lmsy/m/n/10.95 ^^@ []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 el[]\OT1/l
-mr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 )) \OMS/lmsy/m/n/1
-0.95 ^^@ []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](
-\OML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/
-m/n/10.95 0)\OML/lmm/m/it/10.95 ; []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 az[
-]\OT1/lmr/m/n/10.95 )([](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 ) [](\OML/l
-mm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10
-.95 0) \OMS/lmsy/m/n/10.95 ^^@ []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 el[]\O
-T1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 el[]\OT1/lmr/m/n/10.95 )) + [](\OML/l
-mm/m/it/10.95 az[]\OT1/lmr/m/n/10.95 ) [](\OML/lmm/m/it/10.95 az[]\OT1/lmr/m/n/
-10.95 ) [](\OML/lmm/m/it/10.95 el\OT1/lmr/m/n/10.95 0))[][]
- []
-
-) [12]
-\openout2 = `Auswertung.aux'.
-
- (./Auswertung.tex
-chapter 4.
-[13
-
-
-
-]) [14] (./krieg.bbl)
-\openout2 = `declaration.aux'.
-
- (./declaration.tex) [15
-
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
- (./krieg.aux (./titlepage.aux) (./gamma-Astronomie.aux) (./CTA.aux) (./Pointin
-g.aux) (./Auswertung.aux)
-(./declaration.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
-Package rerunfilecheck Info: File `krieg.out' has not changed.
-(rerunfilecheck)             Checksum: F15A9F4ABDE97D9C33C9E8BEBAAAA21D;1975.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 8766 strings out of 494910
- 133363 string characters out of 6179836
- 297623 words of memory out of 5000000
- 11777 multiletter control sequences out of 15000+600000
- 63890 words of font info for 51 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 43i,9n,66p,1461b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
-10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-sy8.pfb>
-Output written on krieg.pdf (18 pages, 14972348 bytes).
-PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 244 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 8284 strings out of 493335
+ 133319 string characters out of 3136649
+ 335943 words of memory out of 3000000
+ 11749 multiletter control sequences out of 15000+200000
+ 4709 words of font info for 16 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,1n,66p,9149b,271s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
