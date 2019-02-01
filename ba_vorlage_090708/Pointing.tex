@@ -68,7 +68,7 @@ Aus diesen Richtungsvektoren müssen wieder die ursprünglichen Koordinaten $az$
 el=\arcsin(r_z)
 \label{eq:backtrafoEl}
 \end{equation}
-und der Azimutwinkel aus dem Verhältnis von y- zu x-Komponente. Da der Tangens dieses Verhaeltnis dem Azimuthwinkel mit einem Wertebereich von $-180^{\circ}$ bis $180^\circ$ entspricht muss man als Umkehrfunktion den erweiterten $\arctan$ vervewenden:
+und der Azimutwinkel aus dem Verhältnis von y- zu x-Komponente. Da der Tangens dieses Verhältnis dem Azimuthwinkel mit einem Wertebereich von $-180^{\circ}$ bis $180^\circ$ entspricht muss man als Umkehrfunktion den erweiterten $\arctan$ verwenden:
 \begin{equation}
 az=\arctan 2(r_y,r_x)=\left\{\begin{array}{lr}
 \arctan\left(\frac{{r_y}}{{r_x}}\right) & r_x \textgreater 0  \\
@@ -94,12 +94,26 @@ az_C=\arctan2(
 \end{equation}
 
 \subsection{Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
-Um die Abhängigkeiten der Drive-Koordinaten von den CCD-Koordinaten zu erhalten, muss das Gleichungssystem \ref{eq:elD2C} \ref{eq:azD2C} nach $el_D$ und $az_D$ aufgelöst werden. Da die Formel \ref{eq:elD2C} nur von $el_D$ und $el_C$ abhängt, kann diese unabhängig von \ref{eq:azC2D} umgestellt werden. Dazu werden die in Gleichung \ref{eq:elD2C} stehenden Sinus- und Kosinusfunktionen durch Tangensfunktionen ausgedrückt
+Um die Abhängigkeiten der Drive-Koordinaten von den CCD-Koordinaten zu erhalten, muss das Gleichungssystem \ref{eq:elD2C} \ref{eq:azD2C} nach $el_D$ und $az_D$ aufgelöst werden. Da die Formel \ref{eq:elD2C} nur von $el_D$ und $el_C$ abhängt, kann diese unabhängig von \ref{eq:azC2D} umgestellt werden. Dazu werden die in Gleichung \ref{eq:elD2C} stehenden Sinus- und Kosinusfunktionen durch die gleichen Tangensfunktionen ausgedrückt. Dazu werden zunächst Sinus als auch Kosinus als Funktion der halben Winkel ausgedrückt
 \begin{equation}
-\sin\left(el_D)\right)=\frac{2t}{1+t^2}
+\sin\left el_D \right) = \sin\left \frac{el_D}{2} \right)\cos\left \frac{el_D}{2} \right)+\cos\left \frac{el_D}{2} \right)\sin\left \frac{el_D}{2} \right)=2\sin\left \frac{el_D}{2} \right)\cos\left \frac{el_D}{2} \right)
 \end{equation}
 \begin{equation}
-\cos\left(el_D)\right)=\frac{1-t^2}{1+t^2},
+\cos\left el_D \right) = \cos\left \frac{el_D}{2} \right)\cos\left \frac{el_D}{2} \right)+\sin\left \frac{el_D}{2} \right)\sin\left \frac{el_D}{2} \right)=\cos^2\left \frac{el_D}{2} \right)-\sin^2\left \frac{el_D}{2} \right)
+\end{equation}
+Teilt man die Gleichungen durch $1=\sin^2\left \frac{el_D}{2} \right)+\cos^2\left \frac{el_D}{2} \right)$ erhält man
+\begin{equation}
+\sin\left el_D \right)=\frac{2\sin\left \frac{el_D}{2} \right)\cos\left \frac{el_D}{2} \right)}{\sin^2\left \frac{el_D}{2} \right)+\cos^2\left \frac{el_D}{2} \right)}
+\end{equation}
+\begin{equation}
+\coss\left el_D \right)=\frac{\cos^2\left \frac{el_D}{2} \right)-\sin^2\left \frac{el_D}{2} \right)}{\sin^2\left \frac{el_D}{2} \right)+\cos^2\left \frac{el_D}{2} \right)}
+\end{equation}
+Ersetzt man $\sin\left(\frac{el_D}{2}\right)$ durch $\cos\left(\frac{el_D}{2}\right)\tan\left(\frac{el_D}{2}\right)$ ergeben sich folgende Gleichungen:
+\begin{equation}
+\sin\left(el_D\right)=\frac{2t}{1+t^2}
+\end{equation}
+\begin{equation}
+\cos\left(el_D\right)=\frac{1-t^2}{1+t^2},
 \end{equation}
 wobei $t$ der Tangens des halben Winkels ist
 \begin{equation}

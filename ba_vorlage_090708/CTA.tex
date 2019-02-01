@@ -48,10 +48,19 @@ Auf der spanischen Insel La Palma wird die nördliche Anlage errichtet. Hier ste
 \end{figure}
 
 \section{Prototyp in Adlershof}
-In Adlershof wurde 2012 vom DESY ein Prototyp des MSTs errichtet um den mechanischen Aufbau zu testen, Pointingmodelle zu entwickeln und um die einzelnen Spiegel zu testen und auszurichten.
+Ein Prototyp für das MST wurde 2012 in Berlin-Adlershof in der Nähe zum DESY-Zeuthen und dem Institut für Physik der Humboldt-Universität zu Berlin errichtet. Ziel ist es mit dem Prototypen den mechanischen Aufbau zu untersuchen, die Ausrichtung der Spiegel zu testen und Pointingmethoden zu entwickeln. Dazu wurde auf eine Tscherenkovkamera verzichtet und durch einen Dummy der gleichen Masse ersetzt.
+
+\subsection{Pointing des Teleskops mit CCD-Kameras}
+Um die möglichst genaue Ausrichtung des Teleskops zu kennen verwendet man CCD-Kameras, die sowohl den Nachthimmel als auch den Dummy beziehungsweise später die Tscherenkowkamera ablichten. In sogenannten Pointing-Runs wird das Teleskop kalibriert, in dem des auf Sterne ausrichtet, deren Reflektion auf dem Dummy zu sehen ist. Mithilfe von auf dem Dummy angebrachten LEDs lässt sich die Position der Reflektion bestimmen und somit auch, wie der Dummy zum Teleskop steht. Aus den Aufnahmen vom Nachthimmel lässt sich aus der Position der zu sehenden Sterne die Koordinaten des Teleskops vorhersagen. Im Betrieb, wenn die Tscherenkowkamera geöffnet ist und die Reflektionen der Sterne nicht mehr zu sehen sind, lässt sich die Position der Tscherenkowkamera immer noch anhand der Pointing-LEDs bestimmen.
 
 \subsection{Kameras des MST}
-Der Prototyp des MST besitzt drei Kameras in der Mitte des Reflektors. Die Sky-CCD, für die im hier folgenden ein Pointingmodell entwickelt wird, ist schräg montiert, sodass sie am Detektorarm vorbei guckt um Bilder des Nachthimmels aufzunehmen. Aus diesen Bildern lassen sich mithilfe der Astrometry-Software die Koordinaten der Kamera bestimmen, die als die wahren Koordinaten angenommen werden.
+Um Pointingmodelle dieser Art zu entwickeln besitzt der Prototyp des MST drei CCD-Kameras im Zentrum des Reflektors. Die Single-CCD hat ein so großes Gesichtsfeld, dass sie gleichzeit die Tscherenkowkamera als auch den Nachthimmel ablichten kann. Alternativ können auch zwei verschiedene Kameras verwenden können, wovon eine (LID-CCD) die Tscherenkowkamera und die andere (Sky-CCD) den Nachthimmel ablichtet. Die Methode mit den beiden Kameras hat den Vorteil, dass sie zusammen eine höhere Auflösung haben. Da sich die beiden Kameras allerdings auch unabhängig voneinander bewegen können, ist die Methode mit einer CCD-Kamera das bevorzugte Konzept für das Teleskop.\\
+Eine Besonderheit des MST ist die Positionierung der Sky-CCD. Da sich diese wie die anderen in der Mitte des Reflektors befindet, den Dummy jedoch nicht ablichten soll, ist sie mit einem Winkel von ungefähr $10^{\circ}$ zur optischen Achse des Teleskops montiert. Wie sich die Richtung der Sky-CCD im Vergleich zu den eingestellten Koordinaten des Teleskops verhält, wird in den Kapiteln 3 und 4 diskutiert.
+
+%In Adlershof wurde 2012 vom DESY ein Prototyp des MSTs errichtet um den mechanischen Aufbau zu testen, Pointingmodelle zu entwickeln und um die einzelnen Spiegel zu testen und auszurichten.
+
+%\subsection{Kameras des MST}
+%Der Prototyp des MST besitzt drei Kameras in der Mitte des Reflektors. Die Sky-CCD, für die im hier folgenden ein Pointingmodell entwickelt wird, ist schräg montiert, sodass sie am Detektorarm vorbei guckt um Bilder des Nachthimmels aufzunehmen. Aus diesen Bildern lassen sich mithilfe der Astrometry-Software die Koordinaten der Kamera bestimmen, die als die wahren Koordinaten angenommen werden.
 
 %\subsection{Koordinatens des MST}
 %Das MST benutzt ein Koordinatensystem aus zwei Winkeln und aehnelt den Kugelkoordinaten. Der Azimutwinkel ($az$) beschreibt die Auslenkung in der Ebenenen und lauft von $-180^{\circ}$ bis $180^{\circ}$, wobei es fuer $az=0^{\circ}$ in Richtung Norden ausgerichtet ist. Der Elevationswinkel $el$ lauft von $0^{\circ}$ bis $90^{\circ}$ wobei $el=90^{\circ}$ dem Zenit entspricht. Da es bei der Entwicklung von Pointingmodellen von Vorteil sein kann, wenn man in kartesischen Koordinaten rechnet, wurde hier die Konvention verwendet, dass Nordrichtung der x-Richtung, die Westrichtung der y-Richtung und die Zenitrichtung der z-Richtung entspricht.
@@ -61,7 +70,7 @@ Der Prototyp des MST besitzt drei Kameras in der Mitte des Reflektors. Die Sky-C
 %\caption{Die verwendeten Koordinaten}
 %\label{img:coordinates}
 %\end{figure}
-\subsection{Bestimmung der Bildkoordinaten durch astronometry.net}
+%\subsection{Bestimmung der Bildkoordinaten durch astronometry.net}
 Aus den mit der Kamera aufgenommen Bildern lassen sich mithilfe der astronometry.net Software die einzelnen Koordinaten der Bilder und die Groesse des Bildausschnitts bestimmen. Auf den einzelnen Bildern werden Sterne erkannt, die jeweils zu Tripplets zusammengeschlossen werden. Diese Tripletts werden mit zwei Sternenkatalogen 
 \begin{itemize}
 \item USNO-B: Ein Katalog mit ungefaehr einer Milliarde OBjekten (Sterne und Galaxien)
