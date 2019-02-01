@@ -19,9 +19,9 @@
 \contentsline {section}{\numberline {3.3}Pointingmodell mit zwei Parametern}{11}{section.36}
 \contentsline {subsection}{\numberline {3.3.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten}{11}{subsection.37}
 \contentsline {subsection}{\numberline {3.3.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{12}{subsection.48}
-\contentsline {section}{\numberline {3.4}Erweiterung des Modells auf vier Parameter}{12}{section.51}
-\contentsline {chapter}{\numberline {4}Anwendung des Pointingmodells auf Daten des Teleskops}{13}{chapter.56}
-\contentsline {section}{\numberline {4.1}Datensatz}{13}{section.57}
-\contentsline {section}{\numberline {4.2}Programm}{13}{section.58}
-\contentsline {section}{\numberline {4.3}Anwendung auf das Pointingmodell mit 2 Parametern}{14}{section.62}
-\contentsline {section}{\numberline {4.4}Anwendung auf das Pointingmodell mit 4 Parametern}{14}{section.63}
+\contentsline {section}{\numberline {3.4}Erweiterung des Modells auf vier Parameter}{13}{section.62}
+\contentsline {chapter}{\numberline {4}Anwendung des Pointingmodells auf Daten des Teleskops}{14}{chapter.67}
+\contentsline {section}{\numberline {4.1}Datensatz}{14}{section.68}
+\contentsline {section}{\numberline {4.2}Programm}{14}{section.69}
+\contentsline {section}{\numberline {4.3}Anwendung auf das Pointingmodell mit 2 Parametern}{15}{section.73}
+\contentsline {section}{\numberline {4.4}Anwendung auf das Pointingmodell mit 4 Parametern}{15}{section.74}
