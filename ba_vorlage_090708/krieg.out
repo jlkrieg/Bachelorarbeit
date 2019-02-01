@@ -10,17 +10,17 @@
 \BOOKMARK [2][-]{subsection.21}{Teleskoptypen}{section.20}% 10
 \BOOKMARK [2][-]{subsection.23}{Arrays}{section.20}% 11
 \BOOKMARK [1][-]{section.25}{Prototyp in Adlershof}{chapter.19}% 12
-\BOOKMARK [2][-]{subsection.26}{Kameras des MST}{section.25}% 13
-\BOOKMARK [2][-]{subsection.27}{Bestimmung der Bildkoordinaten durch astronometry.net}{section.25}% 14
-\BOOKMARK [0][-]{chapter.28}{Pointingmodell}{}% 15
-\BOOKMARK [1][-]{section.29}{Koordinaten}{chapter.28}% 16
-\BOOKMARK [1][-]{section.31}{Entwicklung von Pointingmodellen}{chapter.28}% 17
-\BOOKMARK [1][-]{section.36}{Pointingmodell mit zwei Parametern}{chapter.28}% 18
-\BOOKMARK [2][-]{subsection.37}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.36}% 19
-\BOOKMARK [2][-]{subsection.48}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.36}% 20
-\BOOKMARK [1][-]{section.62}{Erweiterung des Modells auf vier Parameter}{chapter.28}% 21
-\BOOKMARK [0][-]{chapter.67}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 22
-\BOOKMARK [1][-]{section.68}{Datensatz}{chapter.67}% 23
-\BOOKMARK [1][-]{section.69}{Programm}{chapter.67}% 24
-\BOOKMARK [1][-]{section.73}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.67}% 25
-\BOOKMARK [1][-]{section.74}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.67}% 26
+\BOOKMARK [2][-]{subsection.26}{Pointing des Teleskops mit CCD-Kameras}{section.25}% 13
+\BOOKMARK [2][-]{subsection.27}{Kameras des MST}{section.25}% 14
+\BOOKMARK [0][-]{chapter.29}{Pointingmodell}{}% 15
+\BOOKMARK [1][-]{section.30}{Koordinaten}{chapter.29}% 16
+\BOOKMARK [1][-]{section.32}{Entwicklung von Pointingmodellen}{chapter.29}% 17
+\BOOKMARK [1][-]{section.37}{Pointingmodell mit zwei Parametern}{chapter.29}% 18
+\BOOKMARK [2][-]{subsection.38}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.37}% 19
+\BOOKMARK [2][-]{equation.51}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.37}% 20
+\BOOKMARK [1][-]{equation.67}{Erweiterung des Modells auf vier Parameter}{chapter.29}% 21
+\BOOKMARK [0][-]{equation.71}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 22
+\BOOKMARK [1][-]{section*.72}{Datensatz}{equation.71}% 23
+\BOOKMARK [1][-]{section*.72}{Programm}{equation.71}% 24
+\BOOKMARK [1][-]{equation.75}{Anwendung auf das Pointingmodell mit 2 Parametern}{equation.71}% 25
+\BOOKMARK [1][-]{equation.75}{Anwendung auf das Pointingmodell mit 4 Parametern}{equation.71}% 26
