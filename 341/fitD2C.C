@@ -29,7 +29,7 @@ Double_t funcElT(Double_t el,Double_t az,Double_t az0,Double_t el0){
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
-  double Z = el-0.5*(tan(el)*pow(az0,2)+tan(el)/cos(el)*az0*el0);
+  double Z = el+el0-0.5*((1/cos(el)-1)*pow(el0,2)+tan(el)*pow(az0,2)+tan(el)/cos(el)*az0*el0);
   return Z/f;
 }
 

@@ -181,7 +181,7 @@ void fitD2C4(){
 
   //plot
   TCanvas* can = new TCanvas("plots","Plots",0,0,800,600);
-  TString nam("run341D2C.png");
+  TString nam("run341D2C4.png");
   TString tit1("fit drive to CCD");
   TString tit2("el0 = ");
   //tit2 += Int_t(AZ);
