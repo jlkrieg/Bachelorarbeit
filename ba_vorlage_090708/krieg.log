@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  7 FEB 2019 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  7 FEB 2019 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1322,11 +1322,14 @@ File: ../341/run341D2C4.png Graphic file (type png)
 <use ../341/run341D2C4.png>
 Package pdftex.def Info: ../341/run341D2C4.png used on input line 65.
 (pdftex.def)             Requested size: 483.69687pt x 347.5822pt.
-) [18 <../341/run341C2D_4par.png>] [19 <../341/run341D2C4.png>] (./krieg.bbl)
+) [18 <../341/run341C2D_4par.png>] [19 <../341/run341D2C4.png>] (./krieg.bbl) [
+20
+
+
+]
 \openout2 = `declaration.aux'.
 
- (./declaration.tex) [20
-
+ (./declaration.tex) [21
 
 
 ]
@@ -1349,30 +1352,30 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 8887 strings out of 494910
- 135105 string characters out of 6179836
- 302860 words of memory out of 5000000
- 11860 multiletter control sequences out of 15000+600000
- 63890 words of font info for 51 fonts, out of 8000000 for 9000
+ 8897 strings out of 494910
+ 135228 string characters out of 6179836
+ 302871 words of memory out of 5000000
+ 11861 multiletter control sequences out of 15000+600000
+ 68153 words of font info for 52 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,9n,66p,1317b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+ 43i,10n,66p,1317b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1
 /public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-sy8.pfb>
-Output written on krieg.pdf (24 pages, 15071102 bytes).
+/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on krieg.pdf (25 pages, 15091710 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 500000)
  296 words of extra memory for PDF output out of 10000 (max. 10000000)
 
