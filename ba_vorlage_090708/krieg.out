@@ -22,5 +22,9 @@
 \BOOKMARK [0][-]{equation.71}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 22
 \BOOKMARK [1][-]{section*.72}{Datensatz}{equation.71}% 23
 \BOOKMARK [1][-]{section*.72}{Programm}{equation.71}% 24
-\BOOKMARK [1][-]{equation.75}{Anwendung auf das Pointingmodell mit 2 Parametern}{equation.71}% 25
-\BOOKMARK [1][-]{equation.75}{Anwendung auf das Pointingmodell mit 4 Parametern}{equation.71}% 26
+\BOOKMARK [1][-]{equation.80}{Anwendung auf das Pointingmodell mit 2 Parametern}{equation.71}% 25
+\BOOKMARK [2][-]{section*.81}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{equation.80}% 26
+\BOOKMARK [2][-]{figure.82}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{equation.80}% 27
+\BOOKMARK [1][-]{figure.83}{Anwendung auf das Pointingmodell mit 4 Parametern}{equation.71}% 28
+\BOOKMARK [2][-]{section*.84}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{figure.83}% 29
+\BOOKMARK [2][-]{subsection.85}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{figure.83}% 30
