@@ -17,7 +17,7 @@ doF=N-\textrm{Anzahl der Parameter}
 \end{equation}
 Der perfekte Wert für $\frac{\chi^2}{doF}$ ist 1. Unter der Anahme, dass die Fehler $\sigma$ alle gleich groß sind, lassen sich diese wie folgt berechnen
 \begin{equation}
-\sigma=\sqrt{\sum^N_{i=1}\left(P_i-M_i\right)^2}=\sqrt{Q}
+\sigma=\sqrt{\frac{\sum^N_{i=1}\left(P_i-M_i\right)^2}{doF}}=\sqrt{\frac{Q}{doF}}
 \end{equation}
 Interessant ist es auch, sich die Korrelation der Parameter untereinander anzugucken. Die Korrelation beschreibt die Beziehung der zwischen einzelnen Parametern. Hier wird dazu der Korrelationskoeffizient nach Pearson verwendet, der ausschließlich die lineare Korrelation berücksichtigt. Um diesen zu berechnen wird zunächst die Korelationsmatrix
 \begin{equation}
@@ -44,6 +44,19 @@ Zunächst wird das Modell mit den Parametern $el0$ und $az0$ untersucht.
 \caption{Die Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{img:C2D}
 \end{figure}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rcl}
+\toprule
+$el0$ &=& $(-1,1941\pm0,0098)^{\circ}$\\
+$az0$ &=& $(12,0507\pm0,0019)^{\circ}$\\
+$\sigma$ &=& $0,23^{\circ}$\\
+$\rho_{el_0,az0}$ &=& $0,1576$\\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
 \begin{figure}[htbp]
 \centering
@@ -51,6 +64,20 @@ Zunächst wird das Modell mit den Parametern $el0$ und $az0$ untersucht.
 \caption{Die CCD-Koordinaten in Abhängigkeit der Driveoordinaten}
 \label{img:D2C}
 \end{figure}
+
+\end{figure}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rcl}
+\toprule
+$el0$ &=& $(-1,184\pm0,008)^{\circ}$\\
+$az0$ &=& $(12,048\pm0,004)^{\circ}$\\
+$\sigma$ &=& $0,19^{\circ}$\\
+$\rho_{el_0,az0}$ &=& $-0,4698$\\
+\bottomrule
+\end{tabular}
+
+\end{table}
 
 \section{Anwendung auf das Pointingmodell mit 4 Parametern}
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
