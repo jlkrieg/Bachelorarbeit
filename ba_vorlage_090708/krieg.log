@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  7 FEB 2019 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  8 FEB 2019 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -967,10 +967,6 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [2
 
 ] (./krieg.lof
-
-LaTeX Warning: Citation `FermiLAT' on page iii undefined on input line 3.
-
-
 Overfull \hbox (10.08723pt too wide) in paragraph at lines 5--5
  \T1/lmr/m/n/10.95 erzeugt einen elek-tro-mag-netis-chen Luftschauer (oben rech
 ts) der wiederum Cherenkovlicht 
@@ -1009,12 +1005,6 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 1.
-
-LaTeX Warning: Citation `DesignConcept' on page 1 undefined on input line 2.
-
-
-LaTeX Warning: Citation `PDG' on page 1 undefined on input line 11.
-
 ! Undefined control sequence.
 l.11 ... zwei Photonen mit der Energie $E=511\unti
                                                   {keV}$.
@@ -1024,17 +1014,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `Grupen' on page 1 undefined on input line 19.
-
 [1
 
 
 ]
-
-LaTeX Warning: Citation `Grupen' on page 2 undefined on input line 21.
-
-
 Overfull \hbox (0.22214pt too wide) in paragraph at lines 20--22
 \T1/lmr/m/n/10.95 strukt Pul-sar. In seinem rotieren-den Mag-net-feld kön-nen g
 eladene Teilchen durch die Lorentzkraft
@@ -1046,17 +1029,11 @@ Overfull \hbox (3.53036pt too wide) in paragraph at lines 20--22
 n-ergie wiederum an Pho-to-nen abgeben
  []
 
-<Images/lat.png, id=225, 800.9925pt x 450.0012pt>
+<Images/lat.png, id=232, 800.9925pt x 450.0012pt>
 File: Images/lat.png Graphic file (type png)
  <use Images/lat.png>
 Package pdftex.def Info: Images/lat.png used on input line 31.
 (pdftex.def)             Requested size: 483.69687pt x 271.74687pt.
-
-
-LaTeX Warning: Citation `FermiLAT' on page 2 undefined on input line 32.
-
-
-LaTeX Warning: Citation `FermiLAT' on page 2 undefined on input line 32.
 
 
 LaTeX Warning: Citation `iwas' on page 2 undefined on input line 42.
@@ -1067,24 +1044,14 @@ Overfull \hbox (19.27286pt too wide) in paragraph at lines 49--50
  Ma-terie schneller als die Licht-geschwindigkeit
  []
 
-
-LaTeX Warning: Citation `Grupen' on page 3 undefined on input line 53.
-
-<Images/cherenkow.png, id=231, 387.3672pt x 204.5241pt>
+<Images/cherenkow.png, id=243, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
 Package pdftex.def Info: Images/cherenkow.png used on input line 56.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
-
-
-LaTeX Warning: Citation `DesignConcept' on page 3 undefined on input line 63.
-
-
-LaTeX Warning: Citation `CherenkovCam' on page 3 undefined on input line 65.
-
-[3 <./Images/lat.png (PNG copy)>]
-<Images/detection.png, id=243, 895.84688pt x 648.17157pt>
+ [3 <./Images/lat.png (PNG copy)>]
+<Images/detection.png, id=257, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
@@ -1095,9 +1062,6 @@ Package pdftex.def Info: Images/detection.png used on input line 70.
 
  (./CTA.tex
 chapter 2.
-
-LaTeX Warning: Citation `NextGen' on page 6 undefined on input line 2.
-
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 5.
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1105,7 +1069,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 5.
 
-<Images/TelescopeTypes.jpg, id=255, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=271, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
@@ -1116,7 +1080,7 @@ Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 29.
 
 
 ]
-<Images/ArrayLayout.png, id=261, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=278, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
@@ -1134,7 +1098,7 @@ Overfull \hbox (7.22551pt too wide) in paragraph at lines 54--55
 
 (./Pointing.tex
 chapter 3.
-<Images/coordinates.png, id=270, 505.89pt x 337.26pt>
+<Images/coordinates.png, id=287, 505.89pt x 337.26pt>
 File: Images/coordinates.png Graphic file (type png)
 
 <use Images/coordinates.png>
@@ -1230,6 +1194,27 @@ chapter 4.
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 3.
 
+! You can't use `\eqno' in math mode.
+\H@endequation ->\eqno 
+                       \hbox {\@eqnnum }$$\@ignoretrue 
+l.21 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.21 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 [14
 
 
@@ -1239,29 +1224,29 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 40.
 
-<../341/run341C2D.png, id=349, 798.985pt x 574.145pt>
+<../341/run341C2D.png, id=366, 798.985pt x 574.145pt>
 File: ../341/run341C2D.png Graphic file (type png)
 
 <use ../341/run341C2D.png>
 Package pdftex.def Info: ../341/run341C2D.png used on input line 43.
 (pdftex.def)             Requested size: 483.69687pt x 347.5822pt.
 
-<../341/run341D2C.png, id=350, 798.985pt x 574.145pt>
+<../341/run341D2C.png, id=367, 798.985pt x 574.145pt>
 File: ../341/run341D2C.png Graphic file (type png)
 
 <use ../341/run341D2C.png>
-Package pdftex.def Info: ../341/run341D2C.png used on input line 50.
+Package pdftex.def Info: ../341/run341D2C.png used on input line 63.
 (pdftex.def)             Requested size: 483.69687pt x 347.5822pt.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 56.
+(hyperref)                be the same. Added a new anchor on input line 69.
 
-<../341/run341C2D_4par.png, id=351, 798.985pt x 574.145pt>
+<../341/run341C2D_4par.png, id=368, 798.985pt x 574.145pt>
 File: ../341/run341C2D_4par.png Graphic file (type png)
 
 <use ../341/run341C2D_4par.png>
-Package pdftex.def Info: ../341/run341C2D_4par.png used on input line 58.
+Package pdftex.def Info: ../341/run341C2D_4par.png used on input line 71.
 (pdftex.def)             Requested size: 483.69687pt x 347.5822pt.
 
 
@@ -1271,7 +1256,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \caption
+l.72 \caption
              {Die Drivekoordinaten in AbhÃ¤ngigkeit der CCD-Koordinaten}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1279,7 +1264,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra }, or forgotten \endgroup.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.61 \end{figure}
+l.74 \end{figure}
                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1291,7 +1276,7 @@ deleted material, e.g., by typing `I$}'.
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.61 \end{figure}
+l.74 \end{figure}
                  
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -1303,7 +1288,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \end{figure}
+l.74 \end{figure}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1312,15 +1297,15 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.61 \end{figure}
+l.74 \end{figure}
                  
 Things are pretty mixed up, but I think the worst is over.
 
-<../341/run341D2C4.png, id=369, 798.985pt x 574.145pt>
+<../341/run341D2C4.png, id=386, 798.985pt x 574.145pt>
 File: ../341/run341D2C4.png Graphic file (type png)
 
 <use ../341/run341D2C4.png>
-Package pdftex.def Info: ../341/run341D2C4.png used on input line 65.
+Package pdftex.def Info: ../341/run341D2C4.png used on input line 78.
 (pdftex.def)             Requested size: 483.69687pt x 347.5822pt.
 ) [18 <../341/run341C2D_4par.png>] [19 <../341/run341D2C4.png>] (./krieg.bbl) [
 20
@@ -1354,7 +1339,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
 Here is how much of TeX's memory you used:
  8897 strings out of 494910
  135228 string characters out of 6179836
- 302871 words of memory out of 5000000
+ 303052 words of memory out of 5000000
  11861 multiletter control sequences out of 15000+600000
  68153 words of font info for 52 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1372,10 +1357,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on krieg.pdf (25 pages, 15091710 bytes).
+Output written on krieg.pdf (25 pages, 15093521 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
+ 490 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
  120 named destinations out of 1000 (max. 500000)
  296 words of extra memory for PDF output out of 10000 (max. 10000000)
 

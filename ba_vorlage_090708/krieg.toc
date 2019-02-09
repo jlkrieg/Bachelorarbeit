@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {4.1}Datensatz}{14}{section*.72}
 \contentsline {section}{\numberline {4.2}Programm}{14}{section*.72}
 \contentsline {section}{\numberline {4.3}Anwendung auf das Pointingmodell mit 2 Parametern}{15}{equation.80}
-\contentsline {subsection}{\numberline {4.3.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{18}{section*.81}
+\contentsline {subsection}{\numberline {4.3.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{15}{section*.81}
 \contentsline {subsection}{\numberline {4.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{18}{figure.82}
 \contentsline {section}{\numberline {4.4}Anwendung auf das Pointingmodell mit 4 Parametern}{18}{figure.83}
 \contentsline {subsection}{\numberline {4.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{18}{section*.84}
