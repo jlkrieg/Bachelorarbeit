@@ -173,7 +173,7 @@ void fitD2C(){
     chisq+=pow(del_vec[i],2)+pow(daz_vec[i],2);
   }
   std::cout<<"chisqtest = "<<chisq<<std::endl;
-
+  std::cout<<"errorbars = "<<sqrt(chisq/(N-2))<<std::endl;
   //plot
   TCanvas* can = new TCanvas("plotsD","PlotsD",0,0,800,600);
   TString nam("run341D2C.png");

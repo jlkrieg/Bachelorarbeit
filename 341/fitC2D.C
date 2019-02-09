@@ -178,7 +178,7 @@ void fitC2D(){
   for(int i=0; i<kk; i++){
     chisq+=pow(del_vec[i],2)+pow(daz_vec[i],2);
   }
-  std::cout<<"chisqtest = "<<chisq<<std::endl;
+  std::cout<<"errorbars = "<<sqrt(chisq/(N-2))<<std::endl;
 
   //plot
   TCanvas* can = new TCanvas("plotsC","PlotsC",0,0,800,600);

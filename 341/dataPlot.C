@@ -10,9 +10,7 @@ void dataPlot(){
     if( fabs(ps-11.03) > 0.05 ) continue;  
     Double_t azd = a[0];
     Double_t eld = a[1];
-    if( eld < cutEl ){
-      k++;
-    }
+    k++;
   }
   const int kk=k;
   Double_t azc_vec[kk],elc_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk];
@@ -25,29 +23,28 @@ void dataPlot(){
     if( fabs(ps-11.03) > 0.05 ) continue;
     Double_t azd = a[0];
     Double_t eld = a[1];
-    if( eld < cutEl ){
-      Double_t az = a[2];
-      if (az < -180){
-	az+=360;
-      }
-      Double_t el = a[3];
-      azd_vec[k]=azd;
-      eld_vec[k]=eld;
-      azc_vec[k]=az;
-      elc_vec[k]=el;
-      k++;
+    Double_t az = a[2];
+    if (az < -180){
+      az+=360;
     }
+    Double_t el = a[3];
+    azd_vec[k]=azd;
+    eld_vec[k]=eld;
+    azc_vec[k]=az;
+    elc_vec[k]=el;
+    k++;
   }
   for(int i=0; i<kk; i++){
-    daz_vec[i] = azd_vec[i]-funcAz(el_vec[i],az_vec[i],az0,el0);
-    //daz_vec[i] = azd_vec[i]-az_vec[i];
-    if (daz_vec[i] < -180){
-      daz_vec[i]+=360;
+    daz_vec[i] = azd_vec[i]-azc_vec[i];
+    if (daz_vec[i]>180){
+      daz_vec[i] -=360;
     }
-    if (daz_vec[i] > 180){
-      daz_vec[i]-=360;
+    if (daz_vec[i]<180){
+      daz_vec[i] +=360;
     }
+    del_vec[i] = eld_vec[i]-elc_vec[i];
   }
+  std::cout<<kk<<std::endl;
   TCanvas* can = new TCanvas("plots1","Plots1",0,0,800,600);
   can->Divide(2,2);
   TString nam("data1.png");
@@ -114,24 +111,24 @@ void dataPlot(){
   g_dazaz2->Draw("AP");
   can->SaveAs(nam2);
 
-  TCanvas* can = new TCanvas("plots3","Plots3",0,0,800,600);
-  can->Divide(2,2);
+  TCanvas* can = new TCanvas("plots3","Plots3",0,0,1200,600);
+  can->Divide(2);
   TString nam3("data3.png");
-  TGraph* g_el=new TGraph(kk,elc_vec,azc_vec,del_vec);
+  TGraph2D* g_el=new TGraph2D(kk,elc_vec,azc_vec,del_vec);
   can->cd(1);
   g_el->SetMarkerStyle(20);
   g_el->SetMarkerSize(0.80);
-  g_el>GetXaxis()->SetTitle("elevation center (deg)");
-  g_el>GetYaxis()->SetTitle("azimuth center (deg)");
-  g_el->GetZaxis()->SetTitle("#Delta elevation (deg)");
+  //g_el>GetXaxis()->SetTitle("elevation center (deg)");
+  //g_el>GetYaxis()->SetTitle("azimuth center (deg)");
+  //g_el->GetZaxis()->SetTitle("#Delta elevation (deg)");
   g_el->Draw("AP");
-  TGraph* g_az=new TGraph2D(kk,elc_vec,azc_vec,daz_vec);
+  TGraph2D* g_az=new TGraph2D(kk,elc_vec,azc_vec,daz_vec);
   can->cd(2);
   g_az->SetMarkerStyle(20);
   g_az->SetMarkerSize(0.80);
-  g_az>GetXaxis()->SetTitle("elevation center (deg)");
-  g_az>GetYaxis()->SetTitle("azimuth center (deg)");
-  g_az->GetZaxis()->SetTitle("#Delta elevation (deg)");
+  //g_az>GetXaxis()->SetTitle("elevation center (deg)");
+  //g_az>GetYaxis()->SetTitle("azimuth center (deg)");
+  //g_az->GetZaxis()->SetTitle("#Delta elevation (deg)");
   g_az->Draw("AP");
   can->SaveAs(nam3);
 

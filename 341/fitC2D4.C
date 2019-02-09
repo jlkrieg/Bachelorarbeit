@@ -191,7 +191,7 @@ void fitC2D4(){
     chisq+=pow(del_vec[i],2)+pow(daz_vec[i],2);
   }
   std::cout<<"chisqtest = "<<chisq<<std::endl;
-
+  std::cout<<"errorbars = "<<sqrt(chisq/(N-4))<<std::endl;
   //plot
   TCanvas* can = new TCanvas("plots","Plots",0,0,800,600);
   can->Divide(2,2);
