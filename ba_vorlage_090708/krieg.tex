@@ -37,7 +37,8 @@
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 %notwendige Pakete
-\usepackage[ngerman, english]{babel}    % mehrsprachiger Textsatz
+%\usepackage[ngerman, english]{babel}    % mehrsprachiger Textsatz
+\usepackage[english, ngerman]{babel}    % mehrsprachiger Textsatz
 % babel: letzte Sprache in Optionen zeigt die Sprache des Dokumentes
 % und kann durch den Befehl \selectlanguage{} geaendert werden
 % Passen Sie die Optionen des babel-Paketes nach Bedarf an!
@@ -77,7 +78,7 @@
 
 \include{titlepage}                         % Bitte KEINE �nderungen vornehmen!
 \maketitle
-
+\include{abstract}
 
 %-Zusammenfassung / Abstract*-------------------------------------
 
@@ -109,14 +110,15 @@
 
 % part ist optional, bitte ggf. l�schen
 % \part{Teil1}
-
+\include{einleitung}
 %\include{chapter01}
-% \include{chapter02}
+%\include{chapter02}
 \include{gamma-Astronomie}
 \include{CTA}
 %\include{Bildanalyse}
 \include{Pointing}
 \include{Auswertung}
+\include{fazit}
 
 % usw.
 

@@ -1,6 +1,10 @@
-\select@language {english}
+\select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Technische Daten der Sky-CCD}}{8}{table.28}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Technische Daten der Sky-CCD}}{9}{table.29}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Die f\IeC {\"u}r das Pointingmodell mit 2 Parametern bestimmten Werte}}{16}{table.84}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Die Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten im Zwei-Parameter-Modell}}{17}{table.86}
 \addvspace {10\p@ }

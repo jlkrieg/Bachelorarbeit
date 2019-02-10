@@ -1,6 +1,6 @@
 \begin{thebibliography}{1}
 
-\bibitem{FermiLAT}
+\bibitem{TevCat}
 
 
 \bibitem{DesignConcept}
@@ -33,5 +33,10 @@ K.~A. Olive et~al.
 Stefano Vercellone and for~the CTA~Consortium.
 \newblock The next generation cherenkov telescope array observatory: Cta.
 \newblock 2014.
+
+\bibitem{TeVCat2}
+S.~P. {Wakely} and D.~{Horan}.
+\newblock {TeVCat: An online catalog for Very High Energy Gamma-Ray Astronomy}.
+\newblock {\em International Cosmic Ray Conference}, 3:1341--1344, 2008.
 
 \end{thebibliography}

@@ -1,4 +1,5 @@
 \chapter{Das Cherenkov Telescope Array}
+\label{ch:CTA}
 Mit dem Bau des Cherenkov Telescope Arrays (CTA) werden verschiedene Ziele verfolgt \cite{NextGen}:
 \begin{itemize}
 
@@ -22,7 +23,7 @@ Das kleinste Teleskop ist sensitiv im Bereich von 1TeV bis 300TeV und wird einge
 \item[Medium Sized Telescope (MST)]\hfill \\ 
 Das MST basiert auf einem modifiziertem Davies-Cotton-Design und hat einen Durchmesser von 12m. Mit einem Sensitivitätsbereich von 150GeV bis 5TeV deckt es den Kernbereich des CTAs ab. Ein Prototyp des MST wird in Berlin-Adlershof getestet.
 \item[Large Sized Telescope (LST)]\hfill \\
-Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m um auch Strahlung niedriger Energie zu detektieren. Da aufgrund der Größe eine Bauweise aus Stahl zu schwer wäre, werden diese Teleskope aus kohlefaserverstärktem Kunststoff gebaut. Das hat zum Vorteil, dass die Teleskope zwar leichter werden, aber es hat auch den Nachteil, dass die Bauteile durch Bewegung des Teleskops stärker verbiegen, was das Pointing erschwert. Aufgrund der Größe dieser Teleskope reicht es nicht mehr die Reflektoren dieser Teleskope sphärisch zu bauen, sondern parabolisch. Hierbei steigt der Aufwand, da jeder einzelne Spiegel eine individuelle Brennweite hat.
+Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m haben um auch Strahlung niedriger Energie zu detektieren. Da aufgrund der Größe eine Bauweise aus Stahl zu schwer wäre, werden diese Teleskope aus kohlefaserverstärktem Kunststoff gebaut. Das hat den Vorteil, dass die Teleskope zwar leichter werden, aber es hat auch den Nachteil, dass die Bauteile durch Bewegung des Teleskops stärker verbiegen, was das Pointing erschwert. Aufgrund der Größe dieser Teleskope reicht es nicht mehr den Reflektor dieser Teleskope sphärisch zu bauen, sondern parabolisch.% Hierbei steigt der Aufwand, da jeder einzelne Spiegel eine individuelle Brennweite hat.
 \end{description}
 \begin{figure}[htbp]
 \centering
@@ -31,7 +32,7 @@ Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m um auc
 \label{img:TelescopeTypes}
 \end{figure}
 
-\subsection{Arrays}
+\subsection{Array-Konzept}
 Um den gesamten Himmel abdecken zu können wird jeweils eine Anlage auf der Nordhalbkugel und der Südhalbkugel errichtet.
 \begin{description}
 \item[südliche Hemisphäre]\hfill \\
@@ -43,7 +44,7 @@ Auf der spanischen Insel La Palma wird die nördliche Anlage errichtet. Hier ste
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{Images/ArrayLayout.png}
-\caption{Der geplante Aufbau der Arrays auf La Palma und in der Atacamawueste: Auf La Palma werden zunächst nur die beiden größeren Teleskoptypen am Krater des Vulkans errichtet. In der Atacamawüste werden alle drei Teleskoptypten verwendet. Aufgrund der großen freien Fläche kann hier auch ein großer Bereich symmetrisch abgedeckt werden.}
+\caption{Der geplante Aufbau der Arrays auf La Palma und in der Atacamawüste: Auf La Palma werden zunächst nur die beiden größeren Teleskoptypen errichtet. In der Atacamawüste werden alle drei Teleskoptypten verwendet. Aufgrund der großen freien Fläche kann hier auch ein großer Bereich symmetrisch abgedeckt werden.}
 \label{img:ArrayLayout}
 \end{figure}
 
@@ -55,7 +56,7 @@ Um die möglichst genaue Ausrichtung des Teleskops zu kennen verwendet man CCD-K
 
 \subsection{Kameras des MST}
 Um Pointingmodelle dieser Art zu entwickeln besitzt der Prototyp des MST drei CCD-Kameras im Zentrum des Reflektors. Die Single-CCD hat ein so großes Gesichtsfeld, dass sie gleichzeit die Tscherenkowkamera als auch den Nachthimmel ablichten kann. Alternativ können auch zwei verschiedene Kameras verwenden können, wovon eine (LID-CCD) die Tscherenkowkamera und die andere (Sky-CCD) den Nachthimmel ablichtet. Die Methode mit den beiden Kameras hat den Vorteil, dass sie zusammen eine höhere Auflösung haben. Da sich die beiden Kameras allerdings auch unabhängig voneinander bewegen können, ist die Methode mit einer CCD-Kamera das bevorzugte Konzept für das Teleskop.\\
-Eine Besonderheit des MST ist die Positionierung der Sky-CCD. Da sich diese wie die anderen in der Mitte des Reflektors befindet, den Dummy jedoch nicht ablichten soll, ist sie mit einem Winkel von ungefähr $10^{\circ}$ zur optischen Achse des Teleskops montiert. Wie sich die Richtung der Sky-CCD im Vergleich zu den eingestellten Koordinaten des Teleskops verhält, wird in den Kapiteln 3 und 4 diskutiert.
+Eine Besonderheit des MST ist die Positionierung der Sky-CCD. Da sich diese wie die anderen in der Mitte des Reflektors befindet, den Dummy jedoch nicht ablichten soll, ist sie mit einem Winkel von ungefähr $10^{\circ}$ zur optischen Achse des Teleskops montiert. Wie sich die Richtung der Sky-CCD im Vergleich zu den eingestellten Koordinaten des Teleskops verhält, wird in den Kapiteln \ref{ch:pointing} und \ref{ch:auswertung} diskutiert.
 
 \begin{table}[htbp]
 \centering

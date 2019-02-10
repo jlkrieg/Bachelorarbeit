@@ -1,4 +1,5 @@
-\chapter{Pointingmodell}
+\chapter{Pointingmodell für eine große Abweichung zur optischen Achse}
+\label{ch:pointing}
 Das Pointing von Teleskopen beschäftigt sich damit, dass das Teleskop so ausgerichtet wird, wie es erwünscht ist. Häufig ist das Problem, dass die eingestellte Position nicht exakt mit der gewünschten Position übereinstimmt. Gründe dafür können Fehler in der Präzision oder auch die Elastizität einzelner Bauteile sein. Da man die aufgenommen Daten mit den Bekannten Postionen am Himmel vergleichen kann, kann man versuchen ein Modell zu finden, welches die Fehler verkleinert oder im Idealfall sogar eliminiert.
 
 \section{Koordinaten}
@@ -151,11 +152,11 @@ t^2\left(\sin(el_C)+\sin(el_0)\right)-t\left(2\cos(az_0)\cos(el_0)\right)+\sin(e
 \end{equation}
 Aufgelöst nach $t$ ergeben sich folgende Lösungen
 \begin{equation}
-t_{1,2}=\frac{\cos\left(el_0\right)\cos\left(az_0\right)\pm\sqrt{\cos^2\left(el_0\right)\cos^2\left(az_0\right)-\sin^2\left(el_0\right)+\sin^2\left(el_C\right)}}{\sin\left(el_C\right)+\sin\left(el_0\right)}
+t_{1,2}=\frac{\cos\left(el_0\right)\cos\left(az_0\right)\pm\sqrt{\cos^2\left(el_0\right)\cos^2\left(az_0\right)+\sin^2\left(el_0\right)-\sin^2\left(el_C\right)}}{\sin\left(el_C\right)+\sin\left(el_0\right)}
 \end{equation}
 Ersetzt man den linken Teil der Formel durch \ref{eq:t} und löst sich die Gleichung nach $el_D$ auf, so erhält man
 \begin{equation}
-el_D=2\arctan\left(\frac{\cos(el_0)\cos(az_0)-\sqrt{\cos^2(el_0)\cos^2(az_0)-\sin^2(el_0)+\sin^2(el_C)}}{\sin(el_C)+\sin(el_0)}\right)
+el_D=2\arctan\left(\frac{\cos(el_0)\cos(az_0)-\sqrt{\cos^2(el_0)\cos^2(az_0)+\sin^2(el_0)-\sin^2(el_C)}}{\sin(el_C)+\sin(el_0)}\right)
 \label{eq:elC2D}
 \end{equation}
 Betrachtet man den Wertebereich der Funktion stellt man fest, dass
@@ -190,7 +191,7 @@ az_D=\arctan 2\left(
 a\sin\left(az_C\right)-b\cos\left(az_c\right),a\cos\left(az_C\right)+b\sin\left(az_c\right)\right)
 \label{eq:azC2D}
 \end{equation}
-wobei hier noch $el_D$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.
+wobei hier noch $el_D$ in $a$ und $b$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.
 
 \section{Erweiterung des Modells auf vier Parameter}
 Unter der Annahme, dass die Skalen des Drivesystems einen Offset haben, also das der Wertebereich von $el_D$ beispielshalber von $1^{\circ}$ bis $91^{\circ}$ läuft, kann das Modell mit zwei additiven Konstanten $el_1$ und $az_1$ erweitert werden. Das bedeutet, das bei der Vorhersage der CCD-Koordinaten \ref{eq:elD2C} und \ref{eq:azD2C} ein konstanter Offset zu den Argumenten hinzugefügt wird:
