@@ -16,14 +16,14 @@ Mit dem Bau des Cherenkov Telescope Arrays (CTA) werden verschiedene Ziele verfo
 Um die oben genannten Ziele zu erreichen, hat man sich für ein Arraykonzept entschieden, dass aus drei unterschiedlich großen Teleskoptypen besteht und an zwei Standorten errichtet wird.
 
 \subsection{Teleskoptypen}
-Für das CTA werden drei Teleskope unterschiedlicher Größe entwickelt
+Für das CTA werden drei Teleskope unterschiedlicher Größe entwickelt, die in Abbildung \ref{img:TelescopeTypes} zu sehen sind.
 \begin{description}
 \item[Small Sized Telescope (SST)]\hfill \\
-Das kleinste Teleskop ist sensitiv im Bereich von 1TeV bis 300TeV und wird eingesetzt um Schauer grosser Energie zu detektieren. Momentan werden drei verschiedene Varianten entwickelt, die zu einem harmonisiert werden sollen. Das SST 1M ist eine kleinere Variante des MST und SST-2M  ASTRI und das SST-2M GCT basieren auf dem Prinzip eines Schwarzschild-Couder Designs. Das SST soll einen Reflektordurchmesser von ca. 4m haben.
+Das kleinste Teleskop ist sensitiv im Bereich von 1TeV bis 300TeV und wird eingesetzt um Schauer mit Energien über $\unit{TeV}$ zu detektieren. Momentan werden drei verschiedene Varianten entwickelt, die zu einem harmonisiert werden sollen. Das SST 1M ist eine kleinere Variante des MST und SST-2M  ASTRI und das SST-2M GCT basieren auf dem Prinzip eines Schwarzschild-Couder Designs. Das SST soll einen Reflektordurchmesser von ca. 4m haben.
 \item[Medium Sized Telescope (MST)]\hfill \\ 
 Das MST basiert auf einem modifiziertem Davies-Cotton-Design und hat einen Durchmesser von 12m. Mit einem Sensitivitätsbereich von 150GeV bis 5TeV deckt es den Kernbereich des CTAs ab. Ein Prototyp des MST wird in Berlin-Adlershof getestet.
 \item[Large Sized Telescope (LST)]\hfill \\
-Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m haben um auch Strahlung niedriger Energie zu detektieren. Da aufgrund der Größe eine Bauweise aus Stahl zu schwer wäre, werden diese Teleskope aus kohlefaserverstärktem Kunststoff gebaut. Das hat den Vorteil, dass die Teleskope zwar leichter werden, aber es hat auch den Nachteil, dass die Bauteile durch Bewegung des Teleskops stärker verbiegen, was das Pointing erschwert. Aufgrund der Größe dieser Teleskope reicht es nicht mehr den Reflektor dieser Teleskope sphärisch zu bauen, sondern parabolisch.% Hierbei steigt der Aufwand, da jeder einzelne Spiegel eine individuelle Brennweite hat.
+Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m haben um auch Strahlung niedriger Energie zu detektieren. Um das Teleskop möglichst schnell zu bewegen, wurde durch den Einsatz von kohlefaserverstärktem Kunststoff Gewicht gespart. Das hat den Vorteil, dass die Teleskope zwar leichter werden, aber es hat auch den Nachteil, dass die Bauteile durch Bewegung des Teleskops stärker verbiegen, was das Pointing erschwert. Aufgrund der Größe dieser Teleskope reicht es nicht mehr den Reflektor dieser Teleskope sphärisch zu bauen, sondern parabolisch.% Hierbei steigt der Aufwand, da jeder einzelne Spiegel eine individuelle Brennweite hat.
 \end{description}
 \begin{figure}[htbp]
 \centering
@@ -36,9 +36,9 @@ Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m haben 
 Um den gesamten Himmel abdecken zu können wird jeweils eine Anlage auf der Nordhalbkugel und der Südhalbkugel errichtet.
 \begin{description}
 \item[südliche Hemisphäre]\hfill \\
-Die größere der beiden Anlagen wird in der Atacamawüste in Chile errichtet und besteht aus allen drei Teleskoptypen, die auf einer Fläche von $4km^2$ verteilt sind \ref{img:ArrayLayout}, um so den gesamten Energiebereich des CTAs abzudecken
+Die größere der beiden Anlagen wird in der Atacamawüste in Chile errichtet und besteht aus allen drei Teleskoptypen, die auf einer Fläche von $4\unit{km^2}$ verteilt sind (Abbildung \ref{img:ArrayLayout} rechts), um so den gesamten Energiebereich des CTAs abzudecken
 \item[nördliche Hemisphäre]\hfill \\ 
-Auf der spanischen Insel La Palma wird die nördliche Anlage errichtet. Hier steht eine kleinere Fläche zur Verfügung und es wird auf die kleinen Teleskope verzichtet, wodurch der Energiebereich auf 20GeV bis 20TeV begrenzt ist.
+Auf der spanischen Insel La Palma wird die nördliche Anlage errichtet. Hier steht eine kleinere Fläche zur Verfügung und es wird auf die kleinen Teleskope verzichtet, wodurch der Energiebereich auf 20GeV bis 20TeV begrenzt  ist(Abbildung \ref{img:ArrayLayout} links).
 \end{description}
 
 \begin{figure}[htbp]
@@ -55,7 +55,7 @@ Ein Prototyp für das MST wurde 2012 in Berlin-Adlershof in der Nähe zum DESY-Z
 Um die möglichst genaue Ausrichtung des Teleskops zu kennen verwendet man CCD-Kameras, die sowohl den Nachthimmel als auch den Dummy beziehungsweise später die Tscherenkowkamera ablichten. In sogenannten Pointing-Runs wird das Teleskop kalibriert, in dem des auf Sterne ausrichtet, deren Reflektion auf dem Dummy zu sehen ist. Mithilfe von auf dem Dummy angebrachten LEDs lässt sich die Position der Reflektion bestimmen und somit auch, wie der Dummy zum Teleskop steht. Aus den Aufnahmen vom Nachthimmel lässt sich aus der Position der zu sehenden Sterne die Koordinaten des Teleskops vorhersagen. Im Betrieb, wenn die Tscherenkowkamera geöffnet ist und die Reflektionen der Sterne nicht mehr zu sehen sind, lässt sich die Position der Tscherenkowkamera immer noch anhand der Pointing-LEDs bestimmen.
 
 \subsection{Kameras des MST}
-Um Pointingmodelle dieser Art zu entwickeln besitzt der Prototyp des MST drei CCD-Kameras im Zentrum des Reflektors. Die Single-CCD hat ein so großes Gesichtsfeld, dass sie gleichzeit die Tscherenkowkamera als auch den Nachthimmel ablichten kann. Alternativ können auch zwei verschiedene Kameras verwenden können, wovon eine (LID-CCD) die Tscherenkowkamera und die andere (Sky-CCD) den Nachthimmel ablichtet. Die Methode mit den beiden Kameras hat den Vorteil, dass sie zusammen eine höhere Auflösung haben. Da sich die beiden Kameras allerdings auch unabhängig voneinander bewegen können, ist die Methode mit einer CCD-Kamera das bevorzugte Konzept für das Teleskop.\\
+Um Pointingmodelle dieser Art zu entwickeln besitzt der Prototyp des MST drei CCD-Kameras im Zentrum des Reflektors. Die Single-CCD hat ein so großes Gesichtsfeld, dass sie gleichzeit die Tscherenkowkamera als auch den Nachthimmel ablichten kann. Alternativ können auch zwei verschiedene Kameras verwenden können, wovon eine (LID-CCD) die Tscherenkowkamera und die andere (Sky-CCD) den Nachthimmel ablichtet. Die Methode mit den beiden Kameras hat den Vorteil, dass sie zusammen eine höhere Auflösung haben. Da sich die beiden Kameras allerdings auch unabhängig voneinander bewegen können, ist die Methode mit einer CCD-Kamera das bevorzugte Konzept für das Teleskop\cite{pos}.\\
 Eine Besonderheit des MST ist die Positionierung der Sky-CCD. Da sich diese wie die anderen in der Mitte des Reflektors befindet, den Dummy jedoch nicht ablichten soll, ist sie mit einem Winkel von ungefähr $10^{\circ}$ zur optischen Achse des Teleskops montiert. Wie sich die Richtung der Sky-CCD im Vergleich zu den eingestellten Koordinaten des Teleskops verhält, wird in den Kapiteln \ref{ch:pointing} und \ref{ch:auswertung} diskutiert.
 
 \begin{table}[htbp]

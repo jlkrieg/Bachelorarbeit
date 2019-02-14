@@ -1,8 +1,15 @@
 \chapter{Anwendung des Pointingmodells auf Daten des Teleskops}
 \label{ch:auswertung}
-Um das in Kapitel \ref{ch:pointing} entwickelte Pointingmodell zu testen, wurde mit dem Prototyp des MST ein Datensatz aufgenommen um die Daten
+Um das in Kapitel \ref{ch:pointing} entwickelte Pointingmodell zu testen, wurde mit dem Prototyp des MST ein Datensatz aufgenommen um
 \section{Datensatz}
-Der verwendete Datensatz wurde am MST-Prototyp in Adlershof in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC aufgenommen. Dazu wurden 105 Postionen beobachtet wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand. An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten. Die jeweils zweiten Bilder mit dieser Belichtungszeit aufgenommenen Bilder wurden verwendet um mithilfe einer Software die Koordinaten des Bildmittelpunktes zu bestimmen. Das war bei 100 Bildern erflolgreich. Der zur Analyse verwendete Datensatz besteht somit aus 100 Einträgen, die jeweils die Elevations und Azimutkoordinaten des Drivesystems (also der am Teleskop eingestellten Koordinaten) und der tatsächlichen (also der Koordinaten des Bildmittelpunktes).
+Der verwendete Datensatz wurde am MST-Prototyp in Adlershof in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC aufgenommen. Dazu wurden 105 Postionen beobachtet wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand. An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten. Die jeweils zweiten Bilder mit dieser Belichtungszeit aufgenommenen Bilder wurden verwendet um mithilfe einer Software die Koordinaten des Bildmittelpunktes zu bestimmen. Das war bei 100 Bildern erflolgreich.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../341/data2.png}
+\label{img:dataset}
+\caption{Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abhängigkeit der gemessenen Koordinaten}
+\end{figure}
+Der zur Analyse verwendete Datensatz besteht somit aus 100 Einträgen, die jeweils die Elevations und Azimutkoordinaten des Drivesystems (also der am Teleskop eingestellten Koordinaten) und der tatsächlichen (also der Koordinaten des Bildmittelpunktes).
 \section{Programm}
 Um das Pointingmodell auf Konsistenz zu überprüfen wurde ein Programm in ROOT geschrieben, welches die Differenzen der vom Pointingmodell (Index P) bestimmten Werte mit den gemessenen (Index M) Werten berechnet und analysiert. Da die oben entwickelten Pointingmodelle noch freie Parameter haben, die vom Teleskop abhängen werden diese durch eine Regression der Daten bestimmt. Da das Pointingmodell aus zwei Funktionen besteht (jeweils eine für die Elevation und den Azimut), die jedoch von den gleichen Parametern abhängen, muss hier ein kombinierter Fit durchgeführt werden. Dazu wird eine Hilfsvariable eingeführt, die die Summe der Quadrate der Differenzen von Messwerten und vorhergesagten Werten für feste Werte der freien Parameter bestimmt.
 \begin{equation}
@@ -46,6 +53,7 @@ Um die Koordinaten des Teleskops anhand der Koordinaten der CCD-Kamera vorherzus
 \caption{Die Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{img:C2D}
 \end{figure}
+
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
@@ -61,7 +69,7 @@ $\rho_{el_0,az0}$ &=& $0,1576$\\
 \end{table}
 
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
-Für das inverse Modell werden die Gleichungen \ref{eq:D2Cel} und \ref{eq:D2Caz} verwendet. Mit diesen kommt man auf die Werte in Tabelle \ref{tab:D2C} und die in Abbildung \ref{img:D2C} gezeigten Abbildungen.
+Für das inverse Modell werden die Gleichungen \ref{eq:elD2C} und \ref{eq:azD2C} verwendet. Mit diesen kommt man auf die Werte in Tabelle \ref{tab:D2C} und die in Abbildung \ref{img:D2C} gezeigten Abbildungen.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/run341D2C.png}
@@ -85,22 +93,69 @@ $\rho_{el_0,az0}$ &=& $-0,4698$\\
 \end{table}
 
 \section{Anwendung auf das Pointingmodell mit 4 Parametern}
+Im folgenden wird das obige Modell auf vier Parameter erweitert indem wie in Abschnitt \ref{se:4par} beschrieben jeweils ein konstanter Wert zu den Drive-Koordinaten hinzuaddiert wird.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
+Werden die Formeln \ref{eq:elC2D4} und \ref{eq:azC2D4} verwendet erhält man die in Abbildung \ref{img:C2D4} gezeigten Differenzen und die in Tabelle \ref{tab:C2D4} aufgelisteten Werte.
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/run341C2D_4par.png}
 \caption{Die Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{img:C2D4}
 \end{figure}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rcl}
+\toprule
+$el0$ &=& $(-1,21891\pm 0,03924)^{\circ}$\\
+$az0$ &=& $(11,9854\pm0,2072)^{\circ}$\\
+$el_1$ &=& $(0,00251434\pm 0,0001839)^{\circ}$\\
+$az0$ &=& $(0,03080816\pm0,2149)^{\circ}$\\
+$\sigma$ &=& $0,23^{\circ}$\\
+$\rho_{el_0,az_0}$ &=& $0,8691$\\
+$\rho_{el_0,el_1}$ &=& $-0,8417$\\
+$\rho_{az_0,az_1}$ &=& $-0,9358$\\
+$\rho_{el_0,az_1}$ &=& $-0,8137$\\
+$\rho_{az_0,el_1}$ &=& $-0,9709$\\
+$\rho_{el_1,el_1}$ &=& $-0,8417$\\
+\bottomrule
+\end{tabular}
+\label{tab:C2D4}
+\caption{Die für das Pointingmodell mit 4 Parametern bestimmten Werte}
+\end{table}
+
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
+Invertiert man das Modell, so verwendet man die Gleichungen \ref{eq:elD2C4} und \ref{eq:azD2C4}, sodass das das Programm die Werte aus Tabelle \ref{tab:D2C4} und die Abstände aus Abbildung \ref{img:D2C4} liefert.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/run341D2C4.png}
 \caption{Die CCD-Koordinaten in Abhängigkeit der Driveoordinaten}
 \label{img:D2C4}
 \end{figure}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rcl}
+\toprule
+$el0$ &=& $(-1,19373\pm 0,9976)^{\circ}$\\
+$az0$ &=& $(12,0957\pm0,04068)^{\circ}$\\
+$el_1$ &=& $(0,0192352\pm 1,043)^{\circ}$\\
+$az0$ &=& $(-0,0946443\pm0,1452)^{\circ}$\\
+$\sigma$ &=& $0,10^{\circ}$\\
+$\rho_{el_0,az_0}$ &=& $-0,009202$\\
+$\rho_{el_0,el_1}$ &=& $-0,0218$\\
+$\rho_{az_0,az_1}$ &=& $-0,9493$\\
+$\rho_{el_0,az_1}$ &=& $-0,9954$\\
+$\rho_{az_0,el_1}$ &=& $-0,03329$\\
+$\rho_{el_1,el_1}$ &=& $-0,01867$\\
+\bottomrule
+\end{tabular}
+\label{tab:D2C4}
+\caption{Die für das Pointingmodell mit 4 Parametern bestimmten Werte}
+\end{table}
 
 \section{Diskussion der Korrelation}
+Sieht man sich die einzelnen Korrelationen an, so erkennt man, dass sich diese für das jeweils gleiche Modell mit gleich vielen Parametern stark unterscheiden und gerade im Modell mit vier Parametern sehr starke Korrelationen auftreten.
 \subsection{Unterschiedliche Korrelationen für Modelle mit gleichen Parametern}
+Zunächst fällt auf, dass sich im Modell mit zwei Parametern die Korrelationskoeffizienten stark unterscheiden
 \subsection{Hohe Korrelation im Modell mit vier Parametern}
 
 \section{Systematische Abweichungen im entwickelten Pointingmodell}
