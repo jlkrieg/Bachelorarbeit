@@ -4,33 +4,33 @@
 \BOOKMARK [1][-]{section.10}{Quellen hochenergetischer Strahlung}{chapter.8}% 4
 \BOOKMARK [1][-]{section.12}{Detektion von Strahlung}{chapter.8}% 5
 \BOOKMARK [2][-]{subsection.13}{Luftschauer}{section.12}% 6
-\BOOKMARK [2][-]{subsection.15}{Tscherenkow-Strahlung}{section.12}% 7
-\BOOKMARK [2][-]{subsection.18}{Bodengest\374tzte Detektion der Tscherenkow-Strahlung}{section.12}% 8
-\BOOKMARK [0][-]{chapter.20}{Das Cherenkov Telescope Array}{}% 9
-\BOOKMARK [1][-]{section.21}{Design-Konzept}{chapter.20}% 10
-\BOOKMARK [2][-]{subsection.22}{Teleskoptypen}{section.21}% 11
-\BOOKMARK [2][-]{subsection.24}{Array-Konzept}{section.21}% 12
-\BOOKMARK [1][-]{section.26}{Prototyp in Adlershof}{chapter.20}% 13
-\BOOKMARK [2][-]{subsection.27}{Pointing des Teleskops mit CCD-Kameras}{section.26}% 14
-\BOOKMARK [2][-]{subsection.28}{Kameras des MST}{section.26}% 15
-\BOOKMARK [0][-]{chapter.30}{Pointingmodell f\374r eine gro\337e Abweichung zur optischen Achse}{}% 16
-\BOOKMARK [1][-]{section.31}{Koordinaten}{chapter.30}% 17
-\BOOKMARK [1][-]{section.33}{Entwicklung von Pointingmodellen}{chapter.30}% 18
-\BOOKMARK [1][-]{section.38}{Pointingmodell mit zwei Parametern}{chapter.30}% 19
-\BOOKMARK [2][-]{subsection.39}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.38}% 20
-\BOOKMARK [2][-]{subsection.54}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.38}% 21
-\BOOKMARK [1][-]{section.73}{Erweiterung des Modells auf vier Parameter}{chapter.30}% 22
-\BOOKMARK [0][-]{chapter.78}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 23
-\BOOKMARK [1][-]{section.79}{Datensatz}{chapter.78}% 24
-\BOOKMARK [1][-]{section.81}{Programm}{chapter.78}% 25
-\BOOKMARK [1][-]{section.90}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.78}% 26
-\BOOKMARK [2][-]{subsection.91}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.90}% 27
-\BOOKMARK [2][-]{subsection.94}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.90}% 28
-\BOOKMARK [1][-]{section.97}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.78}% 29
-\BOOKMARK [2][-]{subsection.98}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.97}% 30
-\BOOKMARK [2][-]{subsection.100}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.97}% 31
-\BOOKMARK [1][-]{section.103}{Diskussion der Korrelation}{chapter.78}% 32
+\BOOKMARK [2][-]{subsection.14}{Tscherenkow-Strahlung}{section.12}% 7
+\BOOKMARK [2][-]{subsection.17}{Bodengest\374tzte Detektion der Tscherenkow-Strahlung}{section.12}% 8
+\BOOKMARK [0][-]{chapter.19}{Das Cherenkov Telescope Array}{}% 9
+\BOOKMARK [1][-]{section.20}{Design-Konzept}{chapter.19}% 10
+\BOOKMARK [2][-]{subsection.21}{Teleskoptypen}{section.20}% 11
+\BOOKMARK [2][-]{subsection.23}{Array-Konzept}{section.20}% 12
+\BOOKMARK [1][-]{section.25}{Prototyp in Adlershof}{chapter.19}% 13
+\BOOKMARK [2][-]{subsection.26}{Pointing des Teleskops mit CCD-Kameras}{section.25}% 14
+\BOOKMARK [2][-]{subsection.27}{Kameras des MST}{section.25}% 15
+\BOOKMARK [0][-]{chapter.29}{Pointingmodell f\374r eine gro\337e Abweichung zur optischen Achse}{}% 16
+\BOOKMARK [1][-]{section.30}{Koordinaten}{chapter.29}% 17
+\BOOKMARK [1][-]{section.32}{Entwicklung von Pointingmodellen}{chapter.29}% 18
+\BOOKMARK [1][-]{section.37}{Pointingmodell mit zwei Parametern}{chapter.29}% 19
+\BOOKMARK [2][-]{subsection.38}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.37}% 20
+\BOOKMARK [2][-]{subsection.53}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.37}% 21
+\BOOKMARK [1][-]{section.72}{Erweiterung des Modells auf vier Parameter}{chapter.29}% 22
+\BOOKMARK [0][-]{chapter.77}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 23
+\BOOKMARK [1][-]{section.78}{Datensatz}{chapter.77}% 24
+\BOOKMARK [1][-]{section.80}{Programm}{chapter.77}% 25
+\BOOKMARK [1][-]{section.89}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.77}% 26
+\BOOKMARK [2][-]{subsection.90}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.89}% 27
+\BOOKMARK [2][-]{subsection.93}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.89}% 28
+\BOOKMARK [1][-]{section.96}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.77}% 29
+\BOOKMARK [2][-]{subsection.97}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.96}% 30
+\BOOKMARK [2][-]{subsection.100}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.96}% 31
+\BOOKMARK [1][-]{section.103}{Diskussion der Korrelation}{chapter.77}% 32
 \BOOKMARK [2][-]{subsection.104}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.103}% 33
 \BOOKMARK [2][-]{subsection.105}{Hohe Korrelation im Modell mit vier Parametern}{section.103}% 34
-\BOOKMARK [1][-]{section.106}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.78}% 35
+\BOOKMARK [1][-]{section.106}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.77}% 35
 \BOOKMARK [0][-]{chapter.107}{Fazit}{}% 36

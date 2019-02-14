@@ -2,16 +2,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Zu sehen sind alle von TeVCat registrierten und kategorisierten VHE-Quellen (ab einer Energie von $E~>50\unit {GeV}$\cite {TeVCat2}). Die roten Punkte stehen beispielsweise f\IeC {\"u}r AGNs, die Violetten f\IeC {\"u}r PWNs und die Grauen f\IeC {\"u}r unbekannte und unidentifizierte Quellen. \cite {TevCat}}}{4}{figure.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Der Tscherenkow-Effekt: Ein geladenes Teilchen durchfliegt ein dielektrisches Medium mit einer Geschwindigkeit \IeC {\"u}ber der der Lichtgeschwindigkeit im Medium und erzeugt Wellenfronten.}}{5}{figure.17}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Detektion hochenergetischer Strahlung: Das in die Atmosph\IeC {\"a}re eintretende Photon erzeugt einen elektromagnetischen Luftschauer (oben rechts) der wiederum Cherenkovlicht erzeugt, welches am Boden mit IACTs detektiert werden kann. Ein Detektionsbild ist unten links zu sehen.}}{6}{figure.19}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Der Tscherenkow-Effekt: Ein geladenes Teilchen durchfliegt ein dielektrisches Medium mit einer Geschwindigkeit \IeC {\"u}ber der der Lichtgeschwindigkeit im Medium und erzeugt Wellenfronten.}}{5}{figure.16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Detektion hochenergetischer Strahlung: Das in die Atmosph\IeC {\"a}re eintretende Photon erzeugt einen elektromagnetischen Luftschauer (oben rechts) der wiederum Cherenkovlicht erzeugt, welches am Boden mit IACTs detektiert werden kann. Ein Detektionsbild ist unten links zu sehen.}}{6}{figure.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Die drei verschieden gro\IeC {\ss }en Teleskope des CTA: links die drei Varianten des SMT, in der Mitte das MST und rechts das LST}}{8}{figure.23}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Der geplante Aufbau der Arrays auf La Palma und in der Atacamaw\IeC {\"u}ste: Auf La Palma werden zun\IeC {\"a}chst nur die beiden gr\IeC {\"o}\IeC {\ss }eren Teleskoptypen errichtet. In der Atacamaw\IeC {\"u}ste werden alle drei Teleskoptypten verwendet. Aufgrund der gro\IeC {\ss }en freien Fl\IeC {\"a}che kann hier auch ein gro\IeC {\ss }er Bereich symmetrisch abgedeckt werden.}}{9}{figure.25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Die drei verschieden gro\IeC {\ss }en Teleskope des CTA: links die drei Varianten des SMT, in der Mitte das MST und rechts das LST}}{8}{figure.22}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Der geplante Aufbau der Arrays auf La Palma und in der Atacamaw\IeC {\"u}ste: Auf La Palma werden zun\IeC {\"a}chst nur die beiden gr\IeC {\"o}\IeC {\ss }eren Teleskoptypen errichtet. In der Atacamaw\IeC {\"u}ste werden alle drei Teleskoptypten verwendet. Aufgrund der gro\IeC {\ss }en freien Fl\IeC {\"a}che kann hier auch ein gro\IeC {\ss }er Bereich symmetrisch abgedeckt werden.}}{9}{figure.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Die verwendeten Koordinaten}}{10}{figure.32}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Die verwendeten Koordinaten}}{10}{figure.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abh\IeC {\"a}ngigkeit der gemessenen Koordinaten}}{15}{figure.80}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{17}{figure.92}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten im Zwei-Parameter-Modell}}{18}{figure.95}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten}}{20}{figure.101}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abh\IeC {\"a}ngigkeit der gemessenen Koordinaten}}{15}{figure.79}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{17}{figure.91}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten im Zwei-Parameter-Modell}}{18}{figure.94}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{19}{figure.98}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten}}{20}{figure.101}
 \addvspace {10\p@ }
