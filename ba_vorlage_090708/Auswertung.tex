@@ -73,41 +73,47 @@ Zuletzt werden noch die Ergebnisse noch in jeweils vier Plots, die die Differenz
 %\begin{equation}
 %f=el_M-el_P \quad \textrm{bzw} \quad f=az_M-az_P
 %\end{equation}
-\section{Anwendung auf das Pointingmodell mit 2 Parametern}
-Zunächst wird das Modell mit den Parametern $el_0$ und $az_0$ untersucht.
+\section{Anwendung auf das Pointingmodell mit zwei Parametern}
+Zunächst soll das in Kapitel \ref{ch:pointing} entwickelte Modell mit zwei Parametern, das einen konstanten Winkel zwischen der optischen Achse des Teleskops und der CCD-Kamera annimmt, unersucht werden.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
-Um die Koordinaten des Teleskops anhand der Koordinaten der CCD-Kamera vorherzusagen wird das Modell aus den Gleichungen \ref{eq:elC2D} und \ref{eq:azC2D} verwendet. Berechnet man die Parameter mit dem oben beschriebenen Programm so erhält man die Parameter in Tabelle \ref{tab:C2D}. Die Abweichungen zwischen Vorhersage und gemessenen Werten sind in Abbildung \ref{img:C2D} zu sehen.
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{../341/run341C2D.png}
-\caption{Die Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
-\label{img:C2D}
-\end{figure}
-
+Begonnen wird mit der Vorhersage der Drive-Koordinaten mithilfe der CCD-Koordinaten. Unter der Annahme des festen Winkels zwischen Drive und Kamera wurden in Kapitel \ref{ch:pointing} die Abhängigkeiten aus den Formeln \ref{eq:elC2D} und \ref{eq:azC2D} vorhergesagt. Verwendet man das oben beschriebene Programm um die optimalen Parameter zu berechnen, so erhält man die Werte aus Tabelle \ref{tab:C2D}.
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
 \toprule
-$el0$ &=& $(-1,1941\pm0,0098)^{\circ}$\\
-$az0$ &=& $(12,0507\pm0,0019)^{\circ}$\\
+$el_0$ &=& $(-1,1941\pm0,0098)^{\circ}$\\
+$az_0$ &=& $(12,0507\pm0,0019)^{\circ}$\\
 $\sigma$ &=& $0,23^{\circ}$\\
-$\rho_{el_0,az0}$ &=& $0,1576$\\
+$\rho_{el_0,az_0}$ &=& $0,1576$\\
 \bottomrule
 \end{tabular}
 \label{tab:C2D}
-\caption{Die für das Pointingmodell mit 2 Parametern bestimmten Werte}
+\caption{Die für das Pointingmodell mit zwei Parametern bestimmten Werte, wobei die Drivekoordinaten in Abhängigkeit der CCD-Koordinaten vorhergesagt wurden.}
 \end{table}
-
-\subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
-Für das inverse Modell werden die Gleichungen \ref{eq:elD2C} und \ref{eq:azD2C} verwendet. Mit diesen kommt man auf die Werte in Tabelle \ref{tab:D2C} und die in Abbildung \ref{img:D2C} gezeigten Abbildungen.
+Die Differenzen zwischen den vom Modell vorhergesagten und den gemessenen Werten sind in Abbildung \ref{img:C2D} dargestellt.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{../341/run341D2C.png}
-\caption{Die CCD-Koordinaten in Abhängigkeit der Driveoordinaten im Zwei-Parameter-Modell}
-\label{img:D2C}
+\includegraphics[width=\textwidth]{../341/run341C2D.png}
+\caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell mit $az_0=12,05^{\circ}$ und $el_0=-1,19^{\circ}$ vorhergesagten Drive-Koordinaten und den gemessenen Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
+\label{img:C2D}
 \end{figure}
 
-\end{figure}
+%\begin{table}[htbp]
+%\centering
+%\begin{tabular}{rcl}
+%\toprule
+%$el_0$ &=& $(-1,1941\pm0,0098)^{\circ}$\\
+%$az_0$ &=& $(12,0507\pm0,0019)^{\circ}$\\
+%$\sigma$ &=& $0,23^{\circ}$\\
+%$\rho_{el_0,az_0}$ &=& $0,1576$\\
+%\bottomrule
+%\end{tabular}
+%\label{tab:C2D}
+%\caption{Die für das Pointingmodell mit 2 Parametern bestimmten Werte}
+%\end{table}
+
+\subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
+Möchte man jedoch die Koordinaten des Drives in Abbhängigkeit der CCD bestimmem, so benötigt man das inverse Modell, welches durch die Formeln \ref{eq:elD2C} und \ref{eq:azD2C} beschrieben wird. Für dieses Modell werden mithlife des Programms die Werte in Tabelle \ref{tab:D2C} bestimmt. Zudem sind die Differenzen zwischen Vorhersage und Modell in Abbildung  \ref{img:D2C} zu sehen.
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
@@ -119,27 +125,50 @@ $\rho_{el_0,az0}$ &=& $-0,4698$\\
 \bottomrule
 \end{tabular}
 \label{tab:D2C}
-\caption{Die Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten im Zwei-Parameter-Modell}
+\caption{Die für das Pointingmodell mit zwei Parametern bestimmten Werte, wobei die CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten vorhergesagt wurden.}
 \end{table}
 
+
+\begin{figure}[htbp]
+\centering
+
+\includegraphics[width=\textwidth]{../341/run341D2C.png}
+\caption{Die CCD-Koordinaten in Abhängigkeit der Driveoordinaten im Zwei-Parameter-Modell}
+\label{img:D2C}
+\end{figure}
+
+%\end{figure}
+%\begin{table}[htbp]
+%\centering
+%\begin{tabular}{rcl}
+%\toprule
+%$el0$ &=& $(-1,184\pm0,008)^{\circ}$\\
+%$az0$ &=& $(12,048\pm0,004)^{\circ}$\\
+%$\sigma$ &=& $0,19^{\circ}$\\
+%$\rho_{el_0,az0}$ &=& $-0,4698$\\
+%\bottomrule
+%\end{tabular}
+%\label{tab:D2C}
+%\caption{Die Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten im Zwei-Parameter-Modell}
+%\end{table}
 \section{Anwendung auf das Pointingmodell mit 4 Parametern}
-Im folgenden wird das obige Modell auf vier Parameter erweitert indem wie in Abschnitt \ref{se:4par} beschrieben jeweils ein konstanter Wert zu den Drive-Koordinaten hinzuaddiert wird.
+Im Folgenden wird das oben verwendete Modell erweitert, indem man wie in Abschnitt \ref{se:4par} animmmt, dass die eingestellten Koordinaten zu den tatsächlichen um jeweils einen konstanten Wert verschoben sind. Zu den obigen Parametern $el_0$ und $az_0$ kommen somit noch die Parameter $az_1$ für eine konstante Verschiebung im Azimut und $el_1$ für eine konstante Verschiebung in der Elevation hinzu.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
-Werden die Formeln \ref{eq:elC2D4} und \ref{eq:azC2D4} verwendet erhält man die in Abbildung \ref{img:C2D4} gezeigten Differenzen und die in Tabelle \ref{tab:C2D4} aufgelisteten Werte.
+Hier wird wie oben mit der Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD begonnnen. Dazu verwendet man die Formeln \ref{eq:elC2D4} und \ref{eq:azC2D4}, für die sich mithilfe des Fit-Programms die Werte aus Tabelle \ref{tab:C2D4} berechnen lassen und die Differenzen zwischen Modell und gemessenen Werten in Abbildung \ref{img:C2D4} darstellen.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/run341C2D_4par.png}
-\caption{Die Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
+\caption{Gezeigt sind die Differenzen zwischen den vom Vier-Parameter-Modell mit $az_0=11,99^{\circ}$, $el_0=-1,22^{\circ}$, $az_1=0,031^{\circ}$ und $el_1=0,0025^{\circ}$ vorhergesagten Drive-Koordinaten und den gemessenen Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{img:C2D4}
 \end{figure}
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
 \toprule
-$el0$ &=& $(-1,21891\pm 0,03924)^{\circ}$\\
-$az0$ &=& $(11,9854\pm0,2072)^{\circ}$\\
+$el_0$ &=& $(-1,21891\pm 0,03924)^{\circ}$\\
+$az_0$ &=& $(11,9854\pm0,2072)^{\circ}$\\
 $el_1$ &=& $(0,00251434\pm 0,0001839)^{\circ}$\\
-$az0$ &=& $(0,03080816\pm0,2149)^{\circ}$\\
+$az_1$ &=& $(0,03080816\pm0,2149)^{\circ}$\\
 $\sigma$ &=& $0,23^{\circ}$\\
 $\rho_{el_0,az_0}$ &=& $0,8691$\\
 $\rho_{el_0,el_1}$ &=& $-0,8417$\\
@@ -150,25 +179,25 @@ $\rho_{el_1,el_1}$ &=& $-0,8417$\\
 \bottomrule
 \end{tabular}
 \label{tab:C2D4}
-\caption{Die für das Pointingmodell mit 4 Parametern bestimmten Werte}
+\caption{Die für das Pointingmodell mit vier Parametern bestimmten Werte, wobei die Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten vorhergesagt wurden.}
 \end{table}
 
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
-Invertiert man das Modell, so verwendet man die Gleichungen \ref{eq:elD2C4} und \ref{eq:azD2C4}, sodass das das Programm die Werte aus Tabelle \ref{tab:D2C4} und die Abstände aus Abbildung \ref{img:D2C4} liefert.
+Zuletzt wird das Vier-Parameter-Modell benutzt um die CCD-Koordinaten durch die Drive-Koordinaten vorherzusagen. Dazu wird das im Vergleich zu oben invertierte Modell, welches durch die Gleichungen \ref{eq:elD2C4} und \ref{eq:azD2C4} beschrieben wird, verwendet. Für diese Formeln erhält man die in Tabelle \ref{tab:D2C4} Werte und die in Abbildung \ref{img:D2C4} dargestellten Differenzen zwischen Modell und Messwerten.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/run341D2C4.png}
-\caption{Die CCD-Koordinaten in Abhängigkeit der Driveoordinaten}
+\caption{Gezeigt sind die Differenzen zwischen den vom Vier-Parameter-Modell mit $az_0=12,10^{\circ}$, $el_0=-1,19^{\circ}$, $az_1=-0,095^{\circ}$ und $el_1=0,019^{\circ}$ vorhergesagten Drive-Koordinaten und den gemessenen Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{img:D2C4}
 \end{figure}
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
 \toprule
-$el0$ &=& $(-1,19373\pm 0,9976)^{\circ}$\\
-$az0$ &=& $(12,0957\pm0,04068)^{\circ}$\\
+$el_0$ &=& $(-1,19373\pm 0,9976)^{\circ}$\\
+$az_0$ &=& $(12,0957\pm0,04068)^{\circ}$\\
 $el_1$ &=& $(0,0192352\pm 1,043)^{\circ}$\\
-$az0$ &=& $(-0,0946443\pm0,1452)^{\circ}$\\
+$az_1$ &=& $(-0,0946443\pm0,1452)^{\circ}$\\
 $\sigma$ &=& $0,10^{\circ}$\\
 $\rho_{el_0,az_0}$&=& $-0,009202$\\
 $\rho_{el_0,el_1}$&=& $-0,0218$\\
@@ -179,8 +208,10 @@ $\rho_{el_1,el_1}$&=& $-0,01867$\\
 \bottomrule
 \end{tabular}
 \label{tab:D2C4}
-\caption{Die für das Pointingmodell mit 4 Parametern bestimmten Werte}
+\caption{Die für das Pointingmodell mit vier Parametern bestimmten Werte, wobei die CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten vorhergesagt wurden.}
 \end{table}
+
+\section{Vergleich der Parameter}
 
 \section{Diskussion der Korrelation}
 Sieht man sich die einzelnen Korrelationen an, so erkennt man, dass sich diese für das jeweils gleiche Modell mit gleich vielen Parametern stark unterscheiden und gerade im Modell mit vier Parametern sehr starke Korrelationen auftreten.

@@ -13,24 +13,25 @@
 \BOOKMARK [1][-]{section.25}{Prototyp in Adlershof}{chapter.19}% 13
 \BOOKMARK [2][-]{subsection.26}{Pointing des Teleskops mit CCD-Kameras}{section.25}% 14
 \BOOKMARK [2][-]{subsection.27}{Kameras des MST}{section.25}% 15
-\BOOKMARK [0][-]{chapter.29}{Pointingmodell f\374r eine gro\337e Abweichung zur optischen Achse}{}% 16
-\BOOKMARK [1][-]{section.30}{Koordinaten}{chapter.29}% 17
-\BOOKMARK [1][-]{section.32}{Entwicklung von Pointingmodellen}{chapter.29}% 18
-\BOOKMARK [1][-]{section.37}{Pointingmodell mit zwei Parametern}{chapter.29}% 19
-\BOOKMARK [2][-]{subsection.38}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.37}% 20
-\BOOKMARK [2][-]{subsection.53}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.37}% 21
-\BOOKMARK [1][-]{section.72}{Erweiterung des Modells auf vier Parameter}{chapter.29}% 22
-\BOOKMARK [0][-]{chapter.77}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 23
-\BOOKMARK [1][-]{section.78}{Datensatz}{chapter.77}% 24
-\BOOKMARK [1][-]{section.80}{Programm}{chapter.77}% 25
-\BOOKMARK [1][-]{section.88}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.77}% 26
-\BOOKMARK [2][-]{subsection.89}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.88}% 27
-\BOOKMARK [2][-]{subsection.92}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.88}% 28
-\BOOKMARK [1][-]{section.95}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.77}% 29
-\BOOKMARK [2][-]{subsection.96}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.95}% 30
-\BOOKMARK [2][-]{subsection.99}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.95}% 31
-\BOOKMARK [1][-]{section.102}{Diskussion der Korrelation}{chapter.77}% 32
-\BOOKMARK [2][-]{subsection.103}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.102}% 33
-\BOOKMARK [2][-]{subsection.104}{Hohe Korrelation im Modell mit vier Parametern}{section.102}% 34
-\BOOKMARK [1][-]{section.105}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.77}% 35
-\BOOKMARK [0][-]{chapter.106}{Fazit}{}% 36
+\BOOKMARK [0][-]{chapter.30}{Pointingmodell f\374r eine gro\337e Abweichung zur optischen Achse}{}% 16
+\BOOKMARK [1][-]{section.31}{Koordinaten}{chapter.30}% 17
+\BOOKMARK [1][-]{section.33}{Entwicklung von Pointingmodellen}{chapter.30}% 18
+\BOOKMARK [1][-]{section.43}{Pointingmodell mit zwei Parametern}{chapter.30}% 19
+\BOOKMARK [2][-]{subsection.44}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.43}% 20
+\BOOKMARK [2][-]{subsection.59}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.43}% 21
+\BOOKMARK [1][-]{section.78}{Erweiterung des Modells auf vier Parameter}{chapter.30}% 22
+\BOOKMARK [0][-]{chapter.83}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 23
+\BOOKMARK [1][-]{section.84}{Datensatz}{chapter.83}% 24
+\BOOKMARK [1][-]{section.86}{Programm}{chapter.83}% 25
+\BOOKMARK [1][-]{section.94}{Anwendung auf das Pointingmodell mit zwei Parametern}{chapter.83}% 26
+\BOOKMARK [2][-]{subsection.95}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.94}% 27
+\BOOKMARK [2][-]{subsection.98}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.94}% 28
+\BOOKMARK [1][-]{section.101}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.83}% 29
+\BOOKMARK [2][-]{subsection.102}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.101}% 30
+\BOOKMARK [2][-]{subsection.105}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.101}% 31
+\BOOKMARK [1][-]{section.108}{Vergleich der Parameter}{chapter.83}% 32
+\BOOKMARK [1][-]{section.109}{Diskussion der Korrelation}{chapter.83}% 33
+\BOOKMARK [2][-]{subsection.110}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.109}% 34
+\BOOKMARK [2][-]{subsection.111}{Hohe Korrelation im Modell mit vier Parametern}{section.109}% 35
+\BOOKMARK [1][-]{section.112}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.83}% 36
+\BOOKMARK [0][-]{chapter.113}{Fazit}{}% 37

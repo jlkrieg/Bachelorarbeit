@@ -12,8 +12,7 @@ Das MST benutzt ein Koordinatensystem aus zwei Winkeln, welches den Kugelkoordin
 \end{figure}
 
 \section{Entwicklung von Pointingmodellen}
-Da man das Teleskop so ausrichten will, dass man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. \\
-In der Regel haben Teleskope so geringe Abweichungen zwischen eingestellter und tatsächlicher Position, dass sich diese Abweichungen als Funktionen schreiben lassen, die in den relevanten Parametern entwickelt werden können.
+Um mit einem Teleskop möglichst gute Resultate zu erzielen muss man die gewünschte Position am Himmel so genau wie möglich einstellen. Da die eingestellten Koordinaten allerdings nicht exakt mit den tatsächlichen Koordinaten übereinstimmen, verwendet man Pointingmodelle um diese Differenzen zu minimieren. Da Teleskope in der Regel so konstruiert sind, dass es möglichst geringe Abweichungen zwischen eingestellten und tatsächlichen Positionen existieren, reicht es aus, sich die Differenzen anzgucken. Diese Differenzen lassen sich als dann als Funktion der teleskopspezifischen Paramater $\vec{q}$ entwickeln.
 \begin{equation}
 az_D=az_c+\Delta_{az}=az_C+\tilde{f}_{az}\left(az_c,el_c,\vec{q}\right)
 \end{equation}
@@ -21,6 +20,44 @@ az_D=az_c+\Delta_{az}=az_C+\tilde{f}_{az}\left(az_c,el_c,\vec{q}\right)
 el_D=el_c+\Delta_{el}=el_C+\tilde{f}_{el}\left(az_c,el_c,\vec{q}\right)
 \label{eq:pointingZero}
 \end{equation}
+Als Beispiel wird hier die Verkippung der Teleskopachse, die Ruslan Konno in seiner Bachelorarbeit beschrieben hat \citep{Ruslan}, in vereinfachter Form disktutiert. Dazu wird nur die Elevation betrachtet, die sich aus der z-Komponente berechnen lässt
+\begin{equation}
+sin(el)=z.
+\end{equation}
+Für ein kleines $\Delta_{el}$ lässt sich diese Formel gut durch eine Taylorentwicklung bis zum linearen Glied beschreiben.
+\begin{equation}
+\sin(el+\Delta_{el})=\sin(el)\cos(\Delta_{el})+\cos(el)sin(\Delta_{el})\approx \sin(el)+\cos(el)\Delta_{el}
+\end{equation}
+Dreht man nun einen beliebigen Vektor mit einem kleinen Winkel um die x-Achse
+\begin{equation}
+\left(\begin{array}{c}
+x\prime\\y\prime\\z\prime
+\end{array}\right)=\left(\begin{array}{ccc}
+1 & 0 & -\phi_X\\0 & 1 & 0 \\\phi_X & 0 & 1
+\end{array}\right)\left(\begin{array}{c}
+x\\y\\z
+\end{array}\right)=\left(\begin{array}{c}
+x-\phi_Xz\\y\\\phi_X+z
+\end{array}\right),
+\end{equation}
+lässt sich aus der z-Komponente die Abweichung $\Delta_{el}$ berechnen.
+\begin{equation}
+\sin(el)+\cos(el)\Delta_{el}=z\prime=\phi_Xx+z
+\end{equation}
+mit Gleichung xx ergibt sich somit 
+\begin{equation}
+\Delta_{el}=\frac{\phi_Xx}{\cos(el)}
+\end{equation}
+als Abweichung. Aus dieser Formel kann man sehen, dass diese Approximation nur für kleine Unterschiede, wie in diesem Fall eine kleine Drehung um die x-Achse funktioniert.
+%Da man das Teleskop so ausrichten will, dass man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. \\
+%In der Regel haben Teleskope so geringe Abweichungen zwischen eingestellter und tatsächlicher Position, dass sich diese Abweichungen als Funktionen schreiben lassen, die in den relevanten Parametern entwickelt werden können.
+%\begin{equation}
+%az_D=az_c+\Delta_{az}=az_C+\tilde{f}_{az}\left(az_c,el_c,\vec{q}\right)
+%\end{equation}
+%\begin{equation}
+%el_D=el_c+\Delta_{el}=el_C+\tilde{f}_{el}\left(az_c,el_c,\vec{q}\right)
+%\label{eq:pointingZero}
+%\end{equation}
 Da die Sky-CCD des MST-Prototyps einen größeren Winkel ($\mathcal{O}\left(10^{\circ}\right)$) zur optischen Achse hat, lässt sich das Entwicklungsverfahren hier nicht anwenden. Stattdessen wird versucht, die einzustellende Position anhand geometrischer Überlegungen in Abhängigkeit der wahren Position vorherzusagen. Man versucht also Funktionen zu finden, die nur von den wahren Koordinaten und einem teleskopsspezifischen Parametersatz abhängen.
 \begin{equation} 
 az_D=f_{az}(az_C,el_C)
