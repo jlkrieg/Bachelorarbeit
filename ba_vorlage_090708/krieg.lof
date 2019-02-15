@@ -1,4 +1,4 @@
-\select@language {english}
+\select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Zu sehen sind alle von TeVCat registrierten und kategorisierten VHE-Quellen (ab einer Energie von $E~>50\unit {GeV}$\cite {TeVCat2}). Die roten Punkte stehen beispielsweise f\IeC {\"u}r AGNs, die Violetten f\IeC {\"u}r PWNs und die Grauen f\IeC {\"u}r unbekannte und unidentifizierte Quellen. \cite {TevCat}}}{4}{figure.11}
@@ -10,9 +10,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Die verwendeten Koordinaten}}{10}{figure.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abh\IeC {\"a}ngigkeit der gemessenen Koordinaten}}{15}{figure.79}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{17}{figure.91}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten im Zwei-Parameter-Modell}}{18}{figure.94}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{19}{figure.98}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten}}{20}{figure.101}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abh\IeC {\"a}ngigkeit der gemessenen Koordinaten}}{16}{figure.79}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{18}{figure.90}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten im Zwei-Parameter-Modell}}{19}{figure.93}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Die Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{20}{figure.97}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Driveoordinaten}}{21}{figure.100}
 \addvspace {10\p@ }

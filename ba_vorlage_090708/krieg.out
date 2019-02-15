@@ -23,14 +23,14 @@
 \BOOKMARK [0][-]{chapter.77}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 23
 \BOOKMARK [1][-]{section.78}{Datensatz}{chapter.77}% 24
 \BOOKMARK [1][-]{section.80}{Programm}{chapter.77}% 25
-\BOOKMARK [1][-]{section.89}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.77}% 26
-\BOOKMARK [2][-]{subsection.90}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.89}% 27
-\BOOKMARK [2][-]{subsection.93}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.89}% 28
-\BOOKMARK [1][-]{section.96}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.77}% 29
-\BOOKMARK [2][-]{subsection.97}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.96}% 30
-\BOOKMARK [2][-]{subsection.100}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.96}% 31
-\BOOKMARK [1][-]{section.103}{Diskussion der Korrelation}{chapter.77}% 32
-\BOOKMARK [2][-]{subsection.104}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.103}% 33
-\BOOKMARK [2][-]{subsection.105}{Hohe Korrelation im Modell mit vier Parametern}{section.103}% 34
-\BOOKMARK [1][-]{section.106}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.77}% 35
-\BOOKMARK [0][-]{chapter.107}{Fazit}{}% 36
+\BOOKMARK [1][-]{section.88}{Anwendung auf das Pointingmodell mit 2 Parametern}{chapter.77}% 26
+\BOOKMARK [2][-]{subsection.89}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.88}% 27
+\BOOKMARK [2][-]{subsection.92}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.88}% 28
+\BOOKMARK [1][-]{section.95}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.77}% 29
+\BOOKMARK [2][-]{subsection.96}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.95}% 30
+\BOOKMARK [2][-]{subsection.99}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.95}% 31
+\BOOKMARK [1][-]{section.102}{Diskussion der Korrelation}{chapter.77}% 32
+\BOOKMARK [2][-]{subsection.103}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.102}% 33
+\BOOKMARK [2][-]{subsection.104}{Hohe Korrelation im Modell mit vier Parametern}{section.102}% 34
+\BOOKMARK [1][-]{section.105}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.77}% 35
+\BOOKMARK [0][-]{chapter.106}{Fazit}{}% 36
