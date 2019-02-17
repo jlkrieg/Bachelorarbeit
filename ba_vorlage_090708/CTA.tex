@@ -28,7 +28,7 @@ Die größten Teleskope des CTA werden einen Reflektordurchmesser von 23m haben 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{Images/TelescopeTypes.jpg}
-\caption{Die drei verschieden großen Teleskope des CTA: links die drei Varianten des SMT, in der Mitte das MST und rechts das LST}
+\caption{Die drei verschieden großen Teleskope des CTA: links die drei Varianten des SMT, in der Mitte das MST und rechts das LST \cite{Flickr}}
 \label{img:TelescopeTypes}
 \end{figure}
 
@@ -44,23 +44,32 @@ Auf der spanischen Insel La Palma wird die nördliche Anlage errichtet. Hier ste
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{Images/ArrayLayout.png}
-\caption{Der geplante Aufbau der Arrays auf La Palma und in der Atacamawüste: Auf La Palma werden zunächst nur die beiden größeren Teleskoptypen errichtet. In der Atacamawüste werden alle drei Teleskoptypten verwendet. Aufgrund der großen freien Fläche kann hier auch ein großer Bereich symmetrisch abgedeckt werden.}
+\caption{Der geplante Aufbau der Arrays auf La Palma und in der Atacamawüste: Auf La Palma werden zunächst nur die beiden größeren Teleskoptypen errichtet. In der Atacamawüste werden alle drei Teleskoptypten verwendet. Aufgrund der großen freien Fläche kann hier auch ein großer Bereich symmetrisch abgedeckt werden.\cite{Flickr}}
 \label{img:ArrayLayout}
 \end{figure}
 
 \section{Prototyp in Adlershof}
-Ein Prototyp für das MST wurde 2012 in Berlin-Adlershof in der Nähe zum DESY-Zeuthen und dem Institut für Physik der Humboldt-Universität zu Berlin errichtet. Ziel ist es mit dem Prototypen den mechanischen Aufbau zu untersuchen, die Ausrichtung der Spiegel zu testen und Pointingmethoden zu entwickeln. Dazu wurde auf eine Tscherenkovkamera verzichtet und durch einen Dummy der gleichen Masse ersetzt.
+\begin{figure}
+\centering
+%\includegraphics[width=0.5\textwidth]{Images/mst.png}
+\includegraphics[width=\textwidth]{Images/night.png}
+\label{img:mst}
+\caption{Der Prototyp des MST in Berlin. Die Tscherenkow-Kamera wurde durch einen Dummy ersetzt und der Mitte des Reflektors befinden sich drei CCD-Kameras die in Abbildung \ref{img:cameras} besser zu sehen sind}
+\end{figure}
+Ein Prototyp für das MST (Abbildung \ref{img:mst}) wurde 2012 in Berlin-Adlershof in der Nähe zum DESY-Zeuthen und dem Institut für Physik der Humboldt-Universität zu Berlin errichtet. Ziel ist es mit dem Prototypen den mechanischen Aufbau zu untersuchen, die Ausrichtung der Spiegel zu testen und Pointingmethoden zu entwickeln. Dazu wurde auf eine Tscherenkovkamera verzichtet und durch einen Dummy der gleichen Masse ersetzt.
 
 \subsection{Pointing des Teleskops mit CCD-Kameras}
 Um die möglichst genaue Ausrichtung des Teleskops zu kennen verwendet man CCD-Kameras, die sowohl den Nachthimmel als auch den Dummy beziehungsweise später die Tscherenkowkamera ablichten. In sogenannten Pointing-Runs wird das Teleskop kalibriert, in dem des auf Sterne ausrichtet, deren Reflektion auf dem Dummy zu sehen ist. Mithilfe von auf dem Dummy angebrachten LEDs lässt sich die Position der Reflektion bestimmen und somit auch, wie der Dummy zum Teleskop steht. Aus den Aufnahmen vom Nachthimmel lässt sich aus der Position der zu sehenden Sterne die Koordinaten des Teleskops vorhersagen. Im Betrieb, wenn die Tscherenkowkamera geöffnet ist und die Reflektionen der Sterne nicht mehr zu sehen sind, lässt sich die Position der Tscherenkowkamera immer noch anhand der Pointing-LEDs bestimmen.
 
 \subsection{Kameras des MST}
+\label{se:cameras}
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{Images/ccd.png}
 \caption{Die drei für das Pointing verwendeten CCD-Kameras. Rechts befindet sich mit dem größten Gesichtsfeld die Single-CCD, in der Mitte oben die Lid-CCD die nur die Cherenkowkamera ablichtet und links die Sky-CCD, die, wie man hier gut erkennen kann, einen großen Winkel zur optischen Achse des Teleskops hat um den Nachthimmel beobachten zu können}
+\label{img:cameras}
 \end{figure}
-Um Pointingmodelle dieser Art zu entwickeln besitzt der Prototyp des MST drei CCD-Kameras im Zentrum des Reflektors. Die Single-CCD hat ein so großes Gesichtsfeld, dass sie gleichzeit die Tscherenkowkamera als auch den Nachthimmel ablichten kann. Alternativ können auch zwei verschiedene Kameras verwenden können, wovon eine (LID-CCD) die Tscherenkowkamera und die andere (Sky-CCD) den Nachthimmel ablichtet. Die Methode mit den beiden Kameras hat den Vorteil, dass sie zusammen eine höhere Auflösung haben. Da sich die beiden Kameras allerdings auch unabhängig voneinander bewegen können, ist die Methode mit einer CCD-Kamera das bevorzugte Konzept für das Teleskop\cite{pos}.\\
+Um Pointingmodelle dieser Art zu entwickeln besitzt der Prototyp des MST drei CCD-Kameras im Zentrum des Reflektors (Abbildung \ref{img:cameras}). Die Single-CCD hat ein so großes Gesichtsfeld, dass sie gleichzeit die Tscherenkowkamera als auch den Nachthimmel ablichten kann. Alternativ können auch zwei verschiedene Kameras verwenden können, wovon eine (LID-CCD) die Tscherenkowkamera und die andere (Sky-CCD) den Nachthimmel ablichtet. Die Methode mit den beiden Kameras hat den Vorteil, dass sie zusammen eine höhere Auflösung haben. Da sich die beiden Kameras allerdings auch unabhängig voneinander bewegen können, ist die Methode mit einer CCD-Kamera das bevorzugte Konzept für das Teleskop\cite{pos}.\\
 Eine Besonderheit des MST ist die Positionierung der Sky-CCD. Da sich diese wie die anderen in der Mitte des Reflektors befindet, den Dummy jedoch nicht ablichten soll, ist sie mit einem Winkel von ungefähr $10^{\circ}$ zur optischen Achse des Teleskops montiert. Wie sich die Richtung der Sky-CCD im Vergleich zu den eingestellten Koordinaten des Teleskops verhält, wird in den Kapiteln \ref{ch:pointing} und \ref{ch:auswertung} diskutiert.
 
 \begin{table}[htbp]

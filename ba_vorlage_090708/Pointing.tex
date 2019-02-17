@@ -206,7 +206,7 @@ was mit den Gleichungen \ref{eq:sint} und \ref{eq:cost} zu
 \begin{equation}
 t_{1,2}(el_D)=\frac{1+t^2(el_C)\pm(1-t^2(el_C)}{2t(el_C)}=\left\{\begin{array}{lr}
 \frac{1}{t(el_C)} & "+" \\
-t(el_C) & "-"\\
+t(el_C) & - \\
 \end{array}\right
 \end{equation}
 wird. Da für $az_0=el_0=0$ $el_D$ und $el_C$ identisch sind, kommt hier nur die Lösung mit dem negativen Vorzeichen in Betracht. Ersetzt man den linken Teil der Formel \ref{eq:t12} durch \ref{eq:t} und löst sich die Gleichung nach $el_D$ auf, so erhält man
@@ -249,7 +249,7 @@ a\sin\left(az_C\right)-b\cos\left(az_c\right),a\cos\left(az_C\right)+b\sin\left(
 wobei hier noch $el_D$ in $a$ und $b$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.
 
 \section{Erweiterung des Modells auf vier Parameter}
-\ref{se:4par}
+\label{se:4par}
 Unter der Annahme, dass die Skalen des Drivesystems einen Offset haben, also das der Wertebereich von $el_D$ beispielshalber von $1^{\circ}$ bis $91^{\circ}$ läuft, kann das Modell mit zwei additiven Konstanten $el_1$ und $az_1$ erweitert werden. Das bedeutet, das bei der Vorhersage der CCD-Koordinaten \ref{eq:elD2C} und \ref{eq:azD2C} ein konstanter Offset zu den Argumenten hinzugefügt wird:
 \begin{equation}
 el_C^{4par}=el_C(el_D+el_1,az_D+az_1)

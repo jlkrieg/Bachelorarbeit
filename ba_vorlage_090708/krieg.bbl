@@ -1,22 +1,16 @@
 \begin{thebibliography}{1}
 
-\bibitem{TevCat}
+\bibitem{Flickr}
+Cta flickr page.
 
+\bibitem{TevCat}
+Tevcat homepage.
 
 \bibitem{DesignConcept}
 C~T~A Consortium, M~Actis, G~Agnetta, F~Aharonian, and A~Akhperjanian.
 \newblock {Design Concepts for the Cherenkov Telescope Array CTA , An Advanced
   Facility for Ground-Based High-Energy Gamma-Ray Astronomy}.
 \newblock 2012.
-
-\bibitem{CherenkovCam}
-A.~De Franco, R.~White, D.~Allan, T.~Armstrong, T.~Ashton, A.~Balzer, D.~Berge,
-  R.~Bose, A.~M. Brown, J.~Buckley, P.~M. Chadwick, P.~Cooke, G.~Cotter, M.~K.
-  Daniel, S.~Funk, T.~Greenshaw, J.~Hinton, M.~Kraus, J.~Lapington,
-  P.~Molyneux, P.~Moore, S.~Nolan, A.~Okumura, D.~Ross, C.~Rulten, J.~Schmoll,
-  H.~Schoorlemmer, M.~Stephan, P.~Sutcliffe, H.~Tajima, J.~Thornhill,
-  L.~Tibaldo, G.~Varner, J.~Watson, and A.~Zink.
-\newblock The first gct camera for the cherenkov telescope array, 2015.
 
 \bibitem{Grupen}
 Claus Grupen.
@@ -44,5 +38,11 @@ Stefano Vercellone and for~the CTA~Consortium.
 S.~P. {Wakely} and D.~{Horan}.
 \newblock {TeVCat: An online catalog for Very High Energy Gamma-Ray Astronomy}.
 \newblock {\em International Cosmic Ray Conference}, 3:1341--1344, 2008.
+
+\bibitem{gct}
+R.~White.
+\newblock {CHEC}: a compact high energy camera for the cherenkov telescope
+  array.
+\newblock {\em Journal of Instrumentation}, 12(12):C12059--C12059, dec 2017.
 
 \end{thebibliography}

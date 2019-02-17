@@ -133,7 +133,7 @@ $\rho_{el_0,az0}$ &=& $-0,4698$\\
 \centering
 
 \includegraphics[width=\textwidth]{../341/run341D2C.png}
-\caption{Die CCD-Koordinaten in Abhängigkeit der Driveoordinaten im Zwei-Parameter-Modell}
+\caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell mit $az_0=12,05^{\circ}$ und $el_0=-1,19^{\circ}$ vorhergesagten CCD-Koordinaten und den gemessenen CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten}
 \label{img:D2C}
 \end{figure}
 
@@ -175,7 +175,7 @@ $\rho_{el_0,el_1}$ &=& $-0,8417$\\
 $\rho_{az_0,az_1}$ &=& $-0,9358$\\
 $\rho_{el_0,az_1}$ &=& $-0,8137$\\
 $\rho_{az_0,el_1}$ &=& $-0,9709$\\
-$\rho_{el_1,el_1}$ &=& $-0,8417$\\
+$\rho_{el_1,az_1}$ &=& $-0,8417$\\
 \bottomrule
 \end{tabular}
 \label{tab:C2D4}
@@ -204,7 +204,7 @@ $\rho_{el_0,el_1}$&=& $-0,0218$\\
 $\rho_{az_0,az_1}$&=& $-0,9493$\\
 $\rho_{el_0,az_1}$&=& $-0,9954$\\
 $\rho_{az_0,el_1}$&=& $-0,03329$\\
-$\rho_{el_1,el_1}$&=& $-0,01867$\\
+$\rho_{el_1,az_1}$&=& $-0,01867$\\
 \bottomrule
 \end{tabular}
 \label{tab:D2C4}
@@ -220,3 +220,6 @@ Zunächst fällt auf, dass sich im Modell mit zwei Parametern die Korrelationsko
 \subsection{Hohe Korrelation im Modell mit vier Parametern}
 
 \section{Systematische Abweichungen im entwickelten Pointingmodell}
+Betrachtet man die Graphen der Differenzen, so erkennt man, dass noch weitere Effekte das Pointing erschweren. Zunächst wird das weitere Verhalten der Elevation betrachtet. Hier fällt bei der Betrachtung von $\Delta el$ in Abhängigkeit des Azimuts auf, dass der Graph eine Wellenbewegung beschreibt. Aus dem Graph, der die Elevationsabhängigkeit beschreibt, lässt sich hingegen keine keine systematische Abweichung erkennen. Ein solches Verhalten könnte beispielsweise die Verkippung der Turmachse erklären. Durch eine solche Verkippung zeigt die Kamera auf der einen Seite des Teleskops ($az=\theta$) in Richtung einer niedrigeren Elevation und auf der anderen Seite ($az=\theta+180^{\circ}$) in Richtung einer höheren Elevation.\\
+Bei der Betrachtung der Graphen der Azimutdifferenzen fällt zunächst auch auf, dass diese sowohl von der Elevation als auch vom Azimut abhängen. Die Abstände $\left| \Delta az \right|$ werden für gleiche für gleiche Azimutwerte mit steigender Elevation größer. Dieser Effekt lässt sich ebenfalls durch die Verkippung der Turmachse erklären erklären, die in diesem Fall einen ähnlichen Effekt hat wie der Winkel zwischen CCD und Drive im oben beschriebenen Modell. Zudem sieht man noch, dass $\Delta az$ vom Azimut abhängt. Für kleine Azimutwerte läuft die Kamera dem Drive ein wenig voraus und für große Azimutwerte läuft sie ein wenig hinterher.\\
+Diese Abweichungen sind so klein, dass es hier reicht Pointingmodelle der durch die Gleichungen ((und)) beschriebenen Form zu entwickeln, die nur die Differenzen beschreiben. Ein solches Modell hat Ruslan Konno bereits in seiner Bachelorarbeit für die Single-CCD und die Sky-CCD, die zum damaligen Zeitpunkt noch am Rand des Reflektors befestigt war, entwickelt. 

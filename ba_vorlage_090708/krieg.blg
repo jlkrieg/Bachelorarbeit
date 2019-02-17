@@ -5,6 +5,11 @@ A level-1 auxiliary file: titlepage.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: einleitung.aux
 A level-1 auxiliary file: gamma-Astronomie.aux
+Case mismatch error between cite keys TeVCat and TevCat
+---line 3 of file gamma-Astronomie.aux
+ : \citation{TeVCat
+ :                 }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: CTA.aux
 A level-1 auxiliary file: Pointing.aux
 A level-1 auxiliary file: Auswertung.aux
@@ -12,49 +17,54 @@ A level-1 auxiliary file: fazit.aux
 The style file: plain.bst
 A level-1 auxiliary file: declaration.aux
 Database file #1: bibliography.bib
+Illegal end of database file---line 86 of file bibliography.bib
+ :  annote = {The Cherenkov Telescope Array will provide unprecedented   sensitivity and angular resolution to gamma rays across orders of   magnitude in energy. Above 1 TeV up to around 300 TeV an array of   Small-Sized Telescopes (SSTs) will cover several kilometres on the   ground. The Compact High-Energy Camera (CHEC) is a proposed option   for the camera of the SSTs. CHEC contains 2048 pixels of physical   size about 6 mm×6 mm, leading to a field of view of   over 8 degrees. Electronics based on custom ASICs (TARGET) and FPGAs   sample incoming signals at a gigasample per second and provide a   flexible triggering scheme. Waveforms for every pixel in every event   are read out without loss at over 600 events per second. A telescope   prototype in Meudon, Paris, saw first Cherenkov light from air   showers in late 2015, using the first CHEC prototype. Research and   development for CHEC is currently focussed on taking advantage of   the latest generation of silicon photomultipliers (SiPMs).}
+ :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "iwas"
 Warning--to sort, need author or key in TevCat
+Warning--to sort, need author or key in Flickr
 Warning--empty journal in DesignConcept
 Warning--empty journal in NextGen
-You've used 8 entries,
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            547 strings with 5694 characters,
-and the built_in function-call counts, 3201 in all, are:
-= -- 255
-> -- 286
+            553 strings with 5282 characters,
+and the built_in function-call counts, 2455 in all, are:
+= -- 223
+> -- 116
 < -- 0
-+ -- 117
-- -- 106
-* -- 266
-:= -- 571
-add.period$ -- 20
-call.type$ -- 8
-change.case$ -- 74
++ -- 49
+- -- 38
+* -- 158
+:= -- 407
+add.period$ -- 22
+call.type$ -- 9
+change.case$ -- 44
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 75
-empty$ -- 177
-format.name$ -- 106
-if$ -- 608
+cite$ -- 13
+duplicate$ -- 86
+empty$ -- 211
+format.name$ -- 38
+if$ -- 507
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 6
-newline$ -- 39
+int.to.str$ -- 9
+missing$ -- 7
+newline$ -- 43
 num.names$ -- 14
-pop$ -- 95
+pop$ -- 62
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 36
 quote$ -- 0
-skip$ -- 66
+skip$ -- 73
 stack$ -- 0
-substring$ -- 88
-swap$ -- 6
+substring$ -- 135
+swap$ -- 7
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
-warning$ -- 3
-while$ -- 16
-width$ -- 9
-write$ -- 72
-(There were 4 warnings)
+type$ -- 34
+warning$ -- 4
+while$ -- 18
+width$ -- 10
+write$ -- 81
+(There were 2 error messages)
