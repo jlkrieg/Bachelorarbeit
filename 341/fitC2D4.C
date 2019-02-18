@@ -14,7 +14,7 @@ Double_t funcEl(Double_t el,Double_t az,Double_t az0,Double_t el0,Double_t az1, 
   el1 = el1*f;
   double temp1 = cos(az0)*cos(el0)-sqrt(pow(cos(az0)*cos(el0),2)+pow(sin(el0),2)-pow(sin(el),2));
   double temp2 = sin(el0)+sin(el);
-  return 2*atan(temp1/temp2)/f-el1;
+  return (2*atan(temp1/temp2)-el1)/f;
 }
 
 Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0,Double_t az1, Double_t el1){
@@ -22,17 +22,20 @@ Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0,Double_t az1, 
   el = el*f;
   az0 = az0*f;
   el0 = el0*f;
+  az1 = az1*f;
+  el1 = el1*f;
   double temp1 = cos(az0)*cos(el0)-sqrt(pow(cos(az0)*cos(el0),2)+pow(sin(el0),2)-pow(sin(el),2));
   double temp2 = sin(el0)+sin(el);
-  el = 2*atan(temp1/temp2)+el1;
+  el = 2*atan(temp1/temp2)-el1;
   double X = cos(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+sin(az)*sin(az0)*cos(el0);
   double Y = -sin(az)*(cos(el)*cos(az0)*cos(el0)-sin(el)*sin(el0))+cos(az)*sin(az0)*cos(el0);
-  return atan2(-Y,X)/f-az1;
+  return (atan2(-Y,X)-az1)/f;
 }
 
 //funtion to minimize (chisq)
 Double_t chi(Double_t az0, Double_t el0, Double_t az1, Double_t el1){
   Double_t result=0;
+  Double_t temp3=0;
   TFile *file= TFile::Open("ntuple2nt_v12.root");
   TNtuple*nt = (TNtuple*)file->Get("run341_ccd3_tpoint_0_00_nt_ntuple");
   Int_t N = nt->GetEntries();
@@ -46,21 +49,28 @@ Double_t chi(Double_t az0, Double_t el0, Double_t az1, Double_t el1){
     Double_t az = a[2];
     Double_t el = a[3];
     if( eld < cutEl ){
-      Double_t del = funcEl(el,az,az0,el0,az1,el1)-eld;
+      Double_t del = funcEl(el,az,az0,el0,az1,el1);
       if (del < -180){
 	del+=360;
       }
       if (del > 180){
 	del-=360;
       }
-      Double_t daz = funcAz(el,az,az0,el0,az1,el1)-azd;
+      Double_t daz = funcAz(el,az,az0,el0,az1,el1);
       if (daz < -180){
 	daz+=360;
       }
       if (daz > 180){
 	daz-=360;
       }
-      result+=pow(del,2)+pow(daz,2);
+      temp3=sin(eld*f)*sin(del*f)+cos(eld*f)*cos(del*f)*cos((azd-daz)*f);
+      if (fabs(temp3)>1){
+	temp3=0;
+      }
+      else{
+	temp3=acos(temp3);
+      }
+      result+=pow(temp3,2);
     }
   }
   file->Close();
@@ -131,8 +141,11 @@ void fitC2D4(){
   double el0 = minimizer->GetParameter(1);
   double az1 = minimizer->GetParameter(2);
   double el1 = minimizer->GetParameter(3);
-  //double az0 = 12.1;
-  //double el0 = -1;
+  // double az0 = 12.1633;
+  // double el0 = -1.11933;
+  // double az1 = -0.21834;
+  // double el1 = 0.0369223;
+
   double minimum = chi(az0,el0,az1,el1);
   std::cout<<"az0 = "<<az0<<std::endl;
   std::cout<<"el0 = "<<el0<<std::endl;
@@ -191,7 +204,7 @@ void fitC2D4(){
     chisq+=pow(del_vec[i],2)+pow(daz_vec[i],2);
   }
   std::cout<<"chisqtest = "<<chisq<<std::endl;
-  std::cout<<"errorbars = "<<sqrt(chisq/(N-4))<<std::endl;
+  std::cout<<"errorbars = "<<sqrt(chisq/(N-2))<<std::endl;
   //plot
   TCanvas* can = new TCanvas("plots","Plots",0,0,800,600);
   can->Divide(2,2);

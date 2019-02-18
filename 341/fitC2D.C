@@ -31,6 +31,8 @@ Double_t funcAz(Double_t el,Double_t az,Double_t az0,Double_t el0){
 //funtion to minimize (chisq)
 Double_t chi(Double_t az0, Double_t el0){
   Double_t result=0;
+  Double_t temp3=0;
+  Double_t temp4=0; 
   TFile *file= TFile::Open("ntuple2nt_v12.root");
   TNtuple*nt = (TNtuple*)file->Get("run341_ccd3_tpoint_0_00_nt_ntuple");
   Int_t N = nt->GetEntries();
@@ -44,21 +46,29 @@ Double_t chi(Double_t az0, Double_t el0){
     Double_t az = a[2];
     Double_t el = a[3];
     if( eld < cutEl ){
-      Double_t del = funcEl(el,az,az0,el0)-eld;
+      Double_t del = funcEl(el,az,az0,el0);
       if (del < -180){
 	del+=360;
       }
       if (del > 180){
 	del-=360;
       }
-      Double_t daz = funcAz(el,az,az0,el0)-azd;
+      //std::cout<<del;
+      Double_t daz = funcAz(el,az,az0,el0);
       if (daz < -180){
 	daz+=360;
       }
       if (daz > 180){
 	daz-=360;
       }
-      result+=pow(del,2)+pow(daz,2);
+      temp3=sin(eld*f)*sin(del*f)+cos(eld*f)*cos(del*f)*cos((azd-daz)*f);
+      if (fabs(temp3)>1){
+	temp3=0;
+      }
+      else{
+	temp3=acos(temp3);
+      }
+      result+=pow(temp3,2);
     }
   }
   file->Close();
