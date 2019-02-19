@@ -71,7 +71,7 @@ Double_t chi(Double_t az0, Double_t el0){
       temp3=acos(temp3);
     }
     //std::cout<<temp3;
-    result+=pow(temp3,2);
+    result+=temp3;//pow(temp3,2);
   }
   //std::cout<<result<<std::endl;
   file->Close();

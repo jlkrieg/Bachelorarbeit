@@ -2,15 +2,36 @@
 \label{ch:auswertung}
 Um das in Kapitel \ref{ch:pointing} entwickelte Pointingmodell zu testen, wurde mit dem Prototyp des MST ein Datensatz aufgenommen um
 \section{Datensatz}
-Der verwendete Datensatz wurde am MST-Prototyp in Adlershof in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC aufgenommen. Dazu wurden 105 Postionen beobachtet wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand. An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst eine Software verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit dem bekannten Sternenhimmel vergleicht. Hierdurch lassen sich die Koordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes bestimmen. Aus der Größe des Bildausschnitts lässt sich noch der Pixelscale bestimmen, der angibt, wie groß das Gesichtsfeld eines einzelnen Pixels ist. Da der Pixelscale kameraspezifisch und bekannt ist, lässt sich mit diesem überprüfen, ob das Bild richtig aufgelöst wurde. Von den 105 aufgenommenen Bildern konnten 100 aufgelöst werden. Zu sehen ist dieser Datensatz in Abbildung \ref{img:dataset}.
+Zur Analyse wurde der in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC mit dem Prototypen des MST in Berlin-Adlershof aufgenommene Datensatz "run341" verwendet. Dazu wurden 105 Postionen beobachtet wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../341/data4.png}
+\label{img:record}
+\caption{Die am Teleskop eingestellten Position zur Datenaufnahme}
+\end{figure}
+An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten.
+Um die Bilder aufzunehmen, wurde eine Positiondes Nachthimmels eingestellt, die während der Belichtung des Bildes verfolgt wurde. Als Zeitstempel für die jeweiligen Bilder wird die Mitte der Belichtungszeit gewählt. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst die Software \texttt{astrometry.net} verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit dem bekannten Sternenhimmel vergleicht. Hierdurch lassen sich die Himmelskoordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes bestimmen.
+Die Himmelskoordinaten lassen sich mithilfe des Zeitstempels in das Koordinatensystem des Teleskops umrechnen und aus der Größe des Bildausschnitts lässt sich noch der Pixelscale bestimmen, der angibt, wie groß das Gesichtsfeld eines einzelnen Pixels ist. Da der Pixelscale kameraspezifisch und bekannt ist, lässt sich mit diesem überprüfen, ob das Bild richtig aufgelöst wurde. Von den 105 aufgenommenen Bildern konnten 100 gelöst werden, wobei der Pixelscale wie in Abbildung \ref{img:ps}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../341/histo.png}
+\label{img:ps}
+\caption{Die Verteilung der von \texttt{astrometry.net} bestimmten Pixelscales}
+\end{figure}
+zu sehen ist in keinem der Bilder um mehr als $0,04\unit{arcsec}$ abweicht. Somit können alle gelösten Aufnahmen zur Analyse verwendet werden. Zu sehen ist dieser Datensatz in Abbildung \ref{img:dataset}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/data2.png}
 \label{img:dataset}
 \caption{Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abhängigkeit der gemessenen Koordinaten}
 \end{figure}
-\section{Programm}
-Um das Pointingmodell auf Konsistenz zu überprüfen wurde ein Programm mit der C++ Erweiterung ROOT geschrieben, dass die optimalen Parameter für die in Kapitel \ref{ch:pointing} Pointingmodelle berechnet. Aus dem Vergleich der mit diesen Modellen vorhergesagten Werte mit den gemessenen Daten lassen sich dann Rückschlüsse über die Qualität der Pointingmodelle schließen. Nach dem Einlesen des Datensatzes wird zunächst wie oben beschrieben, ob der Pixelscale innerhalb einer Toleranz von $0,05^{\circ}$ mit dem in Tabelle \ref{tab:SkyCCD} angegebenen Wert für die Sky-CCD übereinstimmt. Um die optimalen Parameter zu finden wird die Methode der kleinsten Quadrate angewandt. Dazu werden  aus den Tupeln der Messwerte ($M_i$) und den Vorhersagen des Pointingmodells ($P_i$) mit den Parametern $\vec{q}$ Differenzen gebildet. Diese werden quadriert, damit Abweichungen nach unten den gleichen Effekt wie Abweichungen nach oben haben. Die Differenzen aller Werte des Datensatzes werden zu einer Funktion
+\section{Bestimmung der optimalen Parameter für die Pointingmodelle}
+Um das Pointingmodell auf Konsistenz zu überprüfen, wurde ein Programm mit der C++ Erweiterung ROOT geschrieben, das die optimalen Parameter für die in Kapitel \ref{ch:pointing} Pointingmodelle berechnet. Aus dem Vergleich der mit diesen Modellen vorhergesagten Werte mit den gemessenen Daten lassen sich dann Rückschlüsse über die Qualität der Pointingmodelle schließen. Um die optimalen Parameter zu finden wird die Methode der kleinsten Quadrate angewandt. 
+Dazu müssen die Abstände zwischen den vom Pointingmodell mit Parametern $\vec{q}$ bestimmten (Index P) und den gemessenen Positionen (Index M) bestimmt werden. Da alle Positionen, wie in Abbildung \ref{img:coordinates} zu sehen ist, auf einer Kugeloberfläche liegen, lässt sich der Abstand zwischen zwei Punkten durch einen Winkel $\psi$ ausdrücken:
+\begin{equation}
+\psi=\arccos\left(\sin(el_M)\sin(el_P)+\cos(el_P)\cos(el_M)\cos(az_P-az_M)\right).
+\end{equation}
+Dazu werden  aus den Tupeln der Messwerte ($M_i$) und den Vorhersagen des Pointingmodells ($P_i$) mit den Parametern $\vec{q}$ Differenzen gebildet. Diese werden quadriert, damit Abweichungen nach unten den gleichen Effekt wie Abweichungen nach oben haben. Die Differenzen aller Werte des Datensatzes werden zu einer Funktion
 \begin{equation}
 Q(\vec{q})=\sum^N_{i=1}\left(P_i-M_i(\vec{q})\right)^2
 \end{equation}
@@ -81,10 +102,10 @@ Begonnen wird mit der Vorhersage der Drive-Koordinaten mithilfe der CCD-Koordina
 \centering
 \begin{tabular}{rcl}
 \toprule
-$el_0$ &=& $(-1,1941\pm0,0098)^{\circ}$\\
-$az_0$ &=& $(12,0507\pm0,0019)^{\circ}$\\
+$el_0$ &=& $(-1,20\pm0,32)^{\circ}$\\
+$az_0$ &=& $(12,04\pm0,28)^{\circ}$\\
 $\sigma$ &=& $0,23^{\circ}$\\
-$\rho_{el_0,az_0}$ &=& $0,1576$\\
+$\rho_{el_0,az_0}$ &=& $0,2618$\\
 \bottomrule
 \end{tabular}
 \label{tab:C2D}
@@ -94,7 +115,7 @@ Die Differenzen zwischen den vom Modell vorhergesagten und den gemessenen Werten
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/run341C2D.png}
-\caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell mit $az_0=12,05^{\circ}$ und $el_0=-1,19^{\circ}$ vorhergesagten Drive-Koordinaten und den gemessenen Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
+\caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell mit $az_0=12,04^{\circ}$ und $el_0=-1,20^{\circ}$ vorhergesagten Drive-Koordinaten und den gemessenen Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{img:C2D}
 \end{figure}
 
@@ -118,10 +139,10 @@ Möchte man jedoch die Koordinaten des Drives in Abbhängigkeit der CCD bestimme
 \centering
 \begin{tabular}{rcl}
 \toprule
-$el0$ &=& $(-1,184\pm0,008)^{\circ}$\\
-$az0$ &=& $(12,048\pm0,004)^{\circ}$\\
+$el0$ &=& $(-1,20\pm0,30)^{\circ}$\\
+$az0$ &=& $(12,05\pm0,27)^{\circ}$\\
 $\sigma$ &=& $0,19^{\circ}$\\
-$\rho_{el_0,az0}$ &=& $-0,4698$\\
+$\rho_{el_0,az0}$ &=& $-0,00401$\\
 \bottomrule
 \end{tabular}
 \label{tab:D2C}
@@ -133,7 +154,7 @@ $\rho_{el_0,az0}$ &=& $-0,4698$\\
 \centering
 
 \includegraphics[width=\textwidth]{../341/run341D2C.png}
-\caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell mit $az_0=12,05^{\circ}$ und $el_0=-1,19^{\circ}$ vorhergesagten CCD-Koordinaten und den gemessenen CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten}
+\caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell mit $az_0=12,05^{\circ}$ und $el_0=-1,20^{\circ}$ vorhergesagten CCD-Koordinaten und den gemessenen CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten}
 \label{img:D2C}
 \end{figure}
 

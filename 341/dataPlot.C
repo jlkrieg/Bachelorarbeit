@@ -14,12 +14,13 @@ void dataPlot(){
   }
   const int kk=k;
   Double_t azc_vec[kk],elc_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk];
-  
+  TH1F* histo=new TH1F("dN/dps","",10,10.975,11.075);
   //Einlesen der Daten
   k=0;
   for(int i=0;i<N;i++){
     nt->GetEntry(i);
     Double_t ps = a[5];
+    histo->Fill(ps);
     if( fabs(ps-11.03) > 0.05 ) continue;
     Double_t azd = a[0];
     Double_t eld = a[1];
@@ -131,6 +132,31 @@ void dataPlot(){
   //g_az->GetZaxis()->SetTitle("#Delta elevation (deg)");
   g_az->Draw("AP");
   can->SaveAs(nam3);
+
+  TCanvas* can4 = new TCanvas("plots4","Plots4",0,0,1200,600);
+  //can4->Divide(2);
+  TString nam3("data4.png");
+  TGraph* g1=new TGraph(kk,azd_vec,eld_vec);
+  //can4->cd(1);
+  g1->SetMarkerStyle(20);
+  g1->SetMarkerSize(0.80);
+  g1->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g1->GetYaxis()->SetTitle("elevation drive (deg)");
+  g1->Draw("AP");
+  //TGraph* g2=new TGraph2D(kk,azd_vec,eld_vec);
+  //can4->cd(2);
+  //g2->SetMarkerStyle(20);
+  //g2->SetMarkerSize(0.80);
+  //g2->GetXaxis()->SetTitle("azimuth drive (deg)");
+  //g2->GetYaxis()->SetTitle("elevation drive (deg)");
+  //g2->Draw("AP");
+  can4->SaveAs(nam3);
+
+  TCanvas* can5 = new TCanvas("plots5","Plots5",0,0,1200,600);
+  histo->GetYaxis()->SetTitle("number of events");
+  histo->GetXaxis()->SetTitle("pixelscale (arcsec)");
+  histo->Draw(); 
+  can5->SaveAs("histo.png");
 
   file->Close();
 }

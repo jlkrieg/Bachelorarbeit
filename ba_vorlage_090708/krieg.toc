@@ -1,4 +1,4 @@
-\select@language {ngerman}
+\select@language {english}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.7}
 \contentsline {chapter}{\numberline {2}$\gamma $-Astronomie}{2}{chapter.8}
 \contentsline {section}{\numberline {2.1}Entstehung hochenergetischer Strahlung}{2}{section.9}
@@ -23,16 +23,16 @@
 \contentsline {section}{\numberline {4.4}Erweiterung des Modells auf vier Parameter}{17}{section.79}
 \contentsline {chapter}{\numberline {5}Anwendung des Pointingmodells auf Daten des Teleskops}{18}{chapter.84}
 \contentsline {section}{\numberline {5.1}Datensatz}{18}{section.85}
-\contentsline {section}{\numberline {5.2}Programm}{18}{section.87}
-\contentsline {section}{\numberline {5.3}Anwendung auf das Pointingmodell mit zwei Parametern}{20}{section.95}
-\contentsline {subsection}{\numberline {5.3.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{20}{subsection.96}
-\contentsline {subsection}{\numberline {5.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{20}{subsection.99}
-\contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit 4 Parametern}{23}{section.102}
-\contentsline {subsection}{\numberline {5.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{23}{subsection.103}
-\contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{23}{subsection.106}
-\contentsline {section}{\numberline {5.5}Vergleich der Parameter}{25}{section.109}
-\contentsline {section}{\numberline {5.6}Diskussion der Korrelation}{25}{section.110}
-\contentsline {subsection}{\numberline {5.6.1}Unterschiedliche Korrelationen f\IeC {\"u}r Modelle mit gleichen Parametern}{25}{subsection.111}
-\contentsline {subsection}{\numberline {5.6.2}Hohe Korrelation im Modell mit vier Parametern}{25}{subsection.112}
-\contentsline {section}{\numberline {5.7}Systematische Abweichungen im entwickelten Pointingmodell}{25}{section.113}
-\contentsline {chapter}{\numberline {6}Fazit}{26}{chapter.114}
+\contentsline {section}{\numberline {5.2}Bestimmung der optimalen Parameter f\IeC {\"u}r die Pointingmodelle}{20}{section.89}
+\contentsline {section}{\numberline {5.3}Anwendung auf das Pointingmodell mit zwei Parametern}{21}{section.98}
+\contentsline {subsection}{\numberline {5.3.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{21}{subsection.99}
+\contentsline {subsection}{\numberline {5.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{22}{subsection.102}
+\contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit 4 Parametern}{22}{section.105}
+\contentsline {subsection}{\numberline {5.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{23}{subsection.106}
+\contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{23}{subsection.109}
+\contentsline {section}{\numberline {5.5}Vergleich der Parameter}{23}{section.112}
+\contentsline {section}{\numberline {5.6}Diskussion der Korrelation}{23}{section.113}
+\contentsline {subsection}{\numberline {5.6.1}Unterschiedliche Korrelationen f\IeC {\"u}r Modelle mit gleichen Parametern}{25}{subsection.114}
+\contentsline {subsection}{\numberline {5.6.2}Hohe Korrelation im Modell mit vier Parametern}{25}{subsection.115}
+\contentsline {section}{\numberline {5.7}Systematische Abweichungen im entwickelten Pointingmodell}{25}{section.116}
+\contentsline {chapter}{\numberline {6}Fazit}{26}{chapter.117}
