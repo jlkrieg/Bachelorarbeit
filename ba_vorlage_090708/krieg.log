@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  19 FEB 2019 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  20 FEB 2019 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,7 +1054,7 @@ en, entste-hen groÿe Mag-net-felder ($\OMS/lmsy/m/n/10.95 O\OT1/lmr/m/n/10.95 (
 10[]T)$\T1/lmr/m/n/10.95 [[]].
  []
 
-<Images/tevcat.png, id=330, 410.4936pt x 211.0284pt>
+<Images/tevcat.png, id=333, 410.4936pt x 211.0284pt>
 File: Images/tevcat.png Graphic file (type png)
  <use Images/tevcat.png>
 Package pdftex.def Info: Images/tevcat.png used on input line 35.
@@ -1063,14 +1063,14 @@ Package pdftex.def Info: Images/tevcat.png used on input line 35.
 
 LaTeX Warning: Citation `iwas' on page 3 undefined on input line 46.
 
-[3] <Images/cherenkow.png, id=342, 387.3672pt x 204.5241pt>
+[3] <Images/cherenkow.png, id=345, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
 Package pdftex.def Info: Images/cherenkow.png used on input line 60.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
  [4 <./Images/tevcat.png>]
-<Images/detection.png, id=352, 895.84688pt x 648.17157pt>
+<Images/detection.png, id=355, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
@@ -1088,7 +1088,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 6.
 
-<Images/TelescopeTypes.jpg, id=369, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=372, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
@@ -1099,13 +1099,13 @@ Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 30.
 
 
 ]
-<Images/ArrayLayout.png, id=379, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=382, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
 Package pdftex.def Info: Images/ArrayLayout.png used on input line 46.
 (pdftex.def)             Requested size: 483.69687pt x 198.31517pt.
- <Images/night.png, id=382, 1927.2pt x 1284.8pt>
+ <Images/night.png, id=385, 1927.2pt x 1284.8pt>
 File: Images/night.png Graphic file (type png)
 
 <use Images/night.png>
@@ -1118,7 +1118,7 @@ Overfull \hbox (7.22551pt too wide) in paragraph at lines 62--63
  []
 
 [8 <./Images/TelescopeTypes.jpg>] [9 <./Images/ArrayLayout.png> <./Images/night
-.png>] <Images/ccd.png, id=395, 269.808pt x 273.1806pt>
+.png>] <Images/ccd.png, id=398, 269.808pt x 273.1806pt>
 File: Images/ccd.png Graphic file (type png)
  <use Images/ccd.png>
 Package pdftex.def Info: Images/ccd.png used on input line 68.
@@ -1129,7 +1129,7 @@ Package pdftex.def Info: Images/ccd.png used on input line 68.
 
  (./Pointing.tex
 chapter 4.
-<Images/coordinates.png, id=411, 505.89pt x 337.26pt>
+<Images/coordinates.png, id=414, 505.89pt x 337.26pt>
 File: Images/coordinates.png Graphic file (type png)
 
 <use Images/coordinates.png>
@@ -1214,19 +1214,19 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 
  (./Auswertung.tex
 chapter 5.
-<../341/data4.png, id=508, 1200.485pt x 576.1525pt>
+<../341/data4.png, id=511, 1200.485pt x 576.1525pt>
 File: ../341/data4.png Graphic file (type png)
  <use ../341/data4.png>
 Package pdftex.def Info: ../341/data4.png used on input line 8.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
-<../341/histo.png, id=510, 1200.485pt x 576.1525pt>
+<../341/histo.png, id=513, 1200.485pt x 576.1525pt>
 File: ../341/histo.png Graphic file (type png)
  <use ../341/histo.png>
 Package pdftex.def Info: ../341/histo.png used on input line 17.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
-<../341/data2.png, id=512, 798.985pt x 576.1525pt>
+<../341/data2.png, id=517, 798.985pt x 576.1525pt>
 File: ../341/data2.png Graphic file (type png)
  <use ../341/data2.png>
 Package pdftex.def Info: ../341/data2.png used on input line 24.
@@ -1236,57 +1236,57 @@ Package pdftex.def Info: ../341/data2.png used on input line 24.
 
 
 
- <../341/data4.png>] [19 <../341/histo.png> <../341/data2.png>]
-<../341/run341C2D.png, id=529, 798.985pt x 576.1525pt>
+ <../341/data4.png>] [19 <../341/histo.png>] [20 <../341/data2.png>]
+<../341/run341C2D.png, id=543, 798.985pt x 576.1525pt>
 File: ../341/run341C2D.png Graphic file (type png)
 
 <use ../341/run341C2D.png>
-Package pdftex.def Info: ../341/run341C2D.png used on input line 117.
+Package pdftex.def Info: ../341/run341C2D.png used on input line 116.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- [20] [21 <../341/run341C2D.png>]
-<../341/run341D2C.png, id=552, 798.985pt x 576.1525pt>
+
+<../341/run341D2C.png, id=548, 798.985pt x 576.1525pt>
 File: ../341/run341D2C.png Graphic file (type png)
 
 <use ../341/run341D2C.png>
-Package pdftex.def Info: ../341/run341D2C.png used on input line 156.
+Package pdftex.def Info: ../341/run341D2C.png used on input line 155.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/run341C2D_4par.png, id=558, 798.985pt x 576.1525pt>
+<../341/run341C2D_4par.png, id=554, 798.985pt x 576.1525pt>
 File: ../341/run341C2D_4par.png Graphic file (type png)
 
 <use ../341/run341C2D_4par.png>
-Package pdftex.def Info: ../341/run341C2D_4par.png used on input line 181.
+Package pdftex.def Info: ../341/run341C2D_4par.png used on input line 180.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- [22 <../341/run341D2C.png>]
-<../341/run341D2C4.png, id=567, 798.985pt x 576.1525pt>
+ [21] [22 <../341/run341C2D.png>] [23 <../341/run341D2C.png>] <../341/run341D2C
+4.png, id=576, 798.985pt x 576.1525pt>
 File: ../341/run341D2C4.png Graphic file (type png)
 
 <use ../341/run341D2C4.png>
-Package pdftex.def Info: ../341/run341D2C4.png used on input line 210.
+Package pdftex.def Info: ../341/run341D2C4.png used on input line 209.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-Overfull \hbox (5.85863pt too wide) in paragraph at lines 207--234
+Overfull \hbox (5.85863pt too wide) in paragraph at lines 206--233
 \T1/lmr/m/n/10.95 Zuletzt wird das Vier-Parameter-Modell be-nutzt um die CCD-Ko
 ordinaten durch die Drive-Koordinaten
  []
 
-[23 <../341/run341C2D_4par.png>] [24 <../341/run341D2C4.png>]) [25]
+[24 <../341/run341C2D_4par.png>] [25 <../341/run341D2C4.png>]) [26]
 \openout2 = `fazit.aux'.
 
 
 (./fazit.tex
 chapter 6.
-) [26
+) [27
 
 
 
-] (./krieg.bbl) [27
+] (./krieg.bbl) [28
 
 
 ]
 \openout2 = `declaration.aux'.
 
- (./declaration.tex) [28
+ (./declaration.tex) [29
 
 
 ]
@@ -1304,14 +1304,11 @@ Package rerunfilecheck Info: File `krieg.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 9071 strings out of 494910
- 137556 string characters out of 6179836
+ 9072 strings out of 494910
+ 137563 string characters out of 6179836
  308607 words of memory out of 5000000
  11964 multiletter control sequences out of 15000+600000
  68472 words of font info for 53 fonts, out of 8000000 for 9000
@@ -1331,10 +1328,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt10.pfb>
-Output written on krieg.pdf (33 pages, 11845604 bytes).
+Output written on krieg.pdf (34 pages, 11844604 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 606 compressed objects within 7 object streams
- 162 named destinations out of 1000 (max. 500000)
+ 700 PDF objects out of 1000 (max. 8388607)
+ 614 compressed objects within 7 object streams
+ 163 named destinations out of 1000 (max. 500000)
  377 words of extra memory for PDF output out of 10000 (max. 10000000)
 

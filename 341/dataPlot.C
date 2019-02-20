@@ -40,7 +40,7 @@ void dataPlot(){
     if (daz_vec[i]>180){
       daz_vec[i] -=360;
     }
-    if (daz_vec[i]<180){
+    if (daz_vec[i]<-180){
       daz_vec[i] +=360;
     }
     del_vec[i] = eld_vec[i]-elc_vec[i];
@@ -86,28 +86,32 @@ void dataPlot(){
   can->cd(1);
   g_delel2->SetMarkerStyle(20);
   g_delel2->SetMarkerSize(0.80);
-  g_delel2->GetXaxis()->SetTitle("elevation center (deg)");
+  g_delel2->SetTitle("");
+  g_delel2->GetXaxis()->SetTitle("elevation CCD (deg)");
   g_delel2->GetYaxis()->SetTitle("#Delta elevation (deg)");
   g_delel2->Draw("AP");
   TGraph* g_delaz2=new TGraph(kk,azc_vec,del_vec);
   can->cd(2);
   g_delaz2->SetMarkerStyle(20);
   g_delaz2->SetMarkerSize(0.80);
-  g_delaz2->GetXaxis()->SetTitle("azimuth center (deg)");
+  g_delaz2->SetTitle("");
+  g_delaz2->GetXaxis()->SetTitle("azimuth CCD (deg)");
   g_delaz2->GetYaxis()->SetTitle("#Delta elevation (deg)");
   g_delaz2->Draw("AP");
   TGraph* g_dazel2=new TGraph(kk,elc_vec,daz_vec);
   can->cd(3);
   g_dazel2->SetMarkerStyle(20);
   g_dazel2->SetMarkerSize(0.80);
-  g_dazel2->GetXaxis()->SetTitle("elevation center (deg)");
+  g_dazel2->SetTitle("");
+  g_dazel2->GetXaxis()->SetTitle("elevation CCD (deg)");
   g_dazel2->GetYaxis()->SetTitle("#Delta azimuth (deg)");
   g_dazel2->Draw("AP");
   TGraph* g_dazaz2=new TGraph(kk,azc_vec,daz_vec);
   can->cd(4);
   g_dazaz2->SetMarkerStyle(20);
   g_dazaz2->SetMarkerSize(0.80);
-  g_dazaz2->GetXaxis()->SetTitle("azimuth center (deg)");
+  g_dazaz2->SetTitle("");
+  g_dazaz2->GetXaxis()->SetTitle("azimuth CCD (deg)");
   g_dazaz2->GetYaxis()->SetTitle("#Delta azimuth (deg)");
   g_dazaz2->Draw("AP");
   can->SaveAs(nam2);
@@ -134,22 +138,15 @@ void dataPlot(){
   can->SaveAs(nam3);
 
   TCanvas* can4 = new TCanvas("plots4","Plots4",0,0,1200,600);
-  //can4->Divide(2);
   TString nam3("data4.png");
   TGraph* g1=new TGraph(kk,azd_vec,eld_vec);
-  //can4->cd(1);
   g1->SetMarkerStyle(20);
   g1->SetMarkerSize(0.80);
+  g1->SetTitle("");
   g1->GetXaxis()->SetTitle("azimuth drive (deg)");
   g1->GetYaxis()->SetTitle("elevation drive (deg)");
   g1->Draw("AP");
-  //TGraph* g2=new TGraph2D(kk,azd_vec,eld_vec);
-  //can4->cd(2);
-  //g2->SetMarkerStyle(20);
-  //g2->SetMarkerSize(0.80);
-  //g2->GetXaxis()->SetTitle("azimuth drive (deg)");
-  //g2->GetYaxis()->SetTitle("elevation drive (deg)");
-  //g2->Draw("AP");
+
   can4->SaveAs(nam3);
 
   TCanvas* can5 = new TCanvas("plots5","Plots5",0,0,1200,600);

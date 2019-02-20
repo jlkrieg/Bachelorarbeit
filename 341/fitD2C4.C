@@ -96,7 +96,7 @@ void fitD2C4(){
     k++;
   }
   const int kk=k;
-  Double_t az_vec[kk],el_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk],azerr[kk],elerr[kk];
+  Double_t az_vec[kk],el_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk],azerr[kk],elerr[kk],daz_vec2[kk],del_vec2[kk];
   
   //Einlesen der Daten
   k=0;
@@ -183,6 +183,27 @@ void fitD2C4(){
       daz_vec[i]-=360;
     }
   }
+//calculate differences 2
+  for(int i=0; i<kk; i++){
+    del_vec2[i] = el_vec[i]-eld_vec[i];//,el0,phi,psi)-el_vec[i];
+    if (del_vec2[i] < -180){
+      del_vec2[i]+=360;
+    }
+    if (del_vec2[i] > 180){
+      del_vec2[i]-=360;
+    }
+  }
+				
+  for(int i=0; i<kk; i++){
+    daz_vec2[i] = az_vec[i]-azd_vec[i];
+    if (daz_vec2[i] < -180){
+      daz_vec2[i]+=360;
+    }
+    if (daz_vec2[i] > 180){
+      daz_vec2[i]-=360;
+    }
+  }
+
 
   Double_t chisq=0;
   for(int i=0; i<kk; i++){
@@ -193,7 +214,7 @@ void fitD2C4(){
 
   //plot
   TCanvas* can = new TCanvas("plots","Plots",0,0,800,600);
-  TString nam("run341D2C4.png");
+  TString nam("D2C4.png");
   TString tit1("fit drive to CCD");
   TString tit2("el0 = ");
   //tit2 += Int_t(AZ);
@@ -232,6 +253,99 @@ void fitD2C4(){
   g_dazaz->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
   g_dazaz->Draw("AP");
   can->SaveAs(nam);
+
+  TCanvas* can2 = new TCanvas("compare","compare",0,0,800,600);
+  TString nam2("D2C4comp.png");
+  tit2 += el0;
+  tit2 += ", az0 = ";
+  tit2 += az0;
+  can2->Divide(2,2);
+  TGraph* g_delel2=new TGraph(kk,eld_vec,del_vec2);
+  can2->cd(1);
+  g_delel2->SetMarkerStyle(20);
+  g_delel2->SetMarkerSize(0.80);
+  g_delel2->GetXaxis()->SetTitle("elevation drive (deg)");
+  g_delel2->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
+  g_delel2->SetTitle("");
+  g_delel2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(eld_vec[i], del_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
   }
+  g_delel2->GetYaxis()->SetRangeUser(-8,1);
+  can2->Update();
+  TGraph* g_delaz2=new TGraph(kk,azd_vec,del_vec2);
+  can2->cd(2);
+  g_delaz2->SetMarkerStyle(20);
+  g_delaz2->SetMarkerSize(0.80);
+  g_delaz2->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g_delaz2->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
+  g_delaz2->SetTitle("");
+  g_delaz2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(azd_vec[i], del_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_delaz2->GetYaxis()->SetRangeUser(-8,1);
+  can2->Update();
+  TGraph* g_dazel2=new TGraph(kk,eld_vec,daz_vec2);
+  can2->cd(3);
+  g_dazel2->SetMarkerStyle(20);
+  g_dazel2->SetMarkerSize(0.80);
+  g_dazel2->GetXaxis()->SetTitle("elevation drive (deg)");
+  g_dazel2->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
+  g_dazel2->SetTitle("");
+  g_dazel2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(eld_vec[i], daz_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_dazel2->GetYaxis()->SetRangeUser(-5,60);
+  can2->Update();
+  TGraph* g_dazaz2=new TGraph(kk,azd_vec,daz_vec2);
+  can2->cd(4);
+  g_dazaz2->SetMarkerStyle(20);
+  g_dazaz2->SetMarkerSize(0.80);
+  g_dazaz2->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g_dazaz2->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
+  g_dazaz2->SetTitle("");
+  g_dazaz2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(azd_vec[i], daz_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_dazaz2->GetYaxis()->SetRangeUser(-5,60);
+  can2->Update();
+  can2->SaveAs(nam2);
+
+  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,800,600);
+  TString nam3("D2C4comp2.png");
+  TGraph* g=new TGraph(kk,az_vec,el_vec);
+  g->SetMarkerStyle(20);
+  g->SetMarkerSize(0.80);
+  g->GetXaxis()->SetTitle("azimuth CCD (deg)");
+  g->GetYaxis()->SetTitle("elevation CCD (deg)");
+  g->SetTitle("");
+  g->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(funcAz(eld_vec[i],azd_vec[i],az0,el0,az1,el1),funcEl(eld_vec[i],azd_vec[i],az0,el0,az1,el1),20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  can3->SaveAs(nam3);
+  file->Close();
+  }
+
+
+
 
 

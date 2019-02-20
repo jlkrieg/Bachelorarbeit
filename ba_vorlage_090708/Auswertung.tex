@@ -7,7 +7,7 @@ Zur Analyse wurde der in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 2
 \centering
 \includegraphics[width=\textwidth]{../341/data4.png}
 \label{img:record}
-\caption{Die am Teleskop eingestellten Position zur Datenaufnahme}
+\caption{Die am Teleskop eingestellten Position zur Datenaufnahme: Die Daten wurden in einer spiralförmigen Bewegung des Teleskops aufgenommen.}
 \end{figure}
 An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten.
 Um die Bilder aufzunehmen, wurde eine Positiondes Nachthimmels eingestellt, die während der Belichtung des Bildes verfolgt wurde. Als Zeitstempel für die jeweiligen Bilder wird die Mitte der Belichtungszeit gewählt. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst die Software \texttt{astrometry.net} verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit dem bekannten Sternenhimmel vergleicht. Hierdurch lassen sich die Himmelskoordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes bestimmen.
@@ -16,14 +16,14 @@ Die Himmelskoordinaten lassen sich mithilfe des Zeitstempels in das Koordinatens
 \centering
 \includegraphics[width=\textwidth]{../341/histo.png}
 \label{img:ps}
-\caption{Die Verteilung der von \texttt{astrometry.net} bestimmten Pixelscales}
+\caption{Die Verteilung der von \texttt{astrometry.net} bestimmten Pixelscales: Diese sollte dem in Tabelle \ref{tab:SkyCCD} angegebenen Wert von $11.03\unit{arcsec}$ entsprechen.}
 \end{figure}
 zu sehen ist in keinem der Bilder um mehr als $0,04\unit{arcsec}$ abweicht. Somit können alle gelösten Aufnahmen zur Analyse verwendet werden. Zu sehen ist dieser Datensatz in Abbildung \ref{img:dataset}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/data2.png}
 \label{img:dataset}
-\caption{Zu sehen sind die Abweichungen zwischen gemessenen und eingestellten Koordinaten in Abhängigkeit der gemessenen Koordinaten}
+\caption{Zu sehen sind die Differenzen (drive - CCD) in Abhängigkeit der von \texttt{astrometry.net} bestimmten Koordinaten für den Mittelpunkt der CCD-Aufnahmen}
 \end{figure}
 \section{Bestimmung der optimalen Parameter für die Pointingmodelle}
 Um das Pointingmodell auf Konsistenz zu überprüfen, wurde ein Programm mit der C++ Erweiterung ROOT geschrieben, das die optimalen Parameter für die in Kapitel \ref{ch:pointing} Pointingmodelle berechnet. Aus dem Vergleich der mit diesen Modellen vorhergesagten Werte mit den gemessenen Daten lassen sich dann Rückschlüsse über die Qualität der Pointingmodelle schließen. Um die optimalen Parameter zu finden wird die Methode der kleinsten Quadrate angewandt. 
@@ -47,20 +47,19 @@ berechnet. Mit dem Wissen, dass der perfekte Wert für für $\frac{\chi^2}{doF}=
 \begin{equation}
 \sigma=\sqrt{\frac{\sum^N_{i=1}\left(P_i-M_i\right)^2}{doF}}
 \end{equation}
-Zudem werden noch die Eigenschaften der Parameter bestimmt. Dazu wird ebenfalls mithilfe des TMinuit-Pakets die Kovarianzmatrix ausgegeben, die die Werte
+Zudem werden noch die Eigenschaften der Parameter bestimmt. Dazu wird ebenfalls mithilfe des TMinuit-Pakets die Kovarianzmatrix berechnet, die die Werte
 \begin{equation}
 COV(X,Y)=\left<\left(X-\left<X\right>\right)\cdot\left(Y-\left<Y\right>\right)\right>
 \end{equation}
-enthält. Auf der Hauptdiagonale stehen die Varianzen, aus denen sich die Fehler der Parameter bestimmen lassen:
+enthält. Auf der Hauptdiagonale stehen die Varianzen
 \begin{equation}
-\sigma_X=\sqrt{COV(X,X)}=\sqrt{VAR(X)}
+COV(X,X)=VAR(X)=\sigma_X^2
 \end{equation}
-Interessant ist es auch, sich die Korrelation der Parameter untereinander anzusehen. Dazu wird der Korrelationskoeffizient nach Pearson $\rho$ verwendet, der ausschließlich die lineare Korrelation berücksichtigt. Für $\rho=0$ liegt keine lineare Korrelation vor und für $\rho=\pm1$ eine positive beziehungsweise eine negative lineare Korrelation. Der Korrelationskoeffizient lässt sich ebenfalls aus der Kovarianzmatrix berechnen:
+Interessant ist es auch, sich die Korrelation der Parameter untereinander anzusehen. Dazu wird der Korrelationskoeffizient 
 \begin{equation}
 \rho_{XY}=\frac{COV(X,Y)}{\sigma_X\sigma_Y}
 \end{equation}
-Zuletzt werden noch die Ergebnisse noch in jeweils vier Plots, die die Differenzen des Modells zu den Messwerten zeigen, graphisch dargestellt.
-
+verwendet. Für $\rho=0$ liegt keine lineare Korrelation vor und für $\rho=\pm1$ eine positive beziehungsweise eine negative Korrelation.
 
 %Um das Pointingmodell auf Konsistenz zu überprüfen wurde ein Programm in ROOT geschrieben, welches die Differenzen der vom Pointingmodell (Index P) bestimmten Werte mit den gemessenen (Index M) Werten berechnet und analysiert. Da die oben entwickelten Pointingmodelle noch freie Parameter haben, die vom Teleskop abhängen werden diese durch eine Regression der Daten bestimmt. Da das Pointingmodell aus zwei Funktionen besteht (jeweils eine für die Elevation und den Azimut), die jedoch von den gleichen Parametern abhängen, muss hier ein kombinierter Fit durchgeführt werden. Dazu wird eine Hilfsvariable eingeführt, die die Summe der Quadrate der Differenzen von Messwerten und vorhergesagten Werten für feste Werte der freien Parameter bestimmt.
 %\begin{equation}

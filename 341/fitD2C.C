@@ -37,6 +37,9 @@ Double_t funcElT(Double_t el,Double_t az,Double_t az0,Double_t el0){
 Double_t chi(Double_t az0, Double_t el0){
   Double_t result=0;
   Double_t temp3=0;
+  Double_t x=0;
+  Double_t y=0;
+  Double_t z=0;
   TFile *file = TFile::Open("ntuple2nt_v12.root");
   TNtuple*nt = (TNtuple*)file->Get("run341_ccd3_tpoint_0_00_nt_ntuple");
   Int_t N = nt->GetEntries();
@@ -63,6 +66,9 @@ Double_t chi(Double_t az0, Double_t el0){
     if (daz > 180){
       daz-=360;
     }
+    x=cos(az*f)*cos(el*f)-cos(daz*f)*cos(del*f);
+    y=cos(el*f)*sin(az*f)-cos(del*f)*sin(daz*f);
+    z=sin(el*f)-sin(del*f);
     temp3=sin(el*f)*sin(del*f)+cos(el*f)*cos(del*f)*cos((az-daz)*f);
     if (fabs(temp3>=1)){
       temp3=0;
@@ -71,7 +77,8 @@ Double_t chi(Double_t az0, Double_t el0){
       temp3=acos(temp3);
     }
     //std::cout<<temp3;
-    result+=temp3;//pow(temp3,2);
+    result+=pow(x,2)+pow(y,2)+pow(z,2);//pow(temp3,2);
+    //result+=temp3;
   }
   //std::cout<<result<<std::endl;
   file->Close();
@@ -96,7 +103,7 @@ void fitD2C(){
     k++;
   }
   const int kk=k;
-  Double_t az_vec[kk],el_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk],azerr[kk],elerr[kk];
+  Double_t az_vec[kk],el_vec[kk],azd_vec[kk],eld_vec[kk],daz_vec[kk],del_vec[kk],azerr[kk],elerr[kk],daz_vec2[kk],del_vec2[kk];
   
   //Einlesen der Daten
   k=0;
@@ -177,7 +184,26 @@ void fitD2C(){
       daz_vec[i]-=360;
     }
   }
-
+//calculate differences 2
+  for(int i=0; i<kk; i++){
+    del_vec2[i] = el_vec[i]-eld_vec[i];//,el0,phi,psi)-el_vec[i];
+    if (del_vec2[i] < -180){
+      del_vec2[i]+=360;
+    }
+    if (del_vec2[i] > 180){
+      del_vec2[i]-=360;
+    }
+  }
+				
+  for(int i=0; i<kk; i++){
+    daz_vec2[i] = az_vec[i]-azd_vec[i];
+    if (daz_vec2[i] < -180){
+      daz_vec2[i]+=360;
+    }
+    if (daz_vec2[i] > 180){
+      daz_vec2[i]-=360;
+    }
+  }
   Double_t chisq=0;
   for(int i=0; i<kk; i++){
     chisq+=pow(del_vec[i],2)+pow(daz_vec[i],2);
@@ -186,7 +212,7 @@ void fitD2C(){
   std::cout<<"errorbars = "<<sqrt(chisq/(N-2))<<std::endl;
   //plot
   TCanvas* can = new TCanvas("plotsD","PlotsD",0,0,800,600);
-  TString nam("run341D2C.png");
+  TString nam("D2C.png");
   TString tit1("fit drive to CCD");
   TString tit2("el0 = ");
   //tit2 += Int_t(AZ);
@@ -199,6 +225,7 @@ void fitD2C(){
   g_delel->SetMarkerStyle(20);
   g_delel->SetMarkerSize(0.80);
   g_delel->GetXaxis()->SetTitle("elevation drive (deg)");
+  //g_delel->GetXaxis()->SetTitleSize(100); 
   g_delel->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
   g_delel->SetTitle(tit1);
   g_delel->Draw("AP");
@@ -226,32 +253,94 @@ void fitD2C(){
   g_dazaz->Draw("AP");
   can->SaveAs(nam);
 
-  Double_t elT_vec1[kk],elT_vec2[kk],elT_vec3[kk];
-  for(int i=0; i<kk; i++){
-    elT_vec1[i] = funcElT(eld_vec[i],azd_vec[i],az0,el0);
-    elT_vec2[i] = funcEl(eld_vec[i],azd_vec[i],az0,el0);
-    elT_vec3[i] = elT_vec1[i] - elT_vec2[i];
-  }
-  TCanvas* can2 = new TCanvas("TAylor","Taylor",0,0,1200,600);
-  can2->Divide(3,1);
-  TString nam2("Taylor.png");
+  TCanvas* can2 = new TCanvas("compare","compare",0,0,800,600);
+  TString nam2("D2Ccomp.png");
+  tit2 += el0;
+  tit2 += ", az0 = ";
+  tit2 += az0;
+  can2->Divide(2,2);
+  TGraph* g_delel2=new TGraph(kk,eld_vec,del_vec2);
   can2->cd(1);
-  TGraph* g_t1=new TGraph(kk,eld_vec,elT_vec1);
-  g_t1->SetMarkerStyle(20);
-  g_t1->SetMarkerSize(0.80);
-  g_t1->Draw("AP");
+  g_delel2->SetMarkerStyle(20);
+  g_delel2->SetMarkerSize(0.80);
+  g_delel2->GetXaxis()->SetTitle("elevation drive (deg)");
+  g_delel2->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
+  g_delel2->SetTitle("");
+  g_delel2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(eld_vec[i], del_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_delel2->GetYaxis()->SetRangeUser(-8,1);
+  can2->Update();
+  TGraph* g_delaz2=new TGraph(kk,azd_vec,del_vec2);
   can2->cd(2);
-  TGraph* g_t2=new TGraph(kk,eld_vec,elT_vec2);
-  g_t2->SetMarkerStyle(20);
-  g_t2->SetMarkerSize(0.80);
-  g_t2->Draw("AP");
+  g_delaz2->SetMarkerStyle(20);
+  g_delaz2->SetMarkerSize(0.80);
+  g_delaz2->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g_delaz2->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
+  g_delaz2->SetTitle("");
+  g_delaz2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(azd_vec[i], del_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_delaz2->GetYaxis()->SetRangeUser(-8,1);
+  can2->Update();
+  TGraph* g_dazel2=new TGraph(kk,eld_vec,daz_vec2);
   can2->cd(3);
-  TGraph* g_t3=new TGraph(kk,eld_vec,elT_vec3);
-  g_t3->SetMarkerStyle(20);
-  g_t3->SetMarkerSize(0.80);
-  g_t3->Draw("AP");
+  g_dazel2->SetMarkerStyle(20);
+  g_dazel2->SetMarkerSize(0.80);
+  g_dazel2->GetXaxis()->SetTitle("elevation drive (deg)");
+  g_dazel2->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
+  g_dazel2->SetTitle("");
+  g_dazel2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(eld_vec[i], daz_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_dazel2->GetYaxis()->SetRangeUser(-5,60);
+  can2->Update();
+  TGraph* g_dazaz2=new TGraph(kk,azd_vec,daz_vec2);
+  can2->cd(4);
+  g_dazaz2->SetMarkerStyle(20);
+  g_dazaz2->SetMarkerSize(0.80);
+  g_dazaz2->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g_dazaz2->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
+  g_dazaz2->SetTitle("");
+  g_dazaz2->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(azd_vec[i], daz_vec[i], 20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  g_dazaz2->GetYaxis()->SetRangeUser(-5,60);
+  can2->Update();
+  can2->SaveAs(nam2);
 
-
+  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,800,600);
+  TString nam3("D2Ccomp2.png");
+  TGraph* g=new TGraph(kk,az_vec,el_vec);
+  g->SetMarkerStyle(20);
+  g->SetMarkerSize(0.80);
+  g->GetXaxis()->SetTitle("azimuth CCD (deg)");
+  g->GetYaxis()->SetTitle("elevation CCD (deg)");
+  g->SetTitle("");
+  g->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(funcAz(eld_vec[i],azd_vec[i],az0,el0),funcEl(eld_vec[i],azd_vec[i],az0,el0),20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  can3->SaveAs(nam3);
   file->Close();
   }
 
