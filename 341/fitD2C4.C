@@ -326,7 +326,7 @@ void fitD2C4(){
   can2->Update();
   can2->SaveAs(nam2);
 
-  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,800,600);
+  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
   TString nam3("D2C4comp2.png");
   TGraph* g=new TGraph(kk,az_vec,el_vec);
   g->SetMarkerStyle(20);

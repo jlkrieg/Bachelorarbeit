@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  20 FEB 2019 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  21 FEB 2019 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -830,7 +830,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 81.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<husiegel.pdf, id=152, 131.49126pt x 132.495pt>
+<husiegel.pdf, id=156, 131.49126pt x 132.495pt>
 File: husiegel.pdf Graphic file (type pdf)
  <use husiegel.pdf>
 Package pdftex.def Info: husiegel.pdf used on input line 81.
@@ -975,14 +975,16 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 16.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (1.34267pt too wide) in paragraph at lines 20--20
+Overfull \hbox (1.34267pt too wide) in paragraph at lines 25--25
  [][] [][][]\T1/lmr/m/n/10.95 Gezeigt sind die Dif-feren-zen zwis-chen den vom 
 Vier-Parameter-Modell mit $\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = 11\OML
 /lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 99[]$\T1/lmr/m/n/10.95 , 
  []
 
+[4
 
-Overfull \hbox (1.34267pt too wide) in paragraph at lines 21--21
+]
+Overfull \hbox (1.34267pt too wide) in paragraph at lines 28--28
  [][] [][][]\T1/lmr/m/n/10.95 Gezeigt sind die Dif-feren-zen zwis-chen den vom 
 Vier-Parameter-Modell mit $\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = 12\OML
 /lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 10[]$\T1/lmr/m/n/10.95 , 
@@ -992,13 +994,11 @@ Vier-Parameter-Modell mit $\OML/lmm/m/it/10.95 az[] \OT1/lmr/m/n/10.95 = 12\OML
 \tf@lof=\write5
 \openout5 = `krieg.lof'.
 
- [4
-
-] (./krieg.lot)
+ [5] (./krieg.lot)
 \tf@lot=\write6
 \openout6 = `krieg.lot'.
 
- [5
+ [6
 
 ]
 \openout2 = `einleitung.aux'.
@@ -1054,7 +1054,7 @@ en, entste-hen groÿe Mag-net-felder ($\OMS/lmsy/m/n/10.95 O\OT1/lmr/m/n/10.95 (
 10[]T)$\T1/lmr/m/n/10.95 [[]].
  []
 
-<Images/tevcat.png, id=333, 410.4936pt x 211.0284pt>
+<Images/tevcat.png, id=362, 410.4936pt x 211.0284pt>
 File: Images/tevcat.png Graphic file (type png)
  <use Images/tevcat.png>
 Package pdftex.def Info: Images/tevcat.png used on input line 35.
@@ -1063,14 +1063,14 @@ Package pdftex.def Info: Images/tevcat.png used on input line 35.
 
 LaTeX Warning: Citation `iwas' on page 3 undefined on input line 46.
 
-[3] <Images/cherenkow.png, id=345, 387.3672pt x 204.5241pt>
+[3] <Images/cherenkow.png, id=374, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
 Package pdftex.def Info: Images/cherenkow.png used on input line 60.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
  [4 <./Images/tevcat.png>]
-<Images/detection.png, id=355, 895.84688pt x 648.17157pt>
+<Images/detection.png, id=384, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
@@ -1088,7 +1088,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 6.
 
-<Images/TelescopeTypes.jpg, id=372, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=401, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
@@ -1099,13 +1099,13 @@ Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 30.
 
 
 ]
-<Images/ArrayLayout.png, id=382, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=412, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
 Package pdftex.def Info: Images/ArrayLayout.png used on input line 46.
 (pdftex.def)             Requested size: 483.69687pt x 198.31517pt.
- <Images/night.png, id=385, 1927.2pt x 1284.8pt>
+ <Images/night.png, id=415, 1927.2pt x 1284.8pt>
 File: Images/night.png Graphic file (type png)
 
 <use Images/night.png>
@@ -1118,7 +1118,7 @@ Overfull \hbox (7.22551pt too wide) in paragraph at lines 62--63
  []
 
 [8 <./Images/TelescopeTypes.jpg>] [9 <./Images/ArrayLayout.png> <./Images/night
-.png>] <Images/ccd.png, id=398, 269.808pt x 273.1806pt>
+.png>] <Images/ccd.png, id=427, 269.808pt x 273.1806pt>
 File: Images/ccd.png Graphic file (type png)
  <use Images/ccd.png>
 Package pdftex.def Info: Images/ccd.png used on input line 68.
@@ -1129,7 +1129,7 @@ Package pdftex.def Info: Images/ccd.png used on input line 68.
 
  (./Pointing.tex
 chapter 4.
-<Images/coordinates.png, id=414, 505.89pt x 337.26pt>
+<Images/coordinates.png, id=443, 505.89pt x 337.26pt>
 File: Images/coordinates.png Graphic file (type png)
 
 <use Images/coordinates.png>
@@ -1149,45 +1149,45 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-[13]
-Overfull \hbox (4.02133pt too wide) detected at line 103
+
+Overfull \hbox (4.02133pt too wide) detected at line 105
 [][] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 T\OT1/lmr/m/n/10.95 (\OML/lmm/m/i
 t/10.95 az; el\OT1/lmr/m/n/10.95 )[] = [] \OML/lmm/m/it/10.95 :[][]
  []
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 127.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 128.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 128.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 129.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 129.
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 130.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 130.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 130.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 131.
+LaTeX Warning: Command \textless invalid in math mode on input line 131.
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 132.
 
+
+LaTeX Warning: Command \textless invalid in math mode on input line 132.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 133.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 134.
+
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \mathclose 
-l.134 \end{equation}
+l.136 \end{equation}
                     
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1200,7 +1200,7 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \mathclose 
-l.211 \end{equation}
+l.213 \end{equation}
                     
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1214,19 +1214,19 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 
  (./Auswertung.tex
 chapter 5.
-<../341/data4.png, id=511, 1200.485pt x 576.1525pt>
+<../341/data4.png, id=540, 1200.485pt x 576.1525pt>
 File: ../341/data4.png Graphic file (type png)
  <use ../341/data4.png>
 Package pdftex.def Info: ../341/data4.png used on input line 8.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
-<../341/histo.png, id=513, 1200.485pt x 576.1525pt>
+<../341/histo.png, id=542, 1200.485pt x 576.1525pt>
 File: ../341/histo.png Graphic file (type png)
  <use ../341/histo.png>
 Package pdftex.def Info: ../341/histo.png used on input line 17.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
-<../341/data2.png, id=517, 798.985pt x 576.1525pt>
+<../341/data2.png, id=546, 798.985pt x 576.1525pt>
 File: ../341/data2.png Graphic file (type png)
  <use ../341/data2.png>
 Package pdftex.def Info: ../341/data2.png used on input line 24.
@@ -1237,56 +1237,111 @@ Package pdftex.def Info: ../341/data2.png used on input line 24.
 
 
  <../341/data4.png>] [19 <../341/histo.png>] [20 <../341/data2.png>]
-<../341/run341C2D.png, id=543, 798.985pt x 576.1525pt>
-File: ../341/run341C2D.png Graphic file (type png)
-
-<use ../341/run341C2D.png>
-Package pdftex.def Info: ../341/run341C2D.png used on input line 116.
+<../341/C2Dcomp.png, id=573, 798.985pt x 576.1525pt>
+File: ../341/C2Dcomp.png Graphic file (type png)
+ <use ../341/C2Dcomp.png>
+Package pdftex.def Info: ../341/C2Dcomp.png used on input line 117.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/run341D2C.png, id=548, 798.985pt x 576.1525pt>
+<../341/C2D.png, id=574, 798.985pt x 576.1525pt>
+File: ../341/C2D.png Graphic file (type png)
+ <use ../341/C2D.png>
+Package pdftex.def Info: ../341/C2D.png used on input line 123.
+(pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
+
+<../341/C2Dcomp2.png, id=575, 1200.485pt x 576.1525pt>
+File: ../341/C2Dcomp2.png Graphic file (type png)
+
+<use ../341/C2Dcomp2.png>
+Package pdftex.def Info: ../341/C2Dcomp2.png used on input line 129.
+(pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
+ <../341/D2Ccomp.png, id=580, 798.985pt x 576.1525pt>
+File: ../341/D2Ccomp.png Graphic file (type png)
+
+<use ../341/D2Ccomp.png>
+Package pdftex.def Info: ../341/D2Ccomp.png used on input line 152.
+(pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
+
+<../341/run341D2C.png, id=581, 798.985pt x 576.1525pt>
 File: ../341/run341D2C.png Graphic file (type png)
 
 <use ../341/run341D2C.png>
-Package pdftex.def Info: ../341/run341D2C.png used on input line 155.
+Package pdftex.def Info: ../341/run341D2C.png used on input line 158.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/run341C2D_4par.png, id=554, 798.985pt x 576.1525pt>
+<../341/D2Ccomp2.png, id=582, 1200.485pt x 576.1525pt>
+File: ../341/D2Ccomp2.png Graphic file (type png)
+
+<use ../341/D2Ccomp2.png>
+Package pdftex.def Info: ../341/D2Ccomp2.png used on input line 164.
+(pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
+
+<../341/C2D4comp.png, id=588, 798.985pt x 576.1525pt>
+File: ../341/C2D4comp.png Graphic file (type png)
+
+<use ../341/C2D4comp.png>
+Package pdftex.def Info: ../341/C2D4comp.png used on input line 175.
+(pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
+
+<../341/run341C2D_4par.png, id=589, 798.985pt x 576.1525pt>
 File: ../341/run341C2D_4par.png Graphic file (type png)
 
 <use ../341/run341C2D_4par.png>
-Package pdftex.def Info: ../341/run341C2D_4par.png used on input line 180.
+Package pdftex.def Info: ../341/run341C2D_4par.png used on input line 181.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- [21] [22 <../341/run341C2D.png>] [23 <../341/run341D2C.png>] <../341/run341D2C
-4.png, id=576, 798.985pt x 576.1525pt>
+
+<../341/C2D4comp2.png, id=590, 1200.485pt x 576.1525pt>
+File: ../341/C2D4comp2.png Graphic file (type png)
+
+<use ../341/C2D4comp2.png>
+Package pdftex.def Info: ../341/C2D4comp2.png used on input line 187.
+(pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
+ [21] [22 <../341/C2Dcomp.png>] [23 <../341/C2D.png> <../341/C2Dcomp2.png>] [24
+ <../341/D2Ccomp.png>] [25 <../341/run341D2C.png> <../341/D2Ccomp2.png>] <../34
+1/D2C4comp.png, id=620, 798.985pt x 576.1525pt>
+File: ../341/D2C4comp.png Graphic file (type png)
+
+<use ../341/D2C4comp.png>
+Package pdftex.def Info: ../341/D2C4comp.png used on input line 216.
+(pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
+
+<../341/run341D2C4.png, id=621, 798.985pt x 576.1525pt>
 File: ../341/run341D2C4.png Graphic file (type png)
 
 <use ../341/run341D2C4.png>
-Package pdftex.def Info: ../341/run341D2C4.png used on input line 209.
+Package pdftex.def Info: ../341/run341D2C4.png used on input line 222.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-Overfull \hbox (5.85863pt too wide) in paragraph at lines 206--233
+<../341/D2C4comp2.png, id=622, 1200.485pt x 576.1525pt>
+File: ../341/D2C4comp2.png Graphic file (type png)
+
+<use ../341/D2C4comp2.png>
+Package pdftex.def Info: ../341/D2C4comp2.png used on input line 228.
+(pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
+
+Overfull \hbox (5.85863pt too wide) in paragraph at lines 213--252
 \T1/lmr/m/n/10.95 Zuletzt wird das Vier-Parameter-Modell be-nutzt um die CCD-Ko
 ordinaten durch die Drive-Koordinaten
  []
 
-[24 <../341/run341C2D_4par.png>] [25 <../341/run341D2C4.png>]) [26]
+[26 <../341/C2D4comp.png>] [27 <../341/run341C2D_4par.png> <../341/C2D4comp2.pn
+g>] [28 <../341/D2C4comp.png>] [29 <../341/run341D2C4.png> <../341/D2C4comp2.pn
+g>]) [30]
 \openout2 = `fazit.aux'.
 
-
-(./fazit.tex
+ (./fazit.tex
 chapter 6.
-) [27
+) [31
 
 
 
-] (./krieg.bbl) [28
+] (./krieg.bbl) [32
 
 
 ]
 \openout2 = `declaration.aux'.
 
- (./declaration.tex) [29
+ (./declaration.tex) [33
 
 
 ]
@@ -1299,21 +1354,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `krieg.out' has not changed.
-(rerunfilecheck)             Checksum: 01D93B20C4E0B6D5ED34D668DCF7F797;3145.
+(rerunfilecheck)             Checksum: 8C9E3D9AB41B64525F413566C6F6764B;3223.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 9072 strings out of 494910
- 137563 string characters out of 6179836
- 308607 words of memory out of 5000000
- 11964 multiletter control sequences out of 15000+600000
+ 9135 strings out of 494910
+ 138640 string characters out of 6179836
+ 312651 words of memory out of 5000000
+ 12005 multiletter control sequences out of 15000+600000
  68472 words of font info for 53 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,11n,66p,1457b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,66p,1457b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1328,10 +1386,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt10.pfb>
-Output written on krieg.pdf (34 pages, 11844604 bytes).
+Output written on krieg.pdf (39 pages, 11931312 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 614 compressed objects within 7 object streams
- 163 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 758 PDF objects out of 1000 (max. 8388607)
+ 659 compressed objects within 7 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 

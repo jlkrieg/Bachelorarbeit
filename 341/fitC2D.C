@@ -324,8 +324,8 @@ void fitC2D(){
   can2->Update();
   can2->SaveAs(nam2);
 
-  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,800,600);
-  TString nam3("D2Ccomp2.png");
+  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
+  TString nam3("C2Dcomp2.png");
   TGraph* g=new TGraph(kk,azd_vec,eld_vec);
   g->SetMarkerStyle(20);
   g->SetMarkerSize(0.80);

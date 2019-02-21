@@ -16,22 +16,23 @@
 \BOOKMARK [0][-]{chapter.31}{Pointingmodell f\374r eine gro\337e Abweichung zur optischen Achse}{}% 16
 \BOOKMARK [1][-]{section.32}{Koordinaten}{chapter.31}% 17
 \BOOKMARK [1][-]{section.34}{Entwicklung von Pointingmodellen}{chapter.31}% 18
-\BOOKMARK [1][-]{section.44}{Pointingmodell mit zwei Parametern}{chapter.31}% 19
-\BOOKMARK [2][-]{subsection.45}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.44}% 20
-\BOOKMARK [2][-]{subsection.60}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.44}% 21
-\BOOKMARK [1][-]{section.79}{Erweiterung des Modells auf vier Parameter}{chapter.31}% 22
-\BOOKMARK [0][-]{chapter.84}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 23
-\BOOKMARK [1][-]{section.85}{Datensatz}{chapter.84}% 24
-\BOOKMARK [1][-]{section.89}{Bestimmung der optimalen Parameter f\374r die Pointingmodelle}{chapter.84}% 25
-\BOOKMARK [1][-]{section.98}{Anwendung auf das Pointingmodell mit zwei Parametern}{chapter.84}% 26
-\BOOKMARK [2][-]{subsection.99}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.98}% 27
-\BOOKMARK [2][-]{subsection.102}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.98}% 28
-\BOOKMARK [1][-]{section.105}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.84}% 29
-\BOOKMARK [2][-]{subsection.106}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.105}% 30
-\BOOKMARK [2][-]{subsection.109}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.105}% 31
-\BOOKMARK [1][-]{section.112}{Vergleich der Parameter}{chapter.84}% 32
-\BOOKMARK [1][-]{section.113}{Diskussion der Korrelation}{chapter.84}% 33
-\BOOKMARK [2][-]{subsection.114}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.113}% 34
-\BOOKMARK [2][-]{subsection.115}{Hohe Korrelation im Modell mit vier Parametern}{section.113}% 35
-\BOOKMARK [1][-]{section.116}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.84}% 36
-\BOOKMARK [0][-]{chapter.117}{Fazit}{}% 37
+\BOOKMARK [1][-]{section.44}{Motivation des Pointingmodells}{chapter.31}% 19
+\BOOKMARK [1][-]{section.45}{Pointingmodell mit zwei Parametern}{chapter.31}% 20
+\BOOKMARK [2][-]{subsection.46}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.45}% 21
+\BOOKMARK [2][-]{subsection.61}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.45}% 22
+\BOOKMARK [1][-]{section.80}{Erweiterung des Modells auf vier Parameter}{chapter.31}% 23
+\BOOKMARK [0][-]{chapter.85}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 24
+\BOOKMARK [1][-]{section.86}{Datensatz}{chapter.85}% 25
+\BOOKMARK [1][-]{section.90}{Bestimmung der optimalen Parameter f\374r die Pointingmodelle}{chapter.85}% 26
+\BOOKMARK [1][-]{section.99}{Anwendung auf das Pointingmodell mit zwei Parametern}{chapter.85}% 27
+\BOOKMARK [2][-]{subsection.100}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.99}% 28
+\BOOKMARK [2][-]{subsection.105}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.99}% 29
+\BOOKMARK [1][-]{section.110}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.85}% 30
+\BOOKMARK [2][-]{subsection.111}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.110}% 31
+\BOOKMARK [2][-]{subsection.116}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.110}% 32
+\BOOKMARK [1][-]{section.121}{Vergleich der Parameter}{chapter.85}% 33
+\BOOKMARK [1][-]{section.122}{Diskussion der Korrelation}{chapter.85}% 34
+\BOOKMARK [2][-]{subsection.123}{Unterschiedliche Korrelationen f\374r Modelle mit gleichen Parametern}{section.122}% 35
+\BOOKMARK [2][-]{subsection.124}{Hohe Korrelation im Modell mit vier Parametern}{section.122}% 36
+\BOOKMARK [1][-]{section.125}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.85}% 37
+\BOOKMARK [0][-]{chapter.126}{Fazit}{}% 38
