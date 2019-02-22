@@ -45,8 +45,10 @@ void dataPlot(){
     }
     del_vec[i] = eld_vec[i]-elc_vec[i];
   }
+gStyle->SetLabelSize(.045, "XY");
+gStyle->SetTitleSize(.045, "XY");
   std::cout<<kk<<std::endl;
-  TCanvas* can = new TCanvas("plots1","Plots1",0,0,800,600);
+  TCanvas* can = new TCanvas("plots1","Plots1",0,0,1200,900);
   can->Divide(2,2);
   TString nam("data1.png");
   TGraph* g_delel1=new TGraph(kk,elc_vec,eld_vec);
@@ -89,6 +91,7 @@ void dataPlot(){
   g_delel2->SetTitle("");
   g_delel2->GetXaxis()->SetTitle("elevation CCD (deg)");
   g_delel2->GetYaxis()->SetTitle("#Delta elevation (deg)");
+  g_delel2->SetTitle("");
   g_delel2->Draw("AP");
   TGraph* g_delaz2=new TGraph(kk,azc_vec,del_vec);
   can->cd(2);
@@ -97,6 +100,7 @@ void dataPlot(){
   g_delaz2->SetTitle("");
   g_delaz2->GetXaxis()->SetTitle("azimuth CCD (deg)");
   g_delaz2->GetYaxis()->SetTitle("#Delta elevation (deg)");
+  g_delaz2->SetTitle("");
   g_delaz2->Draw("AP");
   TGraph* g_dazel2=new TGraph(kk,elc_vec,daz_vec);
   can->cd(3);
@@ -105,6 +109,7 @@ void dataPlot(){
   g_dazel2->SetTitle("");
   g_dazel2->GetXaxis()->SetTitle("elevation CCD (deg)");
   g_dazel2->GetYaxis()->SetTitle("#Delta azimuth (deg)");
+  g_dazel2->SetTitle("");
   g_dazel2->Draw("AP");
   TGraph* g_dazaz2=new TGraph(kk,azc_vec,daz_vec);
   can->cd(4);
@@ -113,6 +118,7 @@ void dataPlot(){
   g_dazaz2->SetTitle("");
   g_dazaz2->GetXaxis()->SetTitle("azimuth CCD (deg)");
   g_dazaz2->GetYaxis()->SetTitle("#Delta azimuth (deg)");
+  g_dazaz2->SetTitle("");
   g_dazaz2->Draw("AP");
   can->SaveAs(nam2);
 

@@ -68,7 +68,8 @@ Double_t chi(Double_t az0, Double_t el0){
       else{
 	temp3=acos(temp3);
       }
-      result+=temp3;//pow(temp3,2);
+      result+=temp3;
+      //result+=pow(temp3,2);
     }
   }
   file->Close();
@@ -160,6 +161,8 @@ void fitC2D(){
   }
   std::cout << "Correlation matrix" << std::endl;
   fCovar->Print();
+  std::cout<<"azerr = "<<sigma[0]<<std::endl;
+  std::cout<<"elerr = "<<sigma[1]<<std::endl;
 
   //calculate differences
   for(int i=0; i<kk; i++){
@@ -207,11 +210,16 @@ void fitC2D(){
   //chitest
   Double_t chisq=0;
   for(int i=0; i<kk; i++){
-    chisq+=pow(del_vec[i],2)+pow(daz_vec[i],2);
+    Double_t del8=funcEl(el_vec[i],az_vec[i],az0,el0);
+    Double_t daz8=funcAz(el_vec[i],az_vec[i],az0,el0);
+    Double_t psi=acos(sin(eld_vec[i]*f)*sin(del8*f)+cos(eld_vec[i]*f)*cos(del8*f)*cos((azd_vec[i]-daz8)*f))/f;
+    chisq+=pow(psi,2);
   }
   std::cout<<"errorbars = "<<sqrt(chisq/(N-2))<<std::endl;
 
   //plot
+gStyle->SetLabelSize(.045, "XY");
+gStyle->SetTitleSize(.045, "XY");
   TCanvas* can = new TCanvas("plotsC","PlotsC",0,0,800,600);
   can->Divide(2,2);
   TString nam("C2D.png");
@@ -226,7 +234,7 @@ void fitC2D(){
   g_delel->SetMarkerSize(0.80);
   g_delel->GetXaxis()->SetTitle("elevation CCD (deg)");
   g_delel->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
-  g_delel->SetTitle(tit1);
+  g_delel->SetTitle("");
   g_delel->Draw("AP");
   TGraph* g_delaz=new TGraph(kk,az_vec,del_vec);
   can->cd(2);
@@ -234,7 +242,7 @@ void fitC2D(){
   g_delaz->SetMarkerSize(0.80);
   g_delaz->GetXaxis()->SetTitle("azimuth CCD (deg)");
   g_delaz->GetYaxis()->SetTitle("#Delta elevation CCD (deg)");
-  g_delaz->SetTitle(tit2);
+  g_delaz->SetTitle("");
   g_delaz->Draw("AP");
   TGraph* g_dazel=new TGraph(kk,el_vec,daz_vec);
   can->cd(3);
@@ -242,6 +250,7 @@ void fitC2D(){
   g_dazel->SetMarkerSize(0.80);
   g_dazel->GetXaxis()->SetTitle("elevation CCD (deg)");
   g_dazel->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
+  g_dazel->SetTitle("");
   g_dazel->Draw("AP");
   TGraph* g_dazaz=new TGraph(kk,az_vec,daz_vec);
   can->cd(4);
@@ -249,6 +258,7 @@ void fitC2D(){
   g_dazaz->SetMarkerSize(0.80);
   g_dazaz->GetXaxis()->SetTitle("azimuth CCD (deg)");
   g_dazaz->GetYaxis()->SetTitle("#Delta azimuth CCD (deg)");
+  g_dazaz->SetTitle("");
   g_dazaz->Draw("AP");
   can->SaveAs(nam);
 

@@ -70,7 +70,8 @@ Double_t chi(Double_t az0, Double_t el0,Double_t az1, Double_t el1){
       temp3=acos(temp3);
     }
     //std::cout<<temp3;
-    result+=temp3;//pow(temp3,2);
+    result+=temp3;
+    //result+=pow(temp3,2);
   }
   //std::cout<<result<<std::endl;
   file->Close();
@@ -161,6 +162,10 @@ void fitD2C4(){
   }
   std::cout << "Correlation matrix" << std::endl;
   fCovar->Print();
+  std::cout<<"az0err = "<<sigma[0]<<std::endl;
+  std::cout<<"el0err = "<<sigma[1]<<std::endl;
+  std::cout<<"az1err = "<<sigma[2]<<std::endl;
+  std::cout<<"el1err = "<<sigma[3]<<std::endl;
 
   //calculate differences
   for(int i=0; i<kk; i++){
@@ -207,12 +212,17 @@ void fitD2C4(){
 
   Double_t chisq=0;
   for(int i=0; i<kk; i++){
-    chisq+=pow(del_vec[i],2);
+    Double_t del8=funcEl(eld_vec[i],azd_vec[i],az0,el0,az1,el1);
+    Double_t daz8=funcAz(eld_vec[i],azd_vec[i],az0,el0,az1,el1);
+    Double_t psi=acos(sin(el_vec[i]*f)*sin(del8*f)+cos(el_vec[i]*f)*cos(del8*f)*cos((az_vec[i]-daz8)*f))/f;
+    chisq+=pow(psi,2);
   }
   std::cout<<"errorbars = "<<sqrt(chisq/(N-4))<<std::endl;
 
 
   //plot
+gStyle->SetLabelSize(.045, "XY");
+gStyle->SetTitleSize(.045, "XY");
   TCanvas* can = new TCanvas("plots","Plots",0,0,800,600);
   TString nam("D2C4.png");
   TString tit1("fit drive to CCD");
