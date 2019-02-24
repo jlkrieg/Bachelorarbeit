@@ -1,25 +1,25 @@
 \chapter{Anwendung des Pointingmodells auf Daten des Teleskops}
 \label{ch:auswertung}
-Um das in Kapitel \ref{ch:pointing} entwickelte Pointingmodell zu testen, wurde mit dem Prototyp des MST ein Datensatz aufgenommen um
+Um das in Kapitel \ref{ch:pointing} entwickelte Pointingmodell zu testen, wurde mit dem Prototyp des MST ein Datensatz aufgenommen um 
 \section{Datensatz}
 \label{se:data}
-Zur Analyse wurde der in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC mit dem Prototypen des MST in Berlin-Adlershof aufgenommene Datensatz "run341" verwendet. Dazu wurden 105 Postionen beobachtet wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand.
+Zur Analyse wurde der in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC mit dem Prototypen des MST in Berlin-Adlershof aufgenommene Datensatz "run341" verwendet. Dazu wurden 105 Postionen (Abbildung \ref{img:record}) beobachtet, wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/data4.png}
-\label{img:record}
 \caption{Die am Teleskop eingestellten Position zur Datenaufnahme: Die Daten wurden in einer spiralförmigen Bewegung des Teleskops aufgenommen.}
+\label{img:record}
 \end{figure}
 An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten.
-Um die Bilder aufzunehmen, wurde eine Positiondes Nachthimmels eingestellt, die während der Belichtung des Bildes verfolgt wurde. Als Zeitstempel für die jeweiligen Bilder wird die Mitte der Belichtungszeit gewählt. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst die Software \texttt{astrometry.net} verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit dem bekannten Sternenhimmel vergleicht. Hierdurch lassen sich die Himmelskoordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes bestimmen.
+Um die Bilder aufzunehmen, wurde eine Position des Nachthimmels eingestellt, die während der Belichtung des Bildes verfolgt wurde. Als Zeitstempel für die jeweiligen Bilder wird die Mitte der Belichtungszeit gewählt. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst die Software \texttt{astrometry.net} verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit dem bekannten Sternenhimmel vergleicht. Hierdurch lassen sich die Himmelskoordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes bestimmen.
 Die Himmelskoordinaten lassen sich mithilfe des Zeitstempels in das Koordinatensystem des Teleskops umrechnen und aus der Größe des Bildausschnitts lässt sich noch der Pixelscale bestimmen, der angibt, wie groß das Gesichtsfeld eines einzelnen Pixels ist. Da der Pixelscale kameraspezifisch und bekannt ist, lässt sich mit diesem überprüfen, ob das Bild richtig aufgelöst wurde. Von den 105 aufgenommenen Bildern konnten 100 gelöst werden, wobei der Pixelscale wie in Abbildung \ref{img:ps}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/histo.png}
-\label{img:ps}
 \caption{Die Verteilung der von \texttt{astrometry.net} bestimmten Pixelscales: Diese sollte dem in Tabelle \ref{tab:SkyCCD} angegebenen Wert von $11.03\unit{arcsec}$ entsprechen.}
+\label{img:ps}
 \end{figure}
-zu sehen ist in keinem der Bilder um mehr als $0,04\unit{arcsec}$ abweicht. Somit können alle gelösten Aufnahmen zur Analyse verwendet werden. Die Differenzen zwischen Drive- und CCD-Koordinaten sind in \ref{img:dataset} dargestellt.
+zu sehen ist, in keinem der Bilder um mehr als $0,04\unit{arcsec}$ abweicht. Somit können alle gelösten Aufnahmen zur Analyse verwendet werden. Die Differenzen zwischen Drive- und CCD-Koordinaten sind in \ref{img:dataset} dargestellt.
 %\begin{figure}[htbp]
 %\centering
 %\includegraphics[width=\textwidth]{../341/data2.png}
@@ -92,7 +92,7 @@ verwendet. Für $\rho=0$ liegt keine Korrelation vor und für $\rho=\pm1$ eine p
 %f=el_M-el_P \quad \textrm{bzw} \quad f=az_M-az_P
 %\end{equation}
 \section{Anwendung auf das Pointingmodell mit zwei Parametern}
-Zunächst soll das in Kapitel \ref{ch:pointing} entwickelte Modell mit zwei Parametern, das einen konstanten Winkel zwischen der optischen Achse des Teleskops und der CCD-Kamera annimmt, unersucht werden.
+Zunächst soll das in Kapitel \ref{ch:pointing} entwickelte Modell mit zwei Parametern, das einen konstanten Winkel zwischen der optischen Achse des Teleskops und der CCD-Kamera annimmt, untersucht werden.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 Begonnen wird mit der Vorhersage der Drive-Koordinaten mithilfe der CCD-Koordinaten. Unter der Annahme des festen Winkels zwischen Drive und Kamera wurden in Kapitel \ref{ch:pointing} die Abhängigkeiten aus den Formeln \ref{eq:elC2D} und \ref{eq:azC2D} vorhergesagt. Verwendet man das oben beschriebene Programm, erhält man die Parameter aus Tabelle \ref{tab:C2D}.
 \begin{table}[htbp]
@@ -106,22 +106,21 @@ $az_0$ &=& $(12,04\pm0,53)^{\circ}$\\
 \caption{Die beiden Parameter für die Vorhersage der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{tab:C2D}
 \end{table}
-Vergleicht man die Differenzen zwischen Drive- und CCD-Koordinaten mit den Differenzen zwischen Drive und den durch das Modell mithlife der CCD-Koordinaten vorhergesagten Koordinaten (gezeigt in Abbildung \ref{img:C2Dcomp})
-
+Vergleicht man die Differenzen zwischen Drive- und CCD-Koordinaten mit den Differenzen zwischen Drive und den durch das Modell mithlife der CCD-Koordinaten vorhergesagten Koordinaten (gezeigt in Abbildung \ref{img:C2Dcomp}) so sieht man, dass das Modell die Abweichungen größtenteils kompensiert.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2Dcomp.png}
 \caption{Die Abweichungen der mithilfe von zwei Parametern vorhergesagten CCD-Koordinaten zu den realen Werten (rot) im Vergleich zu den Differenzen zwischen Drive und CCD (schwarz): Das Modell eliminiert einen großen Teil der Abweichungen}
 \label{img:C2Dcomp}
 \end{figure}
-so sieht man, dass das Modell die Abweichungen größtenteils kompensiert. Betrachtet man nur die Differenzen zwischen Pointingmodell und gemessenen Werten (Abbildung \ref{img:C2D})
+Betrachtet man nur die Differenzen zwischen Pointingmodell und gemessenen Werten (Abbildung \ref{img:C2D}), so sieht man, dass die Werte noch von Null verschieden sind.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2D.png}
 \caption{Die Abweichungen der vorhergesagten CCD-Koordinaten im Vergleich zu den gemessenen im Detail: Es sind noch systematische Abweichungen zu sehen, die darauf schließen lassen, dass das Modell noch nicht vollständig ist.}
 \label{img:C2D}
 \end{figure}
-so sieht man, dass die Werte noch von Null verschieden sind. Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen kann systematische Gründe. Solche Abweichungen waren durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt.
+Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen, systematische Gründe. Solche Abweichungen waren durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2Dcomp2.png}
@@ -166,9 +165,9 @@ so sieht man, dass für die beiden oberen Graphen die Effekte ähnlich wie die i
 \end{figure}
 
 \section{Anwendung auf das Pointingmodell mit 4 Parametern}
-Im Folgenden wird das oben verwendete Modell erweitert, indem man wie in Abschnitt \ref{se:4par} animmmt, dass die eingestellten Koordinaten zu den tatsächlichen um jeweils einen konstanten Wert verschoben sind. Zu den obigen Parametern $el_0$ und $az_0$ kommen somit noch die Parameter $az_1$ für eine konstante Verschiebung im Azimut und $el_1$ für eine konstante Verschiebung in der Elevation hinzu.
+Im Folgenden wird das oben verwendete Modell erweitert, indem man wie in Abschnitt \ref{se:4par} annimmt, dass die eingestellten Koordinaten zu den tatsächlichen um jeweils einen konstanten Wert verschoben sind. Zu den obigen Parametern $el_0$ und $az_0$ kommen somit noch die Parameter $az_1$ für eine konstante Verschiebung im Azimut und $el_1$ für eine konstante Verschiebung in der Elevation hinzu.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
-Hier wird wie oben mit der Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD begonnnen. Dazu verwendet man die Formeln \ref{eq:elC2D4} und \ref{eq:azC2D4}, für die sich mithilfe des Fit-Programms die Parameter aus Tabelle \ref{tab:C2D4} berechnen lassen.
+Hier wird wie oben mit der Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD begonnen. Dazu verwendet man die Formeln \ref{eq:elC2D4} und \ref{eq:azC2D4}, für die sich mithilfe des Fit-Programms die Parameter aus Tabelle \ref{tab:C2D4} berechnen lassen.
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}

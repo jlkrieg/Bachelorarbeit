@@ -1,10 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Flickr}
 Cta flickr page.
+\newblock \url{https://www.flickr.com/photos/cta_observatory}.
+\newblock 13.02.2019.
+
+\bibitem{Prosilica}
+Cta flickr page.
+\newblock
+  \url{https://www.alliedvision.com/de/produkte/kameras/kameradetails/Prosilica%20GC/1350.html}.
+\newblock 24.02.2019.
 
 \bibitem{TevCat}
 Tevcat homepage.
+\newblock \url{"http://tevcat.uchicago.edu"}.
+\newblock 13.02.2019.
 
 \bibitem{DesignConcept}
 C~T~A Consortium, M~Actis, G~Agnetta, F~Aharonian, and A~Akhperjanian.
@@ -12,11 +22,21 @@ C~T~A Consortium, M~Actis, G~Agnetta, F~Aharonian, and A~Akhperjanian.
   Facility for Ground-Based High-Energy Gamma-Ray Astronomy}.
 \newblock 2012.
 
+\bibitem{GB-VHE}
+M.~de~Naurois and D.~Mazin.
+\newblock Ground-based detectors in very-high-energy gamma-ray astronomy.
+\newblock 2015.
+
 \bibitem{Grupen}
 Claus Grupen.
 \newblock {\em Einstieg in die Astroteilchenphysik: Grundlagen, Messungen und
   Ergebnisse aktueller Forschung (German Edition)}.
 \newblock Springer Spektrum, 2017.
+
+\bibitem{Ruslan}
+Ruslan Konno.
+\newblock Erstellung von pointing-modellen für ccd-kameras am mst-prototyp.
+\newblock Bachelor thesis, Humboldt-Universität zu Berlin.
 
 \bibitem{PDG}
 K.~A. Olive et~al.
