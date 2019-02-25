@@ -1,4 +1,4 @@
-\select@language {ngerman}
+\select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Zu sehen sind alle von TeVCat registrierten und kategorisierten VHE-Quellen (ab einer Energie von $E~>50\unit {GeV}$\cite {TeVCat2}). Die roten Punkte stehen beispielsweise f\IeC {\"u}r AGNs, die violetten f\IeC {\"u}r PWNs und die grauen f\IeC {\"u}r unbekannte und unidentifizierte Quellen. \cite {TevCat}}}{4}{figure.11}
@@ -21,9 +21,9 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Die Abweichungen der vom Zwei-Parameter-Modell vorhergesagten CCD-Koordinaten zu den realen Werten (rot) im Vergleich zu den Differenzen zwischen Drive und CCD (schwarz): Wie beim inversen Modell werden die Abweichungen gr\IeC {\"o}\IeC {\ss }tenteils korrigiert.}}{23}{figure.106}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell vorhergesagten CCD-Koordinaten und den gemessenen CCD-Koordinaten im Detail: Hier sind \IeC {\"a}hnliche systematische Abweichungen wie im inversen Modell sichtbar.}}{24}{figure.107}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Die vom Zwei-Parameter-Modell vorhergesagten CCD-Koordinaten (rot) im Vergleich zu den experimentell bestimmten (schwarz)}}{24}{figure.108}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Vergleich der Differenzen zwischen den vom Vier-Parameter-Modell (rot) bzw vom Zwei-Parameter-Modell (schwarz) vorhergesagten Drive-Koordinaten und den realen Werten: Die beiden zus\IeC {\"a}tzlichen Parameter bringen kaum eine Verbesserung.}}{25}{figure.112}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Vergleich der Differenzen zwischen den vom Vier-Parameter-Modell (rot) bzw vom Zwei-Parameter-Modell (schwarz) vorhergesagten Drive-Koordinaten und den realen Werten: Die beiden zus\IeC {\"a}tzlichen Parameter bringen kaum eine Verbesserung.}}{26}{figure.112}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Die vom Vier-Parameter-Modell vorhergesagten Drive-Koordinaten (rot) im Vergleich zu den experimentell Bestimmten (schwarz): Es ist kaum ein Unterschied zum Zwei-Parameter-Modell zu erkennen.}}{26}{figure.113}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Das Vier-Parameter-Modell (rot) f\IeC {\"u}r die Vorhersage der CCD-Koordinaten im Vergleich zum Zwei-Parameter-Modell (schwarz): Wie erwartet sind kaum Verbesserungen zu erkennnen.}}{27}{figure.118}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Die vom Vier-Parameter-Modell (rot)vorhergesagten Koordinaten der CCD im Vergleich zu den experimentell bestimmten.}}{27}{figure.119}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Die vom Vier-Parameter-Modell (rot)vorhergesagten Koordinaten der CCD im Vergleich zu den experimentell bestimmten.}}{28}{figure.119}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

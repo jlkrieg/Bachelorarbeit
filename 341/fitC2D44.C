@@ -438,6 +438,8 @@ gStyle->SetTitleSize(.045, "XY");
     m->SetMarkerColor(2);
     m->Draw();
   }
+  g_delel2->GetYaxis()->SetRangeUser(-0.35,0.35);
+  }
   //g_delel2->GetYaxis()->SetRangeUser(-1,8);
   can2->Update();
   TGraph* g_delaz2=new TGraph(kk,az_vec,del_vec2);
@@ -454,6 +456,7 @@ gStyle->SetTitleSize(.045, "XY");
     m->SetMarkerColor(2);
     m->Draw();
   }
+  g_delaz2->GetYaxis()->SetRangeUser(-0.35,0.35);
   //g_delaz2->GetYaxis()->SetRangeUser(-1,8);
   can2->Update();
   TGraph* g_dazel2=new TGraph(kk,el_vec,daz_vec2);
@@ -470,7 +473,7 @@ gStyle->SetTitleSize(.045, "XY");
     m->SetMarkerColor(2);
     m->Draw();
   }
-  //g_dazel2->GetYaxis()->SetRangeUser(-60,5);
+  g_dazel2->GetYaxis()->SetRangeUser(-0.85,0.65);
   can2->Update();
   TGraph* g_dazaz2=new TGraph(kk,az_vec,daz_vec2);
   can2->cd(4);
@@ -486,7 +489,7 @@ gStyle->SetTitleSize(.045, "XY");
     m->SetMarkerColor(2);
     m->Draw();
   }
-  //g_dazaz2->GetYaxis()->SetRangeUser(-60,5);
+  g_dazaz2->GetYaxis()->SetRangeUser(-0.85,0.65);
   can2->Update();
   can2->SaveAs(nam2);
 

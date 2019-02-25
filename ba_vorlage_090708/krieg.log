@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.2.10)  24 FEB 2019 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  25 FEB 2019 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **krieg.tex
 (./krieg.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrreprt.cls
 Document Class: scrreprt 2015/10/03 v3.19a KOMA-Script document class (report)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -147,16 +147,22 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
-\l@naustrian = a dialect from \language\l@ngerman 
-\l@nswissgerman = a dialect from \language\l@ngerman 
-Package babel Info: Making " an active character on input line 88.
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+! Package babel Error: Unknown option `ngerman'. Either you misspelled it
+(babel)                or the language definition file ngerman.ldf was not foun
+d.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \ProcessOptions*
+                      
+Valid options are: shorthands=, KeepShorthandsActive,
+activeacute, activegrave, noconfigs, safe=, main=, math=
+headfoot=, strings=, config=, hyphenmap=, or a language name.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
@@ -918,10 +924,6 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
 (scrreprt)              by `\normalfont \itshape ' on input line 81.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
 [1
 
 
@@ -943,10 +945,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
 [2
 
 
@@ -962,45 +960,34 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `krieg.toc'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 97.
  [3
 
 
 ] (./krieg.lof
+Overfull \hbox (13.37221pt too wide) in paragraph at lines 6--6
+ \T1/lmr/m/n/10.95 erzeugt einen elek-tro-mag-netis-chen Luftschauer (oben rech
+ts), der wiederum Cherenkovlicht 
+ []
+
+
 Overfull \hbox (23.75697pt too wide) in paragraph at lines 11--11
- \T1/lmr/m/n/10.95 gröÿ-ten Ge-sichts-feld die Single-CCD, in der Mit-te oben d
-ie Lid-CCD die nur die Tscherenkow- 
+ \T1/lmr/m/n/10.95 gröÿten Gesichts-feld die Single-CCD, in der Mitte oben die 
+Lid-CCD die nur die Tscherenkow- 
  []
 
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 17.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 23.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 23.
- [4
+) [4
 
 ])
 \tf@lof=\write5
 \openout5 = `krieg.lof'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
  [5] (./krieg.lot)
 \tf@lot=\write6
 \openout6 = `krieg.lot'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 103.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 103.
  [6
 
 ]
@@ -1009,16 +996,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
 (./einleitung.tex
 chapter 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
 )
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 113.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 113.
- [1
+Overfull \hbox (4.30768pt too wide) in paragraph at lines 2--113
+\T1/lmr/m/n/10.95 errichtet um die ver-schiedene Sys-teme wie das Point-ing, da
+s heiÿt die richtige Aus-rich-tung des Teleskops,
+ []
+
+[1
 
 
 ]
@@ -1026,10 +1010,6 @@ Package babel Info: Redefining ngerman shorthand "~
 
  (./gamma-Astronomie.tex
 chapter 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -1046,234 +1026,121 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 21.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 21.
 [2
 
 
 
-] <Images/tevcat.png, id=360, 410.4936pt x 211.0284pt>
+] <Images/tevcat.png, id=363, 410.4936pt x 211.0284pt>
 File: Images/tevcat.png Graphic file (type png)
 
 <use Images/tevcat.png>
 Package pdftex.def Info: Images/tevcat.png used on input line 35.
 (pdftex.def)             Requested size: 483.69687pt x 248.67323pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 44.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
  [3]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
+Overfull \hbox (1.00644pt too wide) in paragraph at lines 54--55
+\T1/lmr/m/n/10.95 Tscherenkow-Strahlung tritt auf, wenn die Geschwindigkeit gel
+adener Teilchen die Licht-geschwindigkeit
+ []
 
-<Images/cherenkow.png, id=375, 387.3672pt x 204.5241pt>
+<Images/cherenkow.png, id=378, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
 Package pdftex.def Info: Images/cherenkow.png used on input line 61.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
  [4 <./Images/tevcat.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 67.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 67.
-
-<Images/detection.png, id=387, 895.84688pt x 648.17157pt>
+<Images/detection.png, id=390, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
 Package pdftex.def Info: Images/detection.png used on input line 74.
 (pdftex.def)             Requested size: 483.69687pt x 349.96786pt.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
- [5 <./Images/cherenkow.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
- [6 <./Images/detection.png>]
+
+Underfull \hbox (badness 1297) in paragraph at lines 75--75
+[][]\T1/lmr/m/n/10.95 Detektion hoch-en-er-getis-cher Strahlung: Das in die At-
+mo-sphäre ein-tre-tende Pho-
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 75--75
+\T1/lmr/m/n/10.95 ton erzeugt einen elek-tro-mag-netis-chen Luftschauer (oben r
+echts), der wiederum
+ []
+
+) [5 <./Images/cherenkow.png>] [6 <./Images/detection.png>]
 \openout2 = `CTA.aux'.
 
  (./CTA.tex
 chapter 3.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 6.
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 6.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
 
-<Images/TelescopeTypes.jpg, id=404, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=407, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
 Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 30.
 (pdftex.def)             Requested size: 483.69687pt x 272.07048pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 35.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 35.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 40.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 40.
  [7
 
 
 
 ]
-<Images/ArrayLayout.png, id=415, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=418, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
 Package pdftex.def Info: Images/ArrayLayout.png used on input line 46.
 (pdftex.def)             Requested size: 483.69687pt x 198.31517pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
- <Images/night.png, id=418, 1927.2pt x 1284.8pt>
+ <Images/night.png, id=421, 1927.2pt x 1284.8pt>
 File: Images/night.png Graphic file (type png)
 
 <use Images/night.png>
 Package pdftex.def Info: Images/night.png used on input line 55.
 (pdftex.def)             Requested size: 483.69687pt x 322.4539pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 61.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 61.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 63.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 63.
- [8 <./Images/TelescopeTypes.jpg>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 63.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 63.
- [9 <./Images/ArrayLayout.png> <./Images/night.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 64.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 64.
- <Images/ccd.png, id=430, 269.808pt x 273.1806pt>
-File: Images/ccd.png Graphic file (type png)
 
-<use Images/ccd.png>
+Overfull \hbox (7.22551pt too wide) in paragraph at lines 62--63
+\T1/lmr/m/n/10.95 sowohl den Nachthim-mel als auch den Dummy beziehungsweise sp
+äter die Tscherenkowkam-era ablichten.
+ []
+
+[8 <./Images/TelescopeTypes.jpg>] [9 <./Images/ArrayLayout.png> <./Images/night
+.png>] <Images/ccd.png, id=433, 269.808pt x 273.1806pt>
+File: Images/ccd.png Graphic file (type png)
+ <use Images/ccd.png>
 Package pdftex.def Info: Images/ccd.png used on input line 68.
 (pdftex.def)             Requested size: 241.84843pt x 244.88068pt.
 )
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 117.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 117.
- [10 <./Images/ccd.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 117.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 117.
- [11]
+[10 <./Images/ccd.png>] [11]
 \openout2 = `Pointing.aux'.
 
  (./Pointing.tex
 chapter 4.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
-<Images/coordinates.png, id=450, 505.89pt x 337.26pt>
+<Images/coordinates.png, id=454, 505.89pt x 337.26pt>
 File: Images/coordinates.png Graphic file (type png)
 
 <use Images/coordinates.png>
 Package pdftex.def Info: Images/coordinates.png used on input line 9.
 (pdftex.def)             Requested size: 338.58632pt x 225.72629pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
  [12
 
 
 
- <./Images/coordinates.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 71.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 71.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 72.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 72.
- [13]
-<../341/data2.png, id=474, 798.985pt x 576.1525pt>
+ <./Images/coordinates.png>] [13]
+<../341/data2.png, id=478, 798.985pt x 576.1525pt>
 File: ../341/data2.png Graphic file (type png)
  <use ../341/data2.png>
 Package pdftex.def Info: ../341/data2.png used on input line 75.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 80.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
 [14 <../341/data2.png>]
 ! Missing delimiter (. inserted).
 <to be read again> 
@@ -1288,39 +1155,33 @@ Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
 
-Overfull \hbox (57.38881pt too wide) detected at line 113
-[][] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 T\OT1/lmr/m/n/10.95 (\OML/lmm/m/i
-t/10.95 az[]; el[]\OT1/lmr/m/n/10.95 )[] = [] \OML/lmm/m/it/10.95 :[][]
- []
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 137.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 138.
-
-
 LaTeX Warning: Command \textgreater invalid in math mode on input line 138.
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 139.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 140.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 139.
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 140.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 141.
+LaTeX Warning: Command \textless invalid in math mode on input line 141.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 142.
+LaTeX Warning: Command \textless invalid in math mode on input line 141.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 142.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 143.
 
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \mathclose 
-l.144 \end{equation}
+l.145 \end{equation}
                     
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1329,338 +1190,115 @@ braces don't get unbalanced. Otherwise just proceed.
 Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 154.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 154.
-[15]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 167.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 167.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 217.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 217.
- [16]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 261.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 261.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 119.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 119.
- [17]
+[15] [16]) [17]
 \openout2 = `Auswertung.aux'.
 
  (./Auswertung.tex
 chapter 5.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 4.
-<../341/data4.png, id=552, 1200.485pt x 576.1525pt>
+<../341/data4.png, id=556, 1200.485pt x 576.1525pt>
 File: ../341/data4.png Graphic file (type png)
  <use ../341/data4.png>
 Package pdftex.def Info: ../341/data4.png used on input line 9.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
-<../341/histo.png, id=554, 1200.485pt x 576.1525pt>
+<../341/histo.png, id=558, 1200.485pt x 576.1525pt>
 File: ../341/histo.png Graphic file (type png)
  <use ../341/histo.png>
 Package pdftex.def Info: ../341/histo.png used on input line 18.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 29.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 29.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
 
 [18
 
 
 
- <../341/data4.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 51.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 51.
- [19 <../341/histo.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 94.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 94.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 96.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 96.
-
-<../341/C2Dcomp.png, id=579, 798.985pt x 576.1525pt>
+ <../341/data4.png>] [19 <../341/histo.png>]
+<../341/C2Dcomp.png, id=583, 798.985pt x 576.1525pt>
 File: ../341/C2Dcomp.png Graphic file (type png)
  <use ../341/C2Dcomp.png>
 Package pdftex.def Info: ../341/C2Dcomp.png used on input line 112.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-Underfull \hbox (badness 3492) in paragraph at lines 113--113
-[][]\T1/lmr/m/n/10.95 Die Ab-wei-chun-gen der mit-hil-fe von zwei Pa-ra-me-tern
- vor-her-ge-sag-ten CCD-
- []
-
-<../341/C2D.png, id=581, 798.985pt x 576.1525pt>
+<../341/C2D.png, id=585, 798.985pt x 576.1525pt>
 File: ../341/C2D.png Graphic file (type png)
  <use ../341/C2D.png>
 Package pdftex.def Info: ../341/C2D.png used on input line 119.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/C2Dcomp2.png, id=583, 1200.485pt x 576.1525pt>
+<../341/C2Dcomp2.png, id=587, 1200.485pt x 576.1525pt>
 File: ../341/C2Dcomp2.png Graphic file (type png)
 
 <use ../341/C2Dcomp2.png>
 Package pdftex.def Info: ../341/C2Dcomp2.png used on input line 126.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 131.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 131.
- <../341/D2Ccomp.png, id=589, 798.985pt x 576.1525pt>
+ <../341/D2Ccomp.png, id=593, 798.985pt x 576.1525pt>
 File: ../341/D2Ccomp.png Graphic file (type png)
 
 <use ../341/D2Ccomp.png>
 Package pdftex.def Info: ../341/D2Ccomp.png used on input line 148.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- <../341/D2C.png, id=591, 798.985pt x 576.1525pt>
+ <../341/D2C.png, id=595, 798.985pt x 576.1525pt>
 File: ../341/D2C.png Graphic file (type png)
 
 <use ../341/D2C.png>
 Package pdftex.def Info: ../341/D2C.png used on input line 155.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- <../341/D2Ccomp2.png, id=593, 1200.485pt x 576.1525pt>
+ <../341/D2Ccomp2.png, id=597, 1200.485pt x 576.1525pt>
 File: ../341/D2Ccomp2.png Graphic file (type png)
 
 <use ../341/D2Ccomp2.png>
 Package pdftex.def Info: ../341/D2Ccomp2.png used on input line 162.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 167.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 167.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
- [20]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
- [21 <../341/C2Dcomp.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
- [22 <../341/C2D.png> <../341/C2Dcomp2.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
- [23 <../341/D2Ccomp.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
- [24 <../341/D2C.png> <../341/D2Ccomp2.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
-
-
-LaTeX Warning: Reference `tab:C2D4' on page 25 undefined on input line 170.
-
-! Misplaced \crcr.
-\endtabular ->\crcr 
-                    \egroup \egroup $\egroup 
-l.183 \end{tabular}
-                   
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Extra }, or forgotten \endgroup.
-\endtabular ->\crcr \egroup \egroup 
-                                    $\egroup 
-l.183 \end{tabular}
-                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.183 \end{tabular}
-                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! LaTeX Error: \begin{table} on input line 171 ended by \end{tabular}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.183 \end{tabular}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.183 \end{tabular}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Too many }'s.
-\color@endbox ->\color@endgroup \egroup 
-                                        
-l.184 \end{table}
-                 
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
-! LaTeX Error: \begin{document} ended by \end{table}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.184 \end{table}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.184 \end{table}
-                 
-Things are pretty mixed up, but I think the worst is over.
-
-<../341/C2D44comp.png, id=621, 798.985pt x 576.1525pt>
+ [20] [21 <../341/C2Dcomp.png>] [22 <../341/C2D.png> <../341/C2Dcomp2.png>] [23
+ <../341/D2Ccomp.png>] [24 <../341/D2C.png> <../341/D2Ccomp2.png>] <../341/C2D4
+4comp.png, id=626, 798.985pt x 576.1525pt>
 File: ../341/C2D44comp.png Graphic file (type png)
 
 <use ../341/C2D44comp.png>
-Package pdftex.def Info: ../341/C2D44comp.png used on input line 188.
+Package pdftex.def Info: ../341/C2D44comp.png used on input line 187.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/C2D4comp2.png, id=624, 1200.485pt x 576.1525pt>
+<../341/C2D4comp2.png, id=629, 1200.485pt x 576.1525pt>
 File: ../341/C2D4comp2.png Graphic file (type png)
 
 <use ../341/C2D4comp2.png>
-Package pdftex.def Info: ../341/C2D4comp2.png used on input line 195.
+Package pdftex.def Info: ../341/C2D4comp2.png used on input line 194.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 200.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 200.
 
-Overfull \hbox (5.85863pt too wide) in paragraph at lines 201--216
+Overfull \hbox (5.85863pt too wide) in paragraph at lines 200--215
 \T1/lmr/m/n/10.95 Zuletzt wird das Vier-Parameter-Modell be-nutzt um die CCD-Ko
 ordinaten durch die Drive-Koordinaten
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 216.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 216.
-[25 <../341/C2D44comp.png>]
-<../341/D2C44comp.png, id=634, 798.985pt x 576.1525pt>
+[25] [26 <../341/C2D44comp.png> <../341/C2D4comp2.png>]
+<../341/D2C44comp.png, id=644, 798.985pt x 576.1525pt>
 File: ../341/D2C44comp.png Graphic file (type png)
 
 <use ../341/D2C44comp.png>
-Package pdftex.def Info: ../341/D2C44comp.png used on input line 226.
+Package pdftex.def Info: ../341/D2C44comp.png used on input line 225.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/D2C4comp2.png, id=635, 1200.485pt x 576.1525pt>
+<../341/D2C4comp2.png, id=645, 1200.485pt x 576.1525pt>
 File: ../341/D2C4comp2.png Graphic file (type png)
 
 <use ../341/D2C4comp2.png>
-Package pdftex.def Info: ../341/D2C4comp2.png used on input line 233.
+Package pdftex.def Info: ../341/D2C4comp2.png used on input line 232.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 238.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 238.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
- [26 <../341/C2D4comp2.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
- [27 <../341/D2C44comp.png> <../341/D2C4comp2.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 120.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 120.
- [28]
+) [27 <../341/D2C44comp.png>] [28 <../341/D2C4comp2.png>]
 \openout2 = `fazit.aux'.
 
  (./fazit.tex
 chapter 6.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 121.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 121.
- [29
+) [29
 
 
 
 ] (./krieg.bbl
 Underfull \hbox (badness 1147) in paragraph at lines 9--13
-[]\T1/lmr/m/n/10.95 Cta flickr pa-ge.  [][]$\T1/lmtt/m/n/10.95 https : / / www 
-. alliedvision . com / de / produkte / kameras / kameradetails /
+[]\T1/lmr/m/n/10.95 Cta flickr page.  [][]$\T1/lmtt/m/n/10.95 https : / / www .
+ alliedvision . com / de / produkte / kameras / kameradetails /
  []
 
-)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
- [30
+) [30
 
 
 ]
@@ -1668,10 +1306,6 @@ Package babel Info: Redefining ngerman shorthand "~
 
  (./appendixA.tex
 chapter A.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
 ! Missing number, treated as zero.
 <to be read again> 
                    \c@Anhang 
@@ -1703,10 +1337,6 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
 [31
 
 
@@ -1722,20 +1352,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-])
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
- [32]
+]) [32]
 \openout2 = `declaration.aux'.
 
- (./declaration.tex)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 156.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 156.
- [33
+ (./declaration.tex) [33
 
 
 
@@ -1751,21 +1371,18 @@ Package rerunfilecheck Info: File `krieg.out' has not changed.
 (rerunfilecheck)             Checksum: 6431713067382C2F744F276ED67C39E1;2903.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 9219 strings out of 493029
- 139911 string characters out of 6136234
- 318496 words of memory out of 5000000
- 12315 multiletter control sequences out of 15000+600000
+ 9145 strings out of 494910
+ 138621 string characters out of 6179836
+ 312526 words of memory out of 5000000
+ 12002 multiletter control sequences out of 15000+600000
  68472 words of font info for 53 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 43i,11n,66p,1458b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36 hyphenation exceptions out of 8191
+ 43i,11n,66p,1875b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1780,10 +1397,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt10.pfb>
-Output written on krieg.pdf (39 pages, 11930766 bytes).
+Output written on krieg.pdf (39 pages, 11933277 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 686 compressed objects within 7 object streams
- 184 named destinations out of 1000 (max. 500000)
+ 790 PDF objects out of 1000 (max. 8388607)
+ 692 compressed objects within 7 object streams
+ 185 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

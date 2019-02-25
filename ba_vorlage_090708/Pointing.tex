@@ -15,10 +15,10 @@ Da das Pointingmodell die Beziehung der am Teleskop eingestellten Koordinaten zu
 \section{Entwicklung von Pointingmodellen}
 Um mit einem Teleskop möglichst gute Resultate zu erzielen, muss man die gewünschte Position am Himmel so genau wie möglich einstellen. Da die eingestellten Koordinaten allerdings nicht exakt mit den tatsächlichen Koordinaten übereinstimmen, verwendet man Pointingmodelle um diese Differenzen zu minimieren. Da Teleskope in der Regel so konstruiert sind, dass es möglichst geringe Abweichungen zwischen eingestellten und tatsächlichen Positionen existieren, reicht es aus, sich die Differenzen anzgucken. Diese Differenzen lassen sich als dann Funktion der teleskopspezifischen Paramater $\vec{q}$ entwickeln.
 \begin{equation}
-az_D=az_c+\Delta_{az}=az_C+\tilde{f}_{az}\left(az_c,el_c,\vec{q}\right)
+az_D=az_c+\Delta_{az}=az_C+\tilde{f}_{az}\left(az_C,el_C,\vec{q}\right)
 \end{equation}
 \begin{equation}
-el_D=el_c+\Delta_{el}=el_C+\tilde{f}_{el}\left(az_c,el_c,\vec{q}\right)
+el_D=el_C+\Delta_{el}=el_C+\tilde{f}_{el}\left(az_C,el_C,\vec{q}\right)
 \label{eq:pointingZero}
 \end{equation}
 Als Beispiel wird hier die Verkippung der Teleskopachse, die Ruslan Konno in seiner Bachelorarbeit \cite{Ruslan} beschrieben hat, in vereinfachter Form diskutiert. Dazu wird nur die Elevation betrachtet, die sich aus der z-Komponente berechnen lässt
@@ -99,18 +99,19 @@ Unter der Annahme, dass die Kamera von vornherein in eine andere Richtung als da
 \vec{r}_C^{\,0}=T(az_0,el_0)\vec{r}_D^{\,0}=\left(\begin{array}{c} \cos(az_0)\cos(el_0) \\ -\cos(el_0)\sin(az_0) \\ \sin(el_0) \end{array}\right).
 \label{eq:startCCD}
 \end{equation}
-Da hier angenommen wird, dass der Winkel zwischen der optischen Achse des Teleskops und der Kamera fest ist, sind $az_0$ und $el_0$ Konstanten. Wendet man nun die gleiche Transformation $T(az_D,el_D)$ mit den Koordinaten des Teleskops als Argumente auf beide Startvektoren an, so erhält man für jedes Koordinatenpaar des Drives die zugehörigen Koordinaten der CCD in Abhängigkeit der Koordinaten des Drives. Für dessen Richtung ergibt sich
+Da hier angenommen wird, dass der Winkel zwischen der optischen Achse des Teleskops und der Kamera fest ist, sind $az_0$ und $el_0$ Konstanten. Wendet man nun die gleiche Transformation $T(az_D,el_D)$ mit den Koordinaten des Teleskops als Argumente auf beide Startvektoren an, so erhält man für die Richtung des Drives 
 \begin{equation}
 \vec{r}_D=T(az_D,el_D)\vec{r}_D^{\,0}=\left(\begin{array}{c} \cos(az_D)\cos(el_D) \\ -\cos(el_D)\sin(az_D) \\ \sin(el_D) \end{array}\right)
 \label{eq:finDrive}
 \end{equation}
 und für die Richtung der CCD
 \begin{equation}
-\vec{r}_C=T(az_D,el_D)\vec{r}_C^{,0}=\left(\begin{array}{c} \cos(az_D)\left(\cos(az_0)\cos(el_D)\cos(el_0)-\sin(el_D)\sin(el_0)\right_D)-\cos(el_0)\sin(az_D)\sin(az_0) \\
+\vec{r}_C=\left(\begin{array}{c} \cos(az_D)\left(\cos(az_0)\cos(el_D)\cos(el_0)-\sin(el_D)\sin(el_0)\right_D)-\cos(el_0)\sin(az_D)\sin(az_0) \\
 \sin(az_D)\left(\sin(el_D)\sin(el_0)-\cos(az_0)\cos(el_D)\cos(el_0)\right)-\cos(az_D)\cos(el_0)\sin(az_0) \\
 \cos(az_0)\cos(el_0)\sin(el_D)+\cos(el_D)\sin(el_0) \end{array}\right).
 \label{eq:finCCD}
 \end{equation}
+%T(az_D,el_D)\vec{r}_C^{,0}=
 Zur Untersuchung der Azimutabhängigkeit werden aus Gründen der Übersichtlichkeit folgende Terme substituiert
 \begin{equation}
 a=\cos\left(el_D\right)\cos\left(az_0\right)\cos\left(el_0\right)-\sin\left(el_D\right)\sin\left(el_0\right)
@@ -213,7 +214,7 @@ t_{\pm}=\frac{1\pm\sqrt{1+0-\sin^2\left(el_C\right)}}{\sin\left(el_C\right)+0}=\
 \end{equation}
 ist, was mit den Gleichungen \ref{eq:sint} und \ref{eq:cost} zu 
 \begin{equation}
-t_{\pm}(el_D)=\frac{1+t^2(el_C)\pm(1-t^2(el_C)}{2t(el_C)}=\left(\frac{1}{t(el_C)}\right)^{\pm}
+t_{\pm}(el_D)=\frac{1+t^2(el_C)\pm(1-t^2(el_C)}{2t(el_C)}=\left(\frac{1}{t(el_C)}\right)^{\pm1}
 \end{equation}
 %\left\{\begin{array}{lr}
 %\frac{1}{t(el_C)} & "+" \\
