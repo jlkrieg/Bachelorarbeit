@@ -341,9 +341,12 @@ void fitC2D44(){
   }
   Double_t az5=fitC2D(0);
   Double_t el5=fitC2D(1);
+  Double_t el2_vec[kk],az2_vec[kk];
 std::cout<<el5<<std::endl;
 //calculate differences 2
   for(int i=0; i<kk; i++){
+    el2_vec[i]=funcEl2(el_vec[i],az_vec[i],az5,el5);
+    az2_vec[i]=funcAz2(el_vec[i],az_vec[i],az5,el5);
     del_vec2[i] = eld_vec[i]-funcEl2(el_vec[i],az_vec[i],az5,el5);//,el0,phi,psi)-el_vec[i];
     if (del_vec2[i] < -180){
       del_vec2[i]+=360;
@@ -492,22 +495,22 @@ gStyle->SetTitleSize(.045, "XY");
   can2->Update();
   can2->SaveAs(nam2);
 
-  // TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
-  // TString nam3("C2D44comp2.png");
-  // TGraph* g=new TGraph(kk,azd_vec,eld_vec);
-  // g->SetMarkerStyle(20);
-  // g->SetMarkerSize(0.80);
-  // g->GetXaxis()->SetTitle("azimuth drive (deg)");
-  // g->GetYaxis()->SetTitle("elevation drive (deg)");
-  // g->SetTitle("");
-  // g->Draw("AP");
-  // for (int i=0; i<kk; i++){
-  //   TMarker *m = new TMarker(funcAz(el_vec[i],az_vec[i],az0,el0,az1,el1),funcEl(el_vec[i],az_vec[i],az0,el0,az1,el1),20);
-  //   m->SetMarkerSize(0.80);
-  //   m->SetMarkerColor(2);
-  //   m->Draw();
-  // }
-  // can3->SaveAs(nam3);
-  // can->SaveAs(nam);
+  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
+  TString nam3("C2D44comp2.png");
+  TGraph* g=new TGraph(kk,az2_vec,el2_vec);
+  g->SetMarkerStyle(20);
+  g->SetMarkerSize(0.80);
+  g->GetXaxis()->SetTitle("azimuth drive (deg)");
+  g->GetYaxis()->SetTitle("elevation drive (deg)");
+  g->SetTitle("");
+  g->Draw("AP");
+  for (int i=0; i<kk; i++){
+    TMarker *m = new TMarker(funcAz(el_vec[i],az_vec[i],az0,el0,az1,el1),funcEl(el_vec[i],az_vec[i],az0,el0,az1,el1),20);
+    m->SetMarkerSize(0.80);
+    m->SetMarkerColor(2);
+    m->Draw();
+  }
+  can3->SaveAs(nam3);
+  can->SaveAs(nam);
   }
 

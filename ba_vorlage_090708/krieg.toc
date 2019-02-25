@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {5.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{20}{subsection.104}
 \contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit 4 Parametern}{25}{section.109}
 \contentsline {subsection}{\numberline {5.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{25}{subsection.110}
-\contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{25}{subsection.114}
-\contentsline {section}{\numberline {5.5}Systematische Abweichungen im entwickelten Pointingmodell}{27}{section.120}
-\contentsline {chapter}{\numberline {6}Fazit}{29}{chapter.121}
-\contentsline {chapter}{\numberline {A}Anhang}{31}{appendix.123}
+\contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{27}{subsection.114}
+\contentsline {section}{\numberline {5.5}Systematische Abweichungen im entwickelten Pointingmodell}{29}{section.120}
+\contentsline {chapter}{\numberline {6}Fazit}{30}{chapter.121}
+\contentsline {chapter}{\numberline {A}Anhang}{32}{appendix.123}

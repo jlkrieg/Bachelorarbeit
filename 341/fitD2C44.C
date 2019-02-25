@@ -324,8 +324,11 @@ void fitD2C44(){
 
 Double_t az5=fitD2C(0);
   Double_t el5=fitD2C(1);
+  Double_t el2_vec[kk],az2_vec[kk];
 std::cout<<el5<<std::endl;
   for(int i=0; i<kk; i++){
+    el2_vec[i]=funcEl2(eld_vec[i],azd_vec[i],az5,el5);
+    az2_vec[i]=funcAz2(eld_vec[i],azd_vec[i],az5,el5);
     del_vec2[i] = funcEl2(eld_vec[i],azd_vec[i],az5,el5)-el_vec[i];
     if (del_vec2[i] < -180){
       del_vec2[i]+=360;
@@ -471,7 +474,7 @@ gStyle->SetTitleSize(.045, "XY");
 
   TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
   TString nam3("D2C44comp2.png");
-  TGraph* g=new TGraph(kk,az_vec,el_vec);
+  TGraph* g=new TGraph(kk,az2_vec,el2_vec);
   g->SetMarkerStyle(20);
   g->SetMarkerSize(0.80);
   g->GetXaxis()->SetTitle("azimuth CCD (deg)");

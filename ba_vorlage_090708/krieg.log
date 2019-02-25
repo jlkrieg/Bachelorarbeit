@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  25 FEB 2019 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  25 FEB 2019 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,13 +996,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (./einleitung.tex
 chapter 1.
-)
-Overfull \hbox (4.30768pt too wide) in paragraph at lines 2--113
-\T1/lmr/m/n/10.95 errichtet um die ver-schiedene Sys-teme wie das Point-ing, da
-s heiÿt die richtige Aus-rich-tung des Teleskops,
- []
-
-[1
+) [1
 
 
 ]
@@ -1026,43 +1020,53 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 1.
+
+Overfull \hbox (0.61136pt too wide) in paragraph at lines 3--4
+\T1/lmr/m/n/10.95 Gegen-satz zur kos-mis-chen Strahlung, die über-wiegend aus P
+ro-to-nen besteht, hat un-ge-ladene Photonen-
+ []
+
 [2
 
 
 
-] <Images/tevcat.png, id=363, 410.4936pt x 211.0284pt>
-File: Images/tevcat.png Graphic file (type png)
+]
 
-<use Images/tevcat.png>
+LaTeX Warning: Citation `tevstat' on page 3 undefined on input line 27.
+
+<Images/tevcat.png, id=361, 410.4936pt x 211.0284pt>
+File: Images/tevcat.png Graphic file (type png)
+ <use Images/tevcat.png>
 Package pdftex.def Info: Images/tevcat.png used on input line 35.
 (pdftex.def)             Requested size: 483.69687pt x 248.67323pt.
- [3]
+
+[3]
 Overfull \hbox (1.00644pt too wide) in paragraph at lines 54--55
 \T1/lmr/m/n/10.95 Tscherenkow-Strahlung tritt auf, wenn die Geschwindigkeit gel
 adener Teilchen die Licht-geschwindigkeit
  []
 
-<Images/cherenkow.png, id=378, 387.3672pt x 204.5241pt>
+<Images/cherenkow.png, id=376, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
 Package pdftex.def Info: Images/cherenkow.png used on input line 61.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
  [4 <./Images/tevcat.png>]
-<Images/detection.png, id=390, 895.84688pt x 648.17157pt>
+<Images/detection.png, id=388, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
-Package pdftex.def Info: Images/detection.png used on input line 74.
+Package pdftex.def Info: Images/detection.png used on input line 75.
 (pdftex.def)             Requested size: 483.69687pt x 349.96786pt.
 
-Underfull \hbox (badness 1297) in paragraph at lines 75--75
+Underfull \hbox (badness 1297) in paragraph at lines 76--76
 [][]\T1/lmr/m/n/10.95 Detektion hoch-en-er-getis-cher Strahlung: Das in die At-
 mo-sphäre ein-tre-tende Pho-
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 75--75
+Underfull \hbox (badness 2452) in paragraph at lines 76--76
 \T1/lmr/m/n/10.95 ton erzeugt einen elek-tro-mag-netis-chen Luftschauer (oben r
 echts), der wiederum
  []
@@ -1079,7 +1083,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 6.
 
-<Images/TelescopeTypes.jpg, id=407, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=409, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
@@ -1090,13 +1094,13 @@ Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 30.
 
 
 ]
-<Images/ArrayLayout.png, id=418, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=420, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
 Package pdftex.def Info: Images/ArrayLayout.png used on input line 46.
 (pdftex.def)             Requested size: 483.69687pt x 198.31517pt.
- <Images/night.png, id=421, 1927.2pt x 1284.8pt>
+ <Images/night.png, id=423, 1927.2pt x 1284.8pt>
 File: Images/night.png Graphic file (type png)
 
 <use Images/night.png>
@@ -1106,6 +1110,12 @@ Package pdftex.def Info: Images/night.png used on input line 55.
 Overfull \hbox (7.22551pt too wide) in paragraph at lines 62--63
 \T1/lmr/m/n/10.95 sowohl den Nachthim-mel als auch den Dummy beziehungsweise sp
 äter die Tscherenkowkam-era ablichten.
+ []
+
+
+Overfull \hbox (4.45923pt too wide) in paragraph at lines 62--63
+\T1/lmr/m/n/10.95 ist und die Re-flek-tio-nen der Sterne nicht mehr zu se-hen s
+ind, lässt sich die Po-si-tion der Tscherenkowkam-
  []
 
 [8 <./Images/TelescopeTypes.jpg>] [9 <./Images/ArrayLayout.png> <./Images/night
@@ -1242,34 +1252,33 @@ File: ../341/D2C.png Graphic file (type png)
 <use ../341/D2C.png>
 Package pdftex.def Info: ../341/D2C.png used on input line 155.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- <../341/D2Ccomp2.png, id=597, 1200.485pt x 576.1525pt>
+ <../341/D2Ccomp2.png, id=599, 1200.485pt x 576.1525pt>
 File: ../341/D2Ccomp2.png Graphic file (type png)
 
 <use ../341/D2Ccomp2.png>
 Package pdftex.def Info: ../341/D2Ccomp2.png used on input line 162.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
  [20] [21 <../341/C2Dcomp.png>] [22 <../341/C2D.png> <../341/C2Dcomp2.png>] [23
- <../341/D2Ccomp.png>] [24 <../341/D2C.png> <../341/D2Ccomp2.png>] <../341/C2D4
-4comp.png, id=626, 798.985pt x 576.1525pt>
+ <../341/D2Ccomp.png>] [24 <../341/D2C.png>]
+<../341/C2D44comp.png, id=628, 798.985pt x 576.1525pt>
 File: ../341/C2D44comp.png Graphic file (type png)
 
 <use ../341/C2D44comp.png>
 Package pdftex.def Info: ../341/C2D44comp.png used on input line 187.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/C2D4comp2.png, id=629, 1200.485pt x 576.1525pt>
-File: ../341/C2D4comp2.png Graphic file (type png)
+<../341/C2D44comp2.png, id=630, 1200.485pt x 576.1525pt>
+File: ../341/C2D44comp2.png Graphic file (type png)
 
-<use ../341/C2D4comp2.png>
-Package pdftex.def Info: ../341/C2D4comp2.png used on input line 194.
+<use ../341/C2D44comp2.png>
+Package pdftex.def Info: ../341/C2D44comp2.png used on input line 194.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-
+ [25 <../341/D2Ccomp2.png>] [26 <../341/C2D44comp.png>]
 Overfull \hbox (5.85863pt too wide) in paragraph at lines 200--215
 \T1/lmr/m/n/10.95 Zuletzt wird das Vier-Parameter-Modell be-nutzt um die CCD-Ko
 ordinaten durch die Drive-Koordinaten
  []
 
-[25] [26 <../341/C2D44comp.png> <../341/C2D4comp2.png>]
 <../341/D2C44comp.png, id=644, 798.985pt x 576.1525pt>
 File: ../341/D2C44comp.png Graphic file (type png)
 
@@ -1277,18 +1286,19 @@ File: ../341/D2C44comp.png Graphic file (type png)
 Package pdftex.def Info: ../341/D2C44comp.png used on input line 225.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/D2C4comp2.png, id=645, 1200.485pt x 576.1525pt>
-File: ../341/D2C4comp2.png Graphic file (type png)
+<../341/D2C44comp2.png, id=645, 1200.485pt x 576.1525pt>
+File: ../341/D2C44comp2.png Graphic file (type png)
 
-<use ../341/D2C4comp2.png>
-Package pdftex.def Info: ../341/D2C4comp2.png used on input line 232.
+<use ../341/D2C44comp2.png>
+Package pdftex.def Info: ../341/D2C44comp2.png used on input line 232.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-) [27 <../341/D2C44comp.png>] [28 <../341/D2C4comp2.png>]
+) [27 <../341/C2D44comp2.png>] [28 <../341/D2C44comp.png> <../341/D2C44comp2.pn
+g>] [29]
 \openout2 = `fazit.aux'.
 
  (./fazit.tex
 chapter 6.
-) [29
+) [30
 
 
 
@@ -1298,7 +1308,7 @@ Underfull \hbox (badness 1147) in paragraph at lines 9--13
  alliedvision . com / de / produkte / kameras / kameradetails /
  []
 
-) [30
+) [31
 
 
 ]
@@ -1337,7 +1347,7 @@ A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-[31
+[32
 
 
 
@@ -1352,10 +1362,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-]) [32]
+]) [33]
 \openout2 = `declaration.aux'.
 
- (./declaration.tex) [33
+ (./declaration.tex) [34
 
 
 
@@ -1371,18 +1381,21 @@ Package rerunfilecheck Info: File `krieg.out' has not changed.
 (rerunfilecheck)             Checksum: 6431713067382C2F744F276ED67C39E1;2903.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 9145 strings out of 494910
- 138621 string characters out of 6179836
- 312526 words of memory out of 5000000
- 12002 multiletter control sequences out of 15000+600000
+ 9147 strings out of 494910
+ 138647 string characters out of 6179836
+ 312472 words of memory out of 5000000
+ 12003 multiletter control sequences out of 15000+600000
  68472 words of font info for 53 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,11n,66p,1875b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,66p,1883b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1397,10 +1410,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt10.pfb>
-Output written on krieg.pdf (39 pages, 11933277 bytes).
+Output written on krieg.pdf (40 pages, 11932945 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
- 692 compressed objects within 7 object streams
- 185 named destinations out of 1000 (max. 500000)
+ 795 PDF objects out of 1000 (max. 8388607)
+ 697 compressed objects within 7 object streams
+ 186 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

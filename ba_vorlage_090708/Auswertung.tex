@@ -127,7 +127,7 @@ Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in 
 \caption{Die vom Zwei-Parameter-Modell vorhergesagten Drive-Koordinaten (rot) im Vergleich zu den experimentell bestimmten (schwarz)}
 \label{img:C2Dcomp2}
 \end{figure}
-
+Hier ist gut zu sehen dass, die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
 Möchte man jedoch die Koordinaten des Drives in Abbhängigkeit der CCD bestimmem, so benötigt man das inverse Modell, welches durch die Formeln \ref{eq:elD2C} und \ref{eq:azD2C} beschrieben wird. Für dieses Modell werden mithlife des Programms die Parameter in Tabelle \ref{tab:D2C} bestimmt.
 \begin{table}[htbp]
@@ -156,7 +156,7 @@ Betrachtet man wieder die Abweichungen des Pointingmodell isoliert (Abbildung \r
 \caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell vorhergesagten CCD-Koordinaten und den gemessenen CCD-Koordinaten  im Detail: Hier sind ähnliche systematische Abweichungen wie im inversen Modell sichtbar.}
 \label{img:D2C}
 \end{figure}
-so sieht man, dass für die beiden oberen Graphen die Effekte ähnlich wie die in Abbildung \ref{img:C2D} sind. Das die Graphen der Azimutabhängigkeit verzerrt aussehen, lässt sich durch den Wechsel der Koordinaten erklären.
+so sieht man, dass für die beiden oberen Graphen die Effekte ähnlich wie die in Abbildung \ref{img:C2D} sind. Das die Graphen der Azimutabhängigkeit verzerrt aussehen, lässt sich durch den Wechsel der Koordinaten erklären. Vergleicht man wieder die Positionen der gemessenen Werte mit den Modellwerten (Abbildung \ref{img:D2Ccomp2}), so stellt man fest, das wie in Abbildung \ref{img:C2Dcomp} die Wellenbewegung unabhängig von den einzelnen Werten der Elevation unabhängig sind.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/D2Ccomp2.png}
@@ -188,11 +188,11 @@ Hier fällt auf, dass die Fehler im Gegensatz zum Zwei-Parameter-Modell deutlich
 \caption{Vergleich der Differenzen zwischen den vom Vier-Parameter-Modell (rot) bzw vom Zwei-Parameter-Modell (schwarz) vorhergesagten Drive-Koordinaten und den realen Werten: Die beiden zusätzlichen Parameter bringen kaum eine Verbesserung.}
 \label{img:C2D4comp}
 \end{figure}
-In der Abbildung sind lediglich für große Elevationswerte des Drives Abweichungen zu erkennen. Aufgrund der kleinen Werte für die Parameter $az_1$ und $el_1$ sind zunächst keine großen Änderungen zum Zwei-Parameter-Modell zu erwarten. Zudem überwiegt beispielsweise im Graphen rechts oben eine Wellenbewegung, die sich nicht durch einen konstante Verschiebung korrigieren lässt. Vergleicht man die vorhergesagten Positionen mit den gemessenen Positionen (Abbildung \ref{img:C2D4comp2}) erhält man aufgrund der nur kleinen Korrekturen zum Zwei-Parametermodell ein ähnliches Verhalten wie in Abbildung \ref{img:C2Dcomp2}.
+In der Abbildung sind lediglich für große Elevationswerte des Drives Abweichungen zu erkennen. Aufgrund der kleinen Werte für die Parameter $az_1$ und $el_1$ sind zunächst keine großen Änderungen zum Zwei-Parameter-Modell zu erwarten. Zudem überwiegt beispielsweise im Graphen rechts oben eine Wellenbewegung, die sich nicht durch einen konstante Verschiebung korrigieren lässt. Vergleicht man die vorhergesagten Positionen der beiden Modelle (Abbildung \ref{img:C2D4comp2}) so kann man nur bei einzelnen Punkte eine kleine Abweichung erkennen.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{../341/C2D4comp2.png}
-\caption{Die vom Vier-Parameter-Modell vorhergesagten Drive-Koordinaten (rot) im Vergleich zu den experimentell Bestimmten (schwarz): Es ist kaum ein Unterschied zum Zwei-Parameter-Modell zu erkennen.}
+\includegraphics[width=\textwidth]{../341/C2D44comp2.png}
+\caption{Die vom Vier-Parameter-Modell (rot) vorhergesagten im Vergleich zu den vom Zwei-Parameter-Modell (schwarz) vorhergesagten Drive-Koordinaten: Es ist kaum ein Unterschied zu erkennen.}
 \label{img:C2D4comp2}
 \end{figure}
 
@@ -226,11 +226,11 @@ ermittelt. Ähnlich sieht für die Korrelation zwischen $az_0$ und $el_0$ aus. H
 \caption{Das Vier-Parameter-Modell (rot) für die Vorhersage der CCD-Koordinaten im Vergleich zum Zwei-Parameter-Modell (schwarz): Wie erwartet sind kaum Verbesserungen zu erkennnen.}
 \label{img:D2C4comp}
 \end{figure}
-Somit gibt es auch keine nennenswerte Veränderung im Vergleich der vorhergesagten und experimentell bestimmten Positionen
+Wie oben erwartet man somit auch keinen nennenswerten Unterschied zwischen den vom Vier- und vom Zwei-Parameter-Modell vorhergesagten Unterschiede.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{../341/D2C4comp2.png}
-\caption{Die vom Vier-Parameter-Modell (rot)vorhergesagten Koordinaten der CCD im Vergleich zu den experimentell bestimmten.}
+\includegraphics[width=\textwidth]{../341/D2C44comp2.png}
+\caption{Die vom Vier-Parameter-Modell (rot) im Vergleich zu den vom Zwei-Parameter-Modell vorhergesagten Koordinaten der CCD.}
 \label{img:D2C4comp2}
 \end{figure}
 
