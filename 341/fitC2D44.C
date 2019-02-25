@@ -439,7 +439,6 @@ gStyle->SetTitleSize(.045, "XY");
     m->Draw();
   }
   g_delel2->GetYaxis()->SetRangeUser(-0.35,0.35);
-  }
   //g_delel2->GetYaxis()->SetRangeUser(-1,8);
   can2->Update();
   TGraph* g_delaz2=new TGraph(kk,az_vec,del_vec2);
@@ -493,22 +492,22 @@ gStyle->SetTitleSize(.045, "XY");
   can2->Update();
   can2->SaveAs(nam2);
 
-  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
-  TString nam3("C2D44comp2.png");
-  TGraph* g=new TGraph(kk,azd_vec,eld_vec);
-  g->SetMarkerStyle(20);
-  g->SetMarkerSize(0.80);
-  g->GetXaxis()->SetTitle("azimuth drive (deg)");
-  g->GetYaxis()->SetTitle("elevation drive (deg)");
-  g->SetTitle("");
-  g->Draw("AP");
-  for (int i=0; i<kk; i++){
-    TMarker *m = new TMarker(funcAz(el_vec[i],az_vec[i],az0,el0,az1,el1),funcEl(el_vec[i],az_vec[i],az0,el0,az1,el1),20);
-    m->SetMarkerSize(0.80);
-    m->SetMarkerColor(2);
-    m->Draw();
-  }
-  can3->SaveAs(nam3);
-  can->SaveAs(nam);
+  // TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
+  // TString nam3("C2D44comp2.png");
+  // TGraph* g=new TGraph(kk,azd_vec,eld_vec);
+  // g->SetMarkerStyle(20);
+  // g->SetMarkerSize(0.80);
+  // g->GetXaxis()->SetTitle("azimuth drive (deg)");
+  // g->GetYaxis()->SetTitle("elevation drive (deg)");
+  // g->SetTitle("");
+  // g->Draw("AP");
+  // for (int i=0; i<kk; i++){
+  //   TMarker *m = new TMarker(funcAz(el_vec[i],az_vec[i],az0,el0,az1,el1),funcEl(el_vec[i],az_vec[i],az0,el0,az1,el1),20);
+  //   m->SetMarkerSize(0.80);
+  //   m->SetMarkerColor(2);
+  //   m->Draw();
+  // }
+  // can3->SaveAs(nam3);
+  // can->SaveAs(nam);
   }
 
