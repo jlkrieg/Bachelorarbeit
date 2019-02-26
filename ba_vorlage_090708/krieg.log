@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  25 FEB 2019 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.18)  26 FEB 2019 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -941,6 +941,50 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 
 
 (./abstract.tex
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...n Tscherenkow-Teleskopen ersetzen soll. Fü
+                                                  r eines der Teleskope wurd...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char ägm (U+D8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ... drei CCD-Kameras, von denen eine schräg m
+                                                  ontiert ist. Für diese wir...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 ...as, von denen eine schräg montiert ist. Fü
+                                                  r diese wird ein Modell en...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
@@ -1030,30 +1074,26 @@ ro-to-nen besteht, hat un-ge-ladene Photonen-
 
 
 
-]
-
-LaTeX Warning: Citation `tevstat' on page 3 undefined on input line 27.
-
-<Images/tevcat.png, id=361, 410.4936pt x 211.0284pt>
+] <Images/tevcat.png, id=363, 410.4936pt x 211.0284pt>
 File: Images/tevcat.png Graphic file (type png)
- <use Images/tevcat.png>
+
+<use Images/tevcat.png>
 Package pdftex.def Info: Images/tevcat.png used on input line 35.
 (pdftex.def)             Requested size: 483.69687pt x 248.67323pt.
-
-[3]
+ [3]
 Overfull \hbox (1.00644pt too wide) in paragraph at lines 54--55
 \T1/lmr/m/n/10.95 Tscherenkow-Strahlung tritt auf, wenn die Geschwindigkeit gel
 adener Teilchen die Licht-geschwindigkeit
  []
 
-<Images/cherenkow.png, id=376, 387.3672pt x 204.5241pt>
+<Images/cherenkow.png, id=379, 387.3672pt x 204.5241pt>
 File: Images/cherenkow.png Graphic file (type png)
 
 <use Images/cherenkow.png>
 Package pdftex.def Info: Images/cherenkow.png used on input line 61.
 (pdftex.def)             Requested size: 338.58632pt x 178.77711pt.
  [4 <./Images/tevcat.png>]
-<Images/detection.png, id=388, 895.84688pt x 648.17157pt>
+<Images/detection.png, id=390, 895.84688pt x 648.17157pt>
 File: Images/detection.png Graphic file (type png)
 
 <use Images/detection.png>
@@ -1083,7 +1123,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 6.
 
-<Images/TelescopeTypes.jpg, id=409, 3854.4pt x 2168.1pt>
+<Images/TelescopeTypes.jpg, id=411, 3854.4pt x 2168.1pt>
 File: Images/TelescopeTypes.jpg Graphic file (type jpg)
 
 <use Images/TelescopeTypes.jpg>
@@ -1094,13 +1134,13 @@ Package pdftex.def Info: Images/TelescopeTypes.jpg used on input line 30.
 
 
 ]
-<Images/ArrayLayout.png, id=420, 963.6pt x 395.076pt>
+<Images/ArrayLayout.png, id=422, 963.6pt x 395.076pt>
 File: Images/ArrayLayout.png Graphic file (type png)
 
 <use Images/ArrayLayout.png>
 Package pdftex.def Info: Images/ArrayLayout.png used on input line 46.
 (pdftex.def)             Requested size: 483.69687pt x 198.31517pt.
- <Images/night.png, id=423, 1927.2pt x 1284.8pt>
+ <Images/night.png, id=425, 1927.2pt x 1284.8pt>
 File: Images/night.png Graphic file (type png)
 
 <use Images/night.png>
@@ -1119,7 +1159,7 @@ ind, lässt sich die Po-si-tion der Tscherenkowkam-
  []
 
 [8 <./Images/TelescopeTypes.jpg>] [9 <./Images/ArrayLayout.png> <./Images/night
-.png>] <Images/ccd.png, id=433, 269.808pt x 273.1806pt>
+.png>] <Images/ccd.png, id=435, 269.808pt x 273.1806pt>
 File: Images/ccd.png Graphic file (type png)
  <use Images/ccd.png>
 Package pdftex.def Info: Images/ccd.png used on input line 68.
@@ -1130,7 +1170,7 @@ Package pdftex.def Info: Images/ccd.png used on input line 68.
 
  (./Pointing.tex
 chapter 4.
-<Images/coordinates.png, id=454, 505.89pt x 337.26pt>
+<Images/coordinates.png, id=456, 505.89pt x 337.26pt>
 File: Images/coordinates.png Graphic file (type png)
 
 <use Images/coordinates.png>
@@ -1140,14 +1180,20 @@ Package pdftex.def Info: Images/coordinates.png used on input line 9.
 
 
 
- <./Images/coordinates.png>] [13]
-<../341/data2.png, id=478, 798.985pt x 576.1525pt>
+ <./Images/coordinates.png>]
+
+LaTeX Warning: Reference `eq:approx' on page 13 undefined on input line 54.
+
+
+LaTeX Warning: Reference `eq:approx' on page 13 undefined on input line 64.
+
+[13] <../341/data2.png, id=481, 798.985pt x 576.1525pt>
 File: ../341/data2.png Graphic file (type png)
  <use ../341/data2.png>
-Package pdftex.def Info: ../341/data2.png used on input line 75.
+Package pdftex.def Info: ../341/data2.png used on input line 77.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
@@ -1155,7 +1201,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 ! Missing delimiter (. inserted).
 <to be read again> 
                    _
-l.109 ..._D)\cos(el_0)-\sin(el_D)\sin(el_0)\right_
+l.111 ..._D)\cos(el_0)-\sin(el_D)\sin(el_0)\right_
                                                   D)-\cos(el_0)\sin(az_D)\si...
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1165,33 +1211,33 @@ Acceptable delimiters are characters whose \delcode is
 nonnegative, or you can use `\delimiter <delimiter code>'.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 138.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 139.
-
-
-LaTeX Warning: Command \textgreater invalid in math mode on input line 139.
-
-
-LaTeX Warning: Command \textless invalid in math mode on input line 140.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 140.
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 141.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 141.
+LaTeX Warning: Command \textgreater invalid in math mode on input line 141.
 
 
-LaTeX Warning: Command \textgreater invalid in math mode on input line 142.
+LaTeX Warning: Command \textless invalid in math mode on input line 142.
 
 
 LaTeX Warning: Command \textless invalid in math mode on input line 143.
 
+
+LaTeX Warning: Command \textless invalid in math mode on input line 143.
+
+
+LaTeX Warning: Command \textgreater invalid in math mode on input line 144.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 145.
+
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \mathclose 
-l.145 \end{equation}
+l.147 \end{equation}
                     
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1205,16 +1251,16 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 
  (./Auswertung.tex
 chapter 5.
-<../341/data4.png, id=556, 1200.485pt x 576.1525pt>
+<../341/data4.png, id=559, 1200.485pt x 576.1525pt>
 File: ../341/data4.png Graphic file (type png)
  <use ../341/data4.png>
 Package pdftex.def Info: ../341/data4.png used on input line 9.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
-<../341/histo.png, id=558, 1200.485pt x 576.1525pt>
+<../341/histo.png, id=561, 1200.485pt x 576.1525pt>
 File: ../341/histo.png Graphic file (type png)
  <use ../341/histo.png>
-Package pdftex.def Info: ../341/histo.png used on input line 18.
+Package pdftex.def Info: ../341/histo.png used on input line 17.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
 
 [18
@@ -1222,78 +1268,87 @@ Package pdftex.def Info: ../341/histo.png used on input line 18.
 
 
  <../341/data4.png>] [19 <../341/histo.png>]
-<../341/C2Dcomp.png, id=583, 798.985pt x 576.1525pt>
+<../341/C2Dcomp.png, id=587, 798.985pt x 576.1525pt>
 File: ../341/C2Dcomp.png Graphic file (type png)
  <use ../341/C2Dcomp.png>
-Package pdftex.def Info: ../341/C2Dcomp.png used on input line 112.
+Package pdftex.def Info: ../341/C2Dcomp.png used on input line 111.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/C2D.png, id=585, 798.985pt x 576.1525pt>
+<../341/C2D.png, id=589, 798.985pt x 576.1525pt>
 File: ../341/C2D.png Graphic file (type png)
  <use ../341/C2D.png>
-Package pdftex.def Info: ../341/C2D.png used on input line 119.
+Package pdftex.def Info: ../341/C2D.png used on input line 118.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/C2Dcomp2.png, id=587, 1200.485pt x 576.1525pt>
+<../341/C2Dcomp2.png, id=591, 1200.485pt x 576.1525pt>
 File: ../341/C2Dcomp2.png Graphic file (type png)
 
 <use ../341/C2Dcomp2.png>
-Package pdftex.def Info: ../341/C2Dcomp2.png used on input line 126.
+Package pdftex.def Info: ../341/C2Dcomp2.png used on input line 125.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
- <../341/D2Ccomp.png, id=593, 798.985pt x 576.1525pt>
+ <../341/D2Ccomp.png, id=597, 798.985pt x 576.1525pt>
 File: ../341/D2Ccomp.png Graphic file (type png)
 
 <use ../341/D2Ccomp.png>
-Package pdftex.def Info: ../341/D2Ccomp.png used on input line 148.
+Package pdftex.def Info: ../341/D2Ccomp.png used on input line 147.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- <../341/D2C.png, id=595, 798.985pt x 576.1525pt>
+ <../341/D2C.png, id=599, 798.985pt x 576.1525pt>
 File: ../341/D2C.png Graphic file (type png)
 
 <use ../341/D2C.png>
-Package pdftex.def Info: ../341/D2C.png used on input line 155.
+Package pdftex.def Info: ../341/D2C.png used on input line 154.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
- <../341/D2Ccomp2.png, id=599, 1200.485pt x 576.1525pt>
+ <../341/D2Ccomp2.png, id=603, 1200.485pt x 576.1525pt>
 File: ../341/D2Ccomp2.png Graphic file (type png)
 
 <use ../341/D2Ccomp2.png>
-Package pdftex.def Info: ../341/D2Ccomp2.png used on input line 162.
+Package pdftex.def Info: ../341/D2Ccomp2.png used on input line 161.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
  [20] [21 <../341/C2Dcomp.png>] [22 <../341/C2D.png> <../341/C2Dcomp2.png>] [23
  <../341/D2Ccomp.png>] [24 <../341/D2C.png>]
-<../341/C2D44comp.png, id=628, 798.985pt x 576.1525pt>
+Underfull \hbox (badness 2903) in paragraph at lines 180--180
+[][]\T1/lmr/m/n/10.95 Die vier Pa-ram-e-ter zur Vorher-sage der Drive-Koordinat
+en durch das er-weit-erte
+ []
+
+<../341/C2D44comp.png, id=632, 798.985pt x 576.1525pt>
 File: ../341/C2D44comp.png Graphic file (type png)
 
 <use ../341/C2D44comp.png>
-Package pdftex.def Info: ../341/C2D44comp.png used on input line 187.
+Package pdftex.def Info: ../341/C2D44comp.png used on input line 186.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/C2D44comp2.png, id=630, 1200.485pt x 576.1525pt>
+<../341/C2D44comp2.png, id=634, 1200.485pt x 576.1525pt>
 File: ../341/C2D44comp2.png Graphic file (type png)
 
 <use ../341/C2D44comp2.png>
-Package pdftex.def Info: ../341/C2D44comp2.png used on input line 194.
+Package pdftex.def Info: ../341/C2D44comp2.png used on input line 193.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
  [25 <../341/D2Ccomp2.png>] [26 <../341/C2D44comp.png>]
-Overfull \hbox (5.85863pt too wide) in paragraph at lines 200--215
+Overfull \hbox (5.85863pt too wide) in paragraph at lines 199--214
 \T1/lmr/m/n/10.95 Zuletzt wird das Vier-Parameter-Modell be-nutzt um die CCD-Ko
 ordinaten durch die Drive-Koordinaten
  []
 
-<../341/D2C44comp.png, id=644, 798.985pt x 576.1525pt>
+<../341/D2C44comp.png, id=648, 798.985pt x 576.1525pt>
 File: ../341/D2C44comp.png Graphic file (type png)
 
 <use ../341/D2C44comp.png>
-Package pdftex.def Info: ../341/D2C44comp.png used on input line 225.
+Package pdftex.def Info: ../341/D2C44comp.png used on input line 224.
 (pdftex.def)             Requested size: 483.69687pt x 348.7975pt.
 
-<../341/D2C44comp2.png, id=645, 1200.485pt x 576.1525pt>
+<../341/D2C44comp2.png, id=649, 1200.485pt x 576.1525pt>
 File: ../341/D2C44comp2.png Graphic file (type png)
 
 <use ../341/D2C44comp2.png>
-Package pdftex.def Info: ../341/D2C44comp2.png used on input line 232.
+Package pdftex.def Info: ../341/D2C44comp2.png used on input line 231.
 (pdftex.def)             Requested size: 483.69687pt x 232.13606pt.
-) [27 <../341/C2D44comp2.png>] [28 <../341/D2C44comp.png> <../341/D2C44comp2.pn
-g>] [29]
+ [27 <../341/C2D44comp2.png>] [28 <../341/D2C44comp.png>]
+
+LaTeX Warning: Reference `eq:PointingZero' on page 29 undefined on input line 2
+39.
+
+) [29 <../341/D2C44comp2.png>]
 \openout2 = `fazit.aux'.
 
  (./fazit.tex
@@ -1378,7 +1433,7 @@ tronomie.aux) (./CTA.aux) (./Pointing.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `krieg.out' has not changed.
-(rerunfilecheck)             Checksum: 6431713067382C2F744F276ED67C39E1;2903.
+(rerunfilecheck)             Checksum: 5F150279B5D21BBC6082E5CB138FB7CF;2893.
 
 
 LaTeX Warning: There were undefined references.
@@ -1389,17 +1444,17 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 9147 strings out of 494910
- 138647 string characters out of 6179836
- 312472 words of memory out of 5000000
- 12003 multiletter control sequences out of 15000+600000
+ 9152 strings out of 494910
+ 138711 string characters out of 6179836
+ 312601 words of memory out of 5000000
+ 12007 multiletter control sequences out of 15000+600000
  68472 words of font info for 53 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  43i,11n,66p,1883b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
@@ -1410,10 +1465,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt10.pfb>
-Output written on krieg.pdf (40 pages, 11932945 bytes).
+Output written on krieg.pdf (40 pages, 11933308 bytes).
 PDF statistics:
- 795 PDF objects out of 1000 (max. 8388607)
- 697 compressed objects within 7 object streams
- 186 named destinations out of 1000 (max. 500000)
+ 802 PDF objects out of 1000 (max. 8388607)
+ 703 compressed objects within 8 object streams
+ 187 named destinations out of 1000 (max. 500000)
  391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -14,13 +14,13 @@
 \contentsline {section}{\numberline {3.2}Prototyp in Adlershof}{8}{section.25}
 \contentsline {subsection}{\numberline {3.2.1}Pointing des Teleskops mit CCD-Kameras}{8}{subsection.27}
 \contentsline {subsection}{\numberline {3.2.2}Kameras des MST}{10}{subsection.28}
-\contentsline {chapter}{\numberline {4}Pointingmodell f\IeC {\"u}r eine gro\IeC {\ss }e Abweichung zur optischen Achse}{12}{chapter.31}
+\contentsline {chapter}{\numberline {4}Ableitung eines Grundlegenden Pointingmodells}{12}{chapter.31}
 \contentsline {section}{\numberline {4.1}Koordinaten}{12}{section.32}
 \contentsline {section}{\numberline {4.2}Entwicklung von Pointingmodellen}{12}{section.34}
 \contentsline {section}{\numberline {4.3}Motivation des Pointingmodells}{13}{section.44}
 \contentsline {section}{\numberline {4.4}Pointingmodell mit zwei Parametern}{14}{section.46}
-\contentsline {subsection}{\numberline {4.4.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten}{14}{subsection.47}
-\contentsline {subsection}{\numberline {4.4.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{16}{subsection.62}
+\contentsline {subsection}{\numberline {4.4.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit von den Drive-Koordinaten}{14}{subsection.47}
+\contentsline {subsection}{\numberline {4.4.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit von den CCD-Koordinaten}{16}{subsection.62}
 \contentsline {section}{\numberline {4.5}Erweiterung des Modells auf vier Parameter}{17}{section.81}
 \contentsline {chapter}{\numberline {5}Anwendung des Pointingmodells auf Daten des Teleskops}{18}{chapter.86}
 \contentsline {section}{\numberline {5.1}Datensatz}{18}{section.87}
@@ -28,7 +28,7 @@
 \contentsline {section}{\numberline {5.3}Anwendung auf das Pointingmodell mit zwei Parametern}{20}{section.98}
 \contentsline {subsection}{\numberline {5.3.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{20}{subsection.99}
 \contentsline {subsection}{\numberline {5.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{20}{subsection.104}
-\contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit 4 Parametern}{25}{section.109}
+\contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit vier Parametern}{25}{section.109}
 \contentsline {subsection}{\numberline {5.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{25}{subsection.110}
 \contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{27}{subsection.114}
 \contentsline {section}{\numberline {5.5}Systematische Abweichungen im entwickelten Pointingmodell}{29}{section.120}

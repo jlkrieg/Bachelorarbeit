@@ -25,45 +25,45 @@ Warning--empty journal in DesignConcept
 Warning--empty journal in GB-VHE
 Warning--empty year in Ruslan
 Warning--empty journal in NextGen
-You've used 12 entries,
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            572 strings with 5777 characters,
-and the built_in function-call counts, 3100 in all, are:
-= -- 292
-> -- 137
+            575 strings with 6068 characters,
+and the built_in function-call counts, 3552 in all, are:
+= -- 326
+> -- 185
 < -- 0
-+ -- 58
-- -- 44
-* -- 184
-:= -- 521
-add.period$ -- 35
-call.type$ -- 12
-change.case$ -- 57
++ -- 78
+- -- 62
+* -- 223
+:= -- 601
+add.period$ -- 37
+call.type$ -- 13
+change.case$ -- 69
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 111
-empty$ -- 265
-format.name$ -- 44
-if$ -- 643
+cite$ -- 20
+duplicate$ -- 118
+empty$ -- 287
+format.name$ -- 62
+if$ -- 728
 int.to.chr$ -- 0
-int.to.str$ -- 12
+int.to.str$ -- 13
 missing$ -- 8
-newline$ -- 62
-num.names$ -- 18
-pop$ -- 89
+newline$ -- 66
+num.names$ -- 20
+pop$ -- 106
 preamble$ -- 1
-purify$ -- 45
+purify$ -- 56
 quote$ -- 0
-skip$ -- 79
+skip$ -- 87
 stack$ -- 0
-substring$ -- 150
-swap$ -- 8
+substring$ -- 156
+swap$ -- 9
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 46
+type$ -- 50
 warning$ -- 7
-while$ -- 22
-width$ -- 14
-write$ -- 117
+while$ -- 24
+width$ -- 15
+write$ -- 125
 (There was 1 error message)

@@ -7,7 +7,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Die beiden Parameter f\IeC {\"u}r die Vorhersage der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}}{20}{table.100}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Die beiden Parameter f\IeC {\"u}r die Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten}}{21}{table.105}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Die vier Parameter um die CCD-Koordinaten durch das erweiterte Pointingmodell vorherzusagen}}{25}{table.111}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Die vier Parameter zur Vorhersage der Drive-Koordinaten durch das erweiterte Pointingmodell}}{25}{table.111}
 \contentsline {table}{\numberline {5.4}{\ignorespaces Die f\IeC {\"u}r das Pointingmodell mit vier Parametern bestimmten Werte, wobei die CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drive-Koordinaten vorhergesagt wurden.}}{27}{table.115}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

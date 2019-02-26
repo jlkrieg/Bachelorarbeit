@@ -3,23 +3,22 @@
 Um das in Kapitel \ref{ch:pointing} entwickelte Pointingmodell zu testen, wurde mit dem Prototyp des MST ein Datensatz aufgenommen, der mit den Vorhersagen des Modells verglichen wird.
 \section{Datensatz}
 \label{se:data}
-Zur Analyse wurde der in der Nacht vom 4. auf den 5. Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC mit dem Prototypen des MST in Berlin-Adlershof aufgenommene Datensatz "run341" verwendet. Dazu wurden 105 Postionen (Abbildung \ref{img:record}) beobachtet, wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand.
+Zur Analyse wurde der in der Nacht vom $4.$ auf den $5.$ Juli 2018 im Zeitraum von 21:00 UTC bis 1:45 UTC mit dem Prototypen des MST in Berlin-Adlershof aufgenommene Datensatz "run341" verwendet. Dazu wurden 105 Postionen (Abbildung \ref{img:record}) beobachtet, wobei das Teleskop anfangs Richtung Zenit stand und sich dann in einer abwärtslaufenden Spirale befand.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/data4.png}
 \caption{Die am Teleskop eingestellten Position zur Datenaufnahme: Die Daten wurden in einer spiralförmigen Bewegung des Teleskops aufgenommen.}
 \label{img:record}
 \end{figure}
-An jeder Position wurden 4 Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten.
-Um die Bilder aufzunehmen, wurde eine Position des Nachthimmels eingestellt, die während der Belichtung des Bildes verfolgt wurde. Als Zeitstempel für die jeweiligen Bilder wird die Mitte der Belichtungszeit gewählt. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst die Software \texttt{astrometry.net} verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit dem bekannten Sternenhimmel vergleicht. Hierdurch lassen sich die Himmelskoordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes bestimmen.
-Die Himmelskoordinaten lassen sich mithilfe des Zeitstempels in das Koordinatensystem des Teleskops umrechnen und aus der Größe des Bildausschnitts lässt sich noch der Pixelscale bestimmen, der angibt, wie groß das Gesichtsfeld eines einzelnen Pixels ist. Da der Pixelscale kameraspezifisch und bekannt ist, lässt sich mit diesem überprüfen, ob das Bild richtig aufgelöst wurde. Von den 105 aufgenommenen Bildern konnten 100 gelöst werden, wobei der Pixelscale wie in Abbildung \ref{img:ps}
+An jeder Position wurden vier Bilder aufgezeichnet, wovon zwei eine Belichtungszeit von 20 Sekunden hatten.
+Um die Bilder aufzunehmen, wurde eine Position des Nachthimmels eingestellt, die während der Belichtung des Bildes wie ein Stern verfolgt wurde. Als Zeitstempel für die jeweiligen Bilder wird die Mitte der Belichtungszeit gewählt. Die jeweils zweiten Bilder werden hier zur Analyse verwendet. Dazu wird zunächst die Software \texttt{astrometry.net} verwendet, die aus den Bildern die jeweiligen Positionen der Sterne liest und diese mit Katalogen des Sternenhimmel vergleicht. Hierdurch lassen sich die Himmelskoordinaten des Mittelpunktes des Bildes sowie die Größe des Bildausschnittes und die Pixelskala angibt, wie groß das Gesichtsfeld eines einzelnen Pixels ist, bestimmen. Da die Pixelskala kameraspezifisch und bekannt ist, lässt sich mit dieser überprüfen, ob das Bild richtig aufgelöst wurde. Von den 105 aufgenommenen Bildern konnten 100 gelöst werden, wobei der Pixelscale wie in Abbildung \ref{img:ps}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/histo.png}
-\caption{Die Verteilung der von \texttt{astrometry.net} bestimmten Pixelscales: Diese sollte dem in Tabelle \ref{tab:SkyCCD} angegebenen Wert von $11.03\unit{arcsec}$ entsprechen.}
+\caption{Die Verteilung der von \texttt{astrometry.net} bestimmten Pixelscales: Diese sollte dem in Tabelle \ref{tab:SkyCCD} angegebenen Wert von $11.03\unit{^{\prime\prime}}$ entsprechen.}
 \label{img:ps}
 \end{figure}
-zu sehen ist, in keinem der Bilder um mehr als $0,04\unit{arcsec}$ abweicht. Somit können alle gelösten Aufnahmen zur Analyse verwendet werden. Die Differenzen zwischen Drive- und CCD-Koordinaten sind in \ref{img:dataset} dargestellt.
+zu sehen ist, in keinem der Bilder um mehr als $0,04\unit{^{\prime\prime}}$ vom im Tabelle \ref{tab:SkyCCD} angegebenen Wert abweicht. Somit können alle gelösten Aufnahmen zur Analyse verwendet werden. Die Himmelskoordinaten lassen sich mithilfe des Zeitstempels in das Koordinatensystem des Teleskops transformieren. Die Differenzen zwischen Drive- und CCD-Koordinaten sind in \ref{img:dataset} dargestellt.
 %\begin{figure}[htbp]
 %\centering
 %\includegraphics[width=\textwidth]{../341/data2.png}
@@ -28,30 +27,30 @@ zu sehen ist, in keinem der Bilder um mehr als $0,04\unit{arcsec}$ abweicht. Som
 %\end{figure}
 \section{Bestimmung der optimalen Parameter für die Pointingmodelle}
 
-Um das Pointingmodell auf Konsistenz zu überprüfen, wurde ein Programm mit \texttt{ROOT} geschrieben, das die optimalen Parameter für die in Kapitel \ref{ch:pointing} Pointingmodelle berechnet. Aus dem Vergleich der mit diesen Modellen vorhergesagten Werte mit den gemessenen Daten lassen sich dann Rückschlüsse über die Qualität der Pointingmodelle schließen. Um die optimalen Parameter zu berechnen werden zunächst die Abstände zwischen den vom Pointingmodell mit Parametern $\vec{q}$ bestimmten (Index P) und den experimentell bestimmten Positionen (Index E) bestimmt. Da alle Positionen, wie in Abbildung \ref{img:coordinates} zu sehen ist, auf einer Kugeloberfläche liegen, lässt sich der Abstand zwischen zwei Punkten durch einen Winkel 
+Um das Pointingmodell auf Konsistenz zu überprüfen, wurde ein \texttt{C++}-Programm mit \texttt{ROOT} geschrieben, das die optimalen Parameter für die in Kapitel \ref{ch:pointing} betrachteten Pointingmodelle berechnet. Aus dem Vergleich der mit diesen Modellen vorhergesagten Werte mit den gemessenen Daten lassen sich dann Rückschlüsse über auf Qualität der Pointingmodelle ziehen. Um die optimalen Parameter zu berechnen, werden zunächst die Winkelabstände zwischen den vom Pointingmodell mit Parametern $\vec{q}$ bestimmten (Index P) und den experimentell bestimmten Positionen (Index E) bestimmt. Da alle Positionen, wie in Abbildung \ref{img:coordinates} zu sehen ist, auf der Himmelssphäre liegen, lässt sich der Abstand zwischen zwei Punkten durch einen Winkel 
 \begin{equation}
-\psi=\arccos\left(\sin(el_E)\sin(el_P)+\cos(el_P)\cos(el_E)\cos(az_P-az_E)\right).
+\psi=\arccos\left(\sin(el_E)\sin(el_P(\vec{q}))+\cos(el_P(\vec{q}))\cos(el_E)\cos(az_P(\vec{q})-az_E)\right)
 \end{equation}
-ausdrücken. Diese Winkelabstände werden für alle Wertepaare berechnet und summiert. Da die Winkel $\psi$ alle positiv sind, müssen hier keine Quadrate gebildet werden, wodurch die die Summe auch nicht durch Ausreißer dominiert wird. Die besten Parameter erhält man, wenn man die Summe der Winkelabstände minimiert. Dazu wird die Funktion \texttt{TMiniuit} verwendet. Um ein Maß für Güte des Modells zu bekommen wird die Größe $\frac{\chi^2}{doF}$ verwendet, die sich aus 
+ausdrücken. Diese Winkelabstände werden für alle Wertepaare berechnet und summiert. Da die Winkel $\psi$ alle positiv sind, müssen hier keine Quadrate gebildet werden, wodurch die Summe auch nicht durch Ausreißer dominiert wird. Die besten Parameter erhält man, wenn man die Summe der Winkelabstände minimiert. Dazu wird die Funktion \texttt{TMiniuit} verwendet. Unter der Annahme, dass Modell und Daten zusammenpassen, kann der $\chi^2$-Test angewendet werden. Die Größe $\frac{\chi^2}{doF}$ berechnet sich aus 
 \begin{equation}
 \chi^2=\sum^N_{i=1}\frac{\psi^2}{\sigma_i^2}
 \end{equation}
 und der Anzahl der Freiheitsgrade
 \begin{equation}
-doF=N-\textrm{Anzahl der Parameter}
+doF=N-\textrm{Anzahl der Parameter}.
 \end{equation}
-berechnet. Mit dem Wissen, dass der perfekte Wert für für $\frac{\chi^2}{doF}=1$ ist und der Annahme, dass alle Fehler gleich groß sind, lassen sich die Fehler wie folgt berechnen
+berechnet. Mit dem Wissen, dass der perfekte Wert für $\frac{\chi^2}{doF}=1$ ist und der Annahme, dass die Fehler für alle Werte gleich groß sind ($\sigma_i=\sigma$), lassen sich die Fehler wie folgt berechnen
 \begin{equation}
 \sigma=\sqrt{\frac{\sum^N_{i=1}\psi^2}{doF}}.
 \end{equation}
-Der $\chi^2$-Test ist in diesem Modell nur bedingt anwendbar, da bereits bekannt ist, dass das Teleskop noch weitere Fehler besitzt und das Modell somit auch nicht perfekt zu den Daten passen kann. Dennoch kann man so die Qualität des Modells beurteilen.\\
+Da neben den in den Pointingmodellen betrachteten Fehlerquellen noch weitere existieren, passt das Modell nicht perfekt zu den Daten und die berechneten Fehler haben nicht mehr die gleiche Aussagekraft. Dennoch kann man mit ihnen die relative Qualität der Modelle beurteilen.\\
 Zudem werden noch die Eigenschaften der Parameter bestimmt. Dazu wird ebenfalls mithilfe des \texttt{TMinuit}-Pakets die Kovarianzmatrix berechnet, die die Werte
 \begin{equation}
 COV(X,Y)=\left<\left(X-\left<X\right>\right)\cdot\left(Y-\left<Y\right>\right)\right>
 \end{equation}
 enthält. Auf der Hauptdiagonale stehen die Varianzen
 \begin{equation}
-COV(X,X)=VAR(X)=\sigma_X^2
+COV(X,X)=\sigma_X^2
 \end{equation}
 Interessant ist es auch, sich die Korrelation der Parameter untereinander anzusehen. Dazu wird der Korrelationskoeffizient 
 \begin{equation}
@@ -120,16 +119,16 @@ Betrachtet man nur die Differenzen zwischen Pointingmodell und gemessenen Werten
 \caption{Die Abweichungen der vorhergesagten CCD-Koordinaten im Vergleich zu den gemessenen im Detail: Es sind noch systematische Abweichungen zu sehen, die darauf schließen lassen, dass das Modell noch nicht vollständig ist.}
 \label{img:C2D}
 \end{figure}
-Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen, systematische Gründe. Solche Abweichungen waren durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt.
+Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen kann, systematische Gründe. Solche Abweichungen sind durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2Dcomp2.png}
 \caption{Die vom Zwei-Parameter-Modell vorhergesagten Drive-Koordinaten (rot) im Vergleich zu den experimentell bestimmten (schwarz)}
 \label{img:C2Dcomp2}
 \end{figure}
-Hier ist gut zu sehen dass, die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.
+Hier ist gut zu sehen, dass die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
-Möchte man jedoch die Koordinaten des Drives in Abbhängigkeit der CCD bestimmem, so benötigt man das inverse Modell, welches durch die Formeln \ref{eq:elD2C} und \ref{eq:azD2C} beschrieben wird. Für dieses Modell werden mithlife des Programms die Parameter in Tabelle \ref{tab:D2C} bestimmt.
+Möchte man jedoch die Koordinaten des Drives in Abhängigkeit der CCD bestimmen, so benötigt man das inverse Modell, welches durch die Formeln \ref{eq:elD2C} und \ref{eq:azD2C} beschrieben wird. Für dieses Modell werden mithlife des Programms die Parameter in Tabelle \ref{tab:D2C} bestimmt.
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
@@ -156,7 +155,7 @@ Betrachtet man wieder die Abweichungen des Pointingmodell isoliert (Abbildung \r
 \caption{Gezeigt sind die Differenzen zwischen den vom Zwei-Parameter-Modell vorhergesagten CCD-Koordinaten und den gemessenen CCD-Koordinaten  im Detail: Hier sind ähnliche systematische Abweichungen wie im inversen Modell sichtbar.}
 \label{img:D2C}
 \end{figure}
-so sieht man, dass für die beiden oberen Graphen die Effekte ähnlich wie die in Abbildung \ref{img:C2D} sind. Das die Graphen der Azimutabhängigkeit verzerrt aussehen, lässt sich durch den Wechsel der Koordinaten erklären. Vergleicht man wieder die Positionen der gemessenen Werte mit den Modellwerten (Abbildung \ref{img:D2Ccomp2}), so stellt man fest, das wie in Abbildung \ref{img:C2Dcomp} die Wellenbewegung unabhängig von den einzelnen Werten der Elevation unabhängig sind.
+so sieht man, dass für die beiden oberen Graphen die Effekte ähnlich wie die in Abbildung \ref{img:C2D} sind. Dass die Graphen der Azimutabhängigkeit verzerrt aussehen, lässt sich durch den Wechsel der Koordinaten erklären. Vergleicht man wieder die Positionen der gemessenen Werte mit den Modellwerten (Abbildung \ref{img:D2Ccomp2}), so stellt man fest, das wie in Abbildung \ref{img:C2Dcomp} die Wellenbewegung unabhängig von den einzelnen Werten der Elevation unabhängig sind.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/D2Ccomp2.png}
@@ -164,7 +163,7 @@ so sieht man, dass für die beiden oberen Graphen die Effekte ähnlich wie die i
 \label{img:D2Ccomp2}
 \end{figure}
 
-\section{Anwendung auf das Pointingmodell mit 4 Parametern}
+\section{Anwendung auf das Pointingmodell mit vier Parametern}
 Im Folgenden wird das oben verwendete Modell erweitert, indem man wie in Abschnitt \ref{se:4par} annimmt, dass die eingestellten Koordinaten zu den tatsächlichen um jeweils einen konstanten Wert verschoben sind. Zu den obigen Parametern $el_0$ und $az_0$ kommen somit noch die Parameter $az_1$ für eine konstante Verschiebung im Azimut und $el_1$ für eine konstante Verschiebung in der Elevation hinzu.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 Hier wird wie oben mit der Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD begonnen. Dazu verwendet man die Formeln \ref{eq:elC2D4} und \ref{eq:azC2D4}, für die sich mithilfe des Fit-Programms die Parameter aus Tabelle \ref{tab:C2D4} berechnen lassen.
@@ -178,17 +177,17 @@ $el_1$ &=& $(-0,14\pm 5,96)^{\circ}$\\
 $az_1$ &=& $(0,03\pm 4,20)^{\circ}$\\
 \bottomrule
 \end{tabular}
-\caption{Die vier Parameter um die CCD-Koordinaten durch das erweiterte Pointingmodell vorherzusagen}
+\caption{Die vier Parameter zur Vorhersage der Drive-Koordinaten durch das erweiterte Pointingmodell}
 \label{tab:C2D4}
 \end{table}
 Hier fällt auf, dass die Fehler im Gegensatz zum Zwei-Parameter-Modell deutlich größer geworden sind. Außerdem sind die Werte für die neu hinzugefügten Modelle zu vernachlässigen. Um zu überprüfen, inwiefern der zu den Drive-Koordinaten hinzugefügte Offset das Zwei-Parameter-Modell verbessert, werden zunächst die Abstände der beiden Modelle gemeinsam in Abbildung \ref{img:C2D4comp} dargestellt.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2D44comp.png}
-\caption{Vergleich der Differenzen zwischen den vom Vier-Parameter-Modell (rot) bzw vom Zwei-Parameter-Modell (schwarz) vorhergesagten Drive-Koordinaten und den realen Werten: Die beiden zusätzlichen Parameter bringen kaum eine Verbesserung.}
+\caption{Vergleich der Differenzen zwischen den vom Vier-Parameter-Modell (rot) bzw. vom Zwei-Parameter-Modell (schwarz) vorhergesagten Drive-Koordinaten und den realen Werten: Die beiden zusätzlichen Parameter bringen kaum eine Verbesserung.}
 \label{img:C2D4comp}
 \end{figure}
-In der Abbildung sind lediglich für große Elevationswerte des Drives Abweichungen zu erkennen. Aufgrund der kleinen Werte für die Parameter $az_1$ und $el_1$ sind zunächst keine großen Änderungen zum Zwei-Parameter-Modell zu erwarten. Zudem überwiegt beispielsweise im Graphen rechts oben eine Wellenbewegung, die sich nicht durch einen konstante Verschiebung korrigieren lässt. Vergleicht man die vorhergesagten Positionen der beiden Modelle (Abbildung \ref{img:C2D4comp2}) so kann man nur bei einzelnen Punkte eine kleine Abweichung erkennen.
+In der Abbildung sind lediglich für große Elevationswerte des Drives Abweichungen zu erkennen. Aufgrund der kleinen Werte für die Parameter $az_1$ und $el_1$ sind zunächst keine großen Änderungen zum Zwei-Parameter-Modell zu erwarten. Zudem überwiegt beispielsweise im Graphen rechts oben eine Wellenbewegung, die sich nicht durch eine konstante Verschiebung korrigieren lässt. Vergleicht man die vorhergesagten Positionen der beiden Modelle (Abbildung \ref{img:C2D4comp2}) so kann man nur bei einzelnen Punkten eine kleine Abweichung erkennen.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2D44comp2.png}
@@ -211,15 +210,15 @@ $az_1$ &=& $(-0,06\pm 3,61)^{\circ}$\\
 \caption{Die für das Pointingmodell mit vier Parametern bestimmten Werte, wobei die CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten vorhergesagt wurden.}
 \label{tab:D2C4}
 \end{table}
-Im Vergleich zu den Parametern im inversen Modell sind hier die Fehler noch mal deutlich angestiegen. Der Grund hierfür ist die Korrelation der Parameter. Die Addition einer kleinen Konstanten zu einer Drehung verhält sich sehr ähnlich zur Summe dieser beiden Winkel. Die Fehler für $el_0$ und $ez_1$ sind beide ähnlich groß, was auf eine starke negative Korrelation schließen lässt. Tatsächlich wurde für diese beiden Parameter der Korrelationskoeffizient 
+Im Vergleich zu den Parametern im inversen Modell sind hier die Fehler noch einmal deutlich angestiegen. Der Grund hierfür ist die Korrelation der Parameter. Die Addition einer kleinen Konstanten zu einer Drehung verhält sich sehr ähnlich zur Summe dieser beiden Winkel. Die Fehler für $el_0$ und $ez_1$ sind beide ähnlich groß, was auf eine starke negative Korrelation schließen lässt. Tatsächlich wurde für diese beiden Parameter der Korrelationskoeffizient 
 \begin{equation}
 \rho_{el_0,el_1}= -0,9999
 \end{equation}
-ermittelt. Ähnlich sieht für die Korrelation zwischen $az_0$ und $el_0$ aus. Hier ist der Korrelationskoeffizient
+ermittelt. Ähnlich sieht es für die Korrelation zwischen $az_0$ und $el_0$ aus. Hier ist der Korrelationskoeffizient
 \begin{equation}
 \rho_{az_0,az_1}= -0,9526
 \end{equation}
-ähnlich groß. Da gerade in diesem Modell die Parameter sehr ähnlich zu denen des Zwei-Paramter-Modells sind (dort sind die zusätzlichen Paramter Null) erwartet man keine großen Unterschiede zwischen diesen Modellen. Diese These wird durch Abbildung \ref{img:D2C4comp} bestätigt.
+ähnlich groß. Da gerade in diesem Modell die Parameter sehr ähnlich zu denen des Zwei-Parameter-Modells sind (dort sind die zusätzlichen Paramter Null), erwartet man keine großen Unterschiede zwischen diesen Modellen. Diese These wird durch Abbildung \ref{img:D2C4comp} bestätigt.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/D2C44comp.png}
@@ -235,6 +234,6 @@ Wie oben erwartet man somit auch keinen nennenswerten Unterschied zwischen den v
 \end{figure}
 
 \section{Systematische Abweichungen im entwickelten Pointingmodell}
-Betrachtet man die Graphen der Differenzen, so erkennt man, dass noch weitere Effekte das Pointing erschweren. Zunächst wird das weitere Verhalten der Elevation betrachtet. Hier fällt bei der Betrachtung von $\Delta el$ in Abhängigkeit des Azimuts auf, dass der Graph eine Wellenbewegung beschreibt. Aus dem Graph, der die Elevationsabhängigkeit beschreibt, lässt sich hingegen keine keine systematische Abweichung erkennen. Ein solches Verhalten könnte beispielsweise die Verkippung der Turmachse erklären. Durch eine solche Verkippung zeigt die Kamera auf der einen Seite des Teleskops ($az=\theta$) in Richtung einer niedrigeren Elevation und auf der anderen Seite ($az=\theta+180^{\circ}$) in Richtung einer höheren Elevation.\\
-Bei der Betrachtung der Graphen der Azimutdifferenzen fällt zunächst auch auf, dass diese sowohl von der Elevation als auch vom Azimut abhängen. Die Abstände $\left| \Delta az \right|$ werden für gleiche für gleiche Azimutwerte mit steigender Elevation größer. Dieser Effekt lässt sich ebenfalls durch die Verkippung der Turmachse erklären erklären, die in diesem Fall einen ähnlichen Effekt hat wie der Winkel zwischen CCD und Drive im oben beschriebenen Modell. Zudem sieht man noch, dass $\Delta az$ vom Azimut abhängt. Für kleine Azimutwerte läuft die Kamera dem Drive ein wenig voraus und für große Azimutwerte läuft sie ein wenig hinterher.\\
-Diese Abweichungen sind so klein, dass es hier reicht Pointingmodelle der durch die Gleichungen ((und)) beschriebenen Form zu entwickeln, die nur die Differenzen beschreiben. Ein solches Modell hat Ruslan Konno bereits in seiner Bachelorarbeit für die Single-CCD und die Sky-CCD, die zum damaligen Zeitpunkt noch am Rand des Reflektors befestigt war, entwickelt. 
+Betrachtet man die Graphen der Differenzen, so erkennt man, dass noch weitere Effekte das Pointing beeinflussen. Zunächst wird das weitere Verhalten der Elevation betrachtet. Hier fällt bei der Betrachtung von $\Delta el$ in Abhängigkeit des Azimuts auf, dass der Graph eine Wellenbewegung beschreibt. Aus dem Graph, der die Elevationsabhängigkeit beschreibt, lässt sich hingegen keine systematische Abweichung erkennen. Ein solches Verhalten könnte beispielsweise die Verkippung der Turmachse erklären. Durch eine solche Verkippung zeigt die Kamera auf der einen Seite des Teleskops ($az\approx100^{\circ}$) in Richtung einer niedrigeren Elevation und auf der anderen Seite ($az\approx-80^{\circ}$) in Richtung einer höheren Elevation.\\
+Bei der Betrachtung der Graphen der Azimutdifferenzen fällt zunächst auf, dass diese sowohl von der Elevation als auch vom Azimut abhängen. Die Abstände $\left| \Delta az \right|$ werden für gleiche Azimutwerte mit steigender Elevation größer. Dieser Effekt lässt sich ebenfalls durch die Verkippung der Turmachse erklären, die in diesem Fall einen ähnlichen Effekt hat wie der Winkel zwischen CCD und Drive im oben beschriebenen Modell. Zudem sieht man noch, dass $\Delta az$ vom Azimut abhängt. Für kleine Azimutwerte läuft die Kamera dem Drive ein wenig voraus und für große Azimutwerte läuft sie ein wenig hinterher.\\
+Diese Abweichungen sind so klein, dass es hier reicht Pointingmodelle der durch die Gleichungen \ref{eq:PointingZero-} und \ref{eq:PointingZero} beschriebenen Form zu entwickeln, die nur die Differenzen beschreiben. Ein solches Modell hat Ruslan Konno bereits in seiner Bachelorarbeit für die Single-CCD und die Sky-CCD, die zum damaligen Zeitpunkt noch am Rand des Reflektors befestigt war, entwickelt. 

@@ -13,13 +13,13 @@
 \BOOKMARK [1][-]{section.25}{Prototyp in Adlershof}{chapter.19}% 13
 \BOOKMARK [2][-]{subsection.27}{Pointing des Teleskops mit CCD-Kameras}{section.25}% 14
 \BOOKMARK [2][-]{subsection.28}{Kameras des MST}{section.25}% 15
-\BOOKMARK [0][-]{chapter.31}{Pointingmodell f\374r eine gro\337e Abweichung zur optischen Achse}{}% 16
+\BOOKMARK [0][-]{chapter.31}{Ableitung eines Grundlegenden Pointingmodells}{}% 16
 \BOOKMARK [1][-]{section.32}{Koordinaten}{chapter.31}% 17
 \BOOKMARK [1][-]{section.34}{Entwicklung von Pointingmodellen}{chapter.31}% 18
 \BOOKMARK [1][-]{section.44}{Motivation des Pointingmodells}{chapter.31}% 19
 \BOOKMARK [1][-]{section.46}{Pointingmodell mit zwei Parametern}{chapter.31}% 20
-\BOOKMARK [2][-]{subsection.47}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit der Drive-Koordinaten}{section.46}% 21
-\BOOKMARK [2][-]{subsection.62}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.46}% 22
+\BOOKMARK [2][-]{subsection.47}{Vorhersage der CCD-Koordinaten in Abh\344ngigkeit von den Drive-Koordinaten}{section.46}% 21
+\BOOKMARK [2][-]{subsection.62}{Vorhersage der Drive-Koordinaten in Abh\344ngigkeit von den CCD-Koordinaten}{section.46}% 22
 \BOOKMARK [1][-]{section.81}{Erweiterung des Modells auf vier Parameter}{chapter.31}% 23
 \BOOKMARK [0][-]{chapter.86}{Anwendung des Pointingmodells auf Daten des Teleskops}{}% 24
 \BOOKMARK [1][-]{section.87}{Datensatz}{chapter.86}% 25
@@ -27,7 +27,7 @@
 \BOOKMARK [1][-]{section.98}{Anwendung auf das Pointingmodell mit zwei Parametern}{chapter.86}% 27
 \BOOKMARK [2][-]{subsection.99}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.98}% 28
 \BOOKMARK [2][-]{subsection.104}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.98}% 29
-\BOOKMARK [1][-]{section.109}{Anwendung auf das Pointingmodell mit 4 Parametern}{chapter.86}% 30
+\BOOKMARK [1][-]{section.109}{Anwendung auf das Pointingmodell mit vier Parametern}{chapter.86}% 30
 \BOOKMARK [2][-]{subsection.110}{Abh\344ngigkeit der Drivekoordinaten in Abh\344ngigkeit der CCD-Koordinaten}{section.109}% 31
 \BOOKMARK [2][-]{subsection.114}{Abh\344ngigkeit der CCD-Koordinaten in Abh\344ngigkeit der Drivekoordinaten}{section.109}% 32
 \BOOKMARK [1][-]{section.120}{Systematische Abweichungen im entwickelten Pointingmodell}{chapter.86}% 33
