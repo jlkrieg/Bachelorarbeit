@@ -27,10 +27,10 @@
 \contentsline {section}{\numberline {5.2}Bestimmung der optimalen Parameter f\IeC {\"u}r die Pointingmodelle}{19}{section.90}
 \contentsline {section}{\numberline {5.3}Anwendung auf das Pointingmodell mit zwei Parametern}{20}{section.98}
 \contentsline {subsection}{\numberline {5.3.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{20}{subsection.99}
-\contentsline {subsection}{\numberline {5.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{20}{subsection.104}
-\contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit vier Parametern}{25}{section.109}
-\contentsline {subsection}{\numberline {5.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{25}{subsection.110}
-\contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{27}{subsection.114}
-\contentsline {section}{\numberline {5.5}Systematische Abweichungen im entwickelten Pointingmodell}{29}{section.120}
+\contentsline {subsection}{\numberline {5.3.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{21}{subsection.104}
+\contentsline {section}{\numberline {5.4}Anwendung auf das Pointingmodell mit vier Parametern}{24}{section.109}
+\contentsline {subsection}{\numberline {5.4.1}Abh\IeC {\"a}ngigkeit der Drivekoordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{24}{subsection.110}
+\contentsline {subsection}{\numberline {5.4.2}Abh\IeC {\"a}ngigkeit der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit der Drivekoordinaten}{26}{subsection.114}
+\contentsline {section}{\numberline {5.5}Systematische Abweichungen im entwickelten Pointingmodell}{27}{section.120}
 \contentsline {chapter}{\numberline {6}Fazit}{30}{chapter.121}
 \contentsline {chapter}{\numberline {A}Anhang}{32}{appendix.123}
