@@ -14,13 +14,13 @@
 \contentsline {section}{\numberline {3.2}Prototyp in Adlershof}{8}{section.25}
 \contentsline {subsection}{\numberline {3.2.1}Pointing des Teleskops mit CCD-Kameras}{8}{subsection.27}
 \contentsline {subsection}{\numberline {3.2.2}Kameras des MST}{10}{subsection.28}
-\contentsline {chapter}{\numberline {4}Ableitung eines Grundlegenden Pointingmodells}{11}{chapter.31}
+\contentsline {chapter}{\numberline {4}Ableitung eines grundlegenden Pointingmodells}{11}{chapter.31}
 \contentsline {section}{\numberline {4.1}Koordinaten}{11}{section.32}
 \contentsline {section}{\numberline {4.2}Entwicklung von Pointingmodellen}{11}{section.34}
 \contentsline {section}{\numberline {4.3}Motivation des Pointingmodells}{12}{section.44}
 \contentsline {section}{\numberline {4.4}Pointingmodell mit zwei Parametern}{13}{section.46}
 \contentsline {subsection}{\numberline {4.4.1}Vorhersage der CCD-Koordinaten in Abh\IeC {\"a}ngigkeit von den Drive-Koordinaten}{13}{subsection.47}
-\contentsline {subsection}{\numberline {4.4.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit von den CCD-Koordinaten}{15}{subsection.62}
+\contentsline {subsection}{\numberline {4.4.2}Vorhersage der Drive-Koordinaten in Abh\IeC {\"a}ngigkeit der CCD-Koordinaten}{15}{subsection.62}
 \contentsline {section}{\numberline {4.5}Erweiterung des Modells auf vier Parameter}{16}{section.81}
 \contentsline {chapter}{\numberline {5}Anwendung des Pointingmodells auf Daten des Teleskops}{17}{chapter.86}
 \contentsline {section}{\numberline {5.1}Datensatz}{17}{section.87}
