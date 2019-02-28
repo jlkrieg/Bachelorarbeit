@@ -218,7 +218,7 @@ void fitD2C(){
   //plot
 gStyle->SetLabelSize(.045, "XY");
 gStyle->SetTitleSize(.045, "XY");
-  TCanvas* can = new TCanvas("plotsD","PlotsD",0,0,800,600);
+  TCanvas* can = new TCanvas("plotsD","PlotsD",0,0,1600,1200);
   TString nam("D2C.png");
   TString tit1("fit drive to CCD");
   TString tit2("el0 = ");
@@ -262,7 +262,7 @@ gStyle->SetTitleSize(.045, "XY");
   g_dazaz->Draw("AP");
   can->SaveAs(nam);
 
-  TCanvas* can2 = new TCanvas("compare","compare",0,0,800,600);
+  TCanvas* can2 = new TCanvas("compare","compare",0,0,1600,1200);
   TString nam2("D2Ccomp.png");
   tit2 += el0;
   tit2 += ", az0 = ";
@@ -334,7 +334,7 @@ gStyle->SetTitleSize(.045, "XY");
   can2->Update();
   can2->SaveAs(nam2);
 
-  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1200,600);
+  TCanvas* can3 = new TCanvas("compare2","compare2",0,0,1600,900);
   TString nam3("D2Ccomp2.png");
   TGraph* g=new TGraph(kk,az_vec,el_vec);
   g->SetMarkerStyle(20);

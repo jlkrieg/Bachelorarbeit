@@ -105,28 +105,28 @@ $az_0$ &=& $(12,04\pm0,53)^{\circ}$\\
 \caption{Die beiden Parameter für die Vorhersage der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
 \label{tab:C2D}
 \end{table}
-Vergleicht man die Differenzen zwischen Drive- und CCD-Koordinaten mit den Differenzen zwischen Drive und den durch das Modell mithlife der CCD-Koordinaten vorhergesagten Koordinaten (gezeigt in Abbildung \ref{img:C2Dcomp}) so sieht man, dass das Modell die Abweichungen größtenteils kompensiert.
+Vergleicht man die Differenzen zwischen Drive- und CCD-Koordinaten mit den Differenzen zwischen Drive und den durch das Modell mithlife der CCD-Koordinaten vorhergesagten Koordinaten (gezeigt in Abbildung \ref{img:C2Dcomp}) so sieht man, dass das Modell die Abweichungen größtenteils kompensiert.%\newpage
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2Dcomp.png}
 \caption{Die Abweichungen der mithilfe von zwei Parametern vorhergesagten CCD-Koordinaten zu den realen Werten (rot) im Vergleich zu den Differenzen zwischen Drive und CCD (schwarz): Das Modell eliminiert einen großen Teil der Abweichungen}
 \label{img:C2Dcomp}
 \end{figure}
-Betrachtet man nur die Differenzen zwischen Pointingmodell und gemessenen Werten (Abbildung \ref{img:C2D}), so sieht man, dass die Werte noch von Null verschieden sind.
+Betrachtet man nur die Differenzen zwischen Pointingmodell und gemessenen Werten (Abbildung \ref{img:C2D}), so sieht man, dass die Werte noch von Null verschieden sind.%\newpage
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2D.png}
 \caption{Die Abweichungen der vorhergesagten CCD-Koordinaten im Vergleich zu den gemessenen im Detail: Es sind noch systematische Abweichungen zu sehen, die darauf schließen lassen, dass das Modell noch nicht vollständig ist.}
 \label{img:C2D}
 \end{figure}
-Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen kann, systematische Gründe. Solche Abweichungen sind durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt.
+Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen kann, systematische Gründe. Solche Abweichungen sind durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt. Hier ist gut zu sehen, dass die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.\newpage
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2Dcomp2.png}
 \caption{Die vom Zwei-Parameter-Modell vorhergesagten Drive-Koordinaten (rot) im Vergleich zu den experimentell bestimmten (schwarz)}
 \label{img:C2Dcomp2}
 \end{figure}
-Hier ist gut zu sehen, dass die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.
+%Hier ist gut zu sehen, dass die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.
 \subsection{Abhängigkeit der CCD-Koordinaten in Abhängigkeit der Drivekoordinaten}
 Möchte man jedoch die Koordinaten des Drives in Abhängigkeit der CCD bestimmen, so benötigt man das inverse Modell, welches durch die Formeln \ref{eq:elD2C} und \ref{eq:azD2C} beschrieben wird. Für dieses Modell werden mithlife des Programms die Parameter in Tabelle \ref{tab:D2C} bestimmt.
 \begin{table}[htbp]

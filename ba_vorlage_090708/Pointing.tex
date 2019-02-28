@@ -1,9 +1,9 @@
-\chapter{Ableitung eines Grundlegenden Pointingmodells}
+\chapter{Ableitung eines grundlegenden Pointingmodells}
 \label{ch:pointing}
-Das Pointing von Teleskopen beschäftigt sich damit, das Teleskop so auszurichten, wie es erwünscht ist. Häufig ist das Problem, dass die am Teleskop eingestellte Position nicht exakt mit der gewünschten Position übereinstimmt. Gründe dafür können Fehler in der Präzision oder auch die Elastizität einzelner Bauteile sein. Im Fall der Sky-CCD des MST-Prototypen liegt es wie in Abschnitt \ref{se:cameras} beschrieben an der zentralen Befestigung die zu einem größeren Winkel zur optischen Achse führt. Da man die aufgenommen Daten mit den bekannten Postionen am Himmel vergleichen kann, kann man versuchen ein Modell zu finden, welches die Fehler verkleinert oder im Idealfall sogar eliminiert.
+Das Pointing von Teleskopen beschäftigt sich damit, das Teleskop so auszurichten, wie es erwünscht ist. Häufig ist das Problem, dass die am Teleskop eingestellte Position nicht exakt mit der gewünschten Position übereinstimmt. Gründe dafür können Fehler in der Präzision oder auch die Elastizität einzelner Bauteile sein. Im Fall der Sky-CCD des MST-Prototypen liegt es wie in Abschnitt \ref{se:cameras} beschrieben an der zentralen Befestigung, die zu einem größeren Winkel zur optischen Achse führt. Da man die aufgenommen Daten mit den bekannten Postionen am Himmel vergleichen kann, kann man versuchen ein Modell zu finden, welches die Fehler verkleinert oder im Idealfall sogar eliminiert.
 
 \section{Koordinaten}
-Das MST benutzt ein aus zwei Winkeln bestehendes und in Abbildung \ref{img:coordinates} zu sehende Koordinatensystem, welches den Kugelkoordinaten ähnelt. Der Azimutwinkel $az$ beschreibt die Auslenkung in der horizontalen Ebene und läuft von $-180^{\circ}$ bis $180^{\circ}$, wobei das Teleskop für $az=0^{\circ}$ in Richtung Norden ausgerichtet ist. Der Elevationswinkel $el$ läuft von $0^{\circ}$ bis $90^{\circ}$ wobei $el=90^{\circ}$ dem Zenit entspricht. Hier wird zudem die Konvention benutzt, dass die Nordrichtung der $x$-Richtung, die Westrichtung der $y$-Richtung und die Zenitrichtung der $z$-Richtung entspricht.
+Das MST benutzt ein aus zwei Winkeln bestehendes und in Abbildung \ref{img:coordinates} zu sehendes Koordinatensystem, welches den Kugelkoordinaten ähnelt. Der Azimutwinkel $az$ beschreibt die Auslenkung in der horizontalen Ebene und läuft von $-180^{\circ}$ bis $180^{\circ}$, wobei das Teleskop für $az=0^{\circ}$ in Richtung Norden ausgerichtet ist. Der Elevationswinkel $el$ läuft von $0^{\circ}$ bis $90^{\circ}$ wobei $el=90^{\circ}$ dem Zenit entspricht. Hier wird zudem die Konvention benutzt, dass die Nordrichtung der $x$-Richtung, die Westrichtung der $y$-Richtung und die Zenitrichtung der $z$-Richtung entspricht.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{Images/coordinates.png}
@@ -13,7 +13,7 @@ Das MST benutzt ein aus zwei Winkeln bestehendes und in Abbildung \ref{img:coord
 Da das Pointingmodell die Beziehung der am Teleskop eingestellten Koordinaten zu den Koordinaten der Sky-CCD beschreiben soll, werden die Indizes $D$ für das Drive-System (das Antrieb des Teleskops) und $C$ für die CCD-Kamera eingeführt.
 
 \section{Entwicklung von Pointingmodellen}
-Um mit einem Teleskop möglichst gute Resultate zu erzielen, muss man die gewünschte Position am Himmel so genau wie möglich einstellen. Da die eingestellten Koordinaten allerdings nicht exakt mit den tatsächlichen Koordinaten übereinstimmen, verwendet man Pointingmodelle, um diese Differenzen zu minimieren. Da Teleskope in der Regel so konstruiert sind, dass es möglichst geringe Abweichungen zwischen eingestellten und tatsächlichen Positionen existieren, reicht es in der Regel aus, die Differenzen zu betrachten. Diese Differenzen lassen sich dann Funktion der teleskopspezifischen Paramater $\vec{q}$ entwickeln
+Um mit einem Teleskop möglichst gute Resultate zu erzielen, muss man die gewünschte Position am Himmel so genau wie möglich einstellen. Da die eingestellten Koordinaten allerdings nicht exakt mit den tatsächlichen Koordinaten übereinstimmen, verwendet man Pointingmodelle, um diese Differenzen zu minimieren. Da Teleskope in der Regel so konstruiert sind, dass es möglichst geringe Abweichungen zwischen eingestellten und tatsächlichen Positionen existieren, reicht es in der Regel aus, die Differenzen zu betrachten. Diese Differenzen lassen sich dann als Funktion der teleskopspezifischen Paramater $\vec{q}$ entwickeln
 \begin{equation}
 az_D=az_C+\Delta_{az}=az_C+\tilde{f}_{az}\left(az_C,el_C,\vec{q}\right)
 \label{eq:PointingZero-}
@@ -31,27 +31,27 @@ Für ein kleines $\Delta_{el}$ lässt sich diese Formel gut durch eine Taylorent
 \sin(el+\Delta_{el})=\sin(el)\cos(\Delta_{el})+\cos(el)\sin(\Delta_{el})\approx \sin(el)+\cos(el)\Delta_{el}.
 \label{eq:approx}
 \end{equation}
-Dreht man nun einen beliebigen Vektor mit einem kleinen Winkel $\phi_X \approx \sin(\phi_X)$ um die x-Achse
+Dreht man nun einen beliebigen Vektor mit einem kleinen Winkel $\phi_X \approx \sin(\phi_X)$ um die $y$-Achse
 \begin{equation}
 \left(\begin{array}{c}
 x^{\prime}\\y^{\prime}\\z^{\prime}
 \end{array}\right)=\left(\begin{array}{ccc}
-1 & 0 & -\phi_X\\0 & 1 & 0 \\\phi_X & 0 & 1
+1 & 0 & -\phi_Y\\0 & 1 & 0 \\\phi_Y & 0 & 1
 \end{array}\right)\left(\begin{array}{c}
 x\\y\\z
 \end{array}\right)=\left(\begin{array}{c}
-x-\phi_Xz\\y\\\phi_X+z
+x-\phi_Yz\\y\\\phi_Y+z
 \end{array}\right),
 \end{equation}
-lässt sich aus der z-Komponente die Abweichung $\Delta_{el}$ berechnen.
+lässt sich aus der $z$-Komponente die Abweichung $\Delta_{el}$ berechnen.
 \begin{equation}
-\sin(el)+\cos(el)\Delta_{el}=z^{\prime}=\phi_Xx+z
+\sin(el)+\cos(el)\Delta_{el}=z^{\prime}=\phi_Yx+z
 \end{equation}
 mit Gleichung \ref{eq:pointingZero} ergibt sich somit 
 \begin{equation}
-\Delta_{el}=\frac{\phi_Xx}{\cos(el)}
+\Delta_{el}=\frac{\phi_Yx}{\cos(el)}
 \end{equation}
-als Abweichung. Die Näherung aus Formel \ref{eq:approx} gilt nur für kleine Winkel, wie in diesem Fall für eine kleine Drehung um die $x$-Achse.
+als Abweichung. Die Näherung aus Formel \ref{eq:approx} gilt nur für kleine Winkel, wie in diesem Fall für eine kleine Drehung um die $y$-Achse.
 %Da man das Teleskop so ausrichten will, dass man die gewünschte Position vorgibt (Koordinaten der CCD- Index C) und dann die Koordinaten am Drive (Index D) einstellt, sucht man nach Funktionen, die die Koordinaten des Drives in Abhängigkeit von den gewünschten Koordinaten beschreibt. \\
 %In der Regel haben Teleskope so geringe Abweichungen zwischen eingestellter und tatsächlicher Position, dass sich diese Abweichungen als Funktionen schreiben lassen, die in den relevanten Parametern entwickelt werden können.
 %\begin{equation}
@@ -96,12 +96,12 @@ T(az,el)=R_z(az)R_y(el)=
 T(az,el)=\left(\begin{array}{ccc} \cos(az)\cos(el) & \sin(az) &-\cos(az)\sin(el) \\-\cos(el)\sin(az) & \cos(az) & \sin(az)\sin(el)\\ \sin(el) & 0 & \cos(el) \end{array} \right).
 \label{eq:TransformMat}
 \end{equation}\\
-Unter der Annahme, dass die Kamera von vornherein in eine andere Richtung als das Drive-System zeigt, lässt sich mit dieser Transformtion $T(az_0,el_0)$ aus der Startpostion des Drives die Startposition der CCD bestimmen:
+Unter der Annahme, dass die Kamera von vornherein in eine andere Richtung als das Drive-System zeigt, lässt sich mit dieser Transformtion aus der Startpostion des Drives die Startposition der CCD bestimmen:
 \begin{equation}
 \vec{r}_C^{\,0}=T(az_0,el_0)\vec{r}_D^{\,0}=\left(\begin{array}{c} \cos(az_0)\cos(el_0) \\ -\cos(el_0)\sin(az_0) \\ \sin(el_0) \end{array}\right).
 \label{eq:startCCD}
 \end{equation}
-Da hier angenommen wird, dass der Winkel zwischen der optischen Achse des Teleskops und der Kamera fest ist, sind $az_0$ und $el_0$ Konstanten. Wendet man nun die gleiche Transformation $T(az_D,el_D)$ mit den Koordinaten des Teleskops als Argumente auf beide Startvektoren an, so erhält man für die Richtung des Drives 
+Da hier angenommen wird, dass der Winkel zwischen der optischen Achse des Teleskops und der Kamera fest ist, sind $az_0$ und $el_0$ Konstanten. Wendet man nun die gleiche Transformation mit den Koordinaten des Teleskops als Argumente auf beide Startvektoren an, so erhält man für die Richtung des Drives 
 \begin{equation}
 \vec{r}_D=T(az_D,el_D)\vec{r}_D^{\,0}=\left(\begin{array}{c} \cos(az_D)\cos(el_D) \\ -\cos(el_D)\sin(az_D) \\ \sin(el_D) \end{array}\right)
 \label{eq:finDrive}
@@ -167,8 +167,8 @@ a\sin(az_D)+b\cos(az_D),a\cos(az_D)-b\sin(az_D))
 \label{eq:azD2C}
 \end{equation}
 
-\subsection{Vorhersage der Drive-Koordinaten in Abhängigkeit von den CCD-Koordinaten}
-Um die CCD wie gewünscht auszurichten, braucht man die zugehörigen Drive-Koordinaten. Da diese von den Kordinaten der CCD abhängen, muss das aus \ref{eq:elD2C} und \ref{eq:azD2C} bestehende Gleichungssystem nach $el_D$ und $az_D$ aufgelöst werden. Die Formel \ref{eq:elD2C} hängt nur von $el_D$ abhängt und kann somit unabhängig von \ref{eq:azD2C} umgestellt werden. Dazu werden die in Gleichung \ref{eq:elD2C} stehenden Sinus- und Kosinusfunktionen als Terme der gleichen Tangensfunktionen ausgedrückt. Dazu werden zunächst sowohl Sinus als auch Kosinus als Funktion der halben Winkel ausgedrückt
+\subsection{Vorhersage der Drive-Koordinaten in Abhängigkeit der CCD-Koordinaten}
+Um die CCD wie gewünscht auszurichten, braucht man die zugehörigen Drive-Koordinaten. Da diese von den Kordinaten der CCD abhängen, muss das aus \ref{eq:elD2C} und \ref{eq:azD2C} bestehende Gleichungssystem nach $el_D$ und $az_D$ aufgelöst werden. Die Formel \ref{eq:elD2C} hängt nur von $el_D$ ab und kann somit unabhängig von \ref{eq:azD2C} umgestellt werden. Dazu werden die in Gleichung \ref{eq:elD2C} stehenden Sinus- und Kosinusfunktionen als Terme der gleichen Tangensfunktionen ausgedrückt. Dazu werden zunächst sowohl Sinus als auch Kosinus als Funktion der halben Winkel ausgedrückt
 \begin{equation}
 \sin\left( el_D \right) = \sin\left( \frac{el_D}{2} \right)\cos\left( \frac{el_D}{2} \right)+\cos\left( \frac{el_D}{2} \right)\sin\left( \frac{el_D}{2} \right)=2\sin\left( \frac{el_D}{2} \right)\cos\left( \frac{el_D}{2} \right)
 \end{equation}
@@ -203,11 +203,11 @@ Somit ergibt sich für Gleichung \ref{eq:elD2C} folgender Ausdruck
 \end{equation}
 beziehungsweise nach Umformung
 \begin{equation}
-t^2\left(\sin(el_C)+\sin(el_0)\right)-t\left(2\cos(az_0)\cos(el_0)\right)+\sin(el_C)-\sin(el_0)=0
+t^2\left(\sin(el_C)+\sin(el_0)\right)-t\left(2\cos(az_0)\cos(el_0)\right)+\sin(el_C)-\sin(el_0)=0.
 \end{equation}
 Aufgelöst nach $t$ ergeben sich die Lösungen
 \begin{equation}
-t_{1,2}=\frac{\cos\left(el_0\right)\cos\left(az_0\right)\pm\sqrt{\cos^2\left(el_0\right)\cos^2\left(az_0\right)+\sin^2\left(el_0\right)-\sin^2\left(el_C\right)}}{\sin\left(el_C\right)+\sin\left(el_0\right)}
+t_{\pm}=\frac{\cos\left(el_0\right)\cos\left(az_0\right)\pm\sqrt{\cos^2\left(el_0\right)\cos^2\left(az_0\right)+\sin^2\left(el_0\right)-\sin^2\left(el_C\right)}}{\sin\left(el_C\right)+\sin\left(el_0\right)}
 \label{eq:t12}
 \end{equation}
 Um die relevante der beiden Lösungen zu ermitteln setzt man $az_0=el_0=0$, sodass
@@ -259,7 +259,7 @@ az_D=\arctan 2\left(
 a\sin\left(az_C\right)-b\cos\left(az_c\right),a\cos\left(az_C\right)+b\sin\left(az_c\right)\right),
 \label{eq:azC2D}
 \end{equation}
-wobei hier noch $el_D$ in $a$ und $b$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden müssen.
+wobei hier noch $el_D$ in $a$ und $b$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.
 
 \section{Erweiterung des Modells auf vier Parameter}
 \label{se:4par}
