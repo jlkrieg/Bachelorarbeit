@@ -10,7 +10,7 @@ Das MST benutzt ein aus zwei Winkeln bestehendes und in Abbildung \ref{img:coord
 \caption{Die verwendeten Koordinaten}
 \label{img:coordinates}
 \end{figure}
-Da das Pointingmodell die Beziehung der am Teleskop eingestellten Koordinaten zu den Koordinaten der Sky-CCD beschreiben soll, werden die Indizes $D$ für das Drive-System (das Antrieb des Teleskops) und $C$ für die CCD-Kamera eingeführt.
+Da das Pointingmodell die Beziehung der am Teleskop eingestellten Koordinaten zu den Koordinaten der Sky-CCD beschreiben soll, werden die Indizes $D$ für das Drive-System (der Antrieb des Teleskops) und $C$ für die CCD-Kamera eingeführt.
 
 \section{Entwicklung von Pointingmodellen}
 Um mit einem Teleskop möglichst gute Resultate zu erzielen, muss man die gewünschte Position am Himmel so genau wie möglich einstellen. Da die eingestellten Koordinaten allerdings nicht exakt mit den tatsächlichen Koordinaten übereinstimmen, verwendet man Pointingmodelle, um diese Differenzen zu minimieren. Da Teleskope in der Regel so konstruiert sind, dass es möglichst geringe Abweichungen zwischen eingestellten und tatsächlichen Positionen existieren, reicht es in der Regel aus, die Differenzen zu betrachten. Diese Differenzen lassen sich dann als Funktion der teleskopspezifischen Paramater $\vec{q}$ entwickeln
@@ -25,13 +25,14 @@ el_D=el_C+\Delta_{el}=el_C+\tilde{f}_{el}\left(az_C,el_C,\vec{q}\right).
 Als Beispiel wird hier die Verkippung der Turmachse des Teleskops, die Ruslan Konno in seiner Bachelorarbeit \cite{Ruslan} beschrieben hat, in vereinfachter Form diskutiert. Dazu wird nur die Elevation betrachtet, die sich aus der $z$-Komponente berechnen lässt
 \begin{equation}
 \sin(el)=z.
+\label{eq:sinel}
 \end{equation}
 Für ein kleines $\Delta_{el}$ lässt sich diese Formel gut durch eine Taylorentwicklung bis zum linearen Glied beschreiben
 \begin{equation}
 \sin(el+\Delta_{el})=\sin(el)\cos(\Delta_{el})+\cos(el)\sin(\Delta_{el})\approx \sin(el)+\cos(el)\Delta_{el}.
 \label{eq:approx}
 \end{equation}
-Dreht man nun einen beliebigen Vektor mit einem kleinen Winkel $\phi_X \approx \sin(\phi_X)$ um die $y$-Achse
+Dreht man nun einen beliebigen Vektor mit einem kleinen Winkel $\phi_Y \approx \sin(\phi_Y)$ um die $y$-Achse
 \begin{equation}
 \left(\begin{array}{c}
 x^{\prime}\\y^{\prime}\\z^{\prime}
@@ -47,7 +48,7 @@ lässt sich aus der $z$-Komponente die Abweichung $\Delta_{el}$ berechnen.
 \begin{equation}
 \sin(el)+\cos(el)\Delta_{el}=z^{\prime}=\phi_Yx+z
 \end{equation}
-mit Gleichung \ref{eq:pointingZero} ergibt sich somit 
+mit Gleichung \ref{eq:sinel} ergibt sich somit 
 \begin{equation}
 \Delta_{el}=\frac{\phi_Yx}{\cos(el)}
 \end{equation}
@@ -63,15 +64,15 @@ als Abweichung. Die Näherung aus Formel \ref{eq:approx} gilt nur für kleine Wi
 %\end{equation}
 Da die Sky-CCD des MST-Prototyps einen größeren Winkel ($\mathcal{O}\left(10^{\circ}\right)$) zur optischen Achse hat, können Näherungen wie in Gleichung \ref{eq:approx} nicht mehr angewendet werden. Daher wird versucht, die einzustellende Position anhand geometrischer Überlegungen in Abhängigkeit der wahren Position vorherzusagen. Man versucht also Funktionen zu finden, die nur von den wahren Koordinaten und einem teleskopspezifischen Parametersatz abhängen.
 \begin{equation} 
-az_D=f_{az}(az_C,el_C)
+az_D=f_{az}(az_C,el_C,\vec{q})
 \end{equation}
 \begin{equation}
-el_D=f_{el}(az_C,el_C)
+el_D=f_{el}(az_C,el_C,\vec{q})
 \label{eq:pointingprinciple}
 \end{equation}
 
 \section{Motivation des Pointingmodells}
-Zunächst soll eine vereinfachte Problemstellung betrachtet werden, indem angenommen wird, dass die Kamera nur einen Winkel in Azimutrichtung $az_0$ zur optischen Achse des Teleskops hat. Bewegt sich das Teleskop entlang des Horizontes ($el=0$), so entspricht der Abstand zwischen eingestelltem Azimut und dem Azimut der Kamera genau $az_0$. Befindet sich das Teleskop im Zenit ($el=90^{\circ}$), so zeigt die Kamera in Richtung $az_C=az_D+\unit{sgn}(az_0)\cdot90^{\circ}$ und $el_C=el_D-|az_0|$. Dieses grundsätzliche Verhalten lässt sich am MST beobachten, wie der in Kapitel \ref{se:data} beschriebene Datensatz zeigt.Diese Abweichungen gilt es nun durch die Entwicklung geeigneter Pointingmodelle zu eliminieren.\newpage
+Zunächst soll eine vereinfachte Problemstellung betrachtet werden, indem angenommen wird, dass, wenn das Teleskop in Richtung Horizont zeigt, die Kamera nur einen Winkel in Azimutrichtung $az_0$ zur optischen Achse des Teleskops hat. Bewegt sich das Teleskop entlang des Horizontes ($el=0$), so entspricht der Abstand zwischen eingestelltem Azimut und dem Azimut der Kamera genau $az_0$. Befindet sich das Teleskop im Zenit ($el=90^{\circ}$), so zeigt die Kamera in Richtung $az_C=az_D+\unit{sgn}(az_0)\cdot90^{\circ}$ und $el_C=el_D-|az_0|$. Dieses grundsätzliche Verhalten lässt sich am MST beobachten, wie der in Kapitel \ref{se:data} beschriebene Datensatz zeigt.Diese Abweichungen gilt es nun durch die Entwicklung geeigneter Pointingmodelle zu eliminieren.\newpage
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/data2.png}
@@ -108,7 +109,7 @@ Da hier angenommen wird, dass der Winkel zwischen der optischen Achse des Telesk
 \end{equation}
 und für die Richtung der CCD
 \begin{equation}
-\vec{r}_C=\left(\begin{array}{c} \cos(az_D)\left(\cos(az_0)\cos(el_D)\cos(el_0)-\sin(el_D)\sin(el_0)\right_D)-\cos(el_0)\sin(az_D)\sin(az_0) \\
+\vec{r}_C=\left(\begin{array}{c} \cos(az_D)\left(\cos(az_0)\cos(el_D)\cos(el_0)-\sin(el_D)\sin(el_0)\right)-\cos(el_0)\sin(az_D)\sin(az_0) \\
 \sin(az_D)\left(\sin(el_D)\sin(el_0)-\cos(az_0)\cos(el_D)\cos(el_0)\right)-\cos(az_D)\cos(el_0)\sin(az_0) \\
 \cos(az_0)\cos(el_0)\sin(el_D)+\cos(el_D)\sin(el_0) \end{array}\right).
 \label{eq:finCCD}
@@ -119,7 +120,7 @@ Zur Untersuchung der Azimutabhängigkeit werden aus Gründen der Übersichtlichk
 a=\cos\left(el_D\right)\cos\left(az_0\right)\cos\left(el_0\right)-\sin\left(el_D\right)\sin\left(el_0\right)
 \end{equation}
 \begin{equation}
-b=\sin\left(az_0\right)\cos\left(el_D\right).
+b=\sin\left(az_0\right)\cos\left(el_0\right).
 \end{equation}
 Gleichung \ref{eq:finCCD} lässt sich nun als
 \begin{equation}
@@ -138,11 +139,11 @@ und der Azimutwinkel aus dem Verhältnis von y- zu x-Komponente. Da der Tangens 
 \begin{equation}
 \arctan2(r_y,r_x)=\left\{\begin{array}{lr}
 \arctan\left(\frac{{r_y}}{{r_x}}\right) & r_x \textgreater 0  \\
-\arctan\left(\frac{{r_y}}{{r_x}}\right)+\pi &  r_x \textless 0,r_y \textgreater 0 \\
-\pm \pi   &  r_x \textless 0,r_y = 0 \\
-\arctan\left(\frac{{r_y}}{{r_x}}\right)-\pi &  x \textless 0,r_y \textless 0 \\
-+\frac{\pi}{2} &  x = 0,r_y \textgreater 0 \\
--\frac{\pi}{2} & x = 0,r_y \textless 0 \\
+\arctan\left(\frac{{r_y}}{{r_x}}\right)+\pi &  r_x \textless 0,r_y \ge 0 \\
+%\pm \pi   &  r_x \textless 0,r_y = 0 \\
+\arctan\left(\frac{{r_y}}{{r_x}}\right)-\pi &  r_x \textless 0,r_y \textless 0 \\
++\frac{\pi}{2} &  r_x = 0,r_y \textgreater 0 \\
+-\frac{\pi}{2} & r_x = 0,r_y \textless 0 \\
 \end{array}\right
 \end{equation}
 Das Koordinatensystem wurde so gewählt, dass der Azimutwinkel wie in Abbildung \ref{img:coordinates} zu sehen in Richtung Osten also die negative y-Richtung geht. Es lässt sich also $az$ durch
@@ -150,7 +151,7 @@ Das Koordinatensystem wurde so gewählt, dass der Azimutwinkel wie in Abbildung 
 az=\arctan2(-r_y,r_x)
 \label{eq:backtrafoAz}
 \end{equation}
-berechnen. Somit lassen sich mit \ref{eq:backtrafoEl} und \ref{eq:backtrafoAz} in Verbindung mit \ref{eq:finCCD} die CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten bestimmen.
+berechnen. Somit lassen sich mit \ref{eq:backtrafoEl} und \ref{eq:backtrafoAz} in Verbindung mit \ref{eq:finCCDab} die CCD-Koordinaten in Abhängigkeit der Drive-Koordinaten bestimmen.
 \begin{equation}
 el_C=\arcsin\left(\cos(az_0)\cos(el_0)\sin(el_D)+\sin(el_0)\cos(el_D)\right)
 \label{eq:elD2C}
@@ -256,7 +257,7 @@ Für $az_D$ erhält man somit
 az_D=\arctan 2\left(
 %\sin(az_C)(\cos(el_C)\cos(az_0)\cos(el0)-\sin(el_C)\sin(el_0))-\cos(az_C)\sin(az_0)\cos(el0),
 %\cos(az_C)(\cos(el_C)\cos(az_0)\cos(el0)-\sin(el_C)\sin(el_0))+\sin(az_C)\sin(az_0)\cos(el0))
-a\sin\left(az_C\right)-b\cos\left(az_c\right),a\cos\left(az_C\right)+b\sin\left(az_c\right)\right),
+a\sin\left(az_C\right)-b\cos\left(az_C\right),a\cos\left(az_C\right)+b\sin\left(az_C\right)\right),
 \label{eq:azC2D}
 \end{equation}
 wobei hier noch $el_D$ in $a$ und $b$ durch den Ausdruck \ref{eq:elC2D} ersetzt werden muss.

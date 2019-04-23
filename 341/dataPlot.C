@@ -48,7 +48,7 @@ void dataPlot(){
 gStyle->SetLabelSize(.045, "XY");
 gStyle->SetTitleSize(.045, "XY");
   std::cout<<kk<<std::endl;
-  TCanvas* can = new TCanvas("plots1","Plots1",0,0,1200,900);
+  TCanvas* can = new TCanvas("plots1","Plots1",0,0,1600,1200);
   can->Divide(2,2);
   TString nam("data1.png");
   TGraph* g_delel1=new TGraph(kk,elc_vec,eld_vec);
@@ -81,7 +81,7 @@ gStyle->SetTitleSize(.045, "XY");
   g_dazaz1->Draw("AP");
   can->SaveAs(nam);
 
-  TCanvas* can = new TCanvas("plots2","Plots2",0,0,800,600);
+  TCanvas* can = new TCanvas("plots2","Plots2",0,0,1600,1200);
   can->Divide(2,2);
   TString nam2("data2.png");
   TGraph* g_delel2=new TGraph(kk,elc_vec,del_vec);
@@ -122,7 +122,7 @@ gStyle->SetTitleSize(.045, "XY");
   g_dazaz2->Draw("AP");
   can->SaveAs(nam2);
 
-  TCanvas* can = new TCanvas("plots3","Plots3",0,0,1200,600);
+  TCanvas* can = new TCanvas("plots3","Plots3",0,0,1600,900);
   can->Divide(2);
   TString nam3("data3.png");
   TGraph2D* g_el=new TGraph2D(kk,elc_vec,azc_vec,del_vec);
@@ -143,7 +143,7 @@ gStyle->SetTitleSize(.045, "XY");
   g_az->Draw("AP");
   can->SaveAs(nam3);
 
-  TCanvas* can4 = new TCanvas("plots4","Plots4",0,0,1200,600);
+  TCanvas* can4 = new TCanvas("plots4","Plots4",0,0,1600,900);
   TString nam3("data4.png");
   TGraph* g1=new TGraph(kk,azd_vec,eld_vec);
   g1->SetMarkerStyle(20);
@@ -155,7 +155,7 @@ gStyle->SetTitleSize(.045, "XY");
 
   can4->SaveAs(nam3);
 
-  TCanvas* can5 = new TCanvas("plots5","Plots5",0,0,1200,600);
+  TCanvas* can5 = new TCanvas("plots5","Plots5",0,0,1600,900);
   histo->GetYaxis()->SetTitle("number of events");
   histo->GetXaxis()->SetTitle("pixelscale (arcsec)");
   histo->Draw(); 

@@ -93,7 +93,7 @@ verwendet. Für $\rho=0$ liegt keine Korrelation vor und für $\rho=\pm1$ eine p
 \section{Anwendung auf das Pointingmodell mit zwei Parametern}
 Zunächst soll das in Kapitel \ref{ch:pointing} entwickelte Modell mit zwei Parametern, das einen konstanten Winkel zwischen der optischen Achse des Teleskops und der CCD-Kamera annimmt, untersucht werden.
 \subsection{Abhängigkeit der Drivekoordinaten in Abhängigkeit der CCD-Koordinaten}
-Begonnen wird mit der Vorhersage der Drive-Koordinaten mithilfe der CCD-Koordinaten. Unter der Annahme des festen Winkels zwischen Drive und Kamera wurden in Kapitel \ref{ch:pointing} die Abhängigkeiten aus den Formeln \ref{eq:elC2D} und \ref{eq:azC2D} vorhergesagt. Verwendet man das oben beschriebene Programm, erhält man die Parameter aus Tabelle \ref{tab:C2D}.
+Begonnen wird mit der Vorhersage der Drive-Koordinaten mit Hilfe der CCD-Koordinaten. Unter der Annahme des festen Winkels zwischen Drive und Kamera wurden in Kapitel \ref{ch:pointing} die Abhängigkeiten aus den Formeln \ref{eq:elC2D} und \ref{eq:azC2D} vorhergesagt. Verwendet man das oben beschriebene Programm, erhält man die Parameter aus Tabelle \ref{tab:C2D}.
 \begin{table}[htbp]
 \centering
 \begin{tabular}{rcl}
@@ -119,7 +119,7 @@ Betrachtet man nur die Differenzen zwischen Pointingmodell und gemessenen Werten
 \caption{Die Abweichungen der vorhergesagten CCD-Koordinaten im Vergleich zu den gemessenen im Detail: Es sind noch systematische Abweichungen zu sehen, die darauf schließen lassen, dass das Modell noch nicht vollständig ist.}
 \label{img:C2D}
 \end{figure}
-Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen kann, systematische Gründe. Solche Abweichungen sind durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkel zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt. Hier ist gut zu sehen, dass die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.\newpage
+Das liegt nicht an ungenau bestimmten Werten, sondern hat, wie man besonders in den Graphen der Azimutabhängigkeit sehen kann, systematische Gründe. Solche Abweichungen sind durchaus zu erwarten, da das verwendete Pointingmodell nur den Fehler des konstanten Winkels zwischen der CCD-Kamera und der optischen Achse des Teleskops berücksichtigt. Zuletzt soll noch ein Graph (Abbildung \ref{img:C2Dcomp2}) betrachtet werden, der die vorhergesagten Koordinaten im Vergleich zu den gemessenen Koordinaten zeigt. Hier ist gut zu sehen, dass die Wellenbewegung der Elevation in Abhängigkeit des Azimuts unabhängig von den einzelnen Elevationswerten ist.\newpage
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../341/C2Dcomp2.png}
